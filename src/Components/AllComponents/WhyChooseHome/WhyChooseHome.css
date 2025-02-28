@@ -1,5 +1,3 @@
-
-
 .WhyChooseCardAnimationEdit {
     padding: 20px;
     height: 450px;
@@ -30,9 +28,10 @@
     color: white;
 }
 
-.AnimatedHoverCards .ant-row .ant-col:nth-child(1) .WhyChooseCardAnimationEdit{
+.AnimatedHoverCards .ant-row .ant-col:nth-child(1) .WhyChooseCardAnimationEdit {
     border-left: 1px solid #840000 !important;
 }
+
 .WhyChooseCardAnimationEdit h2 {
     position: absolute;
     height: 80px;
@@ -47,7 +46,8 @@
     transform: translatey(200px);
     transition: .5s;
 }
-.AnimatedHoverCards{
+
+.AnimatedHoverCards {
     margin-top: 4rem;
 }
 
@@ -62,11 +62,40 @@
     border-radius: 10px;
 }
 
+@media (max-width:900px) {
+    .WhyChooseCardAnimationEdit h2 {
+        position: static;
+    }
+
+    .WhyChooseCardAnimationEdit p {
+        opacity: 1;
+        transform: translatey(0px);
+        transition: .5s;
+    }
+
+    .AnimatedHoverCards .ant-row .ant-col:nth-child(1) .WhyChooseCardAnimationEdit {
+        border-top: 1px solid #840000 !important;
+    }
+
+    .WhyChooseCardAnimationEdit {
+        padding: 20px;
+        height: 450px;
+        background-color: transparent;
+        border: 1px solid #840000;
+        overflow: hidden;
+        position: relative;
+        transition: .5s;
+        border-left: 1px solid #840000 !important;
+        border-top: 0px !important;
+    }
+}
+
 @media (min-width:1500px) and (max-width:4000px) {
-    
+
     #WhoAreWeHomeContentContainer .ContentContainer p {
         width: 70%;
     }
+
     .WhyChooseCardAnimationEdit {
         padding: 20px;
         height: 400px;
@@ -75,5 +104,6 @@
         overflow: hidden;
         position: relative;
         transition: .5s;
+
     }
 }

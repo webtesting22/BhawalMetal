@@ -86,3 +86,24 @@
 
     /* height: 100%; */
 }
+
+@media (max-width:900px){
+    .ImageBackContainerWithContent {
+        width: 100%;
+        position: relative;
+        height: 100%;
+    }
+    .ContentContainerTopheader {
+        padding: 0rem 2rem;
+    }
+    #WhatDoesBhawalContainer{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .AboutUsImageContainer {
+        padding-right: 0px;
+        height: 550px;
+        overflow: hidden;
+    }
+    
+}

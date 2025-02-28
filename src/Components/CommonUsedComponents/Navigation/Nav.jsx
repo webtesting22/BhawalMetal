@@ -34,7 +34,7 @@ const Nav = () => {
                         </Col>
                     </Row>
                 </div>
-                <Drawer placement="left" title="Bhawal Metal Industries" onClose={onClose} open={open}>
+                <Drawer placement="right" title="Bhawal Metal Industries" onClose={onClose} open={open}>
                     <div className="NavigationContainer">
                         <ul className="navigationLinksContainerList">
                             {NavigationDataLinks.map((item, index) => (
@@ -42,7 +42,6 @@ const Nav = () => {
                                     {item.link}
                                 </li></Link>
                             ))}
-
                         </ul>
                     </div>
                     <div className="ContactBtnContainer">

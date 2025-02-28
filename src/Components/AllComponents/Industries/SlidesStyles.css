@@ -52,3 +52,26 @@
     background-color: #840000;
     padding: 10px 20px;
 }
+
+@media (max-width:900px){
+    .DynamicPagination {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        gap: 15px;
+        margin: 4rem 0rem;
+        overflow: auto;
+    }
+    #SlidesStyles {
+        padding: 6rem 1rem;
+        background-color: rgb(249, 249, 249);
+    }
+    .SwiperContainerIndustries .CardImageContainerIndustries {
+        padding-left: 0rem;
+        /* height: 70%; */
+        overflow: hidden;
+        padding-top: 2rem ;
+    }
+    
+    
+}
