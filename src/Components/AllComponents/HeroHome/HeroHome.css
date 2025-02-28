@@ -1,0 +1,94 @@
+.HomePagePointsContainer {
+    padding-top: 130px;
+}
+
+.HomePagePointsContainer .ant-row .ant-col>div div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 40px;
+}
+
+.HomePagePointsContainer .ant-row .ant-col>div div::before {
+    height: 70px;
+    width: 5px;
+    background-color: #840000;
+    content: "";
+    display: inline-flex;
+    border-radius: 5px;
+}
+
+
+#BhawalHomeContainer .ant-row .ant-col:nth-child(2) div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#BhawalHomeContainer .ant-row .ant-col:nth-child(2) div {
+    height: 90vh;
+    overflow: hidden;
+}
+
+#BhawalHomeContainer .ant-row .ant-col:nth-child(1) .SideContentContainer {
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0rem 6rem;
+}
+
+.BoxesContainer {
+    height: 10vh;
+    background-color: white;
+    width: 100%;
+}
+
+
+.BoxesContainer .BoxEditContainer {
+    border: 1px solid #840000;
+    border-left: 0.5px solid #840000 !important;
+    border-right: 0.5px solid #84000000 !important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+    padding: 0px 10px;
+}
+
+.BoxesContainer .BoxEditContainer:hover {
+    background-color: #840000;
+    color: white;
+    transform: scale(1.03);
+    transition: .5s;
+}
+
+
+@media (max-width:900px) {
+
+    #BhawalHomeContainer .ant-row .ant-col:nth-child(1) .SideContentContainer {
+        padding: 0rem 1rem;
+        height: 60vh;
+    }
+
+.BoxesContainer .BoxEditContainer {
+   
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    transition: .5s;
+    padding: 0px 10px;
+}
+.BoxesContainer {
+    height: 30vh;
+    background-color: white;
+    width: 100%;
+}
+#BhawalHomeContainer .ant-row .ant-col:nth-child(2) div {
+    height: 30vh;
+    overflow: hidden;
+}
+}

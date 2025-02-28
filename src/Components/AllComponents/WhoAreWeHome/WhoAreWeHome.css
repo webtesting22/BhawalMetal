@@ -1,0 +1,66 @@
+.AnimationMovingImagesContainer {
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+}
+
+.AnimationMovingImagesContainer .WidthAdjustContainer {
+    width: 80%;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    transition: width 0.5s ease-out;
+}
+
+.AnimationMovingImagesContainer .WidthAdjustContainer div img {
+    width: 600px;
+    height: 600px;
+}
+
+.AnimationMovingImagesContainer .WidthAdjustContainer div {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.animated-col {
+    transition: all 0.8s ease-in-out;
+}
+
+.parallaxColumn {
+    transition: all 0.5s ease-in-out;
+    /* Smooth transition */
+}
+
+.WidthAdjust {
+    margin: 0px 10px;
+}
+
+#WhoAreWeHomeContentContainer .ContentContainer {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+#WhoAreWeHomeContentContainer .ContentContainer p {
+    width: 80%;
+}
+
+
+
+
+@media(max-width:900px){
+    .AnimationMovingImagesContainer .WidthAdjustContainer {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        display: flex;
+        transition: width 0.5s ease-out;
+    }
+    #WhoAreWeHomeContentContainer .ContentContainer p{
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,70 @@
+#WhatWeDoHomeContentContainer {
+    color: white;
+}
+
+#WhatWeDoHomeContentContainer .CardContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.WhatWeDoCard {
+    margin: 4rem 0rem;
+    width: 100%;
+}
+
+.WhatWeDoCard .CardImageContainer img {
+    width: 100%;
+}
+
+.WhatWeCardContainerEdit {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CardImageContainer {
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    margin-bottom: 40px;
+}
+
+.CardImageContainer:hover {
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.508);
+}
+
+.CardImageContainer img {
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media (min-width:1500px) and (max-width:4000px) {
+    .WhatWeDoCard {
+        margin: 6rem 0rem;
+        width: 80%;
+    }
+}
+
+@media (max-width:900px){
+    .CardImageContainer {
+        height: 300px;
+    }
+    .WhatWeCardContainerEdit{
+        padding: 30px 10px;
+    }
+}

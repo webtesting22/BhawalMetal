@@ -1,0 +1,36 @@
+.LatestBlogImageContainer img {
+    width: 100%;
+}
+
+.adjustSlicesContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 40px;
+}
+
+#BlogContainer {
+    margin-top: 4rem;
+}
+
+.BlogItem {
+    height: 100%;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+#BlogContainer .ant-row .ant-col .adjustSlicesContainer .BlogItem:first-child {
+    border-top: 1px solid black;
+}
+
+@media (max-width:900px) {
+    .adjustSlicesContainer {
+        padding-left: 0px;
+    }
+
+    .BlogItem {
+        padding: 20px 0px;
+    }
+}

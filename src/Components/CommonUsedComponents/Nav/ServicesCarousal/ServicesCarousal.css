@@ -1,0 +1,59 @@
+.IndustriesCardContainer {
+    /* min-height: 250px; */
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    transition: .5s;
+}
+.IndustriesCardContainer:hover{
+    transform: translateY(-10px);
+    transition: .5s;
+}
+
+.IndustriesCardContainer img {
+    aspect-ratio: 3/2;
+    width: 200px;
+    height: 100%;
+    object-fit: contain;
+    transition: .5s;
+}
+.IndustriesCardContainer:hover img {
+    aspect-ratio: 3/2;
+    width: 200px;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.IndustriesCards {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+.IndustriesSwiperContainer {
+    margin-top: 4rem;
+}
+
+.IndustriesCards {
+    border-bottom: 1px solid #840000;
+}
+
+.HeadingContainerCarousal {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+#ServicesCarousalContentContainer {
+    background-color: rgb(249, 249, 249);
+    padding: 6rem 0rem;
+}
+
+@media (max-width:900px) {
+    #ServicesCarousalContentContainer {
+        padding: 0rem 1rem;
+    }
+}

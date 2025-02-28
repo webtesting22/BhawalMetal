@@ -1,0 +1,54 @@
+#SlidesStyles {
+    padding: 6rem 6rem;
+    background-color: rgb(249, 249, 249);
+}
+
+#SlidesStyles .SwiperContainerIndustries {
+    margin-top: 6rem;
+}
+
+.SwiperContainerIndustries .CardImageContainer div {
+    border-radius: 10px;
+}
+
+.SwiperContainerIndustries .CardImageContainerIndustries div img {
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.SwiperContainerIndustries .CardImageContainerIndustries {
+    padding-left: 4rem;
+    /* height: 70%; */
+    overflow: hidden;
+}
+
+/* .SwiperMainContainer {
+    padding: 0rem 4rem;
+} */
+
+.DynamicPagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 15px;
+    margin: 4rem 0rem;
+}
+
+.pagination-item {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    color: #555;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+}
+
+.pagination-item.active {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #840000;
+    padding: 10px 20px;
+}

@@ -1,0 +1,45 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 h6 {
+  margin: 0px;
+}
+
+section {
+  padding: 6rem 3rem;
+}
+
+@media (max-width:769px) {
+  section {
+    padding: 4rem 1rem;
+  }
+}
+
+@media (min-width:1500px) and (max-width:4000px){
+  section {
+    padding: 6rem 6rem;
+  }
+  
+}

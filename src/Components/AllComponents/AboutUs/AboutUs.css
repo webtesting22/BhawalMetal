@@ -1,0 +1,88 @@
+.TopBannerContainerCommon {
+    width: 100%;
+
+}
+
+.ImageBackContainerWithContent {
+    width: 100%;
+    position: relative;
+}
+
+.ImageBackContainerWithContent .overlayContainer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.452);
+}
+
+.ImageBackContainerWithContent img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.CommonTopContainer {
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.ContentContainerTopheader {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    right: 0px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.ContentContainerTopheader h2,
+.ContentContainerTopheader p {
+    color: white;
+    margin: 10px 0px;
+}
+
+.ContentContainerTopheader {
+    padding: 0rem 6rem;
+}
+
+.AboutUsImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.AboutUsImageContainer {
+    padding-right: 20px;
+    height: 550px;
+    overflow: hidden;
+}
+
+.AboutUsContentContainer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#WhatDoesBhawalContainer .WhatDoesBhawalImageContainer div img {
+    width: 90%;
+}
+
+.WhatDoesBhawalImageContainer {
+    position: sticky;
+    top: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: ce;
+
+    /* height: 100%; */
+}

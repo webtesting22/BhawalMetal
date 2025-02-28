@@ -1,0 +1,79 @@
+
+
+.WhyChooseCardAnimationEdit {
+    padding: 20px;
+    height: 450px;
+    background-color: transparent;
+    border: 1px solid #840000;
+    overflow: hidden;
+    position: relative;
+    transition: .5s;
+    border-left: 0px;
+}
+
+.WhyChooseCardAnimationEdit:hover {
+    background-color: #840000;
+    transition: .5s;
+}
+
+.WhyChooseCardAnimationEdit:hover h2 {
+    transition: .5s;
+    opacity: 0;
+    transition: .5s;
+    /* display: none; */
+}
+
+.WhyChooseCardAnimationEdit:hover p {
+    transform: translatey(10px);
+    opacity: 1;
+    transition: .5s;
+    color: white;
+}
+
+.AnimatedHoverCards .ant-row .ant-col:nth-child(1) .WhyChooseCardAnimationEdit{
+    border-left: 1px solid #840000 !important;
+}
+.WhyChooseCardAnimationEdit h2 {
+    position: absolute;
+    height: 80px;
+    bottom: 0px;
+    left: 20px;
+    right: 20px;
+    transition: .5s;
+}
+
+.WhyChooseCardAnimationEdit p {
+    opacity: 0;
+    transform: translatey(200px);
+    transition: .5s;
+}
+.AnimatedHoverCards{
+    margin-top: 4rem;
+}
+
+
+.WhyChooseCardAnimationEdit img {
+    transition: .5s;
+}
+
+.WhyChooseCardAnimationEdit:hover img {
+    background-color: white;
+    transition: .5s;
+    border-radius: 10px;
+}
+
+@media (min-width:1500px) and (max-width:4000px) {
+    
+    #WhoAreWeHomeContentContainer .ContentContainer p {
+        width: 70%;
+    }
+    .WhyChooseCardAnimationEdit {
+        padding: 20px;
+        height: 400px;
+        background-color: transparent;
+        border: 1px solid #840000;
+        overflow: hidden;
+        position: relative;
+        transition: .5s;
+    }
+}
