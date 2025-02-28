@@ -1,6 +1,6 @@
 const BlogData = [
     {
-        blogImage: "https://img.freepik.com/free-photo/drilling-hole-metal-with-giant-drill-steel-factory-by-worker-male_613910-5094.jpg?t=st=1740724368~exp=1740727968~hmac=3bec3c981f451dfe21fbdbb0e57f0dd33464864ae79b140c91cf555e641db367&w=1060",
+        blogImage: "https://images.unsplash.com/photo-1738162837340-da3e7a323a09?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         blogTitle: "Maximize your SaaS platform’s potential with seamless integrations",
         keyword:"Demo Trends",
         date:"Jan 29, 2025",
