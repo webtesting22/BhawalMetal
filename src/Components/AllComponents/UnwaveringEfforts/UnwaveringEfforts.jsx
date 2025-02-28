@@ -59,7 +59,7 @@ const UnwaveringEfforts = () => {
                     <div className="OverlayContainer">
 
                     </div>
-                    <img src="https://img.freepik.com/free-photo/monochrome-scene-depicting-life-workers-construction-industry-site_23-2151431379.jpg?t=st=1740727097~exp=1740730697~hmac=d6c6c7ad92239dd37495cd1221c0d08862283b220f43c4078a2918535036ea5d&w=1380" alt="" />
+                    <img src="https://images.unsplash.com/photo-1733683300412-fd4a1519f2cc?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
                 </div>
                 <div className="AbsoluteContainer">
                     <Row style={{ height: "100%" }}>
