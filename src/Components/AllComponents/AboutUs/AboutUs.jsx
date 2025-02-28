@@ -31,7 +31,7 @@ const AboutUs = () => {
                         <Col lg={12}>
                             <div>
                                 <div className="AboutUsImageContainer">
-                                    <img src="https://img.freepik.com/free-photo/cutting-metal-with-plasma-equipment_176420-4788.jpg?t=st=1740727335~exp=1740730935~hmac=a019457602092777c7e17ebdc4f65985461f3ea1d6d77e813428be00f2872d91&w=1060" alt="" loading="lazy" />
+                                    <img src="https://images.unsplash.com/photo-1531053326607-9d349096d887?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" loading="lazy" />
                                 </div>
                             </div>
                         </Col>
