@@ -91,4 +91,12 @@
     height: 30vh;
     overflow: hidden;
 }
+.BoxesContainer .BoxEditContainer {
+    border: none !important;
+    background-color: #840000;
+    color: white;
+}
+.AnimatedbtnContainer{
+    margin-bottom: 0px;
+}
 }
