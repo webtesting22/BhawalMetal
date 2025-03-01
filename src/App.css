@@ -89,6 +89,9 @@ h6 {
 }
 
 @media (max-width:900px) {
+    .containerGap{
+        margin: 2rem 0rem;
+    }
     .textCenter {
         text-align: start;
     }

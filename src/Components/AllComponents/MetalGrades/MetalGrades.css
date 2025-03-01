@@ -1,0 +1,17 @@
+#MetalgradesContainer .AboutUsContentContainer {
+    padding-right: 20px;
+}
+
+.GraphImage img {
+    width: 100%;
+}
+
+@media (max-width:900px) {
+    #MetalgradesContainer .AboutUsImageContainer {
+        margin: 20px 0px;
+    }
+
+    #MetalgradesContainer .AboutUsContentContainer {
+        padding-right: 0px;
+    }
+}
