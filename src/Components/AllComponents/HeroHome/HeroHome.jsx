@@ -33,19 +33,23 @@ const HeroHome = () => {
                             <Col lg={12}>
                                 <div className="SideContentContainer">
                                     <div>
-                                        <h2 className="BigHeading">One Stop Solution for all Your Stainless Steel Needs</h2>
+                                        <h2 className="BigHeading" data-aos="fade-up"
+                                            data-aos-duration="800">One Stop Solution for all Your Stainless Steel Needs</h2>
                                     </div>
                                     <div>
-                                        <p>Precision in every piece, excellence in every alloy. Bhawal Metal Industries – crafting the future of stainless steel.</p>
+                                        <p data-aos="fade-up"
+                                            data-aos-duration="900">Precision in every piece, excellence in every alloy. Bhawal Metal Industries – crafting the future of stainless steel.</p>
                                     </div>
                                     <div className="AnimatedbtnContainer">
-                                        <button className="ColourButton">View Catalogue <MdKeyboardArrowRight/></button>
+                                        <button className="ColourButton" data-aos="fade-right"
+                                            data-aos-duration="100">View Catalogue <MdKeyboardArrowRight /></button>
                                     </div>
                                 </div>
                             </Col>
-                            <Col lg={12} style={{width:"100%"}}>
+                            <Col lg={12} style={{ width: "100%" }}>
                                 <div>
-                                    <div>
+                                    <div data-aos="fade-up"
+                                        data-aos-duration="1000">
                                         <img src="https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" loading="lazy" />
                                     </div>
                                 </div>
@@ -56,8 +60,11 @@ const HeroHome = () => {
                 <div className="BoxesContainer">
                     <Row style={{ height: "100%" }}>
                         {PointsData.map((item, index) => (
-                            <Col key={index} lg={6} md={12} style={{width:"100%"}}>
-                                <div className="BoxEditContainer">
+                            <Col key={index} lg={6} md={12} style={{ width: "100%" }}data-aos="fade-up"
+                            data-aos-duration="800"
+                            data-aos-delay={index * 100}>
+                                <div className="BoxEditContainer" 
+                                  >
                                     <div>
                                         <p>{item.title}</p>
                                     </div>

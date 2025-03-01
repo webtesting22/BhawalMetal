@@ -37,7 +37,9 @@ const Blog = () => {
                                 <div className="adjustSlicesContainer">
                                     {BlogData.slice(1).map((blog, index) => (
                                         <div key={index} className="BlogItem">
-                                            <div>
+                                            <div data-aos="fade-up"
+                                    data-aos-duration="800"
+                                    data-aos-delay={index * 100}>
                                                 <h2>{blog.blogTitle}</h2>
                                                 <br />
                                                 <div style={{display:"flex",alignItems:"center",gap:"30px"}}>
