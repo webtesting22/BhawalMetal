@@ -6,10 +6,12 @@ import AboutUs from "../AllComponents/AboutUs/AboutUs";
 import FacilitiesAndServices from "../AllComponents/FacilitiesAndServices /FacilitiesAndServices";
 import Industries from "../AllComponents/Industries/Industries";
 import MetalGrades from "../AllComponents/MetalGrades/MetalGrades";
+import ScrollToTop from "../CommonUsedComponents/ScrollToTop/ScrollToTop";
 const AllRoutes = () => {
     return (
         <Router>
             <Nav/>
+    
             <Routes>
                 <Route path="/" element={<HomePageRoutes />} />
                 <Route path="/about-us" element={<AboutUs />} />
@@ -18,6 +20,7 @@ const AllRoutes = () => {
                 <Route path="/metal-grades" element={<MetalGrades />} />
 
             </Routes>
+            <ScrollToTop/>
         </Router>
     );
 };
