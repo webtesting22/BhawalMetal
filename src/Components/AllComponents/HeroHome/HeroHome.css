@@ -73,6 +73,7 @@
         padding: 0rem 1rem;
         height: unset;
         margin: 6rem 0rem;
+        margin-top: 8rem !important;
     }
 
 .BoxesContainer .BoxEditContainer {
