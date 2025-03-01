@@ -92,7 +92,8 @@
     z-index: 999;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.ant-drawer{
+
+.ant-drawer {
     z-index: 666666666;
 }
 
@@ -105,5 +106,10 @@
         /* width: 100%; */
         z-index: 1000;
         padding: 0rem 1rem;
+    }
+
+    .MenuBtnContainer div svg {
+        font-size: 30px;
+        color: black !important;
     }
 }

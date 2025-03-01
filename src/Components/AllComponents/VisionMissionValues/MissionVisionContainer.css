@@ -1,0 +1,45 @@
+#MissionVisionContainer {
+    position: relative;
+    margin: 6rem 0rem;
+    color: white;
+}
+
+.backGroundColor {
+    background-color: black;
+    position: absolute;
+    left: -200px;
+    right: -200px;
+    height: 100%;
+    top: 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.VisionMissionContainerImage img {
+    width: 100%;
+}
+
+.interChangeRowAdjust li {
+    font-size: 18px;
+}
+
+.interChangeRowAdjust h2 {
+    color: white !important;
+}
+
+.LinesContainer {
+    /* position: absolute; */
+    width: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.057);
+    height: 100%;
+}
+
+@media (max-width:900px) {
+    .interChangeRowAdjust .ant-row .ant-col {
+        padding: 0px !important;
+    }
+
+    .interChangeRowAdjust .ant-row {
+        border-bottom: 1px solid white;
+    }
+}

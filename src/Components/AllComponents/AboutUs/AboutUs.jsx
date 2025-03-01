@@ -4,7 +4,31 @@ import { Row, Col } from "antd";
 import AboutUsImage from "./AboutUsImage.png"
 import { MdKeyboardArrowRight } from "react-icons/md";
 import UnwaveringEfforts from "../UnwaveringEfforts/UnwaveringEfforts";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css/effect-fade';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+// import required modules
+import { Autoplay, EffectFade, Pagination, Navigation } from 'swiper/modules';
+import VisionMissionValues from "../VisionMissionValues/VisionMissionValues";
+
 const AboutUs = () => {
+
+    const AboutUsCarousalImages = [
+        {
+            img: "https://images.unsplash.com/photo-1531053326607-9d349096d887?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+            img: "/Images/MaterialGrades.jpg"
+        },
+        // {
+        //     img: ""
+        // },
+
+
+    ]
     return (
         <>
 
@@ -33,7 +57,7 @@ const AboutUs = () => {
                                 <div >
                                     <h2 className="BigHeading ">About Bhawal Metal Industries </h2>
                                     <br />
-                                    <p><b>Bhawal Metal Industries</b> was established in the year 1996 with the aim of catering to the growing demands of Stainless Steel. <b>Bhawal Metal Industries</b> is a leading supplier and manufacturer of High Quality Stainless Steel Round Bars, Forged components, Drawing Based Components And Precision components. </p>
+                                    <p><b>Bhawal Metal Industries</b> was established in the year 1996 with the aim of catering to the growing demands of Stainless Steel. Bhawal Metal Industries is a leading supplier and manufacturer of <b>High Quality Stainless Steel Round Bars, Forged components, Drawing Based Components And Precision components.</b> </p>
                                     <br />
                                     <p>We have a team of young visionaries who endeavor for excellence in every aspect related to metals. We strongly believe in our core values and are always in the pursuit of success along the lines of ethical business practices. Keeping in mind its customer centric approach, timely delivery and quality products, the Company has grown in size and products range. </p>
                                     <br />
@@ -46,13 +70,39 @@ const AboutUs = () => {
                             <div>
                                 <br />
                                 <div className="AboutUsImageContainer">
-                                    <img src="https://images.unsplash.com/photo-1531053326607-9d349096d887?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" loading="lazy" />
+                                    <Swiper
+                                        spaceBetween={30}
+                                        centeredSlides={true}
+                                        autoplay={{
+                                            delay: 1500,
+                                            disableOnInteraction: false,
+                                        }}
+                                        effect={'fade'}
+                                        // pagination={{
+                                        //     clickable: true,
+                                        // }}
+                                        // navigation={true}
+                                        modules={[Autoplay, EffectFade, Pagination, Navigation]}
+                                        className="mySwiper"
+                                    >
+                                        {AboutUsCarousalImages.map((item, index) => (
+                                            <SwiperSlide key={index}>
+                                                <div>
+                                                    <div>
+                                                        <img src={item.img} alt="" loading="lazy" />
+                                                    </div>
+                                                </div>
+                                            </SwiperSlide>
+                                        ))}
+                                    </Swiper>
+                                    {/*  */}
                                 </div>
                             </div>
                         </Col>
 
                     </Row>
                 </div>
+                <VisionMissionValues/>
                 <section id="WhatDoesBhawalContainer" style={{ marginBottom: "0px", paddingBottom: "0px" }}>
                     <div>
                         <div>
