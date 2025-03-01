@@ -92,6 +92,9 @@
     z-index: 999;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+.ant-drawer{
+    z-index: 666666666;
+}
 
 @media (max-width:900px) {
     .NavigationbarContainer {

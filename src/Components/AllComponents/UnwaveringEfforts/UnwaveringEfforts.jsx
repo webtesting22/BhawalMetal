@@ -79,7 +79,7 @@ const UnwaveringEfforts = () => {
                             >
                                 {PointsData.map((item, index) => (
                                     <div key={index}>
-                                        <h2 className="BigHeading">{item.title}</h2>
+                                        <h2>{item.title}</h2>
                                         <hr />
                                     </div>
                                 ))}

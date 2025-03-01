@@ -84,17 +84,28 @@ h6 {
     gap: 20px;
     transition: .5s;
 }
-.containerGap{
+
+.containerGap {
     margin: 6rem 0rem;
 }
 
+.contentInfoContainer {
+    padding: 0rem 6rem;
+}
 @media (max-width:900px) {
-    .containerGap{
+
+    .contentInfoContainer {
+        padding: 0rem 0rem;
+    }
+
+    .containerGap {
         margin: 2rem 0rem;
     }
+
     .textCenter {
         text-align: start;
     }
+
     .BigHeading {
         font-size: 35px !important;
         color: #617E87;

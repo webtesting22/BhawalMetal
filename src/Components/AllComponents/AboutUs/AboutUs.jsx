@@ -26,19 +26,13 @@ const AboutUs = () => {
             </div>
             <section id="AboutUsContainer">
 
-                <div>
+                <div className="contentInfoContainer">
                     <Row>
-                        <Col lg={12}>
-                            <div>
-                                <div className="AboutUsImageContainer">
-                                    <img src="https://images.unsplash.com/photo-1531053326607-9d349096d887?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" loading="lazy" />
-                                </div>
-                            </div>
-                        </Col>
-                        <Col lg={12}>
+                        <Col lg={24}>
                             <div className="AboutUsContentContainer">
-                                <div>
-                                    {/* <h2></h2> */}
+                                <div >
+                                    <h2 className="BigHeading ">About Bhawal Metal Industries </h2>
+                                    <br />
                                     <p><b>Bhawal Metal Industries</b> was established in the year 1996 with the aim of catering to the growing demands of Stainless Steel. <b>Bhawal Metal Industries</b> is a leading supplier and manufacturer of High Quality Stainless Steel Round Bars, Forged components, Drawing Based Components And Precision components. </p>
                                     <br />
                                     <p>We have a team of young visionaries who endeavor for excellence in every aspect related to metals. We strongly believe in our core values and are always in the pursuit of success along the lines of ethical business practices. Keeping in mind its customer centric approach, timely delivery and quality products, the Company has grown in size and products range. </p>
@@ -47,9 +41,19 @@ const AboutUs = () => {
                                 </div>
                             </div>
                         </Col>
+
+                        <Col lg={24}>
+                            <div>
+                                <br />
+                                <div className="AboutUsImageContainer">
+                                    <img src="https://images.unsplash.com/photo-1531053326607-9d349096d887?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" loading="lazy" />
+                                </div>
+                            </div>
+                        </Col>
+
                     </Row>
                 </div>
-                <section id="WhatDoesBhawalContainer" style={{marginBottom:"0px",paddingBottom:"0px"}}>
+                <section id="WhatDoesBhawalContainer" style={{ marginBottom: "0px", paddingBottom: "0px" }}>
                     <div>
                         <div>
                             <h2 className="BigHeading textCenter" >What Does Bhawal Metal Do?</h2>
@@ -89,7 +93,7 @@ const AboutUs = () => {
                     </div>
                 </section>
             </section>
-            <UnwaveringEfforts/>
+            <UnwaveringEfforts />
         </>
     )
 }

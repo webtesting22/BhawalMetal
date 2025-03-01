@@ -10,7 +10,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 // import required modules
-import { FreeMode, Pagination } from 'swiper/modules';
+import { Autoplay,FreeMode, Pagination } from 'swiper/modules';
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 const WhyChooseHome = () => {
@@ -68,15 +68,18 @@ const WhyChooseHome = () => {
                             spaceBetween={30}
                             loop={true}
                             freeMode={true}
-                            // pagination={{
-                            //     clickable: true,
-                            // }}
+                            autoplay={{
+                                delay: 2000,
+                                disableOnInteraction: false,
+                              }}
+                            
+                              speed={700}
                             breakpoints={{
                                 1024: { slidesPerView: 3 }, // PC
                                 768: { slidesPerView: 2 },  // Tablet
                                 0: { slidesPerView: 1 }     // Mobile
                             }}
-                            modules={[FreeMode, Pagination]}
+                            modules={[Autoplay,FreeMode, Pagination]}
                             onSwiper={(swiper) => (swiperRef.current = swiper)}
                             className="mySwiper"
                         >
