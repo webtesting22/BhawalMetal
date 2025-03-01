@@ -41,8 +41,7 @@ const HeroHome = () => {
                                             data-aos-duration="900">Precision in every piece, excellence in every alloy. Bhawal Metal Industries – crafting the future of stainless steel.</p>
                                     </div>
                                     <div className="AnimatedbtnContainer">
-                                        <button className="ColourButton" data-aos="fade-right"
-                                            data-aos-duration="100">View Catalogue <MdKeyboardArrowRight /></button>
+                                        <button className="ColourButton" >View Catalogue <MdKeyboardArrowRight /></button>
                                     </div>
                                 </div>
                             </Col>
