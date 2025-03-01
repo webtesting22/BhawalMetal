@@ -60,9 +60,7 @@ const HeroHome = () => {
                 <div className="BoxesContainer">
                     <Row style={{ height: "100%" }}>
                         {PointsData.map((item, index) => (
-                            <Col key={index} lg={6} md={12} style={{ width: "100%" }}data-aos="fade-up"
-                            data-aos-duration="800"
-                            data-aos-delay={index * 100}>
+                            <Col key={index} lg={6} md={12} style={{ width: "100%" }}>
                                 <div className="BoxEditContainer" 
                                   >
                                     <div>
