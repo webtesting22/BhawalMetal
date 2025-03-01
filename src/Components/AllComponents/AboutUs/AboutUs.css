@@ -88,6 +88,12 @@
 }
 
 @media (max-width:900px){
+    .WhatDoesBhawalImageContainer{
+        margin-bottom: 20px;
+    }
+    .AboutUsImageContainer{
+        margin-bottom: 20px;
+    }
     .ImageBackContainerWithContent {
         width: 100%;
         position: relative;
