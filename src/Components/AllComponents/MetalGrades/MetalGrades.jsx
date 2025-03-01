@@ -1,6 +1,7 @@
 import React from "react";
 import "./MetalGrades.css"
 import { Row, Col,Image } from "antd";
+
 const MetalGrades = () => {
     return (
         <>
@@ -10,7 +11,7 @@ const MetalGrades = () => {
                         <div className="overlayContainer">
 
                         </div>
-                        <img src="/Images/AboutUsBanner.jpg" alt="" />
+                        <img src="/Images/MaterialGrades.jpg" alt="" />
                     </div>
                     <div className="ContentContainerTopheader">
                         <div>
