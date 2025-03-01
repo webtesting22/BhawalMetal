@@ -88,6 +88,15 @@
 }
 
 @media (max-width:900px){
+    .CommonTopContainer {
+        height: 500px;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
     .WhatDoesBhawalImageContainer{
         margin-bottom: 20px;
     }
