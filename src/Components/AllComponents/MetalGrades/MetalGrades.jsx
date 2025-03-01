@@ -45,7 +45,7 @@ const MetalGrades = () => {
                                         </div>
                                     </div>
                                 </Col>
-                                <Col lg={12}>
+                                <Col lg={12} style={{width:"100%"}}>
                                     <div>
                                         <div className="AboutUsImageContainer">
                                             <img src="/Images/RoundsBarImage.png" alt="" loading="lazy" />
