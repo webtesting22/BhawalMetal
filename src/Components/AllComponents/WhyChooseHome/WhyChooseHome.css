@@ -63,6 +63,15 @@
 }
 
 @media (max-width:900px) {
+    .WhyChooseCardAnimationEdit:hover h2 {
+        transition: .5s;
+        opacity: 1;
+        transition: .5s;
+        color: white;
+        height: 100%;
+        margin-top: 10px;
+        /* display: none; */
+    }
     .WhyChooseCardAnimationEdit h2 {
         position: static;
     }
