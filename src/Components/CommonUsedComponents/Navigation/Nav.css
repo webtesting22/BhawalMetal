@@ -104,6 +104,9 @@
     padding: 0px 20px;
 }
 @media (max-width:900px) {
+    .NavigationbarContainer .ant-row {
+        padding: 0px 0px;
+    }
     .NavigationbarContainer {
         position: absolute;
         left: 0px;
