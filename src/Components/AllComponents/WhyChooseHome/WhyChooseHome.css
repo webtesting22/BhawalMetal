@@ -72,6 +72,7 @@
         margin-top: 10px;
         /* display: none; */
     }
+
     .WhyChooseCardAnimationEdit h2 {
         position: static;
     }
@@ -87,8 +88,8 @@
     }
 
     .WhyChooseCardAnimationEdit {
-        padding: 20px;
-        height: 450px;
+        padding: 0px 20px;
+        height: 100%;
         background-color: transparent;
         border: 1px solid #840000;
         overflow: hidden;
@@ -96,6 +97,14 @@
         transition: .5s;
         border-left: 1px solid #840000 !important;
         border-top: 0px !important;
+    }
+
+    .WhyChooseContent {
+        padding: 20px 0px;
+    }
+
+    .ImageContainerWhyChoose {
+        padding: 20px 0px;
     }
 }
 

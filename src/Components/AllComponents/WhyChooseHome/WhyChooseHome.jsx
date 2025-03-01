@@ -49,10 +49,10 @@ const WhyChooseHome = () => {
                             {WhyChooseData.map((item, index) => (
                                 <Col lg={6} md={12}>
                                     <div className="WhyChooseCardAnimationEdit">
-                                        <div>
+                                        <div className="ImageContainerWhyChoose">
                                            <img src={item.image} alt="" />
                                         </div>
-                                        <div>
+                                        <div className="WhyChooseContent">
                                             <div>
                                                 <h2 style={{ textTransform: "uppercase" }}>{item.title}</h2>
                                             </div>
