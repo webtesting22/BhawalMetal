@@ -3,13 +3,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import IndustriesData from "./IndustriesData";
-import { Row, Col } from "antd";
+import { Row, Col,Modal } from "antd";
 import "./SlidesStyles.css";
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-
+import { MdKeyboardArrowRight } from "react-icons/md";
 const Industries = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const swiperRef = useRef(null);
+    const [isModalVisible, setIsModalVisible] = useState(false);
+    const [selectedIndustry, setSelectedIndustry] = useState(null);
 
     const handleSlideChange = (swiper) => {
         setActiveIndex(swiper.realIndex);
@@ -17,10 +19,19 @@ const Industries = () => {
 
     const goToSlide = (index) => {
         if (swiperRef.current) {
-            swiperRef.current.slideToLoop(index);  // Use slideToLoop for loop mode
+            swiperRef.current.slideToLoop(index);
         }
     };
-    
+    const showModal = (industry) => {
+        setSelectedIndustry(industry);
+        setIsModalVisible(true);
+    };
+
+    const handleClose = () => {
+        setIsModalVisible(false);
+        setSelectedIndustry(null);
+    };
+
     return (
         <>
             <div >
@@ -132,7 +143,42 @@ const Industries = () => {
                             ))}
                         </div>
                     </div>
+                    <div className="IndustriesDataToShowModals">
+                        <div>
+                            <Row>
+                                {IndustriesData.map((item, index) => (
+                                    <Col lg={24} key={index} style={{ width: "100%" }}>
+                                        <div className="IndustriesMobileCards">
+                                            <div>
+                                                <h2>{item.title}</h2>
+                                                <div className="AnimatedbtnContainer">
+                                                    <button className="ColourButton" data-aos="fade-right"
+                                                        data-aos-duration="100"    onClick={() => showModal(item)}>Read More <MdKeyboardArrowRight /></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                ))}
+                            </Row>
+                        </div>
+                    </div>
                 </div>
+                <Modal 
+                        title={selectedIndustry?.title} 
+                        open={isModalVisible} 
+                        onCancel={handleClose} 
+                        footer={null}
+                        centered
+                    >
+                        {selectedIndustry && (
+                            <>
+                                <div className="ModalImageContainer">
+                                    <img src={selectedIndustry.image} alt={selectedIndustry.title} style={{ width: "100%", borderRadius: "8px" }} />
+                                </div>
+                                <p style={{ marginTop: "10px" }}>{selectedIndustry.description}</p>
+                            </>
+                        )}
+                    </Modal>
 
             </div>
         </>
