@@ -21,7 +21,7 @@ const Nav = () => {
                             <div>
                                 <div className="AdjustBothContainerNavigation">
                                     <div className="BrandLogoContainer">
-                                        <img src="/Images/BhawalLogo.png" alt=""  />
+                                       <a href="/"> <img src="/Images/BhawalLogo.png" alt=""  /></a>
                                     </div>
                                     <div className="MenuBtnContainer">
                                         <div style={{ display: "flex", alignItems: "center" }}>
