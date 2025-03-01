@@ -4,7 +4,6 @@ import { Row, Col, Drawer } from "antd";
 import { IoIosMenu } from "react-icons/io";
 import NavigationDataLinks from "./NavigationLinks";
 import { Link } from "react-router-dom";
-
 const Nav = () => {
     const [open, setOpen] = useState(false);
     const showDrawer = () => {
@@ -18,11 +17,11 @@ const Nav = () => {
             <div id="navigationBarAdjust">
                 <div className="NavigationbarContainer">
                     <Row>
-                        <Col lg={24}>
+                        <Col lg={24} style={{width:"100%"}}>
                             <div>
                                 <div className="AdjustBothContainerNavigation">
                                     <div className="BrandLogoContainer">
-                                        <img src="/Images/BMILogo.svg" alt="" style={{ display: "none" }} />
+                                        <img src="/Images/BhawalLogo.png" alt=""  />
                                     </div>
                                     <div className="MenuBtnContainer">
                                         <div style={{ display: "flex", alignItems: "center" }}>

@@ -5,6 +5,7 @@ import Nav from "../CommonUsedComponents/Navigation/Nav";
 import AboutUs from "../AllComponents/AboutUs/AboutUs";
 import FacilitiesAndServices from "../AllComponents/FacilitiesAndServices /FacilitiesAndServices";
 import Industries from "../AllComponents/Industries/Industries";
+import MetalGrades from "../AllComponents/MetalGrades/MetalGrades";
 const AllRoutes = () => {
     return (
         <Router>
@@ -14,6 +15,7 @@ const AllRoutes = () => {
                 <Route path="/about-us" element={<AboutUs />} />
                 <Route path="/facilities-and-services" element={<FacilitiesAndServices />} />
                 <Route path="/industries" element={<Industries />} />
+                <Route path="/metal-grades" element={<MetalGrades />} />
 
             </Routes>
         </Router>

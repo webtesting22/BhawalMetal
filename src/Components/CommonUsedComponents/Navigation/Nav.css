@@ -7,19 +7,20 @@
     position: absolute;
     left: 0px;
     right: 0px;
-    background-color: #840000;
+    background-color: white;
     width: 100%;
     z-index: 1000;
 }
 .AdjustBothContainerNavigation{
     display: flex;
-    justify-content: end;
-    padding: 15px 10px;
+    justify-content: space-between;
+    padding: 5px 10px;
+    align-items: center;
 
 }
 .MenuBtnContainer div svg{
     font-size: 30px;
-    color: white;
+    color: black;
 }
 .NavigationContainer{
     /* height: 100%; */
@@ -62,4 +63,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.BrandLogoContainer img{
+    width: 130px;
 }
