@@ -13,7 +13,8 @@
     background-color: transparent;
     /* width: 100%; */
     z-index: 1000;
-    padding: 0rem 4rem;
+    padding: 0rem 3rem;
+    margin-top: 2rem;
 }
 
 .AdjustBothContainerNavigation {
@@ -78,25 +79,30 @@
 }
 
 .BrandLogoContainer img {
-    width: 130px;
+    width: 110px;
 }
 
 .FillContainerOnBack {
     background-color: white;
     height: 0px;
-    width: 100%;
+    /* width: 100%; */
+    margin: 0rem 3rem;
     position: fixed;
     top: 0;
     left: 0;
+    right: 0px;
     transition: height 0.3s ease-in-out;
     z-index: 999;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-top: 2rem;
 }
 
 .ant-drawer {
     z-index: 666666666;
 }
-
+.NavigationbarContainer .ant-row {
+    padding: 0px 20px;
+}
 @media (max-width:900px) {
     .NavigationbarContainer {
         position: absolute;
@@ -106,10 +112,14 @@
         /* width: 100%; */
         z-index: 1000;
         padding: 0rem 1rem;
+        margin-top: 0px !important;
     }
 
     .MenuBtnContainer div svg {
         font-size: 30px;
         color: black !important;
+    }
+    .FillContainerOnBack {
+        margin-top: 0px !important;
     }
 }

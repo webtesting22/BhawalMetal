@@ -12,7 +12,7 @@ const Nav = () => {
     useEffect(() => {
         const handleScroll = () => {
             // Increase height up to a max of 70px based on scroll position
-            let newHeight = Math.min(window.scrollY, 85);
+            let newHeight = Math.min(window.scrollY, 75);
             setScrollHeight(newHeight);
             setIsScrolled(window.scrollY > 70);
         };
