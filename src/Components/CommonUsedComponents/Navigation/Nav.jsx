@@ -18,7 +18,8 @@ const Nav = () => {
                 <div className="NavigationbarContainer">
                     <Row>
                         <Col lg={24} style={{width:"100%"}}>
-                            <div>
+                            <div data-aos="fade-down"
+     data-aos-duration="1000">
                                 <div className="AdjustBothContainerNavigation">
                                     <div className="BrandLogoContainer">
                                        <a href="/"> <img src="/Images/BhawalLogo.png" alt=""  /></a>
