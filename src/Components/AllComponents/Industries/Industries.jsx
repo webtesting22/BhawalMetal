@@ -95,7 +95,7 @@ const Industries = () => {
                             }}
                             loop={true}
                             speed={800}
-                            navigation={true}
+                            // navigation={true}
                             modules={[Autoplay, Pagination, Navigation]}
                             className="mySwiper">
                             {IndustriesData.map((item, index) => (

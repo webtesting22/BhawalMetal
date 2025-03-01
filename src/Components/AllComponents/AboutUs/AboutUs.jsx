@@ -102,7 +102,7 @@ const AboutUs = () => {
 
                     </Row>
                 </div>
-                <VisionMissionValues/>
+                <VisionMissionValues />
                 <section id="WhatDoesBhawalContainer" style={{ marginBottom: "0px", paddingBottom: "0px" }}>
                     <div>
                         <div>
@@ -110,16 +110,18 @@ const AboutUs = () => {
                             <p className="textCenter">Bhawal Metal Industries working is divided in 3 major segments</p>
                         </div>
                     </div>
-                    <div className="containerGap">
+                    <div className="containerGap contentInfoContainer">
                         <Row>
-                            <Col lg={12} md={24}>
+                            <Col lg={10} md={24}>
                                 <div className="WhatDoesBhawalImageContainer">
                                     <div>
                                         <img src="/Images/WhatDoesBhawalImage.png" alt="" />
+                                      
                                     </div>
+                                    <br />
                                 </div>
                             </Col>
-                            <Col lg={12} md={24}>
+                            <Col lg={14} md={24}>
                                 <div>
                                     <div>
                                         <p>Bhawal Metal Industries is one of the first fully forward integrated Contract manufacturing Company Based in India. </p>
@@ -128,18 +130,20 @@ const AboutUs = () => {
                                         <br />
                                         <p>We Don't just stop at Stainless Steel Long products, We also provide our clients with our supreme quality Forged Components too, With the best in Class Forging unit we are able to provide our Clients with Forged Circle, Forged Rings, Forged Blocks, forged Flat Bars, Forged flanges and We are also able to provide forged Components in complex shapes using Die Forging Method.  </p>
                                         <br />
-                                        <p>Our Precision Machining unit not only help our clients to reduce their overall machining time it also saves a significant cost as now company has to invest less on labor and transportation and wont have to deal with rejections because we at Bhawal Metal Industries understand the Importance of Quality material as it is a key to delivers a durable and high-performing Finished Product.</p>
-                                        <br />
-                                        <p>To Achieve this we ensure that a strict quality check is maintained over all the phases of manufacturing. This has enabled us to Serve our clients better and also provided us with competitive edge in the market. As the Quality Raw material is the Key For Quality End Products. </p>
-                                        <div>
-                                            <div className="AnimatedbtnContainer">
-                                                <button className="ColourButton">View All Products <MdKeyboardArrowRight /></button>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
                             </Col>
                         </Row>
+                        <br />
+                        <p>Our Precision Machining unit not only help our clients to reduce their overall machining time it also saves a significant cost as now company has to invest less on labor and transportation and wont have to deal with rejections because we at Bhawal Metal Industries understand the Importance of Quality material as it is a key to delivers a durable and high-performing Finished Product.</p>
+                        <br />
+                        <p>To Achieve this we ensure that a strict quality check is maintained over all the phases of manufacturing. This has enabled us to Serve our clients better and also provided us with competitive edge in the market. As the Quality Raw material is the Key For Quality End Products. </p>
+                        <div>
+                            <div className="AnimatedbtnContainer">
+                                <button className="ColourButton">View All Products <MdKeyboardArrowRight /></button>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </section>

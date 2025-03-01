@@ -22,7 +22,7 @@ const MetalGrades = () => {
                 </div>
             </div>
             <section>
-                <div id="MetalgradesContainer">
+                <div id="MetalgradesContainer" className="contentInfoContainer">
                     <div>
                         <p>At Bhawal Metal Industries, We have kept our niche strictly to Stainless Steel and with time we are parallelly Integrating our Products in the Stainless Steel materials as per the market needs and our clients requirements, Adding more Grades in our basket. For Now the Company's dealing in Materials could be Divided in Three Segments -  </p>
                     </div>
