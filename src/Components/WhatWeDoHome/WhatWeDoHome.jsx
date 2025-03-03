@@ -8,21 +8,21 @@ const WhatWeDoHome = () => {
 
     const WhatWeDoCardsData = [
         {
-            img: "https://images.unsplash.com/photo-1686223679665-242fe8521ade?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            img: "/Images/WhatWeDoImages/STAINLESSSTEELLONGPRODUCTS.jpeg",
             title: "STAINLESS STEEL LONG PRODUCTS",
         },
         {
-            img: "https://images.unsplash.com/photo-1602223114290-ba6de2938acc?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            img: "/Images/WhatWeDoImages/FORGINGCOMPONENTS.jpeg",
             title: "FORGING COMPONENTS"
         },
         {
-            img: "https://images.unsplash.com/photo-1601041839008-5de244b9bad9?q=80&w=3164&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            img: "/Images/WhatWeDoImages/PRECISIONMACHINING.jpg",
             title: "PRECISION MACHINING COMPONENTS"
         },
-        {
-            img: "https://images.unsplash.com/photo-1686223679665-242fe8521ade?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            title: "-"
-        }
+        // {
+        //     img: "https://images.unsplash.com/photo-1686223679665-242fe8521ade?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        //     title: "-"
+        // }
     ]
     return (
         <>
@@ -36,7 +36,7 @@ const WhatWeDoHome = () => {
                         <div className="WhatWeDoCard">
                             <Row>
                                 {WhatWeDoCardsData.map((item, index) => (
-                                    <Col lg={12} md={24} style={{ width: "100%" }} key={index} data-aos="fade-up"
+                                    <Col lg={8} md={24} style={{ width: "100%" }} key={index} data-aos="fade-up"
                                     data-aos-duration="800"
                                     data-aos-delay={index * 100}>
                                         <div className="WhatWeCardContainerEdit">

@@ -63,8 +63,10 @@ const FacilitiesAndServices = () => {
                     </div>
                     <div className="ContentContainerTopheader">
                         <div>
-                            <h2 className="BigHeading" style={{ margin: "0px" }}>Facilities and Services </h2>
-                            <p>BHAWAL METAL INDUSTRIES</p>
+                            <h2 className="BigHeading" style={{ margin: "0px" }} data-aos="fade-up"
+                                data-aos-duration="1000">Facilities and Services </h2>
+                            <p data-aos="fade-right"
+                                data-aos-duration="1300">BHAWAL METAL INDUSTRIES</p>
                         </div>
                     </div>
                 </div>
@@ -72,14 +74,18 @@ const FacilitiesAndServices = () => {
             <section id="FacilitiesAndServices">
                 <div className="FacilitiesAndServicesContentContainer contentInfoContainer">
                     <div>
-                        <p>Fueled by burning ambition and driven by its core values, Bhawal Metal Industries specialize in niche precision forgings, fully-machined, sub-assembled and precision products for our domestic and global customers. We have hot forging facilities, heat treatment equipped with oil and water quenching facilities and precision machining facility equipped with high end CNCs, VMCs and SPMs, to achieve required tolerances as per customer specifications.</p>
+                        <p data-aos="fade-up"
+                            data-aos-duration="1000">Fueled by burning ambition and driven by its core values, Bhawal Metal Industries specialize in niche precision forgings, fully-machined, sub-assembled and precision products for our domestic and global customers. We have hot forging facilities, heat treatment equipped with oil and water quenching facilities and precision machining facility equipped with high end CNCs, VMCs and SPMs, to achieve required tolerances as per customer specifications.</p>
                         <br />
-                        <p>Over the last two decades the organization has developed into an innovative, customer oriented and robust organization, known for high quality carbon and alloy steel forged and machined components. We provide engineering, design, development and validation support, in close collaboration with our customers.</p>
+                        <p data-aos="fade-up"
+                            data-aos-duration="1000">Over the last two decades the organization has developed into an innovative, customer oriented and robust organization, known for high quality carbon and alloy steel forged and machined components. We provide engineering, design, development and validation support, in close collaboration with our customers.</p>
                         <br />
-                        <p>Keeping in mind our customer-centric approach and our pledge to provide quality materials, the company provides various value addition services to our clients like -</p>
+                        <p data-aos="fade-up"
+                            data-aos-duration="1000">Keeping in mind our customer-centric approach and our pledge to provide quality materials, the company provides various value addition services to our clients like -</p>
                     </div>
                     <br />
-                    <div>
+                    <div data-aos="fade-up"
+     data-aos-duration="1200">
                         <Swiper
                             spaceBetween={30}
                             centeredSlides={true}
@@ -187,20 +193,25 @@ const FacilitiesAndServices = () => {
                 <div className="contentInfoContainer">
                     <div>
                         <div className="containerGap">
-                            <h2 className="BigHeading textCenter">PRECISION MACHINE FACILITY </h2>
+                            <h2 className="BigHeading textCenter" data-aos="fade-right"
+     data-aos-duration="1200">PRECISION MACHINE FACILITY </h2>
                         </div>
                     </div>
                     <div>
-                        <p>Bhawal Metal Industries offers excellent outsourced machining facilities for various product lines which enable products to be supplied either in the pre-machined or completely-machined condition with exceptional quality. Our unabated emphasis on quality and on-time delivery allows us to meet customer demands.</p>
+                        <p data-aos="fade-right"
+     data-aos-duration="1000">Bhawal Metal Industries offers excellent outsourced machining facilities for various product lines which enable products to be supplied either in the pre-machined or completely-machined condition with exceptional quality. Our unabated emphasis on quality and on-time delivery allows us to meet customer demands.</p>
                         <br />
-                        <p>We have dedicated lines for machining set-up and Outsourcing capabilities to deliver our clients with following services:</p>
+                        <p data-aos="fade-right"
+     data-aos-duration="1000">We have dedicated lines for machining set-up and Outsourcing capabilities to deliver our clients with following services:</p>
                     </div>
-                     <br />
+                    <br />
                     <div>
                         <Row>
                             {GalleryImages.map((item, index) => (
-                                <Col lg={8} md={12} style={{width:"100%",height:"100%"}}>
-                                    <div>
+                                <Col lg={8} md={12} style={{ width: "100%", height: "100%" }}>
+                                    <div data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay={index * 200} >
                                         <div className="GalleryImageContainer">
                                             <Image src={item.img} alt="" />
                                         </div>

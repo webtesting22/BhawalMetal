@@ -62,21 +62,22 @@ const VisionMissionValues = () => {
                     </div>
                     <div className="LinesContainer">
 
-</div>
-<div className="LinesContainer">
+                    </div>
+                    <div className="LinesContainer">
 
-</div>
-<div className="LinesContainer">
+                    </div>
+                    <div className="LinesContainer">
 
-</div>
-<div className="LinesContainer">
+                    </div>
+                    <div className="LinesContainer">
 
-</div>
+                    </div>
                 </div>
                 <div>
                     <div className="interChangeRowAdjust">
                         {VisionMissionContent.map((item, index) => (
-                            <Row key={index} gutter={[32, 32]} align="middle" className="containerGap">
+                            <Row key={index} gutter={[32, 32]} align="middle" className="containerGap" data-aos="fade-up"
+                            data-aos-duration="1000">
                                 {/* If index is even, display Image first, otherwise display Content first */}
                                 {index % 2 === 0 ? (
                                     <>

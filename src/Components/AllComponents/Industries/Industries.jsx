@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import IndustriesData from "./IndustriesData";
-import { Row, Col,Modal } from "antd";
+import { Row, Col, Modal } from "antd";
 import "./SlidesStyles.css";
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { MdKeyboardArrowRight } from "react-icons/md";
@@ -45,8 +45,10 @@ const Industries = () => {
                         </div>
                         <div className="ContentContainerTopheader">
                             <div>
-                                <h2 className="BigHeading" style={{ margin: "0px" }}>Industries</h2>
-                                <p>BHAWAL METAL INDUSTRIES</p>
+                                <h2 className="BigHeading" style={{ margin: "0px" }} data-aos="fade-up"
+                                    data-aos-duration="1000" >Industries</h2>
+                                <p data-aos="fade-up"
+                                    data-aos-duration="1300" >BHAWAL METAL INDUSTRIES</p>
                             </div>
                         </div>
                     </div>
@@ -56,14 +58,16 @@ const Industries = () => {
                         <Row>
                             <Col lg={12}>
                                 <div>
-                                    <div className="AboutUsImageContainer">
+                                    <div className="AboutUsImageContainer" data-aos="fade-right"
+                                        data-aos-duration="1300">
                                         <img src="/Images/IndustriesTopImage.avif" alt="" loading="lazy" />
                                     </div>
                                 </div>
                             </Col>
                             <Col lg={12}>
                                 <div className="AboutUsContentContainer">
-                                    <div>
+                                    <div data-aos="fade-left"
+                                        data-aos-duration="1300">
                                         {/* <h2></h2> */}
                                         <p>Bhawal Metal Industries has an experience of over 27 years in the field of stainless steel and manufacturing. Our journey as precision components manufacturers in India dates back to 1997 when we began establishing our presence in different sectors of domestic and international markets. We have established a vast network of partnerships and supply chains nationwide with products shipped to different industrial sectors. </p>
                                         <br />
@@ -153,7 +157,7 @@ const Industries = () => {
                                                 <h2>{item.title}</h2>
                                                 <div className="AnimatedbtnContainer">
                                                     <button className="ColourButton" data-aos="fade-right"
-                                                        data-aos-duration="100"    onClick={() => showModal(item)}>Read More <MdKeyboardArrowRight /></button>
+                                                        data-aos-duration="100" onClick={() => showModal(item)}>Read More <MdKeyboardArrowRight /></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -163,22 +167,22 @@ const Industries = () => {
                         </div>
                     </div>
                 </div>
-                <Modal 
-                        title={selectedIndustry?.title} 
-                        open={isModalVisible} 
-                        onCancel={handleClose} 
-                        footer={null}
-                        centered
-                    >
-                        {selectedIndustry && (
-                            <>
-                                <div className="ModalImageContainer">
-                                    <img src={selectedIndustry.image} alt={selectedIndustry.title} style={{ width: "100%", borderRadius: "8px" }} />
-                                </div>
-                                <p style={{ marginTop: "10px" }}>{selectedIndustry.description}</p>
-                            </>
-                        )}
-                    </Modal>
+                <Modal
+                    title={selectedIndustry?.title}
+                    open={isModalVisible}
+                    onCancel={handleClose}
+                    footer={null}
+                    centered
+                >
+                    {selectedIndustry && (
+                        <>
+                            <div className="ModalImageContainer">
+                                <img src={selectedIndustry.image} alt={selectedIndustry.title} style={{ width: "100%", borderRadius: "8px" }} />
+                            </div>
+                            <p style={{ marginTop: "10px" }}>{selectedIndustry.description}</p>
+                        </>
+                    )}
+                </Modal>
 
             </div>
         </>

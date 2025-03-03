@@ -66,8 +66,10 @@ const UnwaveringEfforts = () => {
                         <Col lg={10}>
                             <div className="ContentContainer">
                                 <div>
-                                    <h2 className="BigHeading" style={{ color: "white" }}>Unwavering Efforts to Produce Premium Quality Industrial Components</h2>
-                                    <p>Every product at Bhawal Metal Industries is a cherished treasure designed and built with remarkable craftsmanship. As a precision components manufacturer in India, we have made sure to put in unwavering efforts in producing some intriguing and accurate industrial elements. We ensure that every production strategy meets customer specificities and optimum machine performance.</p>
+                                    <h2 className="BigHeading" style={{ color: "white" }} data-aos="fade-up"
+                                        data-aos-duration="1300">Unwavering Efforts to Produce Premium Quality Industrial Components</h2>
+                                    <p data-aos="fade-up"
+                                        data-aos-duration="1500">Every product at Bhawal Metal Industries is a cherished treasure designed and built with remarkable craftsmanship. As a precision components manufacturer in India, we have made sure to put in unwavering efforts in producing some intriguing and accurate industrial elements. We ensure that every production strategy meets customer specificities and optimum machine performance.</p>
                                 </div>
                             </div>
                         </Col>
