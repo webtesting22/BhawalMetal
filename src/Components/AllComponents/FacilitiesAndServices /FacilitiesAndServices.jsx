@@ -9,8 +9,19 @@ import 'swiper/css/navigation';
 // import required modules
 import { Autoplay, EffectFade, Pagination, Navigation } from 'swiper/modules';
 import { Row, Col, Image } from "antd";
+import CommonHeaderCarousal from "../../CommonUsedComponents/CommonTopCarousalAllPages/CommonHeaderCarousal";
 const FacilitiesAndServices = () => {
+    const CarousalImages = [
 
+        {
+            img: "https://images.unsplash.com/photo-1499359165151-4f7d7c46288c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            title: "Your Trusted Partner for Premium Stainless Steel Solutions"
+        },
+        {
+            img: "https://images.unsplash.com/photo-1474674556023-efef886fa147?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8fHx8fA%3D%3D",
+            title: "Excellence in Stainless Steel – Crafted for Your Needs"
+        },
+    ];
 
     const FacilitiesCarousalImages = [
         {
@@ -53,24 +64,7 @@ const FacilitiesAndServices = () => {
     ]
     return (
         <>
-            <div className="TopBannerContainerCommon">
-                <div className="CommonTopContainer">
-                    <div className="ImageBackContainerWithContent">
-                        <div className="overlayContainer">
-
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1516959328599-c7ca70a9dbcb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                    </div>
-                    <div className="ContentContainerTopheader">
-                        <div>
-                            <h2 className="BigHeading" style={{ margin: "0px" }} data-aos="fade-up"
-                                data-aos-duration="1000">Facilities and Services </h2>
-                            <p data-aos="fade-right"
-                                data-aos-duration="1300">BHAWAL METAL INDUSTRIES</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <CommonHeaderCarousal slidesData={CarousalImages} heading="Facilities and Services" tagline="BHAWAL METAL INDUSTRIES" />
             <section id="FacilitiesAndServices">
                 <div className="FacilitiesAndServicesContentContainer contentInfoContainer">
                     <div>
@@ -85,7 +79,7 @@ const FacilitiesAndServices = () => {
                     </div>
                     <br />
                     <div data-aos="fade-up"
-     data-aos-duration="1200">
+                        data-aos-duration="1200">
                         <Swiper
                             spaceBetween={30}
                             centeredSlides={true}
@@ -194,15 +188,15 @@ const FacilitiesAndServices = () => {
                     <div>
                         <div className="containerGap">
                             <h2 className="BigHeading textCenter" data-aos="fade-right"
-     data-aos-duration="1200">PRECISION MACHINE FACILITY </h2>
+                                data-aos-duration="1200">PRECISION MACHINE FACILITY </h2>
                         </div>
                     </div>
                     <div>
                         <p data-aos="fade-right"
-     data-aos-duration="1000">Bhawal Metal Industries offers excellent outsourced machining facilities for various product lines which enable products to be supplied either in the pre-machined or completely-machined condition with exceptional quality. Our unabated emphasis on quality and on-time delivery allows us to meet customer demands.</p>
+                            data-aos-duration="1000">Bhawal Metal Industries offers excellent outsourced machining facilities for various product lines which enable products to be supplied either in the pre-machined or completely-machined condition with exceptional quality. Our unabated emphasis on quality and on-time delivery allows us to meet customer demands.</p>
                         <br />
                         <p data-aos="fade-right"
-     data-aos-duration="1000">We have dedicated lines for machining set-up and Outsourcing capabilities to deliver our clients with following services:</p>
+                            data-aos-duration="1000">We have dedicated lines for machining set-up and Outsourcing capabilities to deliver our clients with following services:</p>
                     </div>
                     <br />
                     <div>
@@ -210,8 +204,8 @@ const FacilitiesAndServices = () => {
                             {GalleryImages.map((item, index) => (
                                 <Col lg={8} md={12} style={{ width: "100%", height: "100%" }}>
                                     <div data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay={index * 200} >
+                                        data-aos-duration="1000"
+                                        data-aos-delay={index * 200} >
                                         <div className="GalleryImageContainer">
                                             <Image src={item.img} alt="" />
                                         </div>

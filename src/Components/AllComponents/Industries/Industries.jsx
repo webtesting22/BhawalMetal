@@ -7,6 +7,7 @@ import { Row, Col, Modal } from "antd";
 import "./SlidesStyles.css";
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { MdKeyboardArrowRight } from "react-icons/md";
+import CommonHeaderCarousal from "../../CommonUsedComponents/CommonTopCarousalAllPages/CommonHeaderCarousal";
 const Industries = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const swiperRef = useRef(null);
@@ -31,28 +32,23 @@ const Industries = () => {
         setIsModalVisible(false);
         setSelectedIndustry(null);
     };
+    const CarousalImages = [
+
+        {
+            img: "https://images.unsplash.com/photo-1499359165151-4f7d7c46288c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            title: "Your Trusted Partner for Premium Stainless Steel Solutions"
+        },
+        {
+            img: "https://images.unsplash.com/photo-1474674556023-efef886fa147?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8fHx8fA%3D%3D",
+            title: "Excellence in Stainless Steel – Crafted for Your Needs"
+        },
+    ];
+
 
     return (
         <>
             <div >
-                <div className="TopBannerContainerCommon">
-                    <div className="CommonTopContainer">
-                        <div className="ImageBackContainerWithContent">
-                            <div className="overlayContainer">
-
-                            </div>
-                            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                        </div>
-                        <div className="ContentContainerTopheader">
-                            <div>
-                                <h2 className="BigHeading" style={{ margin: "0px" }} data-aos="fade-up"
-                                    data-aos-duration="1000" >Industries</h2>
-                                <p data-aos="fade-up"
-                                    data-aos-duration="1300" >BHAWAL METAL INDUSTRIES</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <CommonHeaderCarousal slidesData={CarousalImages} heading="Industries" tagline="BHAWAL METAL INDUSTRIES" />
                 <section >
                     <div id="Industries">
                         <Row>
