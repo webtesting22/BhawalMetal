@@ -4,10 +4,10 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
-
+import { Link } from "react-router-dom";
 import "./CommonHeader.css";
 
-const CommonHeaderCarousal = ({ slidesData,heading,tagline }) => {
+const CommonHeaderCarousal = ({ slidesData, heading, tagline, pageLink }) => {
     return (
         <div id="CommonHeaderHeightAdjust">
             <div style={{ height: "100%" }}>
@@ -16,7 +16,7 @@ const CommonHeaderCarousal = ({ slidesData,heading,tagline }) => {
                     effect={'fade'}
                     centeredSlides={true}
                     loop={true}
-                    autoplay={{ delay: 2500, disableOnInteraction: false }}
+                    // autoplay={{ delay: 2500, disableOnInteraction: false }}
                     speed={800}
                     // navigation={true}
                     modules={[Autoplay, Pagination, Navigation, EffectFade]}
@@ -42,6 +42,14 @@ const CommonHeaderCarousal = ({ slidesData,heading,tagline }) => {
                                         <p style={{ textAlign: "center", color: "white" }} data-aos="fade-up"
                                             data-aos-duration="1200"
                                             data-aos-delay={`${index * 500}`}>{tagline}</p>
+                                        <br />
+                                        <span style={{ textAlign: "center", color: "white" }} data-aos="fade-up"
+                                            data-aos-duration="1500"
+                                            data-aos-delay={`${index * 500}`}
+                                            className="RouteLinks"
+                                        >
+                                            <Link to="/">Home</Link>&nbsp;/ {pageLink}
+                                        </span>
                                     </div>
                                 </div>
                             </div>

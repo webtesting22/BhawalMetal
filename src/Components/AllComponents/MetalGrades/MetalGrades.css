@@ -1,6 +1,9 @@
 #MetalgradesContainer .AboutUsContentContainer {
     padding-right: 20px;
 }
+.GraphImage{
+    overflow: auto;
+}
 
 .GraphImage img {
     width: 100%;

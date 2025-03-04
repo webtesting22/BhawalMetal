@@ -50,7 +50,7 @@ const Industries = () => {
     return (
         <>
             <div >
-                <CommonHeaderCarousal slidesData={CarousalImages} heading="Industries" tagline="BHAWAL METAL INDUSTRIES" />
+                <CommonHeaderCarousal slidesData={CarousalImages} heading="Industries" tagline="BHAWAL METAL INDUSTRIES" pageLink="Industries"/>
                 <section >
                     <div id="Industries">
                         <Row>

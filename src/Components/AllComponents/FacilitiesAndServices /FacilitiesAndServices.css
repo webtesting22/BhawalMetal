@@ -15,7 +15,13 @@
     width: 100%;
     object-fit: cover;
 }
-
+.FacilitiesAndServicesContentSwiper {
+    height: 550px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 @media (max-width:900px){
     .GalleryImageContainer {
         height: 300px;

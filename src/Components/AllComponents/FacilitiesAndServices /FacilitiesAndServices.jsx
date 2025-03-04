@@ -68,7 +68,7 @@ const FacilitiesAndServices = () => {
     }, []);
     return (
         <>
-            <CommonHeaderCarousal slidesData={CarousalImages} heading="Facilities and Services" tagline="BHAWAL METAL INDUSTRIES" />
+            <CommonHeaderCarousal slidesData={CarousalImages} heading="Facilities and Services" tagline="BHAWAL METAL INDUSTRIES" pageLink="Facilities and Services" />
             <section id="FacilitiesAndServices">
                 <div className="FacilitiesAndServicesContentContainer contentInfoContainer">
                     <div>
@@ -83,7 +83,7 @@ const FacilitiesAndServices = () => {
                     </div>
                     <br />
                     <div data-aos="fade-up"
-                        data-aos-duration="1200">
+                        data-aos-duration="1200" className="FacilitiesAndServicesContentSwiper">
                         <Swiper
                             spaceBetween={30}
                             centeredSlides={true}

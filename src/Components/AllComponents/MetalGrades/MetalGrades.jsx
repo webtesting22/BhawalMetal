@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import "./MetalGrades.css"
 import { Row, Col, Image, Table, Input } from "antd";
 import CommonHeaderCarousal from "../../CommonUsedComponents/CommonTopCarousalAllPages/CommonHeaderCarousal";
@@ -165,9 +165,9 @@ const MetalGrades = () => {
         window.scrollTo(0, 0);
     }, []);
     return (
-        
+
         <>
-            <CommonHeaderCarousal slidesData={CarousalImages} heading="Material Grades" tagline="BHAWAL METAL INDUSTRIES" />
+            <CommonHeaderCarousal slidesData={CarousalImages} heading="Material Grades" tagline="BHAWAL METAL INDUSTRIES" pageLink="Material Grades" />
             <section>
                 <div id="MetalgradesContainer" className="contentInfoContainer">
                     <div>
@@ -212,7 +212,7 @@ const MetalGrades = () => {
                             <h2 className="BigHeading textCenter">Chemical Properties of Austenitic Steel</h2>
                         </div>
                         <div className="GraphImage">
-                            <Table columns={columns} dataSource={data} pagination={{pageSize:20}}/>
+                            <Table columns={columns} dataSource={data} pagination={{ pageSize: 20 }} />
                         </div>
                     </div>
                     <div>

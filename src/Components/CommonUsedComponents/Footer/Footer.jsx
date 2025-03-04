@@ -1,11 +1,12 @@
 import React from "react";
 import { Row, Col } from "antd";
 import "./Footer.css"
+import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <>
-            <div >
-                <section style={{ paddingBottom: "20px", }}>
+            <div>
+                <section style={{ paddingBottom: "00px", }}>
                     <div>
                         <div>
                             <Row>
@@ -57,10 +58,16 @@ const Footer = () => {
                                 </Col>
                             </Row>
                         </div>
+                        <hr />
+                        <div className="CopyWriteTextContainer">
+                            <p>Designed By
+                            <Link to="https://www.outleadsolutions.com/" target="_blank" style={{color:"black"}}><b style={{fontWeight:"500"}}> Outlead Solutions</b></Link></p>
+                        </div>
+                        <br />
                     </div>
                 </section>
             </div>
-            <br /><br />
+            {/* <br /><br /> */}
         </>
     )
 }

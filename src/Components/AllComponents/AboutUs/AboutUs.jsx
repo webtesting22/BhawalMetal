@@ -47,7 +47,7 @@ const AboutUs = () => {
     return (
         <>
             <div>
-                <CommonHeaderCarousal slidesData={CarousalImages} heading="About Us" tagline="BHAWAL METAL INDUSTRIES"/>
+                <CommonHeaderCarousal slidesData={CarousalImages} heading="About Us" tagline="BHAWAL METAL INDUSTRIES" pageLink="About Us"/>
             </div>
             {/* <div className="TopBannerContainerCommon">
                 <div className="CommonTopContainer">
