@@ -9,15 +9,15 @@ p {
     font-size: 30px !important;
     color: #617E87;
     line-height: 60px;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     font-family: "Onest", sans-serif;
     font-weight: 600;
     line-height: 50px;
     text-align: center !important;
-    margin-bottom: 1rem !important;
+    margin-bottom: 0rem !important;
     /* border-top: 1px solid #617E87; */
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
 }
 .BigHeading {
     font-size: 23px !important;

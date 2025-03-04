@@ -13,6 +13,7 @@ import 'swiper/css/navigation';
 // import required modules
 import { Autoplay, EffectFade, Pagination, Navigation } from 'swiper/modules';
 import VisionMissionValues from "../VisionMissionValues/VisionMissionValues";
+import CommonHeaderCarousal from "../../CommonUsedComponents/CommonTopCarousalAllPages/CommonHeaderCarousal";
 
 const AboutUs = () => {
 
@@ -29,10 +30,23 @@ const AboutUs = () => {
 
 
     ]
+    const CarousalImages = [
+       
+        {
+            img: "https://images.unsplash.com/photo-1499359165151-4f7d7c46288c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            title: "Your Trusted Partner for Premium Stainless Steel Solutions"
+        },
+        {
+            img: "https://images.unsplash.com/photo-1474674556023-efef886fa147?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8fHx8fA%3D%3D",
+            title: "Excellence in Stainless Steel – Crafted for Your Needs"
+        },
+    ];
     return (
         <>
-
-            <div className="TopBannerContainerCommon">
+            <div>
+        <CommonHeaderCarousal slidesData={CarousalImages}/>
+            </div>
+            {/* <div className="TopBannerContainerCommon">
                 <div className="CommonTopContainer">
                     <div className="ImageBackContainerWithContent">
                         <div className="overlayContainer">
@@ -49,7 +63,7 @@ const AboutUs = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <section id="AboutUsContainer">
 
                 <div className="contentInfoContainer">

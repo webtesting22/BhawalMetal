@@ -37,8 +37,8 @@ const VisionMissionValues = () => {
             title: "Core Values",
             content: <>
                 <div>
-                   <p> At Bhawal Metal Industries, we strongly believe in:</p>
-                    
+                    <p> At Bhawal Metal Industries, we strongly believe in:</p>
+
                     <ul>
                         <li>Excellence – Striving for the highest quality in everything we do.</li>
                         <li>Integrity – Conducting business with honesty and strong moral principles.</li>
@@ -76,17 +76,18 @@ const VisionMissionValues = () => {
                 <div>
                     <div className="interChangeRowAdjust">
                         {VisionMissionContent.map((item, index) => (
-                            <Row key={index}  align="middle" className="containerGap"  data-aos="fade-up"
-                            data-aos-duration="1000">
+                            <Row key={index} align="middle" className="containerGap"  >
                                 {/* If index is even, display Image first, otherwise display Content first */}
                                 {index % 2 === 0 ? (
                                     <>
-                                        <Col lg={12} xs={24}>
+                                        <Col lg={12} xs={24} data-aos="fade-right"
+                                            data-aos-duration="1000">
                                             <div className="VisionMissionContainerImage">
                                                 <img src={item.image} alt={item.title} />
                                             </div>
                                         </Col>
-                                        <Col lg={12} xs={24}>
+                                        <Col lg={12} xs={24} data-aos="fade-left"
+                                            data-aos-duration="1000">
                                             <div>
                                                 <h2 className="BigHeading">{item.title}</h2>
                                                 {item.content}
@@ -95,14 +96,16 @@ const VisionMissionValues = () => {
                                     </>
                                 ) : (
                                     <>
-                                        <Col lg={12} xs={24}>
+                                        <Col lg={12} xs={24} data-aos="fade-right"
+                                            data-aos-duration="1000">
                                             <div>
                                                 <h2 className="BigHeading">{item.title}</h2>
                                                 {item.content}
                                             </div>
                                         </Col>
-                                        <Col lg={12} xs={24}>
-                                            <div className="VisionMissionContainerImage" style={{paddingRight:"0px"}}>
+                                        <Col lg={12} xs={24} data-aos="fade-left"
+                                            data-aos-duration="1000">
+                                            <div className="VisionMissionContainerImage" style={{ paddingRight: "0px" }}>
                                                 <img src={item.image} alt={item.title} />
                                             </div>
                                         </Col>

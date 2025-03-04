@@ -14,3 +14,10 @@ color: white;
     bottom: 0px;
     background-color: rgb(0 0 0 / 69%);
 }
+.RightSideHeadingContainer .ant-row .ant-col{
+    padding: 0px 10px;
+}
+.RightSideHeadingContainer .ant-row .ant-col div{
+padding: 20px 0px;
+border-bottom: 1px solid #617E87;
+}

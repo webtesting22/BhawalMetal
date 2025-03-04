@@ -52,10 +52,14 @@ const ServicesCarousal = () => {
                             >
                                 <Swiper
                                     slidesPerView={3}
-                                    spaceBetween={30}
+                                    spaceBetween={20}
                                     freeMode={true}
                                     loop={true}
                                     speed={1000}
+                                    autoplay={{
+                                        delay: 2000,
+                                        disableOnInteraction: false,
+                                      }}
                                     breakpoints={{
                                         320: { slidesPerView: 1, spaceBetween: 10 }, // Mobile
                                         768: { slidesPerView: 2, spaceBetween: 20 }, // Tablet
