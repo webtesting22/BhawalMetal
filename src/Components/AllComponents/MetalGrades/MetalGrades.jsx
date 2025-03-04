@@ -102,7 +102,17 @@ const MetalGrades = () => {
         { key: "7", designationEN: "X5CrNiMo17-12-2", enNumberDesignation: "1.4401", gradeASTM: "316", c: "0.07", si: "1", mn: "2", pMax: "0.045", s: "0.015", n: "0.11", cr: "16.5-18.5", mo: "2.0-2.5", ni: "10.0-13.0", others: "" },
         { key: "8", designationEN: "X3CrNiMo17-13-3", enNumberDesignation: "1.4436", gradeASTM: "316", c: "0.05", si: "1", mn: "2", pMax: "0.045", s: "0.015", n: "0.11", cr: "16.5-18.5", mo: "2.5-3.0", ni: "10.5-13.0", others: "" },
         { key: "9", designationEN: "", enNumberDesignation: "", gradeASTM: "316N", c: "0.08", si: "0.75", mn: "2", pMax: "0.045", s: "0.03", n: "0.10-0.16", cr: "16.0-18.0", mo: "2.0-3.0", ni: "10.0-14.0", others: "" },
-        { key: "9", designationEN: "", enNumberDesignation: "", gradeASTM: "316H", c: "0.04-0.10", si: "0.75", mn: "2", pMax: "0.045", s: "0.03", n: "", cr: "16.0-18.0", mo: "2.0-3.0", ni: "10.0-14.0", others: "" },
+        { key: "10", designationEN: "", enNumberDesignation: "", gradeASTM: "316H", c: "0.04-0.10", si: "0.75", mn: "2", pMax: "0.045", s: "0.03", n: "", cr: "16.0-18.0", mo: "2.0-3.0", ni: "10.0-14.0", others: "" },
+        { key: "11", designationEN: "X3CrNiMo17-12-3", enNumberDesignation: "1.4404", gradeASTM: "316L", c: "0.03", si: "1", mn: "2", pMax: "0.045", s: "0.015", n: "0.11", cr: "16.5-18.5", mo: "2.0-2.5", ni: "10.0-13.0", others: "" },
+        { key: "12", designationEN: "X3CrNiMo18-14-3", enNumberDesignation: "1.4435", gradeASTM: "316L", c: "0.03", si: "1", mn: "2", pMax: "0.045", s: "0.015", n: "0.11", cr: "17.0-19.0", mo: "2.5-3.0", ni: "12.5-15.0", others: "" },
+        { key: "13", designationEN: "X3CrNiMo17-12-3", enNumberDesignation: "1.4432", gradeASTM: "316L", c: "0.03", si: "1", mn: "2", pMax: "0.045", s: "0.015", n: "0.11", cr: "16.5-18.5", mo: "2.5-3.0", ni: "10.5-13.0", others: "" },
+        { key: "14", designationEN: "X3CrNiMoN17-11-2", enNumberDesignation: "1.4406", gradeASTM: "316LN", c: "0.03", si: "1", mn: "2", pMax: "0.045", s: "0.015", n: "0.12-0.22", cr: "16.5-18.5", mo: "2.0-2.5", ni: "10.0-12.5", others: "" },
+        { key: "15", designationEN: "X3CrNiMoTi17-12-2", enNumberDesignation: "1.4571", gradeASTM: "316Ti", c: "0.08", si: "1", mn: "2", pMax: "0.045", s: "0.015", n: "", cr: "16.5-18.5", mo: "2.0-2.5", ni: "10.5-13.5", others: "Ti:5 * CTo 0.70" },
+        { key: "16", designationEN: "", enNumberDesignation: "", gradeASTM: "317", c: "0.08", si: "0.75", mn: "2", pMax: "0.045", s: "0.03", n: "0.1", cr: "18.0-20.0", mo: "3.0-4.0", ni: "11.0-15.0", others: "" },
+        { key: "17", designationEN: "X2CrNiMo18-15-4", enNumberDesignation: "1.4438", gradeASTM: "317L", c: "0.03", si: "1", mn: "2", pMax: "0.045", s: "0.015", n: "0.11", cr: "17.5-19.5", mo: "3.0-4.0", ni: "13.0-16.0", others: "" },
+        { key: "18", designationEN: "X2CrNiMoN18-12-4", enNumberDesignation: "1.4434", gradeASTM: "317LN", c: "0.03", si: "1", mn: "2", pMax: "0.045", s: "0.015", n: "0.10-0.20", cr: "16.5-19.5", mo: "3.0-4.0", ni: "10.5-14.0", others: "" },
+        { key: "19", designationEN: "X2CrNiTi18-10", enNumberDesignation: "1.4541", gradeASTM: "321", c: "0.08", si: "1", mn: "2", pMax: "0.045", s: "0.015", n: "", cr: "17.0-19.0", mo: "", ni: "9.0-12.0", others: "Ti:5 * C to 0.70" },
+
     ];
 
 
@@ -197,7 +207,7 @@ const MetalGrades = () => {
                             <h2 className="BigHeading textCenter">Chemical Properties of Austenitic Steel</h2>
                         </div>
                         <div className="GraphImage">
-                            <Table columns={columns} dataSource={data} />
+                            <Table columns={columns} dataSource={data} pagination={{pageSize:20}}/>
                         </div>
                     </div>
                     <div>

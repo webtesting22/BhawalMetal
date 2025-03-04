@@ -6,6 +6,10 @@
     width: 100%;
 }
 
+.GraphImage .ant-table-wrapper .ant-table-tbody .ant-table-cell{
+    padding: 8px 15px !important;
+}
+
 @media (max-width:900px) {
     #MetalgradesContainer .AboutUsImageContainer {
         margin: 20px 0px;
