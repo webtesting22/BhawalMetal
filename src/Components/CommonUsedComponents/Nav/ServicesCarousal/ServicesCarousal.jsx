@@ -10,13 +10,13 @@ const ServicesCarousal = () => {
     const swiperRef = useRef(null);
 
     const ServicesData = [
-        { img: "./Images/IndustriesIcons/AerospaceEngineering.png", title: "Aerospace and Defence" },
-        { img: "./Images/IndustriesIcons/Marine Engineering 1.png", title: "Marine Engineering" },
+        { img: "./Images/IndustriesServed/AeroSpace.svg", title: "Aerospace and Defence" },
+        { img: "./Images/IndustriesServed/MarineEngineering.svg", title: "Marine Engineering" },
         { img: "./Images/IndustriesIcons/OilandGas.png", title: "Oil & Gas" },
-        { img: "./Images/IndustriesIcons/packaging.png", title: "Packaging" },
-        { img: "./Images/IndustriesIcons/pharma.png", title: "Pharma" },
-        { img: "", title: "Processing " },
-        { img: "", title: "Water Treatment" }
+        { img: "./Images/IndustriesServed/Packging.svg", title: "Packaging" },
+        { img: "./Images/IndustriesServed/Pharma.svg", title: "Pharma" },
+        { img: "./Images/IndustriesServedProcessing.svg", title: "Processing " },
+        { img: "./Images/IndustriesServed/WaterTreatment.svg", title: "Water Treatment" }
 
     ];
 
@@ -59,7 +59,7 @@ const ServicesCarousal = () => {
                                     autoplay={{
                                         delay: 2000,
                                         disableOnInteraction: false,
-                                      }}
+                                    }}
                                     breakpoints={{
                                         320: { slidesPerView: 1, spaceBetween: 10 }, // Mobile
                                         768: { slidesPerView: 2, spaceBetween: 20 }, // Tablet

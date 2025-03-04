@@ -13,15 +13,16 @@
 
 .IndustriesCardContainer img {
     aspect-ratio: 3/2;
-    width: 200px;
+    width: 100%;
     height: 100%;
     object-fit: contain;
     transition: .5s;
+    background-color: white;
 }
 
 .IndustriesCardContainer:hover img {
     aspect-ratio: 3/2;
-    width: 200px;
+    width: 100%;
     height: 100%;
     object-fit: contain;
     transform: scale(1.1);
@@ -31,7 +32,7 @@
 .IndustriesCards {
     display: flex;
     justify-content: center;
-    padding: 20px 0px;
+    /* padding: 20px 0px; */
 }
 
 .IndustriesSwiperContainer {
