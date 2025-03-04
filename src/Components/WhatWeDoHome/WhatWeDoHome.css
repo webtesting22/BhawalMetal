@@ -17,12 +17,15 @@
 }
 
 .WhatWeCardContainerEdit {
-    padding: 30px;
+    /* padding: 30px; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.WhatWeDoCard .ant-row .ant-col:nth-child(2) .WhatWeCardContainerEdit{
+    padding: 0px 20px;
+}
 .CardImageContainer {
     height: 500px;
     width: 100%;
@@ -56,7 +59,7 @@
 @media (min-width:1500px) and (max-width:4000px) {
     .WhatWeDoCard {
         margin: 6rem 0rem;
-        width: 80%;
+        width: 100%;
     }
 }
 

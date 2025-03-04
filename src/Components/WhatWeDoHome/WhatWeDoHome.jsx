@@ -9,28 +9,25 @@ const WhatWeDoHome = () => {
     const WhatWeDoCardsData = [
         {
             img: "/Images/WhatWeDoImages/STAINLESSSTEELLONGPRODUCTS.jpeg",
-            title: "STAINLESS STEEL LONG PRODUCTS",
+            title: "Stainless Steel Long Products",
         },
         {
             img: "/Images/WhatWeDoImages/FORGINGCOMPONENTS.jpeg",
-            title: "FORGING COMPONENTS"
+            title: "Forging Components"
         },
         {
             img: "/Images/WhatWeDoImages/PRECISIONMACHINING.jpg",
-            title: "PRECISION MACHINING COMPONENTS"
-        },
-        // {
-        //     img: "https://images.unsplash.com/photo-1686223679665-242fe8521ade?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        //     title: "-"
-        // }
-    ]
+            title: "Precision Machining Components"
+        }
+    ];
+    
     return (
         <>
             <section style={{ backgroundColor: "#161616" }}>
                 <div id="WhatWeDoHomeContentContainer">
                     <div>
                         <h2 className="BigHeading textCenter" style={{ color: "white", marginBottom: "1rem" }}>What We Do?</h2>
-                        <p className="textCenter">Bhawal Metal Industries working is divided in 3 major segments</p>
+                        <p className="textCenter">Bhawal Metal Industries working is divided in 3 major segments -</p>
                     </div>
                     <div className="CardContainer">
                         <div className="WhatWeDoCard">

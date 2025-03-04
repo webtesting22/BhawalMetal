@@ -35,7 +35,7 @@ const WhoAreWeHome = () => {
                 <Row>
                     <Col lg={24}>
                         <h2 className="BigHeading textCenter">Who Are We?</h2>
-                        <div className="AnimationMovingImagesContainer" ref={containerRef}>
+                        {/* <div className="AnimationMovingImagesContainer" ref={containerRef}>
                             <div className="WidthAdjustContainer">
                                 <div className="WidthAdjust" style={{ width: `${firstWidth}%` }}>
                                     <img
@@ -53,7 +53,7 @@ const WhoAreWeHome = () => {
                                     />
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                        <div className="ContentContainer">
                        <p className="textCenter">
                             Bhawal Metal Industries was established in the year 1996 with the aim of catering to the growing demands of Stainless Steel. Bhawal Metal Industries is a leading supplier and manufacturer of High Quality Stainless Steel Round Bars, Forged components, Drawing Based Components And Precision components. We have a team of young visionaries who endeavor for excellence in every aspect related to metals. We strongly believe in our core values and are always in the pursuit of success along the lines of ethical business practices. Keeping in mind its customer centric approach, timely delivery and quality products, the Company has grown in size and products range. Over the decades Bhawal Metal Industries has carved an unparallel position for itself in the steel industry of India and has built various congenial customer relations. Now with the new generation of entrepreneurs joining the company, the company aims at expanding on a global scale with the domestic supply and export of Stainless Steel long Products, Forged components, Drawing Based Components And Precision components.

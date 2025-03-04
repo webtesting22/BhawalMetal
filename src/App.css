@@ -5,16 +5,43 @@ p {
     font-size: 18px;
     font-family: "Onest", sans-serif;
 }
-
-.BigHeading {
-    font-size: 48px !important;
-    color: #840000;
+.BigHeadingNormal {
+    font-size: 30px !important;
+    color: #617E87;
     line-height: 60px;
     margin-bottom: 40px;
     font-family: "Onest", sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 50px;
+    text-align: center !important;
     margin-bottom: 1rem !important;
+    /* border-top: 1px solid #617E87; */
+    display: flex;
+    align-items: center;
+}
+.BigHeading {
+    font-size: 23px !important;
+    color: #617E87;
+    line-height: 60px;
+    margin-bottom: 40px;
+    font-family: "Onest", sans-serif;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: start;
+    margin-bottom: 1rem !important;
+    border-top: 1px solid #617E87;
+    display: flex;
+    align-items: center;
+    padding: 15px 0px;
+}
+.BigHeading::before{
+    content: "";
+    height: 10px;
+    width: 10px;
+    background-color: #617E87;
+    display: inline-block;
+    margin-right: 10px;
+    rotate: 45deg;
 }
 
 .Redbtn {
@@ -38,7 +65,7 @@ p {
 }
 
 .textCenter {
-    text-align: center;
+    text-align: start;
 }
 
 h2 {
@@ -90,7 +117,7 @@ h6 {
 }
 
 .contentInfoContainer {
-    padding: 0rem 6rem;
+    padding: 0rem 0rem;
 }
 @media (max-width:900px) {
 

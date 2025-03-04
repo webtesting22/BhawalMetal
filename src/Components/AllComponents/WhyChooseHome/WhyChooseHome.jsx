@@ -65,7 +65,7 @@ const WhyChooseHome = () => {
                     <div className="SwiperContainerCardWhyChoose">
                         <Swiper
                             slidesPerView={3}
-                            spaceBetween={30}
+                            spaceBetween={20}
                             loop={true}
                             freeMode={true}
                             autoplay={{

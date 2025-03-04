@@ -17,9 +17,11 @@ const ServicesCarousal = () => {
 
     return (
         <div id="ServicesCarousalContentContainer">
+            <section style={{paddingTop:"0px",paddingBottom:"0px"}}>
             <div>
                 <h2 className="BigHeading textCenter">Why Choose Bhawal Metal Industries?</h2>
             </div>
+            </section>
             <div className='IndustriesSwiperContainer'>
                 <Swiper
                     slidesPerView={3}

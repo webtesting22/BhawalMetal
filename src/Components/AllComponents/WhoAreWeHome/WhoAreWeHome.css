@@ -12,6 +12,7 @@
     overflow: hidden;
     display: flex;
     transition: width 0.5s ease-out;
+    gap: 20px;
 }
 
 .AnimationMovingImagesContainer .WidthAdjustContainer div img {
@@ -37,9 +38,6 @@
     /* Smooth transition */
 }
 
-.WidthAdjust {
-    margin: 0px 10px;
-}
 
 #WhoAreWeHomeContentContainer .ContentContainer {
     margin-top: 40px;
@@ -48,7 +46,7 @@
 }
 
 #WhoAreWeHomeContentContainer .ContentContainer p {
-    width: 80%;
+    width: 100%;
 }
 
 

@@ -45,7 +45,7 @@ const MetalGrades = () => {
                                             <br />
                                             <p>Austenitic steels are generally classified into two groups –the Chromium-Nickel AISI 300 series type and Chromium-Nickel- Manganese 200 series type. Steel with better resistance to corrosion is created by adding 2-3% molybdenum, which is often called “acid-proof steel”. Grade 304 is the most common grade of this type, which typically contains 18 percent chromium and 8 percent nickel.</p>
                                             <br />
-                                            <p>Bhawal Metal Industries works with all materials in this grade – Bright Round Bars, PSQ Bars, Flat Bars, HR Bars & RCS, Cold Drawn Round/Flat/Square/Hexagon Bars, Forged Components and Precision Component</p>
+                                            <p>Bhawal Metal Industries works with all materials in this grade – Bright Round Bars, PSQ Bars, Flat Bars, HR Bars & RCS, Cold Drawn Round/Flat/Square/Hexagon Bars, Forged Components and Precision Component.</p>
 
                                         </div>
                                     </div>

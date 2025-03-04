@@ -11,9 +11,9 @@ const VisionMissionValues = () => {
             content: <>
                 <div>
                     <ul>
-                        <li>To be recognize ours company’s and its people full potential to carve our name as world’s leading Precision Engineering Firm.</li>
-                        <li>To be India’s Driving force in the World of Automation and robots through innovation and persistence.</li>
-                        <li>To inspire and impact the life of millions by uplifting the society and making constant mindful efforts for earth and its people   </li>
+                        <li>To recognize our company’s and its people full potential to carve our name as world’s leading Precision Engineering Firm.</li>
+                        <li>To be India’s Driving force in the World of Automation and robots through Innovation and Persistence.</li>
+                        <li>To inspire and impact the life of millions by uplifting the society and making constant mindful efforts for earth and its people.  </li>
                     </ul>
                 </div>
             </>
@@ -26,7 +26,7 @@ const VisionMissionValues = () => {
                     <ul>
                         <li>To support our customers by providing superior products and services of exceptional value which help them gain competitive advantage in their markets.</li>
                         <li>To sustain our vision by constantly seeking renewal via continual improvement in processes, and the application of new technologies and best business practices. </li>
-                        <li>To provide a pleasant, nurturing and growth oriented environment which encourages our employees to be highly productive and to grow personally and professionally</li>
+                        <li>To provide a pleasant, nurturing and growth oriented environment which encourages our employees to be highly productive and to grow personally and professionally.</li>
                     </ul>
                 </div>
             </>
@@ -36,9 +36,8 @@ const VisionMissionValues = () => {
             title: "Core Values",
             content: <>
                 <div>
-                    <ul>
-                        <li>We at Bhawal Metal Industries strongly believe in the following:</li>
-                    </ul>
+                   <p> We at Bhawal Metal Industries strongly believe in the following:</p>
+                    
                     <ul>
                         <li>Excellence</li>
                         <li>Integrity</li>

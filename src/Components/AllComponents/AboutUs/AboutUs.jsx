@@ -139,8 +139,7 @@ const AboutUs = () => {
                                         <br />
                                         <p >We help our clients by fulfilling their manufacturing needs before the process even begins by serving them with High Quality Raw Materials in form of Stainless Steel Round bars, Flat Bars, Hex Bars, Square Bars etc. We conduct tests for Chemical, Physical, Mechanical, Ultrasonic, Micro, IGC, and any other aspects from Govt. & Internationally approved certification bodies to ensure that our client receives only the best in class products.</p>
                                         <br />
-                                        <p>We Don't just stop at Stainless Steel Long products, We also provide our clients with our supreme quality Forged Components too, With the best in Class Forging unit we are able to provide our Clients with Forged Circle, Forged Rings, Forged Blocks, forged Flat Bars, Forged flanges and We are also able to provide forged Components in complex shapes using Die Forging Method.  </p>
-                                        <br />
+<p>We don't just stop at Stainless Steel Long Products, we also provide our clients with our supreme quality Forged Components too. With the best-in-class forging unit, we are able to provide our clients with Forged Circle, Forged Rings, Forged Blocks, Forged Flat Bars, Forged Flanges, and we are also able to provide Forged Components in complex shapes using the Die Forging Method.</p>                                        <br />
 
                                     </div>
                                 </div>
@@ -148,10 +147,10 @@ const AboutUs = () => {
                         </Row>
                         <br />
                         <p data-aos="fade-up"
-                            data-aos-duration="1200">Our Precision Machining unit not only help our clients to reduce their overall machining time it also saves a significant cost as now company has to invest less on labor and transportation and wont have to deal with rejections because we at Bhawal Metal Industries understand the Importance of Quality material as it is a key to delivers a durable and high-performing Finished Product.</p>
+                            data-aos-duration="1200">Our Precision Machining unit not only helps our clients reduce their overall machining time, but it also saves a significant cost as the company now has to invest less in labor and transportation and won't have to deal with rejections. This is because we at Bhawal Metal Industries understand the importance of quality material, as it is the key to delivering a durable and high-performing finished product.</p>
                         <br />
                         <p data-aos="fade-up"
-                            data-aos-duration="1300">To Achieve this we ensure that a strict quality check is maintained over all the phases of manufacturing. This has enabled us to Serve our clients better and also provided us with competitive edge in the market. As the Quality Raw material is the Key For Quality End Products. </p>
+                            data-aos-duration="1300">To achieve this, we ensure that a strict quality check is maintained over all the phases of manufacturing. This has enabled us to serve our clients better and also provided us with a competitive edge in the market, as the quality raw material is the key for quality end products. </p>
                         <div>
                             <div className="AnimatedbtnContainer">
                                 <button className="ColourButton" >View All Products <MdKeyboardArrowRight /></button>

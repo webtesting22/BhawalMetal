@@ -25,11 +25,6 @@
     object-fit: cover;
 }
 
-#BhawalHomeContainer .ant-row .ant-col:nth-child(2) div {
-    height: 90vh;
-    overflow: hidden;
-}
-
 #BhawalHomeContainer .ant-row .ant-col:nth-child(1) .SideContentContainer {
     height: 90vh;
     overflow: hidden;
@@ -43,32 +38,121 @@
 .BoxesContainer {
     height: 10vh;
     background-color: white;
-    width: 100%;
+    /* width: 100%; */
+    right: 0px;
+    left: 0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 5;
+    margin: 0px 3rem;
+
 }
 
-
-.BoxesContainer .BoxEditContainer {
-    border: 1px solid #840000;
-    border-left: 0.5px solid #840000 !important;
-    border-right: 0.5px solid #84000000 !important;
+.BoxEditContainer {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: .5s;
-    padding: 0px 10px;
+    border-bottom: 1px solid #617E87;
 }
 
-.BoxesContainer .BoxEditContainer:hover {
-    background-color: #840000;
+.HoverableContainer {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    top: 0px;
+    opacity: 0;
+    transform: translateY(10px);
+    background-color: #617E87;
+    transition: .5s;
+}
+
+.BoxEditContainer:hover .HoverableContainer {
+    opacity: 1;
+    transform: translateY(-37px);
+    padding: 5px 0px;
+    transition: .5s;
+}
+
+#BhawalHomeContainer {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#BhawalHomeContainer .swiper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#BhawalHomeContainer .swiper-button-next {
+    padding: 50px 20px;
+    border: 1px solid #617E87;
+    right: -1px;
+    border-radius: 100px 0px 0px 100px;
+    transition: .5s;
+}
+
+#BhawalHomeContainer .swiper-button-next::after,
+#BhawalHomeContainer .swiper-button-prev::after {
+    color: #617E87;
+    transition: .5s;
+}
+
+#BhawalHomeContainer .swiper-button-next:hover,
+#BhawalHomeContainer .swiper-button-prev:hover {
+    padding: 50px 30px;
+    transition: .5s;
+}
+
+#BhawalHomeContainer .swiper-button-prev {
+    padding: 50px 20px;
+    border: 1px solid #617E87;
+    left: -1px;
+    border-radius: 0px 100px 100px 0px;
+    transition: .5s;
+}
+
+.OverlayEffectContainer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.612);
+}
+.ContentContainerSwiperHome{
+    position: absolute;
+    width: 50%;
+}
+
+.ContentContainerSwiperHome h1{
     color: white;
-    transform: scale(1.03);
-    transition: .5s;
 }
-
-
 @media (max-width:900px) {
-
+    #BhawalHomeContainer .swiper-button-next {
+        padding: 20px 10px;
+        border: 1px solid #617E87;
+        right: -1px;
+        border-radius: 100px 0px 0px 100px;
+        transition: .5s;
+    }
+    #BhawalHomeContainer .swiper-button-prev {
+        padding: 20px 10px;
+        border: 1px solid #617E87;
+        left: -1px;
+        border-radius: 0px 100px 100px 0px;
+        transition: .5s;
+    }
+    
+    
+    .ContentContainerSwiperHome{
+        position: absolute;
+        width: 80%;
+    }
     #BhawalHomeContainer .ant-row .ant-col:nth-child(1) .SideContentContainer {
         padding: 0rem 1rem;
         height: unset;
@@ -76,29 +160,34 @@
         margin-top: 8rem !important;
     }
 
-.BoxesContainer .BoxEditContainer {
-   
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    transition: .5s;
-    padding: 0px 10px;
-}
-.BoxesContainer {
-    height: 30vh;
-    background-color: white;
-    width: 100%;
-}
-#BhawalHomeContainer .ant-row .ant-col:nth-child(2) div {
-    height: 30vh;
-    overflow: hidden;
-}
-.BoxesContainer .BoxEditContainer {
-    border: none !important;
-    background-color: #840000;
-    color: white;
-}
-.AnimatedbtnContainer{
-    margin-bottom: 0px;
-}
+    .BoxesContainer .BoxEditContainer {
+
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        transition: .5s;
+        padding: 0px 10px;
+    }
+
+    .BoxesContainer {
+        height: 30vh;
+        background-color: white;
+        width: 100%;
+        display: none;
+    }
+
+    #BhawalHomeContainer .ant-row .ant-col:nth-child(2) div {
+        height: 30vh;
+        overflow: hidden;
+    }
+
+    .BoxesContainer .BoxEditContainer {
+        border: none !important;
+        background-color: #840000;
+        color: white;
+    }
+
+    .AnimatedbtnContainer {
+        margin-bottom: 0px;
+    }
 }
