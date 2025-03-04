@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./FacilitiesAndServices.css"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/effect-fade';
@@ -62,6 +62,10 @@ const FacilitiesAndServices = () => {
         }
 
     ]
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <>
             <CommonHeaderCarousal slidesData={CarousalImages} heading="Facilities and Services" tagline="BHAWAL METAL INDUSTRIES" />

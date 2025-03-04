@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./MetalGrades.css"
 import { Row, Col, Image, Table, Input } from "antd";
 import CommonHeaderCarousal from "../../CommonUsedComponents/CommonTopCarousalAllPages/CommonHeaderCarousal";
@@ -160,7 +160,12 @@ const MetalGrades = () => {
         { grade: "317L", tensileStrength: "515", yieldStrength: "205", elongation: "40", hardnessBHN: "217", hardnessRb: "95" },
         { grade: "321", tensileStrength: "515", yieldStrength: "205", elongation: "40", hardnessBHN: "217", hardnessRb: "95" },
     ];
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
+        
         <>
             <CommonHeaderCarousal slidesData={CarousalImages} heading="Material Grades" tagline="BHAWAL METAL INDUSTRIES" />
             <section>

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./AboutUs.css"
 import { Row, Col } from "antd";
 import AboutUsImage from "./AboutUsImage.png"
@@ -41,6 +41,9 @@ const AboutUs = () => {
             title: "Excellence in Stainless Steel – Crafted for Your Needs"
         },
     ];
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <>
             <div>
