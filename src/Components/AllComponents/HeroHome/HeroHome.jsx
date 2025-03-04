@@ -92,7 +92,7 @@ const HeroHome = () => {
                                                 ) : (
                                                     "Premium"
                                                 )}
-                                                {index === 0 ? "+" : index === 1 ? "%" : index === 2 ? "+" : ""}
+                                                {index === 0 ? "+" : index === 1 ? "%" : index === 2 ? "+" : "%"}
                                             </h2>
                                             <p style={{ fontWeight: "500" }}>{item.title}</p>
                                         </div>

@@ -8,6 +8,7 @@ import Industries from "../AllComponents/Industries/Industries";
 import MetalGrades from "../AllComponents/MetalGrades/MetalGrades";
 import ScrollToTop from "../CommonUsedComponents/ScrollToTop/ScrollToTop";
 import WhatsAppPulseButton from "../CommonUsedComponents/WhatsAppPulseButton/WhatsAppPulseButton";
+import Footer from "../CommonUsedComponents/Footer/Footer";
 const AllRoutes = () => {
     return (
         <Router>
@@ -21,6 +22,7 @@ const AllRoutes = () => {
                 <Route path="/metal-grades" element={<MetalGrades />} />
 
             </Routes>
+            <Footer/>
             {/* <ScrollToTop/> */}
             <WhatsAppPulseButton/>
         </Router>

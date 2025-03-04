@@ -1,0 +1,26 @@
+.FooterlogoContainer{
+    padding-right: 40px;
+}
+.FooterlogoContainer img{
+    width: 200px;
+    margin-bottom: 20px;
+}
+.PhoneBoxContainer , .EmailBoxContainer{
+    /* border: 1px solid #617e8793; */
+    height: 100%;
+    padding: 20px;
+    margin: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+    /* background-color: #617e8793; */
+}
+.PhoneBoxContainer hr , .EmailBoxContainer hr{
+    background-color: #617e8793;
+    border: 0.5px solid #617e8793;
+    opacity: 1;
+}
+.PhoneBoxContainer a, .EmailBoxContainer a{
+    color: black;
+}
