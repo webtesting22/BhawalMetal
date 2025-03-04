@@ -21,7 +21,7 @@ const AllRoutes = () => {
                 <Route path="/metal-grades" element={<MetalGrades />} />
 
             </Routes>
-            <ScrollToTop/>
+            {/* <ScrollToTop/> */}
             <WhatsAppPulseButton/>
         </Router>
     );

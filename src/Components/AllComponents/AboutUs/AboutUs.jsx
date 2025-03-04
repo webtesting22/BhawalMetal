@@ -64,12 +64,12 @@ const AboutUs = () => {
                                         data-aos-duration="1200">Bhawal Metal Industries was established in 1996 to meet the growing demand for stainless steel. We are a leading manufacturer and supplier of high-quality stainless steel round bars, forged components, drawing-based components, and precision components. </p>
                                     <br />
                                     <p data-aos="fade-up"
-                                        data-aos-duration="1300">Our team of young visionaries strives for excellence in every aspect of the metal industry. We strongly believe in our core values and are committed to ethical business practices. With a customer-centric approach, timely delivery, and a focus on quality, the company has expanded in both size and product range.  
-</p>
+                                        data-aos-duration="1300">Our team of young visionaries strives for excellence in every aspect of the metal industry. We strongly believe in our core values and are committed to ethical business practices. With a customer-centric approach, timely delivery, and a focus on quality, the company has expanded in both size and product range.
+                                    </p>
                                     <br />
                                     <p data-aos="fade-up"
                                         data-aos-duration="1400">Over the decades, Bhawal Metal Industries has secured a strong position in India’s steel industry and built long-lasting customer relationships. Now, with a new generation of entrepreneurs joining the company, we aim to expand globally while continuing to supply and export stainless steel long products, forged components, drawing-based components, and precision components.
-</p>
+                                    </p>
                                 </div>
                             </div>
                         </Col>
@@ -121,12 +121,12 @@ const AboutUs = () => {
                                 data-aos-duration="1300">Bhawal Metal Industries operates in three major segments and is one of the first fully forward-integrated contract manufacturing companies based in India.</p>
                         </div>
                     </div>
-                    <div className="containerGap contentInfoContainer" style={{marginBottom:"0px"}}>
+                    <div className="containerGap contentInfoContainer" style={{ marginBottom: "0px" }}>
                         <Row>
                             <Col lg={10} md={24}>
                                 <div className="WhatDoesBhawalImageContainer">
                                     <div>
-                                        <img src="/Images/WhatDoesBhawalImage.png" alt="" data-aos="fade-right"
+                                        <img src="/Images/WhatDoesSectionImage.png" alt="" data-aos="fade-right"
                                             data-aos-duration="1000" />
 
                                     </div>
@@ -135,13 +135,13 @@ const AboutUs = () => {
                             </Col>
                             <Col lg={14} md={24}>
                                 <div data-aos="fade-left"
-                                    data-aos-duration="1400">
+                                    data-aos-duration="1400" style={{ display: "flex", alignItems: "center", height: "100%" }}>
                                     <div>
-                                       <p>We assist our clients even before the manufacturing process begins by providing high-quality raw materials such as stainless steel round bars, flat bars, hex bars, and square bars. To ensure the highest quality, we conduct various tests, including chemical, physical, mechanical, ultrasonic, micro, and IGC tests, through government and internationally approved certification bodies. This guarantees that our clients receive only the best-in-class products. </p>
-                                       <br />
-                                       <p> In addition to stainless steel long products, we supply premium-quality forged components. With our state-of-the-art forging unit, we manufacture forged circles, forged rings, forged blocks, forged flat bars, and forged flanges. We also produce forged components with complex shapes using the die forging method.</p>
-                                       <br />
-                                       <p>Our precision machining unit helps clients reduce machining time, lower costs, and minimize labor and transportation investments while preventing rejections. We understand that high-quality materials are essential for delivering durable and high-performing finished products.</p>
+                                        <p>We assist our clients even before the manufacturing process begins by providing high-quality raw materials such as stainless steel round bars, flat bars, hex bars, and square bars. To ensure the highest quality, we conduct various tests, including chemical, physical, mechanical, ultrasonic, micro, and IGC tests, through government and internationally approved certification bodies. This guarantees that our clients receive only the best-in-class products. </p>
+                                        <br />
+                                        <p> In addition to stainless steel long products, we supply premium-quality forged components. With our state-of-the-art forging unit, we manufacture forged circles, forged rings, forged blocks, forged flat bars, and forged flanges. We also produce forged components with complex shapes using the die forging method.</p>
+                                        <br />
+                                        <p>Our precision machining unit helps clients reduce machining time, lower costs, and minimize labor and transportation investments while preventing rejections. We understand that high-quality materials are essential for delivering durable and high-performing finished products.</p>
                                     </div>
                                 </div>
                             </Col>

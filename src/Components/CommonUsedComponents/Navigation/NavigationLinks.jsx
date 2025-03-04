@@ -19,17 +19,17 @@ const NavigationDataLinks = [
         path: "/industries",
         link: "Industry"
     },
-    {
-        path: "",
-        link: "Sustainabilty"
-    },
-    {
-        path: "",
-        link: "Blogs"
-    },
-    {
-        path: "",
-        link: "Contact"
-    }
+    // {
+    //     path: "",
+    //     link: "Sustainabilty"
+    // },
+    // {
+    //     path: "",
+    //     link: "Blogs"
+    // },
+    // {
+    //     path: "",
+    //     link: "Contact"
+    // }
 ]
 export default NavigationDataLinks

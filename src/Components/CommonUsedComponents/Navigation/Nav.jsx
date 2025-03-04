@@ -15,28 +15,18 @@ const Nav = () => {
         const handleScroll = () => {
             let newHeight = Math.min(window.scrollY, 75);
             setScrollHeight(newHeight);
-            setIsScrolled(window.scrollY > 70);
+            setIsScrolled(window.scrollY > 100); // Change state when scrolled 100px
 
             // Adjust logo size smoothly
-            if (window.scrollY > 50) {
-                setLogoSize(120); // Shrink logo
-            } else {
-                setLogoSize(150); // Default size
-            }
+            setLogoSize(window.scrollY > 50 ? 120 : 150);
         };
 
         window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const showDrawer = () => {
-        setOpen(true);
-    };
-    const onClose = () => {
-        setOpen(false);
-    };
+    const showDrawer = () => setOpen(true);
+    const onClose = () => setOpen(false);
 
     return (
         <>
@@ -49,16 +39,23 @@ const Nav = () => {
                                 <div className="AdjustBothContainerNavigation">
                                     <div className="BrandLogoContainer">
                                         <a href="/">
-                                            <img 
-                                                src="/Images/BhawalLogo.png" 
-                                                alt="Bhawal Logo" 
-                                                style={{ width: `${logoSize}px`, transition: "width 0.3s ease-in-out" }} 
+                                            <img
+                                                src="/Images/BhawalLogo.png"
+                                                alt="Bhawal Logo"
+                                                style={{ width: `${logoSize}px`, transition: "width 0.3s ease-in-out" }}
                                             />
                                         </a>
                                     </div>
                                     <div className="MenuBtnContainer">
                                         <div style={{ display: "flex", alignItems: "center" }}>
-                                            <IoIosMenu onClick={showDrawer} style={{ color: isScrolled ? "black" : "white" }} />
+                                            <ul >
+                                                {NavigationDataLinks.map((item, index) => (
+                                                    <Link to={item.path} style={{ color: isScrolled ? "black" : "white", transition: "color 0.3s ease-in-out" }}>
+                                                        <li key={index}>{item.link}</li>
+                                                    </Link>
+                                                ))}
+                                            </ul>
+                                            {/* <IoIosMenu onClick={showDrawer} style={{ color: isScrolled ? "black" : "white" }} /> */}
                                         </div>
                                     </div>
                                 </div>
@@ -66,7 +63,7 @@ const Nav = () => {
                         </Col>
                     </Row>
                 </div>
-                <Drawer placement="right" title="Bhawal Metal Industries" onClose={onClose} open={open}>
+                {/* <Drawer placement="right" title="Bhawal Metal Industries" onClose={onClose} open={open}>
                     <div className="NavigationContainer">
                         <ul className="navigationLinksContainerList">
                             {NavigationDataLinks.map((item, index) => (
@@ -81,7 +78,7 @@ const Nav = () => {
                             <h2 style={{ color: "white" }}>Contact info</h2>
                         </div>
                     </div>
-                </Drawer>
+                </Drawer> */}
             </div>
         </>
     );

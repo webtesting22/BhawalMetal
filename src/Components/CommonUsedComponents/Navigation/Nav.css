@@ -103,6 +103,12 @@
 .NavigationbarContainer .ant-row {
     padding: 0px 20px;
 }
+.MenuBtnContainer ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    font-size: 18px;
+}
 @media (max-width:900px) {
     .NavigationbarContainer .ant-row {
         padding: 0px 0px;
