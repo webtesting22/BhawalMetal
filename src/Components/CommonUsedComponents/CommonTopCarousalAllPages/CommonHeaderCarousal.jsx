@@ -7,7 +7,7 @@ import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
 
 import "./CommonHeader.css";
 
-const CommonHeaderCarousal = ({ slidesData }) => {
+const CommonHeaderCarousal = ({ slidesData,heading,tagline }) => {
     return (
         <div id="CommonHeaderHeightAdjust">
             <div style={{ height: "100%" }}>
@@ -37,9 +37,11 @@ const CommonHeaderCarousal = ({ slidesData }) => {
                                             data-aos-duration="1000"
                                             data-aos-delay={`${index * 500}`} // Delay increases with index
                                         >
-                                            About Us
+                                            {heading}
                                         </h1>
-                                        <p style={{ textAlign: "center", color: "white" }}>BHAWAL METAL INDUSTRIES</p>
+                                        <p style={{ textAlign: "center", color: "white" }} data-aos="fade-up"
+                                            data-aos-duration="1200"
+                                            data-aos-delay={`${index * 500}`}>{tagline}</p>
                                     </div>
                                 </div>
                             </div>
