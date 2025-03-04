@@ -61,13 +61,15 @@ const AboutUs = () => {
                                         data-aos-duration="1000">About Bhawal Metal Industries </h2>
                                     <br />
                                     <p data-aos="fade-up"
-                                        data-aos-duration="1200"><b>Bhawal Metal Industries</b> was established in the year 1996 with the aim of catering to the growing demands of Stainless Steel. Bhawal Metal Industries is a leading supplier and manufacturer of <b>High Quality Stainless Steel Round Bars, Forged components, Drawing Based Components And Precision components.</b> </p>
+                                        data-aos-duration="1200">Bhawal Metal Industries was established in 1996 to meet the growing demand for stainless steel. We are a leading manufacturer and supplier of high-quality stainless steel round bars, forged components, drawing-based components, and precision components. </p>
                                     <br />
                                     <p data-aos="fade-up"
-                                        data-aos-duration="1300">We have a team of young visionaries who endeavor for excellence in every aspect related to metals. We strongly believe in our core values and are always in the pursuit of success along the lines of ethical business practices. Keeping in mind its customer centric approach, timely delivery and quality products, the Company has grown in size and products range. </p>
+                                        data-aos-duration="1300">Our team of young visionaries strives for excellence in every aspect of the metal industry. We strongly believe in our core values and are committed to ethical business practices. With a customer-centric approach, timely delivery, and a focus on quality, the company has expanded in both size and product range.  
+</p>
                                     <br />
                                     <p data-aos="fade-up"
-                                        data-aos-duration="1400">Over the decades <b>Bhawal Metal Industries</b> has carved an unparallel position for itself in the steel industry of India and has built various congenial customer relations. Now with the new generation of entrepreneurs joining the company, the company aims at expanding on a global scale with the domestic supply and export of Stainless Steel long Products, Forged components, Drawing Based Components And Precision components.</p>
+                                        data-aos-duration="1400">Over the decades, Bhawal Metal Industries has secured a strong position in India’s steel industry and built long-lasting customer relationships. Now, with a new generation of entrepreneurs joining the company, we aim to expand globally while continuing to supply and export stainless steel long products, forged components, drawing-based components, and precision components.
+</p>
                                 </div>
                             </div>
                         </Col>
@@ -110,16 +112,16 @@ const AboutUs = () => {
                     </Row>
                 </div>
                 <VisionMissionValues />
-                <section id="WhatDoesBhawalContainer" style={{ marginBottom: "0px", paddingBottom: "0px" }}>
+                <div id="WhatDoesBhawalContainer" style={{ marginBottom: "0px", paddingBottom: "0px" }}>
                     <div>
                         <div>
                             <h2 className="BigHeading textCenter" data-aos="fade-up"
                                 data-aos-duration="1000">What Does Bhawal Metal Do?</h2>
                             <p className="textCenter" data-aos="fade-up"
-                                data-aos-duration="1300">Bhawal Metal Industries working is divided in 3 major segments</p>
+                                data-aos-duration="1300">Bhawal Metal Industries operates in three major segments and is one of the first fully forward-integrated contract manufacturing companies based in India.</p>
                         </div>
                     </div>
-                    <div className="containerGap contentInfoContainer">
+                    <div className="containerGap contentInfoContainer" style={{marginBottom:"0px"}}>
                         <Row>
                             <Col lg={10} md={24}>
                                 <div className="WhatDoesBhawalImageContainer">
@@ -135,29 +137,24 @@ const AboutUs = () => {
                                 <div data-aos="fade-left"
                                     data-aos-duration="1400">
                                     <div>
-                                        <p >Bhawal Metal Industries is one of the first fully forward integrated Contract manufacturing Company Based in India. </p>
-                                        <br />
-                                        <p >We help our clients by fulfilling their manufacturing needs before the process even begins by serving them with High Quality Raw Materials in form of Stainless Steel Round bars, Flat Bars, Hex Bars, Square Bars etc. We conduct tests for Chemical, Physical, Mechanical, Ultrasonic, Micro, IGC, and any other aspects from Govt. & Internationally approved certification bodies to ensure that our client receives only the best in class products.</p>
-                                        <br />
-<p>We don't just stop at Stainless Steel Long Products, we also provide our clients with our supreme quality Forged Components too. With the best-in-class forging unit, we are able to provide our clients with Forged Circle, Forged Rings, Forged Blocks, Forged Flat Bars, Forged Flanges, and we are also able to provide Forged Components in complex shapes using the Die Forging Method.</p>                                        <br />
-
+                                       <p>We assist our clients even before the manufacturing process begins by providing high-quality raw materials such as stainless steel round bars, flat bars, hex bars, and square bars. To ensure the highest quality, we conduct various tests, including chemical, physical, mechanical, ultrasonic, micro, and IGC tests, through government and internationally approved certification bodies. This guarantees that our clients receive only the best-in-class products. </p>
+                                       <br />
+                                       <p> In addition to stainless steel long products, we supply premium-quality forged components. With our state-of-the-art forging unit, we manufacture forged circles, forged rings, forged blocks, forged flat bars, and forged flanges. We also produce forged components with complex shapes using the die forging method.</p>
+                                       <br />
+                                       <p>Our precision machining unit helps clients reduce machining time, lower costs, and minimize labor and transportation investments while preventing rejections. We understand that high-quality materials are essential for delivering durable and high-performing finished products.</p>
                                     </div>
                                 </div>
                             </Col>
                         </Row>
                         <br />
-                        <p data-aos="fade-up"
-                            data-aos-duration="1200">Our Precision Machining unit not only helps our clients reduce their overall machining time, but it also saves a significant cost as the company now has to invest less in labor and transportation and won't have to deal with rejections. This is because we at Bhawal Metal Industries understand the importance of quality material, as it is the key to delivering a durable and high-performing finished product.</p>
-                        <br />
-                        <p data-aos="fade-up"
-                            data-aos-duration="1300">To achieve this, we ensure that a strict quality check is maintained over all the phases of manufacturing. This has enabled us to serve our clients better and also provided us with a competitive edge in the market, as the quality raw material is the key for quality end products. </p>
+                        <p>To achieve this, we maintain strict quality checks at every stage of manufacturing. This commitment to quality has allowed us to serve our clients better and gain a competitive edge in the market, as superior raw materials are the foundation of excellent end products.</p>
                         <div>
                             <div className="AnimatedbtnContainer">
                                 <button className="ColourButton" >View All Products <MdKeyboardArrowRight /></button>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
             </section>
             <UnwaveringEfforts />
         </>

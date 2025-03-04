@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import CountUp from "react-countup";
 import "./UnwaveringEfforts.css";
 import { Row, Col } from "antd";
 
@@ -7,21 +8,25 @@ const UnwaveringEfforts = () => {
     const rightContainerRef = useRef(null);
     const [offset, setOffset] = useState(0);
     const [isVisible, setIsVisible] = useState(false);
+    const [startCounter, setStartCounter] = useState(false);
 
     const PointsData = [
-        { title: <>650+ Satisfied Clients with 86% repeating Clients</> },
-        { title: <>27+ Years of Experience</> },
-        { title: <>50k+ Product Delivered</> },
-        { title: <>Reduced Carbon Footprint through incorporating Circular Economy.</> }
+        { title: "Satisfied Clients", value: 650, suffix: "+" },
+        { title: "Repeating Clients", value: 86, suffix: "%" },
+        { title: "Years of Experience", value: 27, suffix: "+" },
+        { title: "Products Delivered", value: 50000, suffix: "+" }
     ];
 
-    // Intersection Observer to detect when the section is visible
-    useEffect(() => {
+     // Intersection Observer to detect when the section is visible
+     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                setIsVisible(entry.isIntersecting);
+                if (entry.isIntersecting) {
+                    setStartCounter(false); // Reset counter
+                    setTimeout(() => setStartCounter(true), 300); // Restart after a short delay
+                }
             },
-            { threshold: 0 } // Triggers when 30% of the section is visible
+            { threshold: 0.3 } // Triggers when 30% of the section is visible
         );
 
         if (sectionRef.current) observer.observe(sectionRef.current);
@@ -52,45 +57,64 @@ const UnwaveringEfforts = () => {
         return () => window.removeEventListener("scroll", onScroll);
     }, [isVisible]);
 
-    return (
-        <div id="UnwaveringEffortsContentContainer" ref={sectionRef}>
-            <div>
-                <div className="AdjustUnwaveringImageContainer">
-                    <div className="OverlayContainer">
 
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1733683300412-fd4a1519f2cc?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                </div>
+    return (
+        <section id="UnwaveringEffortsContentContainer"  ref={sectionRef}>
+            <div className="overlayContainerUnwavering">
+
+            </div>
+            <div style={{ paddingTop: "0px" }}>
                 <div className="AbsoluteContainer">
                     <Row style={{ height: "100%" }}>
-                        <Col lg={10}>
+                        <Col lg={24}>
                             <div className="ContentContainer">
                                 <div>
-                                    <h2 className="BigHeading" style={{ color: "white" }} data-aos="fade-up"
-                                        data-aos-duration="1300">Unwavering Efforts to Produce Premium Quality Industrial Components</h2>
-                                    <p data-aos="fade-up"
-                                        data-aos-duration="1500">Every product at Bhawal Metal Industries is a cherished treasure designed and built with remarkable craftsmanship. As a precision components manufacturer in India, we have made sure to put in unwavering efforts in producing some intriguing and accurate industrial elements. We ensure that every production strategy meets customer specificities and optimum machine performance.</p>
+                                    <h2 className="BigHeading" data-aos="fade-up" data-aos-duration="1300" style={{color:"white"}}>
+                                        Unwavering Efforts to Produce Premium Quality Industrial Components
+                                    </h2>
+                                    <p data-aos="fade-up" data-aos-duration="1500">
+                                        Every product at Bhawal Metal Industries is a valued creation, designed and built with remarkable craftsmanship.
+                                        As a precision components manufacturer in India, we put in unwavering efforts to produce high-quality and accurate industrial components.
+                                        We ensure that every production strategy aligns with customer specifications and ensures optimal machine performance.
+                                    </p>
                                 </div>
                             </div>
                         </Col>
-                        <Col lg={14}>
-                            <div
-                                className="RightSideHeadingContainer"
-                                ref={rightContainerRef}
-                                style={{ transform: `translateY(${offset}px)`, transition: "transform 0.1s ease-out" }}
-                            >
-                                {PointsData.map((item, index) => (
-                                    <div key={index}>
-                                        <h2>{item.title}</h2>
-                                        <hr />
-                                    </div>
-                                ))}
+                        <Col lg={24} >
+                            <div className="containerGap" style={{marginBottom:"0px"}}>
+                                <div
+                                    className="RightSideHeadingContainer "
+                                    style={{ transform: `translateY(${offset}px)`, transition: "transform 0.1s ease-out" }}
+                                  
+                                >
+                                    <Row>
+                                        {PointsData.map((item, index) => (
+                                            <Col lg={6} key={index}>
+                                                <div>
+                                                    <h2 style={{textAlign:"center"}}>
+                                                        <CountUp
+                                                            start={startCounter ? 0 : null}
+                                                            end={item.value}
+                                                            duration={8}
+                                                            suffix={item.suffix}
+                                                            delay={0.3 * index}
+                                                            
+                                                            style={{fontSize:"30px"}}
+                                                        />
+                                                    </h2>
+                                                    <p style={{textAlign:"center",fontWeight:"500"}}>{item.title}</p>
+                                                </div>
+                                            </Col>
+                                        ))}
+                                    </Row>
+                                </div>
                             </div>
+
                         </Col>
                     </Row>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

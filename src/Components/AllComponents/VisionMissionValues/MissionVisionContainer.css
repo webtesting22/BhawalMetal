@@ -33,7 +33,17 @@
     border: 1px solid rgba(255, 255, 255, 0.057);
     height: 100%;
 }
+.VisionMissionContainerImage{
+    padding-right: 20px;
+}
+.interChangeRowAdjust .ant-row:nth-child(2) .ant-col:nth-child(2){
+    padding-left: 20px;
+    padding-right: 0px !important;
+}
 
+#MissionVisionContainer{
+    padding: 3rem 0rem;
+}
 @media (max-width:900px) {
     .interChangeRowAdjust .ant-row .ant-col {
         padding: 0px !important;

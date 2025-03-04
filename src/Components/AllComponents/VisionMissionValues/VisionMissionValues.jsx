@@ -11,9 +11,10 @@ const VisionMissionValues = () => {
             content: <>
                 <div>
                     <ul>
-                        <li>To recognize our company’s and its people full potential to carve our name as world’s leading Precision Engineering Firm.</li>
-                        <li>To be India’s Driving force in the World of Automation and robots through Innovation and Persistence.</li>
-                        <li>To inspire and impact the life of millions by uplifting the society and making constant mindful efforts for earth and its people.  </li>
+                        <li>To recognize our company’s and our people's full potential, establishing ourselves as a leading global Precision Engineering Firm</li>
+                        <li> ⁠To be India’s driving force in the world of automation and robotics through innovation and persistence.
+                        </li>
+                        <li>To inspire and positively impact millions of lives by uplifting society and making mindful efforts for the well-being of the planet and its people.</li>
                     </ul>
                 </div>
             </>
@@ -24,9 +25,9 @@ const VisionMissionValues = () => {
             content: <>
                 <div>
                     <ul>
-                        <li>To support our customers by providing superior products and services of exceptional value which help them gain competitive advantage in their markets.</li>
-                        <li>To sustain our vision by constantly seeking renewal via continual improvement in processes, and the application of new technologies and best business practices. </li>
-                        <li>To provide a pleasant, nurturing and growth oriented environment which encourages our employees to be highly productive and to grow personally and professionally.</li>
+                        <li>To support our customers by delivering superior products and services of exceptional value, helping them gain a competitive advantage in their markets.</li>
+                        <li>To sustain our vision by continuously improving processes, adopting new technologies, and implementing best business practices. </li>
+                        <li>To provide a positive, nurturing, and growth-oriented work environment that encourages employees to be highly productive and grow both personally and professionally.</li>
                     </ul>
                 </div>
             </>
@@ -36,15 +37,15 @@ const VisionMissionValues = () => {
             title: "Core Values",
             content: <>
                 <div>
-                   <p> We at Bhawal Metal Industries strongly believe in the following:</p>
+                   <p> At Bhawal Metal Industries, we strongly believe in:</p>
                     
                     <ul>
-                        <li>Excellence</li>
-                        <li>Integrity</li>
-                        <li>Transparency</li>
-                        <li>Innovation</li>
-                        <li>Customer Service</li>
-                        <li>Accountability</li>
+                        <li>Excellence – Striving for the highest quality in everything we do.</li>
+                        <li>Integrity – Conducting business with honesty and strong moral principles.</li>
+                        <li>Transparency – Maintaining open and clear communication in all dealings. </li>
+                        <li>Innovation – Continuously improving and adopting new ideas and technologies. </li>
+                        <li>Customer Service – Prioritizing customer satisfaction through quality products and support.</li>
+                        <li>Accountability – Taking responsibility for our actions and commitments.</li>
                     </ul>
                 </div>
 
@@ -54,7 +55,7 @@ const VisionMissionValues = () => {
     ]
     return (
         <>
-            <section id="MissionVisionContainer">
+            <div id="MissionVisionContainer">
                 <div className="backGroundColor">
                     <div className="LinesContainer">
 
@@ -75,12 +76,12 @@ const VisionMissionValues = () => {
                 <div>
                     <div className="interChangeRowAdjust">
                         {VisionMissionContent.map((item, index) => (
-                            <Row key={index} gutter={[32, 32]} align="middle" className="containerGap" data-aos="fade-up"
+                            <Row key={index}  align="middle" className="containerGap"  data-aos="fade-up"
                             data-aos-duration="1000">
                                 {/* If index is even, display Image first, otherwise display Content first */}
                                 {index % 2 === 0 ? (
                                     <>
-                                        <Col lg={10} xs={24}>
+                                        <Col lg={12} xs={24}>
                                             <div className="VisionMissionContainerImage">
                                                 <img src={item.image} alt={item.title} />
                                             </div>
@@ -100,8 +101,8 @@ const VisionMissionValues = () => {
                                                 {item.content}
                                             </div>
                                         </Col>
-                                        <Col lg={10} xs={24}>
-                                            <div className="VisionMissionContainerImage">
+                                        <Col lg={12} xs={24}>
+                                            <div className="VisionMissionContainerImage" style={{paddingRight:"0px"}}>
                                                 <img src={item.image} alt={item.title} />
                                             </div>
                                         </Col>
@@ -111,7 +112,7 @@ const VisionMissionValues = () => {
                         ))}
                     </div>
                 </div>
-            </section>
+            </div>
         </>
     )
 }
