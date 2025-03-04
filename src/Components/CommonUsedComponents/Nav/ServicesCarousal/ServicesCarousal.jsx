@@ -15,6 +15,9 @@ const ServicesCarousal = () => {
         { img: "./Images/IndustriesIcons/OilandGas.png", title: "Oil & Gas" },
         { img: "./Images/IndustriesIcons/packaging.png", title: "Packaging" },
         { img: "./Images/IndustriesIcons/pharma.png", title: "Pharma" },
+        { img: "", title: "Processing " },
+        { img: "", title: "Water Treatment" }
+
     ];
 
     // Function to handle hover effect
@@ -43,7 +46,7 @@ const ServicesCarousal = () => {
                         </div>
 
                         <div className='containerGap' style={{ marginBottom: "0px" }}>
-                            <div 
+                            <div
                                 className="SwiperHoverArea"
                                 onMouseMove={handleMouseMove} // Detect mouse hover movement
                             >
