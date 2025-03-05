@@ -80,12 +80,14 @@ const VisionMissionValues = () => {
                                 {/* If index is even, display Image first, otherwise display Content first */}
                                 {index % 2 === 0 ? (
                                     <>
-                                        <Col lg={12} xs={24} >
+                                        <Col lg={12} xs={24} data-aos="fade-right"
+                                            data-aos-duration="1000">
                                             <div className="VisionMissionContainerImage">
                                                 <img src={item.image} alt={item.title} />
                                             </div>
                                         </Col>
-                                        <Col lg={12} xs={24} >
+                                        <Col lg={12} xs={24} data-aos="fade-left"
+                                            data-aos-duration="1000">
                                             <div>
                                                 <h2 className="BigHeading">{item.title}</h2>
                                                 {item.content}
@@ -94,13 +96,15 @@ const VisionMissionValues = () => {
                                     </>
                                 ) : (
                                     <>
-                                        <Col lg={12} xs={24} >
+                                        <Col lg={12} xs={24} data-aos="fade-right"
+                                            data-aos-duration="1000">
                                             <div>
                                                 <h2 className="BigHeading">{item.title}</h2>
                                                 {item.content}
                                             </div>
                                         </Col>
-                                        <Col lg={12} xs={24} >
+                                        <Col lg={12} xs={24} data-aos="fade-left"
+                                            data-aos-duration="1000">
                                             <div className="VisionMissionContainerImage" style={{ paddingRight: "0px" }}>
                                                 <img src={item.image} alt={item.title} />
                                             </div>

@@ -69,10 +69,12 @@ const UnwaveringEfforts = () => {
                         <Col lg={24}>
                             <div className="ContentContainer">
                                 <div>
-                                    <h2 className="BigHeading"  style={{color:"white"}}>
+                                    <h2 className="BigHeading"  style={{color:"white"}} data-aos="fade-up"
+                                            data-aos-duration="1300">
                                         Unwavering Efforts to Produce Premium Quality Industrial Components
                                     </h2>
-                                    <p >
+                                    <p data-aos="fade-up"
+                                            data-aos-duration="1300">
                                         Every product at Bhawal Metal Industries is a valued creation, designed and built with remarkable craftsmanship.
                                         As a precision components manufacturer in India, we put in unwavering efforts to produce high-quality and accurate industrial components.
                                         We ensure that every production strategy aligns with customer specifications and ensures optimal machine performance.
@@ -89,7 +91,8 @@ const UnwaveringEfforts = () => {
                                 >
                                     <Row>
                                         {PointsData.map((item, index) => (
-                                            <Col lg={6} key={index}>
+                                            <Col lg={6} key={index} data-aos="fade-up"
+                                            data-aos-duration="1200" data-aos-delay={index * 200} >
                                                 <div>
                                                     <h2 style={{textAlign:"center"}}>
                                                         <CountUp

@@ -33,7 +33,9 @@ const WhatWeDoHome = () => {
                         <div className="WhatWeDoCard">
                             <Row>
                                 {WhatWeDoCardsData.map((item, index) => (
-                                    <Col lg={8} md={24} style={{ width: "100%" }} key={index} >
+                                    <Col lg={8} md={24} style={{ width: "100%" }} key={index}     data-aos="fade-up"
+                                    data-aos-duration="1000"
+                                    data-aos-delay={index * 200} >
                                         <div className="WhatWeCardContainerEdit">
                                             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", width: "100%" }}>
                                                 <div className="CardImageContainer">

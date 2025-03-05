@@ -59,6 +59,9 @@ const HeroHome = () => {
                                             <img src={item.img} alt={item.title} />
                                             <div className="ContentContainerSwiperHome">
                                                 <h1
+                                                    data-aos="fade-up"
+                                                    data-aos-duration="1000"
+                                                    data-aos-delay={index * 200}
                                                     className="BigHeadingNormal"
                                                 >
                                                     {item.title}

@@ -56,13 +56,16 @@ const WhoAreWeHome = () => {
                         </div> */}
                         <div className="ContentContainer">
                            <div>
-                           <p className="textCenter">
+                           <p className="textCenter" data-aos="fade-up"
+     data-aos-duration="1000">
                                 Bhawal Metal Industries was established in 1996 to meet the growing demand for stainless steel. We are a leading manufacturer and supplier of high-quality stainless steel round bars, forged components, drawing-based components, and precision components.
                             </p>
                             <br />
-                            <p>Our team of young visionaries strives for excellence in every aspect of the metal industry. We strongly uphold our core values and pursue success through ethical business practices. With a customer-centric approach, timely delivery, and a commitment to quality, the company has expanded in both size and product range.  </p>
+                            <p data-aos="fade-up"
+     data-aos-duration="1200">Our team of young visionaries strives for excellence in every aspect of the metal industry. We strongly uphold our core values and pursue success through ethical business practices. With a customer-centric approach, timely delivery, and a commitment to quality, the company has expanded in both size and product range.  </p>
                             <br />
-                            <p>Over the decades, Bhawal Metal Industries has secured a strong and distinguished position in India’s steel industry while building long-lasting customer relationships. Now, with a new generation of entrepreneurs joining the company, we aim to expand globally, continuing to supply and export stainless steel long products, forged components, drawing-based components, and precision components.</p>
+                            <p data-aos="fade-up"
+     data-aos-duration="1400">Over the decades, Bhawal Metal Industries has secured a strong and distinguished position in India’s steel industry while building long-lasting customer relationships. Now, with a new generation of entrepreneurs joining the company, we aim to expand globally, continuing to supply and export stainless steel long products, forged components, drawing-based components, and precision components.</p>
 
                            </div>
                         </div>

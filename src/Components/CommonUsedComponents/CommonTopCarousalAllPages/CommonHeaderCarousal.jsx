@@ -33,13 +33,21 @@ const CommonHeaderCarousal = ({ slidesData, heading, tagline, pageLink }) => {
                                         <h1
                                             className="BigHeadingNormal"
                                             style={{ textAlign: "center" }}
+                                            data-aos="fade-up"
+                                            data-aos-duration="1000"
+                                            data-aos-delay={index * 200} 
                                         >
                                             {heading}
                                         </h1>
-                                        <p style={{ textAlign: "center", color: "white" }} >{tagline}</p>
+                                        <p style={{ textAlign: "center", color: "white" }} data-aos="fade-up"
+                                            data-aos-duration="1300"
+                                            data-aos-delay={index * 200} >{tagline}</p>
                                         <br />
                                         <span style={{ textAlign: "center", color: "white" }} 
                                             className="RouteLinks"
+                                            data-aos="fade-up"
+                                            data-aos-duration="1400"
+                                            data-aos-delay={index * 200} 
                                         >
                                             <Link to="/">Home</Link>&nbsp;/ {pageLink}
                                         </span>
