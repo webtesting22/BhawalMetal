@@ -74,7 +74,7 @@ const ServicesCarousal = () => {
                                             <div className='IndustriesCardContainer'>
                                                 <div style={{ height: "100%" }}>
                                                     <div className='IndustriesCards'>
-                                                        <img src={item.img} alt="" />
+                                                        <img src={item.img} alt={item.title} loading="lazy"/>
                                                     </div>
                                                     <div className='HeadingContainerCarousal'>
                                                         <h2 className='textCenter'>{item.title}</h2>

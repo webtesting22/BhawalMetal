@@ -28,7 +28,7 @@ const CommonHeaderCarousal = ({ slidesData, heading, tagline, pageLink }) => {
                             <div style={{ height: "100%" }}>
                                 <div className="OverlayEffectContainer"></div>
                                 <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                                    <img src={item.img} alt="" />
+                                    <img src={item.img} alt="" loading="lazy"/>
                                     <div className="ContentContainerSwiperHome">
                                         <h1
                                             className="BigHeadingNormal"

@@ -64,6 +64,11 @@
 }
 
 @media (max-width:900px){
+    .WhatWeDoCard {
+        margin: 4rem 0rem;
+        width: 100%;
+        margin-bottom: 0px !important;
+    }
     .CardImageContainer {
         height: 300px;
     }

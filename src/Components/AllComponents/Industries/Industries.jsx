@@ -123,7 +123,7 @@ const Industries = () => {
                                             <div>
                                                 <div className="WhyChooseUsCardSwiperContainer">
                                                     <div className="SwiperImageCardContainer">
-                                                        <img src={item.image} alt="" />
+                                                        <img src={item.image} alt={item.title} loading="lazy"/>
                                                     </div>
                                                     {/* <br /> */}
                                                     <div>
@@ -169,7 +169,7 @@ const Industries = () => {
                             <div className="ModalImageContainer">
                                 <Row>
                                     <Col lg={12}>
-                                        <img src={selectedIndustry.image} alt={selectedIndustry.title} />
+                                        <img src={selectedIndustry.image} alt={selectedIndustry.title} loading="lazy"/>
 
                                     </Col>
                                     <Col lg={12}>

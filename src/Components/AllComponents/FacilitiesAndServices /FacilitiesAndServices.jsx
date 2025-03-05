@@ -211,7 +211,7 @@ const FacilitiesAndServices = () => {
                                         data-aos-duration="1000"
                                         data-aos-delay={index * 200} >
                                         <div className="GalleryImageContainer">
-                                            <Image src={item.img} alt="" />
+                                            <Image src={item.img} alt="" loading="lazy"/>
                                         </div>
                                     </div>
                                 </Col>

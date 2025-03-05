@@ -143,7 +143,7 @@ const AboutUs = () => {
                             <Col lg={10} md={24}>
                                 <div className="WhatDoesBhawalImageContainer">
                                     <div>
-                                        <img src="/Images/WhatDoesSectionImage.png" alt="" data-aos="fade-right"
+                                        <img src="/Images/WhatDoesSectionImage.png" alt="" loading="lazy" data-aos="fade-right"
                                             data-aos-duration="1000" />
 
                                     </div>
