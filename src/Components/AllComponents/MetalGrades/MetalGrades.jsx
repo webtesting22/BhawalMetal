@@ -196,7 +196,7 @@ const MetalGrades = () => {
                                 <Col lg={12} style={{ width: "100%" }}>
                                     <div >
                                         <div className="AboutUsImageContainer">
-                                            <img src="https://img.freepik.com/free-vector/realistic-metallic-iron-tube-equipment-background-construction_1017-51450.jpg?t=st=1741082392~exp=1741085992~hmac=cd624afc5401df2f9435f3aec973815fefe9916a2c7d9b40a4c503c58c8e3b74&w=1480" alt="" />
+                                            <img src="/Images/Metalgrades.jpeg" alt="" />
                                         </div>
                                     </div>
                                 </Col>
