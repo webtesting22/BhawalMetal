@@ -1,11 +1,14 @@
-.FooterlogoContainer{
+.FooterlogoContainer {
     padding-right: 40px;
 }
-.FooterlogoContainer img{
+
+.FooterlogoContainer img {
     width: 200px;
     margin-bottom: 20px;
 }
-.PhoneBoxContainer , .EmailBoxContainer{
+
+.PhoneBoxContainer,
+.EmailBoxContainer {
     /* border: 1px solid #617e8793; */
     /* height: 100%; */
     padding: 20px;
@@ -16,26 +19,50 @@
     /* text-align: center; */
     /* background-color: #617e8793; */
 }
-.PhoneBoxContainer hr , .EmailBoxContainer hr{
+
+.PhoneBoxContainer hr,
+.EmailBoxContainer hr {
     background-color: #617e8793;
     border: 0.5px solid #617e8793;
     opacity: 1;
 }
-.PhoneBoxContainer a, .EmailBoxContainer a{
+
+.PhoneBoxContainer a,
+.EmailBoxContainer a {
     color: black;
 }
-.CopyWriteTextContainer{
+
+.CopyWriteTextContainer {
     display: flex;
     justify-content: end;
     align-items: center;
     padding: 0px 20px;
 }
 
-@media (max-width:900px){
-    .PhoneBoxContainer , .EmailBoxContainer{
+.ContactNumbers {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+@media (max-width:900px) {
+    .ContactNumbers {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .ContactNumbers p::after{
+        content: ",";
+        display: inline-flex;
+
+    }
+    .PhoneBoxContainer,
+    .EmailBoxContainer {
         /* border: 1px solid #617e8793; */
         /* height: 100%; */
         padding: 20px 0px;
+        padding-bottom: 0px !important;
         margin: 0px 0px;
         display: flex;
         /* align-items: center; */
@@ -43,4 +70,12 @@
         /* text-align: center; */
         /* background-color: #617e8793; */
     }
+
+    .CopyWriteTextContainer {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 0px 00px;
+    }
+
 }

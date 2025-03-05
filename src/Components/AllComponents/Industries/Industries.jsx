@@ -76,14 +76,13 @@ const Industries = () => {
                                     <div data-aos="fade-left"
                                         data-aos-duration="1300">
                                         {/* <h2></h2> */}
-                                        <p>Bhawal Metal Industries has an experience of over 27 years in the field of stainless steel and manufacturing. Our journey as precision components manufacturers in India dates back to 1997 when we began establishing our presence in different sectors of domestic and international markets. We have established a vast network of partnerships and supply chains nationwide with products shipped to different industrial sectors. </p>
+                                        <p>Bhawal Metal Industries has over 27 years of experience in stainless steel and manufacturing. Our journey as precision components manufacturers in India began in 1997 when we started establishing our presence in various domestic and international markets. Over the years, we have built a strong network of partnerships and supply chains across the country, delivering products to different industrial sectors. </p>
                                         <br />
                                         <p><b>Personalized Products</b></p>
-                                        <p>We, as precision components manufacturers, also supply custom-designed products which are manufactured according to the customers’ unique needs.</p>
+                                        <p>As precision components manufacturers, we also provide custom-designed products tailored to meet our customers' unique requirements.</p>
                                         <br />
                                         <p><b>Superior Quality</b></p>
-                                        <p>At Bhawal Metal, we envision high durability and corrosion-resistant industrial components of exceptional quality crafted by the finest craftsman our Quality material plays a key role in delivering our clients a durable and high-performing Finished Product.
-                                            To Achieve this we make sure that all our material is according to ASTM Standards & are Ultra okay, hence free from Unwanted cracks, slags & air gaps, To ensure this a strict quality check is maintained over all the phases of manufacturing.</p>
+                                        <p>At Bhawal Metal, we are committed to producing highly durable and corrosion-resistant industrial components of exceptional quality, crafted by skilled professionals. High-quality materials play a crucial role in delivering durable and high-performing finished products. To achieve this, we ensure that all our materials comply with ASTM standards and are ultra-sound, free from unwanted cracks, slags, and air gaps. A strict quality check is maintained throughout all phases of manufacturing to uphold these standards.</p>
                                     </div>
                                 </div>
                             </Col>
@@ -93,7 +92,7 @@ const Industries = () => {
                 <div id="SlidesStyles">
                     <div>
                         <h2 className="BigHeading textCenter">Industries We Serve</h2>
-                        <p className="textCenter">Over the years of establishment, Bhawal Metal Industries has been serving various industries nationwide. We take pride in our achievements across diverse sectors, from automobiles to aerospace and defense. With our advanced technology and material science, we have produced innovative products for these industrial sectors.</p>
+                        <p className="textCenter">Over the years, Bhawal Metal Industries has been catering to various industries across the nation. We take pride in our achievements across diverse sectors, from automobiles to aerospace and defense. With advanced technology and expertise in material science, we have developed innovative products to meet the needs of these industries.</p>
                     </div>
 
                     <div className="IndustriesServedCards">

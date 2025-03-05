@@ -73,13 +73,13 @@ const FacilitiesAndServices = () => {
                 <div className="FacilitiesAndServicesContentContainer contentInfoContainer">
                     <div>
                         <p data-aos="fade-up"
-                            data-aos-duration="1000">Fueled by burning ambition and driven by its core values, Bhawal Metal Industries specialize in niche precision forgings, fully-machined, sub-assembled and precision products for our domestic and global customers. We have hot forging facilities, heat treatment equipped with oil and water quenching facilities and precision machining facility equipped with high end CNCs, VMCs and SPMs, to achieve required tolerances as per customer specifications.</p>
+                            data-aos-duration="1000">Fueled by ambition and driven by its core values, Bhawal Metal Industries specializes in niche precision forgings, fully machined, sub-assembled, and precision products for both domestic and global customers. We have advanced hot forging facilities, heat treatment systems with oil and water quenching, and a precision machining unit equipped with high-end CNCs, VMCs, and SPMs to achieve the required tolerances as per customer specifications. </p>
                         <br />
                         <p data-aos="fade-up"
-                            data-aos-duration="1000">Over the last two decades the organization has developed into an innovative, customer oriented and robust organization, known for high quality carbon and alloy steel forged and machined components. We provide engineering, design, development and validation support, in close collaboration with our customers.</p>
+                            data-aos-duration="1000">Over the past two decades, the company has evolved into an innovative, customer-focused, and robust organization, recognized for high-quality carbon and alloy steel forged and machined components. We provide engineering, design, development, and validation support in close collaboration with our customers.</p>
                         <br />
                         <p data-aos="fade-up"
-                            data-aos-duration="1000">Keeping in mind our customer-centric approach and our pledge to provide quality materials, the company provides various value addition services to our clients like -</p>
+                            data-aos-duration="1000">With our customer-centric approach and commitment to delivering quality materials, we offer various value-added services, including:</p>
                     </div>
                     <br />
                     <div data-aos="fade-up"
@@ -197,10 +197,10 @@ const FacilitiesAndServices = () => {
                     </div>
                     <div>
                         <p data-aos="fade-right"
-                            data-aos-duration="1000">Bhawal Metal Industries offers excellent outsourced machining facilities for various product lines which enable products to be supplied either in the pre-machined or completely-machined condition with exceptional quality. Our unabated emphasis on quality and on-time delivery allows us to meet customer demands.</p>
+                            data-aos-duration="1000">Bhawal Metal Industries provides top-quality outsourced machining facilities for various product lines, enabling us to supply products in either pre-machined or fully machined conditions with exceptional precision. Our unwavering focus on quality and timely delivery ensures we meet customer demands efficiently.</p>
                         <br />
                         <p data-aos="fade-right"
-                            data-aos-duration="1000">We have dedicated lines for machining set-up and Outsourcing capabilities to deliver our clients with following services:</p>
+                            data-aos-duration="1000">We have dedicated machining setups and outsourcing capabilities to offer the following services to our clients:</p>
                     </div>
                     <br />
                     <div>

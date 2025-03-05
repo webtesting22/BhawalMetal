@@ -32,6 +32,7 @@
 .IndustriesCards {
     display: flex;
     justify-content: center;
+    overflow: hidden;
     /* padding: 20px 0px; */
 }
 
@@ -77,6 +78,6 @@
 
 @media (max-width:900px) {
     #ServicesCarousalContentContainer {
-        padding: 4rem 1rem;
+        padding: 4rem 0rem;
     }
 }

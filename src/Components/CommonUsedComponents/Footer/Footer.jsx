@@ -29,9 +29,11 @@ const Footer = () => {
                                             <div>
                                                 <h2>Contact</h2>
                                                 <br />
-                                                <p><a href="tel:+91 93270 18703">+91 93270 18703</a></p>
+                                               <div className="ContactNumbers">
+                                               <p><a href="tel:+91 93270 18703">+91 93270 18703</a></p> 
                                                 <p> <a href="tel:+91 76007 29708">+91 76007 29708</a></p>
                                                 <p> <a href="tel:+91 92272 18702">+91 92272 18702</a></p>
+                                               </div>
                                                 <hr />
                                                 <p><a href="mailto:sales1@bhawalmetal.com">sales1@bhawalmetal.com</a></p>
                                                 <p><a href="mailto:bhawalmetalindustries@gmail.com">bhawalmetalindustries@gmail.com</a></p>
