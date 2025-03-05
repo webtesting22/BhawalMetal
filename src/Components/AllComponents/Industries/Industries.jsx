@@ -11,20 +11,11 @@ import CommonHeaderCarousal from "../../CommonUsedComponents/CommonTopCarousalAl
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import IndustriesData from "./IndustriesData";
 const Industries = () => {
-    const [activeIndex, setActiveIndex] = useState(0);
     const swiperRef = useRef(null);
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [selectedIndustry, setSelectedIndustry] = useState(null);
 
-    const handleSlideChange = (swiper) => {
-        setActiveIndex(swiper.realIndex);
-    };
-
-    const goToSlide = (index) => {
-        if (swiperRef.current) {
-            swiperRef.current.slideToLoop(index);
-        }
-    };
+ 
     const showModal = (industry) => {
         setSelectedIndustry(industry);
         setIsModalVisible(true);
@@ -66,7 +57,7 @@ const Industries = () => {
                             <Col lg={12}>
                                 <div>
                                     <div className="AboutUsImageContainer" >
-                                        <img src="/Images/IndustriesTopImage.avif" alt=""  />
+                                        <img src="/Images/IndustriesTopImage.avif" alt="" />
                                     </div>
                                 </div>
                             </Col>
@@ -123,7 +114,6 @@ const Industries = () => {
                                                     <div className="SwiperImageCardContainer">
                                                         <img src={item.image} alt={item.title} />
                                                     </div>
-                                                    {/* <br /> */}
                                                     <div>
                                                         <h2>{item.title}</h2>
                                                         <div className="AnimatedbtnContainer">
@@ -145,9 +135,7 @@ const Industries = () => {
                                             <IoIosArrowForward size={24} />
                                         </button>
                                     </div>
-                                    {/* <div className="AnimatedbtnContainer">
-                                        <button className="ColourButton" >Read More <MdKeyboardArrowRight /></button>
-                                    </div> */}
+
                                 </div>
                             </div>
                         </div>

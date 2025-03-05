@@ -6,7 +6,6 @@ import AboutUs from "../AllComponents/AboutUs/AboutUs";
 import FacilitiesAndServices from "../AllComponents/FacilitiesAndServices /FacilitiesAndServices";
 import Industries from "../AllComponents/Industries/Industries";
 import MetalGrades from "../AllComponents/MetalGrades/MetalGrades";
-import ScrollToTop from "../CommonUsedComponents/ScrollToTop/ScrollToTop";
 import WhatsAppPulseButton from "../CommonUsedComponents/WhatsAppPulseButton/WhatsAppPulseButton";
 import Footer from "../CommonUsedComponents/Footer/Footer";
 const AllRoutes = () => {
@@ -23,7 +22,6 @@ const AllRoutes = () => {
 
             </Routes>
             <Footer/>
-            {/* <ScrollToTop/> */}
             <WhatsAppPulseButton/>
         </Router>
     );

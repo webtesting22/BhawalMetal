@@ -10,7 +10,8 @@ const Nav = () => {
     const [scrollHeight, setScrollHeight] = useState(0);
     const [isScrolled, setIsScrolled] = useState(false);
     const [logoSize, setLogoSize] = useState(150); // Default logo size
-
+    const showDrawer = () => setOpen(true);
+    const onClose = () => setOpen(false);
     useEffect(() => {
         const handleScroll = () => {
             let newHeight = Math.min(window.scrollY, 75);
@@ -25,8 +26,7 @@ const Nav = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const showDrawer = () => setOpen(true);
-    const onClose = () => setOpen(false);
+
 
     return (
         <>
@@ -38,13 +38,13 @@ const Nav = () => {
                             <div>
                                 <div className="AdjustBothContainerNavigation">
                                     <div className="BrandLogoContainer">
-                                        <a href="/">
+                                        <Link to="/">
                                             <img
                                                 src="/Images/BhawalLogo.png"
                                                 alt="Bhawal Logo"
                                                 style={{ width: `${logoSize}px`, transition: "width 0.3s ease-in-out" }}
                                             />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="MenuBtnContainer">
                                         <div style={{ display: "flex", alignItems: "center" }}>

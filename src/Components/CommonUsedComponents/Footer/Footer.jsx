@@ -15,7 +15,7 @@ const Footer = () => {
                                         <div>
                                             <div>
                                                 <img src="/Images/BhawalLogo.png" alt="" className="FooterLogoContainer" />
-                                                <p><b style={{fontWeight:"500"}}>Bhawal Metal Industries</b></p>
+                                                <p><b style={{ fontWeight: "500" }}>Bhawal Metal Industries</b></p>
                                                 <p>Forging excellence, shaping the future—one stainless steel innovation at a time.</p>
                                                 <div>
 
@@ -30,11 +30,11 @@ const Footer = () => {
                                             <div>
                                                 <h2>Contact</h2>
                                                 <br />
-                                               <div className="ContactNumbers">
-                                               <p><a href="tel:+91 93270 18703">+91 93270 18703</a></p> 
-                                                <p> <a href="tel:+91 76007 29708">+91 76007 29708</a></p>
-                                                <p> <a href="tel:+91 92272 18702">+91 92272 18702</a></p>
-                                               </div>
+                                                <div className="ContactNumbers">
+                                                    <p><a href="tel:+91 93270 18703">+91 93270 18703</a></p>
+                                                    <p> <a href="tel:+91 76007 29708">+91 76007 29708</a></p>
+                                                    <p> <a href="tel:+91 92272 18702">+91 92272 18702</a></p>
+                                                </div>
                                                 <hr />
                                                 <p><a href="mailto:sales1@bhawalmetal.com">sales1@bhawalmetal.com</a></p>
                                                 <p><a href="mailto:bhawalmetalindustries@gmail.com">bhawalmetalindustries@gmail.com</a></p>
@@ -64,7 +64,7 @@ const Footer = () => {
                         <hr />
                         <div className="CopyWriteTextContainer">
                             <p>Designed By
-                            <Link to="https://www.outleadsolutions.com/" target="_blank" style={{color:"black"}}><b style={{fontWeight:"500"}}> Outlead Solutions</b></Link></p>
+                                <Link to="https://www.outleadsolutions.com/" target="_blank" style={{ color: "black" }}><b style={{ fontWeight: "500" }}> Outlead Solutions</b></Link></p>
                         </div>
                         <br />
                     </div>

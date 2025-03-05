@@ -1,6 +1,6 @@
 const NavigationDataLinks = [
     {
-        path: "",
+        path: "/",
         link: "Home"
     },
     {

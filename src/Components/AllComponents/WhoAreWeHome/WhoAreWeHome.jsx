@@ -55,18 +55,16 @@ const WhoAreWeHome = () => {
                             </div>
                         </div> */}
                         <div className="ContentContainer">
-                            <p className="textCenter">
-                                <strong>Bhawal Metal Industries</strong> was established in the year <strong>1996</strong> with the aim of catering to the growing demands of <strong>Stainless Steel</strong>.
-                                <strong>Bhawal Metal Industries</strong> is a leading supplier and manufacturer of <strong>high-quality Stainless Steel Round Bars, Forged Components, Drawing-Based Components,</strong> and <strong>Precision Components</strong>.
-                                We have a team of <em>young visionaries</em> who endeavor for excellence in every aspect related to metals.
-                                We strongly believe in our <strong>core values</strong> and are always in pursuit of success along the lines of <em>ethical business practices</em>.
-                                Keeping in mind its <strong>customer-centric approach</strong>, <strong>timely delivery</strong>, and <strong>quality products</strong>, the company has grown in size and product range.
-
-                                Over the decades, <strong>Bhawal Metal Industries</strong> has carved an <em>unparalleled position</em> in India's steel industry and has built <em>strong, lasting customer relationships</em>.
-                                Now, with the <em>new generation of entrepreneurs</em> joining the company, we aim to <strong>expand globally</strong> while continuing our domestic supply and export of
-                                <strong>Stainless Steel Long Products, Forged Components, Drawing-Based Components,</strong> and <strong>Precision Components</strong>.
+                           <div>
+                           <p className="textCenter">
+                                Bhawal Metal Industries was established in 1996 to meet the growing demand for stainless steel. We are a leading manufacturer and supplier of high-quality stainless steel round bars, forged components, drawing-based components, and precision components.
                             </p>
+                            <br />
+                            <p>Our team of young visionaries strives for excellence in every aspect of the metal industry. We strongly uphold our core values and pursue success through ethical business practices. With a customer-centric approach, timely delivery, and a commitment to quality, the company has expanded in both size and product range.  </p>
+                            <br />
+                            <p>Over the decades, Bhawal Metal Industries has secured a strong and distinguished position in India’s steel industry while building long-lasting customer relationships. Now, with a new generation of entrepreneurs joining the company, we aim to expand globally, continuing to supply and export stainless steel long products, forged components, drawing-based components, and precision components.</p>
 
+                           </div>
                         </div>
                     </Col>
                 </Row>

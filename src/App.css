@@ -1,4 +1,4 @@
-@import url(https://db.onlinewebfonts.com/c/a31b7939b8b59ccb73ca9a5e46bb11cc?family=THICCCBOI+Thin);
+/* @import url("https://db.onlinewebfonts.com/c/a31b7939b8b59ccb73ca9a5e46bb11cc?family=THICCCBOI+Thin"); */
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 
 p {
@@ -126,10 +126,7 @@ h6 {
     padding-bottom: 4rem;
 }
 
-b,
-strong {
-    font-weight: 500;
-}
+
 
 .ant-table-thead .ant-table-cell {
     background-color: #617e8725 !important;
