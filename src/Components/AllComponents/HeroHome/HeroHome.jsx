@@ -56,7 +56,7 @@ const HeroHome = () => {
                                     <div style={{ height: "100%" }}>
                                         <div className="OverlayEffectContainer"></div>
                                         <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                                            <img src={item.img} alt={item.title} />
+                                            <img src={item.img} alt={item.title} loading="lazy"/>
                                             <div className="ContentContainerSwiperHome">
                                                 <h1
                                                     data-aos="fade-up"

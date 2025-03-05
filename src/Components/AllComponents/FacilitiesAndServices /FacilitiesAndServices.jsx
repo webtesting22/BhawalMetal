@@ -100,7 +100,7 @@ const FacilitiesAndServices = () => {
                                 <SwiperSlide key={index}>
                                     <div>
                                         <div >
-                                            <img src={item.image} alt="" style={{ width: "100%" }} />
+                                            <img src={item.image} alt="" style={{ width: "100%" }} loading="lazy" />
                                         </div>
                                     </div>
                                 </SwiperSlide>
@@ -202,7 +202,7 @@ const FacilitiesAndServices = () => {
                                 <Col lg={8} md={12} style={{ width: "100%", height: "100%" }}>
                                     <div  >
                                         <div className="GalleryImageContainer">
-                                            <Image src={item.img} alt="" />
+                                            <Image src={item.img} alt="" loading="lazy"/>
                                         </div>
                                     </div>
                                 </Col>

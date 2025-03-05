@@ -83,7 +83,7 @@ const VisionMissionValues = () => {
                                         <Col lg={12} xs={24} data-aos="fade-right"
                                             data-aos-duration="1000">
                                             <div className="VisionMissionContainerImage">
-                                                <img src={item.image} alt={item.title} />
+                                                <img src={item.image} alt={item.title} loading="lazy"/>
                                             </div>
                                         </Col>
                                         <Col lg={12} xs={24} data-aos="fade-left"
@@ -106,7 +106,7 @@ const VisionMissionValues = () => {
                                         <Col lg={12} xs={24} data-aos="fade-left"
                                             data-aos-duration="1000">
                                             <div className="VisionMissionContainerImage" style={{ paddingRight: "0px" }}>
-                                                <img src={item.image} alt={item.title} />
+                                                <img src={item.image} alt={item.title} loading="lazy"/>
                                             </div>
                                         </Col>
                                     </>

@@ -42,6 +42,7 @@ const Nav = () => {
                                             <img
                                                 src="/Images/BhawalLogo.png"
                                                 alt="Bhawal Logo"
+                                                loading="lazy"
                                                 style={{ width: `${logoSize}px`, transition: "width 0.3s ease-in-out" }}
                                             />
                                         </Link>

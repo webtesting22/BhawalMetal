@@ -196,7 +196,7 @@ const MetalGrades = () => {
                                 <Col lg={12} style={{ width: "100%" }}>
                                     <div >
                                         <div className="AboutUsImageContainer">
-                                            <img src="/Images/Metalgrades.jpeg" alt="" />
+                                            <img src="/Images/Metalgrades.jpeg" alt="" loading="lazy"/>
                                         </div>
                                     </div>
                                 </Col>

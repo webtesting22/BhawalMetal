@@ -113,7 +113,7 @@ const AboutUs = () => {
                                             <SwiperSlide key={index}>
                                                 <div>
                                                     <div>
-                                                        <img src={item.img} alt=""  />
+                                                        <img src={item.img} alt=""  loading="lazy"/>
                                                     </div>
                                                 </div>
                                             </SwiperSlide>
@@ -140,7 +140,7 @@ const AboutUs = () => {
                                 <div className="WhatDoesBhawalImageContainer">
                                     <div data-aos="fade-right"
                                             data-aos-duration="1300">
-                                        <img src="/Images/WhatDoesSectionImage.png" alt=""  />
+                                        <img src="/Images/WhatDoesSectionImage.png" alt=""  loading="lazy"/>
 
                                     </div>
                                     <br />

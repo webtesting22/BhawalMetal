@@ -39,7 +39,7 @@ const WhatWeDoHome = () => {
                                         <div className="WhatWeCardContainerEdit">
                                             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", width: "100%" }}>
                                                 <div className="CardImageContainer">
-                                                    <img src={item.img} alt={item.title} />
+                                                    <img src={item.img} alt={item.title} loading="lazy"/>
                                                 </div>
                                                 <div className="CardContentContainer">
                                                     <div>
