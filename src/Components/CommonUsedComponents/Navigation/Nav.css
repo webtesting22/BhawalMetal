@@ -101,6 +101,34 @@
     z-index: 666666666;
 }
 
+.NavigationbarContainer li {
+    /* color: black; */
+    position: relative;
+    transition: .5s;
+}
+
+.NavigationbarContainer li::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    background-color: #840000;
+    height: 2px;
+    opacity: 0;
+    transition: .5s;
+}
+.NavigationbarContainer li:hover::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    background-color: #840000;
+    height: 2px;
+    opacity: 1;
+    transition: .5s;
+}
+
+
 .NavigationbarContainer .ant-row {
     padding: 0px 20px;
 }

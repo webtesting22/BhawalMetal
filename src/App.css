@@ -4,6 +4,7 @@
 p {
     font-size: 18px;
     font-family: "Onest", sans-serif;
+    
 }
 .BigHeadingNormal {
     font-size: 30px !important;
@@ -120,8 +121,17 @@ h6 {
 .contentInfoContainer {
     padding: 0rem 0rem;
 }
+b, strong{
+    font-weight: 500;
+}
 @media (max-width:900px) {
-   
+    p {
+        font-size: 18px;
+        font-family: "Onest", sans-serif;
+        hyphens: auto;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
     .BigHeading::before{
         content: "";
         height: 10px;

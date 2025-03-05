@@ -29,6 +29,7 @@ h5 h6 {
 
 section {
   padding: 6rem 3rem;
+  overflow: hidden;
 }
 
 @media (max-width:769px) {

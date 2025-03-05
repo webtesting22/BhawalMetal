@@ -23,6 +23,13 @@
     justify-content: center;
 }
 @media (max-width:900px){
+    .FacilitiesAndServicesContentSwiper {
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .GalleryImageContainer {
         height: 300px;
         /* width: 100%; */

@@ -88,6 +88,7 @@
 
 .ModalImageContainer {
     display: flex;
+    padding: 2rem 0rem;
 
 }
 
@@ -103,6 +104,15 @@
 }
 
 @media (max-width:900px) {
+    .ModalImageContainer .ant-row .ant-col:nth-child(1) {
+
+        padding-right: 0px;
+
+
+    }
+
+  
+
     .IndustriesMobileCards {
         display: block;
     }
