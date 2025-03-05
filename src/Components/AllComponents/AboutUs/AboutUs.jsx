@@ -150,10 +150,13 @@ const AboutUs = () => {
                                 <div style={{ display: "flex", alignItems: "center", height: "100%" }} data-aos="fade-left"
                                             data-aos-duration="1300">
                                     <div>
+                                        <p><b>Raw Material Supply</b></p>
                                         <p>We assist our clients even before the manufacturing process begins by providing high-quality raw materials such as stainless steel round bars, flat bars, hex bars, and square bars. To ensure the highest quality, we conduct various tests, including chemical, physical, mechanical, ultrasonic, micro, and IGC tests, through government and internationally approved certification bodies. This guarantees that our clients receive only the best-in-class products. </p>
                                         <br />
+                                        <p><b>Forged Components</b></p>
                                         <p> In addition to stainless steel long products, we supply premium-quality forged components. With our state-of-the-art forging unit, we manufacture forged circles, forged rings, forged blocks, forged flat bars, and forged flanges. We also produce forged components with complex shapes using the die forging method.</p>
                                         <br />
+                                        <p><b>Precision Machining</b></p>
                                         <p>Our precision machining unit helps clients reduce machining time, lower costs, and minimize labor and transportation investments while preventing rejections. We understand that high-quality materials are essential for delivering durable and high-performing finished products.</p>
                                     </div>
                                 </div>
