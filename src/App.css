@@ -124,6 +124,9 @@ h6 {
 b, strong{
     font-weight: 500;
 }
+.ant-table-thead .ant-table-cell{
+    background-color: #617e8725 !important;
+}
 @media (max-width:900px) {
     p {
         font-size: 18px;

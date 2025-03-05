@@ -143,14 +143,14 @@ const MetalGrades = () => {
             sorter: (a, b) => parseFloat(a.hardnessBHN) - parseFloat(b.hardnessBHN),
         },
         {
-            title: "Hardness (Max) - Rb",
+            title: "Rb",
             dataIndex: "hardnessRb",
             sorter: (a, b) => parseFloat(a.hardnessRb) - parseFloat(b.hardnessRb),
         },
     ];
 
     const dataMechanical = [
-        { grade: "301", tensileStrength: "515", yieldStrength: "205", elongation: "40", hardnessBHN: "217", hardnessRb: "95" },
+        // { grade: "301", tensileStrength: "515", yieldStrength: "205", elongation: "40", hardnessBHN: "217", hardnessRb: "95" },
         { grade: "304", tensileStrength: "515", yieldStrength: "205", elongation: "40", hardnessBHN: "201", hardnessRb: "92" },
         { grade: "304L", tensileStrength: "485", yieldStrength: "170", elongation: "40", hardnessBHN: "201", hardnessRb: "92" },
         { grade: "310S", tensileStrength: "515", yieldStrength: "205", elongation: "40", hardnessBHN: "217", hardnessRb: "95" },
