@@ -33,7 +33,7 @@ const IndustriesData = [
         </>
     },
     {
-        title: "Water treatment Plants",
+        title: "Water Treatment Plants",
         image: "/Images/IndustriesServicesImages/WaterTreatmentPlants.png",
         description: <>
             <p>In the water treatment industry, *stainless steel 316L* is the most preferred material due to its excellent corrosion resistance, making it ideal for various water treatment components and equipment, especially in harsh chemical or wastewater environments. The presence of molybdenum in its composition enhances its resistance to saltwater corrosion, preventing deterioration where other steels may fail. The *"L"* in 316L indicates low carbon content, which further improves corrosion resistance, particularly in welding applications.</p>
@@ -46,7 +46,7 @@ const IndustriesData = [
         image: "/Images/IndustriesServicesImages/GeneralEngineering.png",
         description: <>
             <p>Bhawal Metal Industries has been a strong supporter of general engineering units and fabricators across various sectors, from processing to power. We cater to their diverse stainless steel requirements, supplying stainless steel long products, forging components, and precision machined components. </p>
-            
+
             <br /><p>Since these companies manufacture machinery and engineering solutions for multiple industries, our collaboration also helps our team gain deeper insights into different industries and their specific needs.</p>
         </>
     },
@@ -55,7 +55,7 @@ const IndustriesData = [
         image: "/Images/IndustriesServicesImages/AerospaceDefence.png",
         description: <>
             <p>Bhawal Metal Industries is making substantial efforts through innovation and collaboration with companies in the aerospace and defense sectors. By providing high-quality materials and components within India, we have not only reduced the country’s dependency on foreign suppliers but also streamlined the manufacturing process for our clients, helping them reduce overall lead time. </p>
-            
+
             <br /><p>We take pride in contributing to India’s *Make in India* movement through our resilient and dedicated approach.</p>
         </>
     },

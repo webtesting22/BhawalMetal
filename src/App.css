@@ -21,7 +21,12 @@ p {
     /* display: flex;
     align-items: center; */
 }
-
+.ant-modal-title{
+    font-size: 18px !important;
+}
+b{
+    font-weight: 500;
+}
 .BigHeading {
     font-size: 23px !important;
     color: #617E87;
