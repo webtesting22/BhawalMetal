@@ -12,10 +12,10 @@ const ServicesCarousal = () => {
     const ServicesData = [
         { img: "./Images/IndustriesServed/AeroSpace.svg", title: "Aerospace and Defence" },
         { img: "./Images/IndustriesServed/MarineEngineering.svg", title: "Marine Engineering" },
-        { img: "./Images/IndustriesIcons/OilandGas.png", title: "Oil & Gas" },
+        { img: "./Images/IndustriesServed/OilAndGas.svg", title: "Oil & Gas" },
         { img: "./Images/IndustriesServed/Packging.svg", title: "Packaging" },
         { img: "./Images/IndustriesServed/Pharma.svg", title: "Pharma" },
-        { img: "./Images/IndustriesServedProcessing.svg", title: "Processing " },
+        { img: "./Images/IndustriesServed/Processing.svg", title: "Processing " },
         { img: "./Images/IndustriesServed/WaterTreatment.svg", title: "Water Treatment" }
 
     ];
