@@ -73,17 +73,17 @@ const FacilitiesAndServices = () => {
                 <div className="FacilitiesAndServicesContentContainer contentInfoContainer">
                     <div>
                         <p data-aos="fade-up"
-    data-aos-duration="800">Fueled by ambition and driven by its core values, Bhawal Metal Industries specializes in niche precision forgings, fully machined, sub-assembled, and precision products for both domestic and global customers. We have advanced hot forging facilities, heat treatment systems with oil and water quenching, and a precision machining unit equipped with high-end CNCs, VMCs, and SPMs to achieve the required tolerances as per customer specifications. </p>
+                            data-aos-duration="800">Fueled by ambition and driven by its core values, Bhawal Metal Industries specializes in niche precision forgings, fully machined, sub-assembled, and precision products for both domestic and global customers. We have advanced hot forging facilities, heat treatment systems with oil and water quenching, and a precision machining unit equipped with high-end CNCs, VMCs, and SPMs to achieve the required tolerances as per customer specifications. </p>
                         <br />
                         <p data-aos="fade-up"
-    data-aos-duration="800">Over the past two decades, the company has evolved into an innovative, customer-focused, and robust organization, recognized for high-quality carbon and alloy steel forged and machined components. We provide engineering, design, development, and validation support in close collaboration with our customers.</p>
+                            data-aos-duration="800">Over the past two decades, the company has evolved into an innovative, customer-focused, and robust organization, recognized for high-quality carbon and alloy steel forged and machined components. We provide engineering, design, development, and validation support in close collaboration with our customers.</p>
                         <br />
                         <p data-aos="fade-up"
-    data-aos-duration="800">With our customer-centric approach and commitment to delivering quality materials, we offer various value-added services, including:</p>
+                            data-aos-duration="800">With our customer-centric approach and commitment to delivering quality materials, we offer various value-added services, including:</p>
                     </div>
                     <br />
                     <div className="FacilitiesAndServicesContentSwiper" data-aos="fade-up"
-    data-aos-duration="1000">
+                        data-aos-duration="1000">
                         <Swiper
                             spaceBetween={30}
                             centeredSlides={true}
@@ -205,10 +205,10 @@ const FacilitiesAndServices = () => {
                             {GalleryImages.map((item, index) => (
                                 <Col lg={8} md={12} style={{ width: "100%", height: "100%" }}>
                                     <div  >
-                                        <div className="GalleryImageContainer"     data-aos="fade-up"
-    data-aos-duration="800"
-    data-aos-delay={index * 200} >
-                                            <Image src={item.img} alt="" loading="lazy"/>
+                                        <div className="GalleryImageContainer" data-aos="fade-up"
+                                            data-aos-duration="800"
+                                            data-aos-delay={index * 200} >
+                                            <Image src={item.img} alt="" loading="lazy" />
                                         </div>
                                     </div>
                                 </Col>

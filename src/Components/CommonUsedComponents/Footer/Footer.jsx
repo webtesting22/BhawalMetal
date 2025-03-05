@@ -2,6 +2,11 @@ import React from "react";
 import { Row, Col } from "antd";
 import "./Footer.css"
 import { Link } from "react-router-dom";
+import { MdOutlinePhoneInTalk } from "react-icons/md";
+import { TfiEmail } from "react-icons/tfi";
+import { IoLocationOutline } from "react-icons/io5";
+
+
 const Footer = () => {
     return (
         <>
@@ -31,13 +36,13 @@ const Footer = () => {
                                                 <h2>Contact</h2>
                                                 <br />
                                                 <div className="ContactNumbers">
-                                                    <p><a href="tel:+91 93270 18703">+91 93270 18703</a></p>
-                                                    <p> <a href="tel:+91 76007 29708">+91 76007 29708</a></p>
-                                                    <p> <a href="tel:+91 92272 18702">+91 92272 18702</a></p>
+                                                    <p><a href="tel:+91 93270 18703"><MdOutlinePhoneInTalk/> &nbsp;+91 93270 18703,</a></p>
+                                                    <p><a href="tel:+91 76007 29708"><MdOutlinePhoneInTalk/> &nbsp;+91 76007 29708,</a></p>
+                                                    <p> <a href="tel:+91 92272 18702"><MdOutlinePhoneInTalk/> &nbsp;+91 92272 18702</a></p>
                                                 </div>
                                                 <hr />
-                                                <p><a href="mailto:sales1@bhawalmetal.com">sales1@bhawalmetal.com</a></p>
-                                                <p><a href="mailto:bhawalmetalindustries@gmail.com">bhawalmetalindustries@gmail.com</a></p>
+                                                <p><a href="mailto:sales1@bhawalmetal.com"><TfiEmail/>&nbsp; sales1@bhawalmetal.com</a></p>
+                                                <p><a href="mailto:bhawalmetalindustries@gmail.com"><TfiEmail/>&nbsp; bhawalmetalindustries@gmail.com</a></p>
                                                 <br />
                                             </div>
                                         </div>
@@ -49,11 +54,11 @@ const Footer = () => {
                                             <div>
                                                 <h2>Address</h2>
                                                 <br />
-                                                <p><b style={{ fontWeight: "500" }}>Ahmedabad Office</b>
+                                                <p><b style={{ fontWeight: "500" }}><IoLocationOutline style={{marginBottom:"-3px"}}/>&nbsp;Ahmedabad Office</b>
                                                     &nbsp;21, Jay Jayant Estate, Kewal Kanta, Rakhial, Rakhial, Ahmedabad, Gujarat 380023</p>
                                                 {/* <br /> */}
                                                 <hr />
-                                                <p><b style={{ fontWeight: "500" }}>Mumbai Office </b>
+                                                <p><b style={{ fontWeight: "500" }}><IoLocationOutline style={{marginBottom:"-3px"}}/>&nbsp;Mumbai Office </b>
                                                     21, 2nd Carpenter St, Charni Road East, Cawasji Patel Tank, Bhuleshwar, Mumbai, Maharashtra 400004</p>
                                             </div>
                                         </div>

@@ -44,6 +44,10 @@
     flex-wrap: wrap;
     flex-direction: column;
 }
+.EmailBoxContainer p a{
+    display: flex;
+    align-items: center;
+}
 
 @media (max-width:900px) {
     .ContactNumbers {
@@ -52,11 +56,7 @@
         flex-direction: row;
     }
 
-    .ContactNumbers p::after{
-        content: ",";
-        display: inline-flex;
-
-    }
+    
     .PhoneBoxContainer,
     .EmailBoxContainer {
         /* border: 1px solid #617e8793; */
