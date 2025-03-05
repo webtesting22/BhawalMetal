@@ -56,13 +56,10 @@ const HeroHome = () => {
                                     <div style={{ height: "100%" }}>
                                         <div className="OverlayEffectContainer"></div>
                                         <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                                            <img src={item.img} alt={item.title} loading="lazy"/>
+                                            <img src={item.img} alt={item.title} />
                                             <div className="ContentContainerSwiperHome">
                                                 <h1
                                                     className="BigHeadingNormal"
-                                                    data-aos="fade-up"
-                                                    data-aos-duration="1000"
-                                                    data-aos-delay={`${index * 500}`} // Delay increases with index
                                                 >
                                                     {item.title}
                                                 </h1>

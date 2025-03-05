@@ -28,24 +28,17 @@ const CommonHeaderCarousal = ({ slidesData, heading, tagline, pageLink }) => {
                             <div style={{ height: "100%" }}>
                                 <div className="OverlayEffectContainer"></div>
                                 <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                                    <img src={item.img} alt="" loading="lazy"/>
+                                    <img src={item.img} alt="" />
                                     <div className="ContentContainerSwiperHome">
                                         <h1
                                             className="BigHeadingNormal"
                                             style={{ textAlign: "center" }}
-                                            data-aos="fade-up"
-                                            data-aos-duration="1000"
-                                            data-aos-delay={`${index * 500}`} // Delay increases with index
                                         >
                                             {heading}
                                         </h1>
-                                        <p style={{ textAlign: "center", color: "white" }} data-aos="fade-up"
-                                            data-aos-duration="1200"
-                                            data-aos-delay={`${index * 500}`}>{tagline}</p>
+                                        <p style={{ textAlign: "center", color: "white" }} >{tagline}</p>
                                         <br />
-                                        <span style={{ textAlign: "center", color: "white" }} data-aos="fade-up"
-                                            data-aos-duration="1500"
-                                            data-aos-delay={`${index * 500}`}
+                                        <span style={{ textAlign: "center", color: "white" }} 
                                             className="RouteLinks"
                                         >
                                             <Link to="/">Home</Link>&nbsp;/ {pageLink}

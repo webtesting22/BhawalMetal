@@ -87,7 +87,7 @@ const WhyChooseHome = () => {
                                     <div>
                                         <div className="WhyChooseUsCardSwiperContainer">
                                             <div className="SwiperImageCardContainer">
-                                                <img src={item.image} alt={item.title} loading="lazy"/>
+                                                <img src={item.image} alt={item.title}/>
                                             </div>
                                             {/* <br /> */}
                                             <div>

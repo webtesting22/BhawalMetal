@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import "./FacilitiesAndServices.css"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/effect-fade';
@@ -72,18 +72,14 @@ const FacilitiesAndServices = () => {
             <section id="FacilitiesAndServices">
                 <div className="FacilitiesAndServicesContentContainer contentInfoContainer">
                     <div>
-                        <p data-aos="fade-up"
-                            data-aos-duration="1000">Fueled by ambition and driven by its core values, Bhawal Metal Industries specializes in niche precision forgings, fully machined, sub-assembled, and precision products for both domestic and global customers. We have advanced hot forging facilities, heat treatment systems with oil and water quenching, and a precision machining unit equipped with high-end CNCs, VMCs, and SPMs to achieve the required tolerances as per customer specifications. </p>
+                        <p >Fueled by ambition and driven by its core values, Bhawal Metal Industries specializes in niche precision forgings, fully machined, sub-assembled, and precision products for both domestic and global customers. We have advanced hot forging facilities, heat treatment systems with oil and water quenching, and a precision machining unit equipped with high-end CNCs, VMCs, and SPMs to achieve the required tolerances as per customer specifications. </p>
                         <br />
-                        <p data-aos="fade-up"
-                            data-aos-duration="1000">Over the past two decades, the company has evolved into an innovative, customer-focused, and robust organization, recognized for high-quality carbon and alloy steel forged and machined components. We provide engineering, design, development, and validation support in close collaboration with our customers.</p>
+                        <p >Over the past two decades, the company has evolved into an innovative, customer-focused, and robust organization, recognized for high-quality carbon and alloy steel forged and machined components. We provide engineering, design, development, and validation support in close collaboration with our customers.</p>
                         <br />
-                        <p data-aos="fade-up"
-                            data-aos-duration="1000">With our customer-centric approach and commitment to delivering quality materials, we offer various value-added services, including:</p>
+                        <p >With our customer-centric approach and commitment to delivering quality materials, we offer various value-added services, including:</p>
                     </div>
                     <br />
-                    <div data-aos="fade-up"
-                        data-aos-duration="1200" className="FacilitiesAndServicesContentSwiper">
+                    <div className="FacilitiesAndServicesContentSwiper">
                         <Swiper
                             spaceBetween={30}
                             centeredSlides={true}
@@ -104,7 +100,7 @@ const FacilitiesAndServices = () => {
                                 <SwiperSlide key={index}>
                                     <div>
                                         <div >
-                                            <img src={item.image} alt="" loading="lazy" style={{ width: "100%" }} />
+                                            <img src={item.image} alt="" style={{ width: "100%" }} />
                                         </div>
                                     </div>
                                 </SwiperSlide>
@@ -144,7 +140,7 @@ const FacilitiesAndServices = () => {
                                                 <SwiperSlide key={index}>
                                                     <div>
                                                         <div>
-                                                            <img src={item.image} alt="" loading="lazy" style={{ width: "100%" }} />
+                                                            <img src={item.image} alt=""  style={{ width: "100%" }} />
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>
@@ -191,27 +187,22 @@ const FacilitiesAndServices = () => {
                 <div className="contentInfoContainer">
                     <div>
                         <div className="containerGap">
-                            <h2 className="BigHeading textCenter" data-aos="fade-right"
-                                data-aos-duration="1200">PRECISION MACHINE FACILITY </h2>
+                            <h2 className="BigHeading textCenter" >PRECISION MACHINE FACILITY </h2>
                         </div>
                     </div>
                     <div>
-                        <p data-aos="fade-right"
-                            data-aos-duration="1000">Bhawal Metal Industries provides top-quality outsourced machining facilities for various product lines, enabling us to supply products in either pre-machined or fully machined conditions with exceptional precision. Our unwavering focus on quality and timely delivery ensures we meet customer demands efficiently.</p>
+                        <p >Bhawal Metal Industries provides top-quality outsourced machining facilities for various product lines, enabling us to supply products in either pre-machined or fully machined conditions with exceptional precision. Our unwavering focus on quality and timely delivery ensures we meet customer demands efficiently.</p>
                         <br />
-                        <p data-aos="fade-right"
-                            data-aos-duration="1000">We have dedicated machining setups and outsourcing capabilities to offer the following services to our clients:</p>
+                        <p >We have dedicated machining setups and outsourcing capabilities to offer the following services to our clients:</p>
                     </div>
                     <br />
                     <div>
                         <Row>
                             {GalleryImages.map((item, index) => (
                                 <Col lg={8} md={12} style={{ width: "100%", height: "100%" }}>
-                                    <div data-aos="fade-up"
-                                        data-aos-duration="1000"
-                                        data-aos-delay={index * 200} >
+                                    <div  >
                                         <div className="GalleryImageContainer">
-                                            <Image src={item.img} alt="" loading="lazy"/>
+                                            <Image src={item.img} alt="" />
                                         </div>
                                     </div>
                                 </Col>

@@ -41,7 +41,7 @@ const WhoAreWeHome = () => {
                                     <img
                                         src="https://plus.unsplash.com/premium_photo-1674939647783-099acf70b5c4?q=80&w=1974&auto=format&fit=crop"
                                         alt=""
-                                        loading="lazy"
+                                    
                                     />
                                 </div>
 
@@ -49,7 +49,7 @@ const WhoAreWeHome = () => {
                                     <img
                                         src="https://images.unsplash.com/photo-1602223114290-ba6de2938acc?q=80&w=1974&auto=format&fit=crop"
                                         alt=""
-                                        loading="lazy"
+                                  
                                     />
                                 </div>
                             </div>

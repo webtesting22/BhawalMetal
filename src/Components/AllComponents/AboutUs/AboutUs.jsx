@@ -59,10 +59,8 @@ const AboutUs = () => {
                     </div>
                     <div className="ContentContainerTopheader">
                         <div>
-                            <h2 className="BigHeading" style={{ margin: "0px" }} data-aos="fade-up"
-                                data-aos-duration="1000">About Us</h2>
-                            <p data-aos="fade-up"
-                                data-aos-duration="1200">BHAWAL METAL INDUSTRIES</p>
+                            <h2 className="BigHeading" style={{ margin: "0px" }} >About Us</h2>
+                            <p >BHAWAL METAL INDUSTRIES</p>
                         </div>
                     </div>
                 </div>
@@ -74,26 +72,21 @@ const AboutUs = () => {
                         <Col lg={24}>
                             <div className="AboutUsContentContainer">
                                 <div >
-                                    <h2 className="BigHeading " data-aos="fade-up"
-                                        data-aos-duration="1000">About Bhawal Metal Industries </h2>
+                                    <h2 className="BigHeading " >About Bhawal Metal Industries </h2>
                                     <br />
-                                    <p data-aos="fade-up"
-                                        data-aos-duration="1200">Bhawal Metal Industries was established in 1996 to meet the growing demand for stainless steel. We are a leading manufacturer and supplier of high-quality stainless steel round bars, forged components, drawing-based components, and precision components. </p>
+                                    <p>Bhawal Metal Industries was established in 1996 to meet the growing demand for stainless steel. We are a leading manufacturer and supplier of high-quality stainless steel round bars, forged components, drawing-based components, and precision components. </p>
                                     <br />
-                                    <p data-aos="fade-up"
-                                        data-aos-duration="1300">Our team of young visionaries strives for excellence in every aspect of the metal industry. We strongly believe in our core values and are committed to ethical business practices. With a customer-centric approach, timely delivery, and a focus on quality, the company has expanded in both size and product range.
+                                    <p >Our team of young visionaries strives for excellence in every aspect of the metal industry. We strongly believe in our core values and are committed to ethical business practices. With a customer-centric approach, timely delivery, and a focus on quality, the company has expanded in both size and product range.
                                     </p>
                                     <br />
-                                    <p data-aos="fade-up"
-                                        data-aos-duration="1400">Over the decades, Bhawal Metal Industries has secured a strong position in India’s steel industry and built long-lasting customer relationships. Now, with a new generation of entrepreneurs joining the company, we aim to expand globally while continuing to supply and export stainless steel long products, forged components, drawing-based components, and precision components.
+                                    <p>Over the decades, Bhawal Metal Industries has secured a strong position in India’s steel industry and built long-lasting customer relationships. Now, with a new generation of entrepreneurs joining the company, we aim to expand globally while continuing to supply and export stainless steel long products, forged components, drawing-based components, and precision components.
                                     </p>
                                 </div>
                             </div>
                         </Col>
 
                         <Col lg={24}>
-                            <div data-aos="fade-up"
-                                data-aos-duration="1400">
+                            <div >
                                 <br />
                                 <div className="AboutUsImageContainer">
                                     <Swiper
@@ -115,7 +108,7 @@ const AboutUs = () => {
                                             <SwiperSlide key={index}>
                                                 <div>
                                                     <div>
-                                                        <img src={item.img} alt="" loading="lazy" />
+                                                        <img src={item.img} alt=""  />
                                                     </div>
                                                 </div>
                                             </SwiperSlide>
@@ -132,10 +125,8 @@ const AboutUs = () => {
                 <div id="WhatDoesBhawalContainer" style={{ marginBottom: "0px", paddingBottom: "0px" }}>
                     <div>
                         <div>
-                            <h2 className="BigHeading textCenter" data-aos="fade-up"
-                                data-aos-duration="1000">What Does Bhawal Metal Do?</h2>
-                            <p className="textCenter" data-aos="fade-up"
-                                data-aos-duration="1300">Bhawal Metal Industries operates in three major segments and is one of the first fully forward-integrated contract manufacturing companies based in India.</p>
+                            <h2 className="BigHeading textCenter" >What Does Bhawal Metal Do?</h2>
+                            <p className="textCenter" >Bhawal Metal Industries operates in three major segments and is one of the first fully forward-integrated contract manufacturing companies based in India.</p>
                         </div>
                     </div>
                     <div className="containerGap contentInfoContainer" style={{ marginBottom: "0px" }}>
@@ -143,16 +134,14 @@ const AboutUs = () => {
                             <Col lg={10} md={24}>
                                 <div className="WhatDoesBhawalImageContainer">
                                     <div>
-                                        <img src="/Images/WhatDoesSectionImage.png" alt="" loading="lazy" data-aos="fade-right"
-                                            data-aos-duration="1000" />
+                                        <img src="/Images/WhatDoesSectionImage.png" alt=""  />
 
                                     </div>
                                     <br />
                                 </div>
                             </Col>
                             <Col lg={14} md={24}>
-                                <div data-aos="fade-left"
-                                    data-aos-duration="1400" style={{ display: "flex", alignItems: "center", height: "100%" }}>
+                                <div style={{ display: "flex", alignItems: "center", height: "100%" }}>
                                     <div>
                                         <p>We assist our clients even before the manufacturing process begins by providing high-quality raw materials such as stainless steel round bars, flat bars, hex bars, and square bars. To ensure the highest quality, we conduct various tests, including chemical, physical, mechanical, ultrasonic, micro, and IGC tests, through government and internationally approved certification bodies. This guarantees that our clients receive only the best-in-class products. </p>
                                         <br />

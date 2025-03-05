@@ -171,22 +171,19 @@ const MetalGrades = () => {
             <section>
                 <div id="MetalgradesContainer" className="contentInfoContainer">
                     <div>
-                        <p data-aos="fade-up"
-                            data-aos-duration="1000">At Bhawal Metal Industries, we have strictly focused on stainless steel. Over time, we have continuously integrated our products within stainless steel materials to meet market demands and client requirements, adding more grades to our portfolio. Currently, the company's material offerings can be categorized into three segments.
+                        <p >At Bhawal Metal Industries, we have strictly focused on stainless steel. Over time, we have continuously integrated our products within stainless steel materials to meet market demands and client requirements, adding more grades to our portfolio. Currently, the company's material offerings can be categorized into three segments.
                         </p>
                     </div>
                     <div>
                         <div className="containerGap">
-                            <h2 className="BigHeading textCenter" data-aos="fade-up"
-                                data-aos-duration="1200">Austenitic Steel</h2>
+                            <h2 className="BigHeading textCenter" >Austenitic Steel</h2>
                         </div>
                         <div>
                             <Row>
 
                                 <Col lg={12}>
                                     <div className="AboutUsContentContainer">
-                                        <div data-aos="fade-right"
-                                            data-aos-duration="1400">
+                                        <div >
                                             <p>Austenitic steels are non-magnetic stainless steels with high chromium and nickel content and low carbon levels. They are the most widely used stainless steel grade, with the most common composition being 18% chromium and 8% nickel, also known as 18/8 steel.</p>
                                             <br />
                                             <p>Austenitic steels are generally classified into two groups: the Chromium-Nickel AISI 300 series and the Chromium-Nickel-Manganese 200 series. Adding 2-3% molybdenum enhances corrosion resistance, often referred to as "acid-proof steel." Grade 304 is the most common type, typically containing 18% chromium and 8% nickel. </p>
@@ -197,10 +194,9 @@ const MetalGrades = () => {
                                     </div>
                                 </Col>
                                 <Col lg={12} style={{ width: "100%" }}>
-                                    <div data-aos="fade-left"
-                                        data-aos-duration="1400">
+                                    <div >
                                         <div className="AboutUsImageContainer">
-                                            <img src="https://img.freepik.com/free-vector/realistic-metallic-iron-tube-equipment-background-construction_1017-51450.jpg?t=st=1741082392~exp=1741085992~hmac=cd624afc5401df2f9435f3aec973815fefe9916a2c7d9b40a4c503c58c8e3b74&w=1480" alt="" loading="lazy" />
+                                            <img src="https://img.freepik.com/free-vector/realistic-metallic-iron-tube-equipment-background-construction_1017-51450.jpg?t=st=1741082392~exp=1741085992~hmac=cd624afc5401df2f9435f3aec973815fefe9916a2c7d9b40a4c503c58c8e3b74&w=1480" alt="" />
                                         </div>
                                     </div>
                                 </Col>

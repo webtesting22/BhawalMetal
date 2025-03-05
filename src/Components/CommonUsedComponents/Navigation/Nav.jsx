@@ -50,7 +50,7 @@ const Nav = () => {
                                         <div style={{ display: "flex", alignItems: "center" }}>
                                             <ul className="PCShowNavigationLinks">
                                                 {NavigationDataLinks.map((item, index) => (
-                                                    <Link to={item.path} style={{ color: isScrolled ? "black" : "white", transition: "color 0.3s ease-in-out" }}>
+                                                    <Link key={index} to={item.path} style={{ color: isScrolled ? "black" : "white", transition: "color 0.3s ease-in-out" }}>
                                                         <li key={index}>{item.link}</li>
                                                     </Link>
                                                 ))}

@@ -5,7 +5,9 @@
     width: 100%;
 
 }
-
+#WhatDoesBhawalContainer{
+    padding-top: 4rem;
+}
 .ImageBackContainerWithContent {
     width: 100%;
     position: relative;

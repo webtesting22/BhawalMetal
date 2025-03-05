@@ -65,16 +65,14 @@ const Industries = () => {
                         <Row>
                             <Col lg={12}>
                                 <div>
-                                    <div className="AboutUsImageContainer" data-aos="fade-right"
-                                        data-aos-duration="1300">
-                                        <img src="/Images/IndustriesTopImage.avif" alt="" loading="lazy" />
+                                    <div className="AboutUsImageContainer" >
+                                        <img src="/Images/IndustriesTopImage.avif" alt=""  />
                                     </div>
                                 </div>
                             </Col>
                             <Col lg={12}>
                                 <div className="AboutUsContentContainer">
-                                    <div data-aos="fade-left"
-                                        data-aos-duration="1300">
+                                    <div >
                                         {/* <h2></h2> */}
                                         <p>Bhawal Metal Industries has over 27 years of experience in stainless steel and manufacturing. Our journey as precision components manufacturers in India began in 1997 when we started establishing our presence in various domestic and international markets. Over the years, we have built a strong network of partnerships and supply chains across the country, delivering products to different industrial sectors. </p>
                                         <br />
@@ -123,7 +121,7 @@ const Industries = () => {
                                             <div>
                                                 <div className="WhyChooseUsCardSwiperContainer">
                                                     <div className="SwiperImageCardContainer">
-                                                        <img src={item.image} alt={item.title} loading="lazy"/>
+                                                        <img src={item.image} alt={item.title} />
                                                     </div>
                                                     {/* <br /> */}
                                                     <div>
@@ -169,7 +167,7 @@ const Industries = () => {
                             <div className="ModalImageContainer">
                                 <Row>
                                     <Col lg={12}>
-                                        <img src={selectedIndustry.image} alt={selectedIndustry.title} loading="lazy"/>
+                                        <img src={selectedIndustry.image} alt={selectedIndustry.title} />
 
                                     </Col>
                                     <Col lg={12}>
