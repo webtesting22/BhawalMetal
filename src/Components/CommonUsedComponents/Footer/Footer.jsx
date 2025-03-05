@@ -15,7 +15,8 @@ const Footer = () => {
                                         <div>
                                             <div>
                                                 <img src="/Images/BhawalLogo.png" alt="" className="FooterLogoContainer" />
-                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, hic.</p>
+                                                <p><b style={{fontWeight:"500"}}>Bhawal Metal Industries</b></p>
+                                                <p>Forging excellence, shaping the future—one stainless steel innovation at a time.</p>
                                                 <div>
 
                                                 </div>

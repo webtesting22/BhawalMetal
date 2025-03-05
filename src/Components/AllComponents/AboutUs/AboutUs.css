@@ -91,6 +91,9 @@
 }
 
 @media (max-width:900px){
+    #WhatDoesBhawalContainer{
+        padding-top: 4rem;
+    }
     .CommonTopContainer {
         height: 500px;
         width: 100%;

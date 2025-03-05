@@ -1,6 +1,6 @@
 #MissionVisionContainer {
     position: relative;
-    margin: 6rem 0rem;
+    margin: 0rem 0rem;
     color: white;
 }
 
@@ -48,6 +48,9 @@
     padding: 3rem 0rem;
 }
 @media (max-width:900px) {
+    .VisionMissionContainerImage{
+        padding-right: 0px;
+    }
     .interChangeRowAdjust .ant-row .ant-col {
         padding: 0px !important;
     }
