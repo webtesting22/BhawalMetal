@@ -36,8 +36,8 @@ const Footer = () => {
                                                 <h2>Contact</h2>
                                                 <br />
                                                 <div className="ContactNumbers">
-                                                    <p><a href="tel:+91 93270 18703"><MdOutlinePhoneInTalk/> &nbsp;+91 93270 18703,</a></p>
-                                                    <p><a href="tel:+91 76007 29708"><MdOutlinePhoneInTalk/> &nbsp;+91 76007 29708,</a></p>
+                                                    <p><a href="tel:+91 93270 18703"><MdOutlinePhoneInTalk/> &nbsp;+91 93270 18703</a></p>
+                                                    <p><a href="tel:+91 76007 29708"><MdOutlinePhoneInTalk/> &nbsp;+91 76007 29708</a></p>
                                                     <p> <a href="tel:+91 92272 18702"><MdOutlinePhoneInTalk/> &nbsp;+91 92272 18702</a></p>
                                                 </div>
                                                 <hr />
@@ -69,7 +69,7 @@ const Footer = () => {
                         <hr />
                         <div className="CopyWriteTextContainer">
                             <p>Designed By
-                                <Link to="https://www.outleadsolutions.com/" target="_blank" style={{ color: "black" }}><b style={{ fontWeight: "500" }}> Outlead Solutions</b></Link></p>
+                                <Link to="https://www.outleadsolutions.com/" target="_blank" style={{ color: "black" }}><b style={{ fontWeight: "500" }}> OutLead Solutions</b></Link></p>
                         </div>
                         <br />
                     </div>
