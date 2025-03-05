@@ -1,13 +1,15 @@
-import React, { useRef, useState,useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-import IndustriesData from "./IndustriesData";
 import { Row, Col, Modal } from "antd";
 import "./SlidesStyles.css";
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
 import { MdKeyboardArrowRight } from "react-icons/md";
 import CommonHeaderCarousal from "../../CommonUsedComponents/CommonTopCarousalAllPages/CommonHeaderCarousal";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import IndustriesData from "./IndustriesData";
 const Industries = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const swiperRef = useRef(null);
@@ -47,10 +49,17 @@ const Industries = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+    const handleNext = () => {
+        if (swiperRef.current) swiperRef.current.slideNext();
+    };
+
+    const handlePrev = () => {
+        if (swiperRef.current) swiperRef.current.slidePrev();
+    };
     return (
         <>
             <div >
-                <CommonHeaderCarousal slidesData={CarousalImages} heading="Industries" tagline="BHAWAL METAL INDUSTRIES" pageLink="Industries"/>
+                <CommonHeaderCarousal slidesData={CarousalImages} heading="Industries" tagline="BHAWAL METAL INDUSTRIES" pageLink="Industries" />
                 <section >
                     <div id="Industries">
                         <Row>
@@ -86,84 +95,67 @@ const Industries = () => {
                         <h2 className="BigHeading textCenter">Industries We Serve</h2>
                         <p className="textCenter">Over the years of establishment, Bhawal Metal Industries has been serving various industries nationwide. We take pride in our achievements across diverse sectors, from automobiles to aerospace and defense. With our advanced technology and material science, we have produced innovative products for these industrial sectors.</p>
                     </div>
-                    <div className="SwiperContainerIndustries">
-                        <Swiper
-                            onSwiper={(swiper) => (swiperRef.current = swiper)}
-                            onSlideChange={handleSlideChange}
-                            centeredSlides={true}
-                            autoplay={{
-                                delay: 2000,
-                                disableOnInteraction: false,
-                            }}
-                            loop={true}
-                            speed={800}
-                            // navigation={true}
-                            modules={[Autoplay, Pagination, Navigation]}
-                            className="mySwiper">
-                            {IndustriesData.map((item, index) => (
-                                <SwiperSlide key={index}
 
-                                >
-                                    <div className="SwiperMainContainer">
-                                        <div>
-                                            <Row>
-                                                <Col lg={14}>
-                                                    <div>
-                                                        <div>
-                                                            <h2 style={{ textTransform: "uppercase" }}><b>{item.title}</b></h2>
-                                                            <br />
-                                                            <div>
-                                                                {item.description}
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </Col>
-                                                <Col lg={10}>
-                                                    <div className="CardImageContainerIndustries">
-                                                        <div>
-                                                            <img src={item.image} alt="" />
-                                                        </div>
-                                                    </div>
-                                                </Col>
-                                            </Row>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
-                    </div>
-                    <div className="DynamicPagination">
-                        <div className="DynamicPagination">
-                            {IndustriesData.map((item, index) => (
-                                <span
-                                    key={index}
-                                    className={`pagination-item ${activeIndex === index ? 'active' : ''}`}
-                                    onClick={() => goToSlide(index)}
-                                >
-                                    {item.title}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
-                    <div className="IndustriesDataToShowModals">
+                    <div className="IndustriesServedCards">
                         <div>
-                            <Row>
-                                {IndustriesData.map((item, index) => (
-                                    <Col lg={24} key={index} style={{ width: "100%" }}>
-                                        <div className="IndustriesMobileCards">
+                            <div className="SwiperContainerCardWhyChoose">
+                                <Swiper
+                                    slidesPerView={3}
+                                    spaceBetween={20}
+                                    loop={true}
+                                    freeMode={true}
+                                    autoplay={{
+                                        delay: 2000,
+                                        disableOnInteraction: false,
+                                    }}
+
+                                    speed={700}
+                                    breakpoints={{
+                                        1024: { slidesPerView: 3 }, // PC
+                                        768: { slidesPerView: 2 },  // Tablet
+                                        0: { slidesPerView: 1 }     // Mobile
+                                    }}
+                                    modules={[Autoplay, FreeMode, Pagination]}
+                                    onSwiper={(swiper) => (swiperRef.current = swiper)}
+                                    className="mySwiper"
+                                >
+                                    {IndustriesData.map((item, index) => (
+                                        <SwiperSlide key={index}>
                                             <div>
-                                                <h2>{item.title}</h2>
-                                                <div className="AnimatedbtnContainer">
-                                                    <button className="ColourButton" data-aos="fade-right"
-                                                        data-aos-duration="100" onClick={() => showModal(item)}>Read More <MdKeyboardArrowRight /></button>
+                                                <div className="WhyChooseUsCardSwiperContainer">
+                                                    <div className="SwiperImageCardContainer">
+                                                        <img src={item.image} alt="" />
+                                                    </div>
+                                                    {/* <br /> */}
+                                                    <div>
+                                                        <h2>{item.title}</h2>
+                                                        <div className="AnimatedbtnContainer">
+                                                            <button className="ColourButton" onClick={() => showModal(item)}>Read More <MdKeyboardArrowRight /></button>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
                                             </div>
-                                        </div>
-                                    </Col>
-                                ))}
-                            </Row>
+                                        </SwiperSlide>
+                                    ))}
+                                </Swiper>
+                                <div className="CarousalbtnContainerEdit">
+                                    <div>
+                                        <button className="swiper-button prev" onClick={handlePrev}>
+                                            <IoIosArrowBack size={24} />
+                                        </button>
+                                        <button className="swiper-button next" onClick={handleNext}>
+                                            <IoIosArrowForward size={24} />
+                                        </button>
+                                    </div>
+                                    {/* <div className="AnimatedbtnContainer">
+                                        <button className="ColourButton" >Read More <MdKeyboardArrowRight /></button>
+                                    </div> */}
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
                 <Modal
                     title={selectedIndustry?.title}
@@ -171,13 +163,22 @@ const Industries = () => {
                     onCancel={handleClose}
                     footer={null}
                     centered
+                    width={900}
                 >
                     {selectedIndustry && (
                         <>
                             <div className="ModalImageContainer">
-                                <img src={selectedIndustry.image} alt={selectedIndustry.title} style={{ width: "100%", borderRadius: "8px" }} />
+                                <Row>
+                                    <Col lg={12}>
+                                        <img src={selectedIndustry.image} alt={selectedIndustry.title} />
+
+                                    </Col>
+                                    <Col lg={12}>
+                                        <p style={{ marginTop: "10px" }}>{selectedIndustry.description}</p>
+                                    </Col>
+                                </Row>
                             </div>
-                            <p style={{ marginTop: "10px" }}>{selectedIndustry.description}</p>
+
                         </>
                     )}
                 </Modal>

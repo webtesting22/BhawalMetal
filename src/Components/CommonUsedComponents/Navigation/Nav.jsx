@@ -48,14 +48,14 @@ const Nav = () => {
                                     </div>
                                     <div className="MenuBtnContainer">
                                         <div style={{ display: "flex", alignItems: "center" }}>
-                                            <ul >
+                                            <ul className="PCShowNavigationLinks">
                                                 {NavigationDataLinks.map((item, index) => (
                                                     <Link to={item.path} style={{ color: isScrolled ? "black" : "white", transition: "color 0.3s ease-in-out" }}>
                                                         <li key={index}>{item.link}</li>
                                                     </Link>
                                                 ))}
                                             </ul>
-                                            {/* <IoIosMenu onClick={showDrawer} style={{ color: isScrolled ? "black" : "white" }} /> */}
+                                            <IoIosMenu onClick={showDrawer} style={{ color: isScrolled ? "black" : "white" }} />
                                         </div>
                                     </div>
                                 </div>
@@ -63,7 +63,7 @@ const Nav = () => {
                         </Col>
                     </Row>
                 </div>
-                {/* <Drawer placement="right" title="Bhawal Metal Industries" onClose={onClose} open={open}>
+                <Drawer placement="right" title="Bhawal Metal Industries" onClose={onClose} open={open}>
                     <div className="NavigationContainer">
                         <ul className="navigationLinksContainerList">
                             {NavigationDataLinks.map((item, index) => (
@@ -78,7 +78,7 @@ const Nav = () => {
                             <h2 style={{ color: "white" }}>Contact info</h2>
                         </div>
                     </div>
-                </Drawer> */}
+                </Drawer>
             </div>
         </>
     );

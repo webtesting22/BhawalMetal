@@ -63,7 +63,7 @@
     /* width: 100%; */
     margin: 10px 0px;
     color: white;
-display: none;
+    display: none;
 }
 
 .IndustriesDataToShowModals .ColourButton {
@@ -79,10 +79,34 @@ display: none;
     color: black;
 }
 
+.ModalImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.ModalImageContainer {
+    display: flex;
+
+}
+
+.ModalImageContainer .ant-row .ant-col:nth-child(1) {
+
+    padding-right: 20px;
+
+
+}
+
+.ant-modal-mask {
+    backdrop-filter: blur(3px);
+}
+
 @media (max-width:900px) {
-    .IndustriesMobileCards{
+    .IndustriesMobileCards {
         display: block;
     }
+
     .DynamicPagination {
         display: flex;
         justify-content: center;

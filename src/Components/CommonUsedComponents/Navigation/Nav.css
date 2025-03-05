@@ -1,7 +1,7 @@
 #navigationBarAdjust {
     position: sticky;
     top: 0px;
-    z-index: 5555555;
+    z-index: 2;
 }
 
 
@@ -100,19 +100,35 @@
 .ant-drawer {
     z-index: 666666666;
 }
+
 .NavigationbarContainer .ant-row {
     padding: 0px 20px;
 }
-.MenuBtnContainer ul{
-    display: flex;
+
+.PCShowNavigationLinks {
+    display: flex !important;
     gap: 20px;
     list-style: none;
     font-size: 18px;
 }
+
+.MenuBtnContainer svg {
+    display: none;
+}
+
 @media (max-width:900px) {
+    .MenuBtnContainer svg {
+        display: block;
+    }
+
+    .PCShowNavigationLinks {
+        display: none !important;
+    }
+
     .NavigationbarContainer .ant-row {
         padding: 0px 0px;
     }
+
     .NavigationbarContainer {
         position: absolute;
         left: 0px;
@@ -128,6 +144,7 @@
         font-size: 30px;
         color: black !important;
     }
+
     .FillContainerOnBack {
         margin-top: 0px !important;
     }

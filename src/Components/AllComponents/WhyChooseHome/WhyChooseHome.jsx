@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
-import { Row, Col } from "antd";
-import ServicesCarousal from "../../CommonUsedComponents/Nav/ServicesCarousal/ServicesCarousal";
+import { Link } from "react-router-dom";
 import "./WhyChooseHome.css"
 import { IoMdStar } from "react-icons/io";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -110,7 +109,7 @@ const WhyChooseHome = () => {
                                 </button>
                             </div>
                             <div className="AnimatedbtnContainer">
-                                <button className="ColourButton" >Read More <MdKeyboardArrowRight /></button>
+                                <Link to="/industries"><button className="ColourButton" >Read More <MdKeyboardArrowRight /></button></Link>
                             </div>
                         </div>
                     </div>
