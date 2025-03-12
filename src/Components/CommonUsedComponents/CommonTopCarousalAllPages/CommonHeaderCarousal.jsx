@@ -43,14 +43,14 @@ const CommonHeaderCarousal = ({ slidesData, heading, tagline, pageLink }) => {
                                             data-aos-duration="1300"
                                             data-aos-delay={index * 200} >{tagline}</p>
                                         <br />
-                                        <span style={{ textAlign: "center", color: "white" }} 
+                                        {/* <span style={{ textAlign: "center", color: "white" }} 
                                             className="RouteLinks"
                                             data-aos="fade-up"
                                             data-aos-duration="1400"
                                             data-aos-delay={index * 200} 
                                         >
                                             <Link to="/">Home</Link>&nbsp;/ {pageLink}
-                                        </span>
+                                        </span> */}
                                     </div>
                                 </div>
                             </div>

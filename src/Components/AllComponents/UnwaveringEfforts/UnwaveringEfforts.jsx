@@ -98,7 +98,7 @@ const UnwaveringEfforts = () => {
                                                         <CountUp
                                                             start={startCounter ? 0 : null}
                                                             end={item.value}
-                                                            duration={8}
+                                                            duration={3}
                                                             suffix={item.suffix}
                                                             delay={0.3 * index}
                                                             

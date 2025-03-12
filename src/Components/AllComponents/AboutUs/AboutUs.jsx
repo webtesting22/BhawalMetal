@@ -134,7 +134,7 @@ const AboutUs = () => {
                             <p className="textCenter" >Bhawal Metal Industries operates in three major segments and is one of the first fully forward-integrated contract manufacturing companies based in India.</p>
                         </div>
                     </div>
-                    <div className="containerGap contentInfoContainer" style={{ marginBottom: "0px" }}>
+                    <div className="containerGap contentInfoContainer" style={{ marginBottom: "0px",paddingBottom:"0px" }}>
                         <Row>
                             <Col lg={10} md={24}>
                                 <div className="WhatDoesBhawalImageContainer">

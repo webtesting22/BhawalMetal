@@ -14,7 +14,7 @@ const Nav = () => {
     const onClose = () => setOpen(false);
     useEffect(() => {
         const handleScroll = () => {
-            let newHeight = Math.min(window.scrollY, 75);
+            let newHeight = Math.min(window.scrollY, 84);
             setScrollHeight(newHeight);
             setIsScrolled(window.scrollY > 100); // Change state when scrolled 100px
 

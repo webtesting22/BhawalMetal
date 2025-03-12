@@ -10,6 +10,7 @@
 .WhatWeDoCard {
     margin: 4rem 0rem;
     width: 100%;
+    margin-bottom: 0px !important;
 }
 
 .WhatWeDoCard .CardImageContainer img {

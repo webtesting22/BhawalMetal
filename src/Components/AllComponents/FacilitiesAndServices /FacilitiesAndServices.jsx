@@ -188,7 +188,7 @@ const FacilitiesAndServices = () => {
                 </div>
             </section > */}
             <section id="PRECISIONMACHINEFACILITY ">
-                <div className="contentInfoContainer">
+                <div className="contentInfoContainer" style={{paddingBottom:"0px"}}>
                     <div>
                         <div className="containerGap">
                             <h2 className="BigHeading textCenter" >PRECISION MACHINE FACILITY </h2>

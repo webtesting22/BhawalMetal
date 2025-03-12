@@ -11,7 +11,7 @@ const Footer = () => {
     return (
         <>
             <div>
-                <section style={{ paddingBottom: "00px", }}>
+                <section style={{ paddingBottom: "00px",paddingTop:"2rem" }}>
                     <div>
                         <div>
                             <Row>

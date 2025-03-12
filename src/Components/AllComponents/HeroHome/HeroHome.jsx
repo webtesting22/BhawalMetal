@@ -41,7 +41,7 @@ const HeroHome = () => {
                 <div id="BhawalHomeContainer">
                     <div style={{ height: "100%", }}>
                         <Swiper
-                            spaceBetween={30}
+                            spaceBetween={0}
                             centeredSlides={true}
                             loop={true}
                             // autoplay={{ delay: 2500, disableOnInteraction: false }}
