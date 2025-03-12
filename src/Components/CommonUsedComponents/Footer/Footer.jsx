@@ -66,12 +66,12 @@ const Footer = () => {
                                 </Col>
                             </Row>
                         </div>
-                        <hr />
+                        {/* <hr />
                         <div className="CopyWriteTextContainer">
                             <p>Designed By
                                 <Link to="https://www.outleadsolutions.com/" target="_blank" style={{ color: "black" }}><b style={{ fontWeight: "500" }}> OutLead Solutions</b></Link></p>
                         </div>
-                        <br />
+                        <br /> */}
                     </div>
                 </section>
             </div>
