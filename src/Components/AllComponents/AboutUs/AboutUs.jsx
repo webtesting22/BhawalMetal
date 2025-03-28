@@ -33,7 +33,7 @@ const AboutUs = () => {
     const CarousalImages = [
 
         {
-            img: "https://images.unsplash.com/photo-1499359165151-4f7d7c46288c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            img: "/Images/CarousalImages/BhawalAboutCarousal1.png",
             title: "Your Trusted Partner for Premium Stainless Steel Solutions"
         },
         {

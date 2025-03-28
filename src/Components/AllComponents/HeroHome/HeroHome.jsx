@@ -22,18 +22,18 @@ const HeroHome = () => {
 
     const CarousalImages = [
         {
-            img: "/Images/HomepageBanner/HomePagebanner1.jpeg",
+            img: "/Images/HomepageBanner/HomePageBanner1.jpg",
             title: "One Stop Solution for all Your Stainless Steel Needs",
             description: <>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptas laborum. Temporibus totam iure blanditiis error officiis tempore maiores facilis!</>,
         },
         {
-            img: "https://images.unsplash.com/photo-1499359165151-4f7d7c46288c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            img: "/Images/HomepageBanner/HomePageBanner2.jpg",
             title: "Your Trusted Partner for Premium Stainless Steel Solutions",
             description: <>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptas laborum. Temporibus totam iure blanditiis error officiis tempore maiores facilis!</>,
 
         },
         {
-            img: "https://images.unsplash.com/photo-1474674556023-efef886fa147?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8fHx8fA%3D%3D",
+            img: "/Images/HomepageBanner/HomePageBanner3.jpg",
             title: "Excellence in Stainless Steel – Crafted for Your Needs",
             description: <>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptas laborum. Temporibus totam iure blanditiis error officiis tempore maiores facilis!</>,
 
@@ -60,7 +60,7 @@ const HeroHome = () => {
                                 <SwiperSlide key={index}>
                                     <div style={{ height: "100%" }}>
                                         <div className="OverlayEffectContainer"></div>
-                                        <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                                        <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center",overflow:"hidden" }}>
                                             <img src={item.img} alt={item.title} loading="lazy" />
                                             <div className="ContentContainerSwiperHome">
                                                 <h1
@@ -73,9 +73,9 @@ const HeroHome = () => {
                                                 </h1>
                                                 <br />
                                                 <div className="Paragraph">
-                                                    <p style={{ color: "white" }}  data-aos="fade-up"
-                                                    data-aos-duration="1000"
-                                                    data-aos-delay={index * 200}>{item.description}</p>
+                                                    <p style={{ color: "white" }} data-aos="fade-up"
+                                                        data-aos-duration="1000"
+                                                        data-aos-delay={index * 200}>{item.description}</p>
                                                 </div>
                                             </div>
                                         </div>
