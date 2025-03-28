@@ -57,7 +57,7 @@ const Industries = () => {
                             <Col lg={12}>
                                 <div>
                                     <div className="AboutUsImageContainer" >
-                                        <img src="/Images/IndustriesTopImage.avif" alt="" loading="lazy"/>
+                                        <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/W7GnePMTWHjkPwRS4IZo/MetalIndustries.jpg" alt="" loading="lazy"/>
                                     </div>
                                 </div>
                             </Col>
