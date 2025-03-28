@@ -92,10 +92,10 @@ const Industries = () => {
                                     spaceBetween={20}
                                     loop={true}
                                     freeMode={true}
-                                    // autoplay={{
-                                    //     delay: 2000,
-                                    //     disableOnInteraction: false,
-                                    // }}
+                                    autoplay={{
+                                        delay: 2000,
+                                        disableOnInteraction: false,
+                                    }}
 
                                     speed={700}
                                     breakpoints={{
