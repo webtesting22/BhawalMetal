@@ -15,6 +15,11 @@
     z-index: 1000;
     padding: 0rem 3rem;
     margin-top: 2rem;
+    height: 84px;
+    display: flex
+;
+    /* width: 100%; */
+    align-items: center;
 }
 
 .AdjustBothContainerNavigation {
@@ -84,9 +89,9 @@
 
 .FillContainerOnBack {
     background-color: white;
-    height: 0px;
+    height: 84px;
     /* width: 100%; */
-    margin: 0rem 3rem;
+    /* margin: 0rem 3rem; */
     position: fixed;
     top: 0;
     left: 0;
@@ -94,7 +99,7 @@
     transition: height 0.3s ease-in-out;
     z-index: 999;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
 }
 
 .ant-drawer {

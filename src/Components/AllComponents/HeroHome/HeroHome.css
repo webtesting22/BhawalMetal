@@ -124,20 +124,40 @@
     bottom: 0px;
     background-color: rgba(0, 0, 0, 0.612);
 }
-.ContentContainerSwiperHome{
+
+.ContentContainerSwiperHome {
     position: absolute;
-    width: 50%;
+    /* width: 50%; */
 }
 
-.ContentContainerSwiperHome h1{
+.ContentContainerSwiperHome h1 {
     color: white;
 }
-@media (max-width:900px) {
-    #BhawalHomeContainer .swiper-button-next:hover,
-#BhawalHomeContainer .swiper-button-prev:hover {
-    padding: 20px 10px;
-    transition: .5s;
+
+.Paragraph {
+    display: flex;
+    justify-content: center;
 }
+
+.ContentContainerSwiperHome p {
+    text-align: center;
+    width: 60%;
+
+}
+
+@media (max-width:900px) {
+    .ContentContainerSwiperHome p {
+        text-align: center;
+        width: 100%;
+
+    }
+
+    #BhawalHomeContainer .swiper-button-next:hover,
+    #BhawalHomeContainer .swiper-button-prev:hover {
+        padding: 20px 10px;
+        transition: .5s;
+    }
+
     #BhawalHomeContainer .swiper-button-next {
         padding: 20px 10px;
         border: 1px solid #617E87;
@@ -145,6 +165,7 @@
         border-radius: 100px 0px 0px 100px;
         transition: .5s;
     }
+
     #BhawalHomeContainer .swiper-button-prev {
         padding: 20px 10px;
         border: 1px solid #617E87;
@@ -152,12 +173,13 @@
         border-radius: 0px 100px 100px 0px;
         transition: .5s;
     }
-    
-    
-    .ContentContainerSwiperHome{
+
+
+    .ContentContainerSwiperHome {
         position: absolute;
         width: 80%;
     }
+
     #BhawalHomeContainer .ant-row .ant-col:nth-child(1) .SideContentContainer {
         padding: 0rem 1rem;
         height: unset;

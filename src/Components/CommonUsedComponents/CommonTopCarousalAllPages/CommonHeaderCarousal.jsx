@@ -27,22 +27,25 @@ const CommonHeaderCarousal = ({ slidesData, heading, tagline, pageLink }) => {
                         <SwiperSlide key={index}>
                             <div style={{ height: "100%" }}>
                                 <div className="OverlayEffectContainer"></div>
-                                <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                                    <img src={item.img} alt="" loading="lazy"/>
+                                <div style={{ height: "100%", display: "flex", alignItems: "end", justifyContent: "center" }}>
+                                    <img src={item.img} alt="" loading="lazy" />
                                     <div className="ContentContainerSwiperHome">
                                         <h1
                                             className="BigHeadingNormal"
-                                            style={{ textAlign: "center" }}
+                                            style={{ textAlign: "center", fontSize: "102px", marginBottom: "10px",color: "transparent", // Makes text fill transparent
+                                                WebkitTextStroke: "3px white", // Black stroke effect
+                                                textStroke: "4px black", // Fallback for some browsers
+                                                background: "transparent",fontFamily: '"Poppins", sans-serif' }}
                                             data-aos="fade-up"
                                             data-aos-duration="1000"
-                                            data-aos-delay={index * 200} 
+                                            data-aos-delay={index * 200}
                                         >
                                             {heading}
                                         </h1>
-                                        <p style={{ textAlign: "center", color: "white" }} data-aos="fade-up"
+                                        {/* <p style={{ textAlign: "center", color: "white" }} data-aos="fade-up"
                                             data-aos-duration="1300"
                                             data-aos-delay={index * 200} >{tagline}</p>
-                                        <br />
+                                        <br /> */}
                                         {/* <span style={{ textAlign: "center", color: "white" }} 
                                             className="RouteLinks"
                                             data-aos="fade-up"

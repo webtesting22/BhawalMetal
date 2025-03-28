@@ -1,6 +1,6 @@
 /* @import url("https://db.onlinewebfonts.com/c/a31b7939b8b59ccb73ca9a5e46bb11cc?family=THICCCBOI+Thin"); */
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 p {
     font-size: 18px;
     font-family: "Onest", sans-serif;
@@ -8,7 +8,7 @@ p {
 }
 
 .BigHeadingNormal {
-    font-size: 30px !important;
+    font-size: 30px ;
     color: #617E87;
     line-height: 60px;
     /* margin-bottom: 40px; */
@@ -16,7 +16,7 @@ p {
     font-weight: 600;
     line-height: 50px;
     text-align: center !important;
-    margin-bottom: 0rem !important;
+    margin-bottom: 0rem ;
     /* border-top: 1px solid #617E87; */
     /* display: flex;
     align-items: center; */
