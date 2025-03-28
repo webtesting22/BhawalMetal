@@ -1,7 +1,7 @@
 const IndustriesData = [
     {
         title: "Chemical Industries",
-        image: "/Images/IndustriesServicesImages/ChemicalIndustries.png",
+        image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/jAl7gGSblnT8wy0qDaYM/ChemicalIndustries.jpg",
         description: <>
             <p>Bhawal Metal Industries manufactures highly durable components such as reactors, flanges, mixing shafts, valve spindles, and pump shafts with excellent corrosion resistance to withstand harsh chemicals and prevent fluid leaks in chemical industries. Even a slight compromise in quality can have serious consequences. </p>
             <br />
@@ -12,7 +12,7 @@ const IndustriesData = [
     },
     {
         title: "Marine Engineering",
-        image: "/Images/IndustriesServicesImages/MarineEngineering.png",
+        image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/QTWGTokWElWZOsNwGg8a/MarineEngineeringNew.jpg",
         description: <>
             <p>With extensive experience and knowledge in the marine industry, Bhawal Metal Industries offers a complete range of dedicated application support and type-approved products.</p>
             <br />
@@ -23,7 +23,7 @@ const IndustriesData = [
     },
     {
         title: "Oil & Gas Industries",
-        image: "/Images/IndustriesServicesImages/OilGasIndustries.png",
+        image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/cJpDgdIoSMiMKfYFHBbE/OilGasIndustries.jpg",
         description: <>
             <p>In the oil and gas industry, corrosion-resistant and highly durable components are essential. That’s why we manufacture shafts and valves with tight seals and smooth interior surfaces to prevent fluid leaks, as even a minor leakage can have serious consequences.</p>
             <br />
@@ -34,7 +34,7 @@ const IndustriesData = [
     },
     {
         title: "Water Treatment Plants",
-        image: "/Images/IndustriesServicesImages/WaterTreatmentPlants.png",
+        image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/5PBbNE4tAiHVARcJZdo7/WaterTreatmentPlants.jpg",
         description: <>
             <p>In the water treatment industry, *stainless steel 316L* is the most preferred material due to its excellent corrosion resistance, making it ideal for various water treatment components and equipment, especially in harsh chemical or wastewater environments. The presence of molybdenum in its composition enhances its resistance to saltwater corrosion, preventing deterioration where other steels may fail. The *"L"* in 316L indicates low carbon content, which further improves corrosion resistance, particularly in welding applications.</p>
             <br />
@@ -43,7 +43,7 @@ const IndustriesData = [
     },
     {
         title: "General Engineering",
-        image: "/Images/IndustriesServicesImages/GeneralEngineering.png",
+        image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/RYvoKSESR8eFzGL4DbPs/GeneralEngineering.jpg",
         description: <>
             <p>Bhawal Metal Industries has been a strong supporter of general engineering units and fabricators across various sectors, from processing to power. We cater to their diverse stainless steel requirements, supplying stainless steel long products, forging components, and precision machined components. </p>
 
@@ -52,7 +52,7 @@ const IndustriesData = [
     },
     {
         title: "Aerospace & Defence",
-        image: "/Images/IndustriesServicesImages/AerospaceDefence.png",
+        image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/91cp00m5gmM0j3otCG3e/AerospaceDefence.jpg",
         description: <>
             <p>Bhawal Metal Industries is making substantial efforts through innovation and collaboration with companies in the aerospace and defense sectors. By providing high-quality materials and components within India, we have not only reduced the country’s dependency on foreign suppliers but also streamlined the manufacturing process for our clients, helping them reduce overall lead time. </p>
 
@@ -61,7 +61,7 @@ const IndustriesData = [
     },
     {
         title: "Processing Industries",
-        image: "/Images/IndustriesServicesImages/ProcessingIndustries.png",
+        image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/ASCi7sbS70UXkpvszL1c/ProcessingIndustries.jpg",
         description: <>
             <p>Bhawal Metal Industries manufactures highly durable components such as reactors, flanges, mixing shafts, valve spindles, and pump shafts with excellent corrosion resistance for industries like food processing, sugar processing, pharmaceuticals, and paper manufacturing. </p>
             <br />
