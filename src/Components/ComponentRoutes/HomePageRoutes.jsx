@@ -14,7 +14,7 @@ const HomePageRoutes=()=>{
         <WhatWeDoHome/>
         <WhyChooseHome/>
         <ServicesCarousal/>
-        <Blog/>
+        {/* <Blog/> */}
         </>
     )
 }
