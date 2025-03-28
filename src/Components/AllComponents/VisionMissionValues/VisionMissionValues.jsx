@@ -6,14 +6,13 @@ const VisionMissionValues = () => {
 
     const VisionMissionContent = [
         {
-            image: "https://images.unsplash.com/photo-1686223679665-242fe8521ade?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/fKJw3sY6Kuptl4eMjMMT/AboutUsVision.jpg",
             title: "Vision ",
             content: <>
                 <div>
                     <ul>
                         <li>To recognize our company’s and our people's full potential, establishing ourselves as a leading global Precision Engineering Firm</li>
-                        <li> ⁠To be India’s driving force in the world of automation and robotics through innovation and persistence.
-                        </li>
+                        <li> ⁠To be India’s driving force in the world of automation and robotics through innovation and persistence.</li>
                         <li>To inspire and positively impact millions of lives by uplifting society and making mindful efforts for the well-being of the planet and its people.</li>
                     </ul>
                 </div>
