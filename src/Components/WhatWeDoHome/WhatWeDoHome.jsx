@@ -1,8 +1,5 @@
 import React from "react";
 import "./WhatWeDoHome.css"
-import STAINLESSSTEELLONG from "./STAINLESSSTEELLONG.svg"
-import PRECISIONMACHINING from "./PRECISIONMACHINING.svg"
-import FORGINGCOMPONENTS from "./FORGINGCOMPONENTS.svg"
 import { Row, Col } from "antd";
 const WhatWeDoHome = () => {
 
