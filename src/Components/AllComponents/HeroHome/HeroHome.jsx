@@ -49,7 +49,7 @@ const HeroHome = () => {
                             spaceBetween={0}
                             centeredSlides={true}
                             loop={true}
-                            // autoplay={{ delay: 2500, disableOnInteraction: false }}
+                            autoplay={{ delay: 2500, disableOnInteraction: false }}
                             speed={800}
                             navigation={true}
                             modules={[Autoplay, Pagination, Navigation]}
@@ -99,7 +99,7 @@ const HeroHome = () => {
                                             {/* Animated Counter */}
                                             <h2 style={{ textAlign: "center" }}>
                                                 {item.number !== null ? (
-                                                    <CountUp start={0} end={item.number} duration={8} separator="," style={{ color: "#617E87", }} />
+                                                    <CountUp start={0} end={item.number} duration={4} separator="," style={{ color: "#617E87", }} />
                                                 ) : (
                                                     "Premium"
                                                 )}

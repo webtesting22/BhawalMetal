@@ -16,7 +16,7 @@ const WhatWeDoHome = () => {
             title: "Forging Components"
         },
         {
-            img: "/Images/WhatWeDoImages/PRECISIONMACHINING.jpg",
+            img: "/Images/WhatWeDoImages/PrecisionMachining.jpg",
             title: "Precision Machining Components"
         }
     ];
