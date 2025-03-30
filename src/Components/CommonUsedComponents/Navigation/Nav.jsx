@@ -49,7 +49,7 @@ const Nav = () => {
                             <div>
                                 <div className="AdjustBothContainerNavigation">
                                     <div className="BrandLogoContainer" style={{ display: "flex" }}>
-                                        <Link to="/" style={{ display: "flex" }}>
+                                        <Link to="/" style={{ display: "flex" }} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                                             <img
                                                 src="/Images/BhawalLogo.png"
                                                 alt="Bhawal Logo"
