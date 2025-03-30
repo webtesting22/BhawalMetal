@@ -21,3 +21,14 @@
     justify-content: center;
 }
 
+
+.BigHeadingNormal{
+    font-size: 102px;
+}
+
+@media (max-width:900px){
+
+.BigHeadingNormal{
+    font-size: 30px;
+}
+}

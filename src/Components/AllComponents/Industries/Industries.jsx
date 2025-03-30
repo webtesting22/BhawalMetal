@@ -54,14 +54,14 @@ const Industries = () => {
                 <section >
                     <div id="Industries">
                         <Row>
-                            <Col lg={12}>
+                            <Col lg={12} md={24} style={{width:"100%"}}>
                                 <div>
                                     <div className="AboutUsImageContainer" >
                                         <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/W7GnePMTWHjkPwRS4IZo/MetalIndustries.jpg" alt="" loading="lazy"/>
                                     </div>
                                 </div>
                             </Col>
-                            <Col lg={12}>
+                            <Col lg={12}  md={24} style={{width:"100%"}}>
                                 <div className="AboutUsContentContainer">
                                     <div >
                                         {/* <h2></h2> */}

@@ -49,7 +49,7 @@ const HeroHome = () => {
                             spaceBetween={0}
                             centeredSlides={true}
                             loop={true}
-                            autoplay={{ delay: 2500, disableOnInteraction: false }}
+                            // autoplay={{ delay: 2500, disableOnInteraction: false }}
                             speed={800}
                             navigation={true}
                             modules={[Autoplay, Pagination, Navigation]}
@@ -60,7 +60,7 @@ const HeroHome = () => {
                                 <SwiperSlide key={index}>
                                     <div style={{ height: "100%" }}>
                                         <div className="OverlayEffectContainer"></div>
-                                        <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center",overflow:"hidden" }}>
+                                        <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
                                             <img src={item.img} alt={item.title} loading="lazy" />
                                             <div className="ContentContainerSwiperHome">
                                                 <h1
