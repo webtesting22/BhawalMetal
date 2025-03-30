@@ -72,8 +72,10 @@
     /* height: 10vh; */
     right: 10px;
     background-color: #617E87;
-    padding: 40px 0px;
+    padding: 40px 20px;
     border-radius: 10px;
+    color: white;
+  
 }
 .ContactBtnContainer a{
     color: white;

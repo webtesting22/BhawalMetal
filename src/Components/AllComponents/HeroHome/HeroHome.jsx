@@ -19,26 +19,24 @@ const HeroHome = () => {
         { title: "Years of Experience", number: 27 },
         { title: "Premium Quality", number: 100 },
     ];
-
     const CarousalImages = [
         {
             img: "/Images/HomepageBanner/HomePageBanner1.jpg",
             title: "From Indian Roots to a Global Steel Leader",
-            description: <>With decades of expertise, we are expanding our presence worldwide. Our new generation of entrepreneurs is driving innovation and growth. Bhawal Metal Industries continues to supply premium stainless steel products to industries across the globe.</>,
+            description: <>With decades of expertise, we are expanding globally. Our new-generation entrepreneurs drive innovation, ensuring premium stainless steel solutions for industries worldwide.</>,
         },
         {
             img: "/Images/HomepageBanner/HomePageBanner2.jpg",
             title: "Precision in Manufacturing, Perfection in Every Product",
-            description: <>We specialize in stainless steel round bars, forged components, and custom-engineered solutions. Every product we craft meets global quality standards, ensuring strength and longevity. Our commitment to excellence makes us a trusted name in the steel industry.</>,
-
+            description: <>We specialize in stainless steel bars, forged components, and custom solutions. Every product meets global standards, ensuring strength, durability, and excellence.</>,
         },
         {
             img: "/Images/HomepageBanner/HomePageBanner3.jpg",
             title: "Quality Steel, Trusted Service, Lasting Relationships",
-            description: <>Since 1996, Bhawal Metal Industries has been committed to delivering top-tier stainless steel solutions. Our customer-first approach, ethical practices, and timely delivery set us apart. We take pride in building long-term partnerships based on trust and quality.</>,
-
+            description: <>Since 1996, Bhawal Metal Industries has delivered top-tier stainless steel. Our ethical practices, timely delivery, and customer-first approach build lasting trust.</>,
         },
     ];
+    
 
     return (
         <>

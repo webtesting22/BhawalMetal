@@ -92,8 +92,8 @@ const Nav = () => {
                     <div className="ContactBtnContainer">
                         <div className="HeightAdjustContainer">
                             <div>
-                                <h2>Helloo</h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, rerum.</p>
+                                <h2>Connect with Us for Reliable Steel Solutions</h2><br />
+                                <p>📞 Our team is ready to assist with your steel requirements.</p>
                             </div>
                         </div>
                     </div>
