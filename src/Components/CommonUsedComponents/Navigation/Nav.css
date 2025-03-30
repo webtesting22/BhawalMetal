@@ -160,6 +160,8 @@
 .ant-drawer-close{
     background-color: #800000 !important;
     color: white;
+    position: absolute;
+    right: 13px;
 }
 .ant-drawer-close span{
     color: white !important;
