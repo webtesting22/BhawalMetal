@@ -164,6 +164,12 @@
 }
 
 @media (max-width:900px) {
+    #BhawalHomeContainer {
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+        margin-top: 84px;
+    }
     .ContentContainerSwiperHome p {
         text-align: center;
         width: 100%;
