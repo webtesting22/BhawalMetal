@@ -23,19 +23,19 @@ const HeroHome = () => {
     const CarousalImages = [
         {
             img: "/Images/HomepageBanner/HomePageBanner1.jpg",
-            title: "One Stop Solution for all Your Stainless Steel Needs",
-            description: <>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptas laborum. Temporibus totam iure blanditiis error officiis tempore maiores facilis!</>,
+            title: "From Indian Roots to a Global Steel Leader",
+            description: <>With decades of expertise, we are expanding our presence worldwide. Our new generation of entrepreneurs is driving innovation and growth. Bhawal Metal Industries continues to supply premium stainless steel products to industries across the globe.</>,
         },
         {
             img: "/Images/HomepageBanner/HomePageBanner2.jpg",
-            title: "Your Trusted Partner for Premium Stainless Steel Solutions",
-            description: <>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptas laborum. Temporibus totam iure blanditiis error officiis tempore maiores facilis!</>,
+            title: "Precision in Manufacturing, Perfection in Every Product",
+            description: <>We specialize in stainless steel round bars, forged components, and custom-engineered solutions. Every product we craft meets global quality standards, ensuring strength and longevity. Our commitment to excellence makes us a trusted name in the steel industry.</>,
 
         },
         {
             img: "/Images/HomepageBanner/HomePageBanner3.jpg",
-            title: "Excellence in Stainless Steel – Crafted for Your Needs",
-            description: <>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptas laborum. Temporibus totam iure blanditiis error officiis tempore maiores facilis!</>,
+            title: "Quality Steel, Trusted Service, Lasting Relationships",
+            description: <>Since 1996, Bhawal Metal Industries has been committed to delivering top-tier stainless steel solutions. Our customer-first approach, ethical practices, and timely delivery set us apart. We take pride in building long-term partnerships based on trust and quality.</>,
 
         },
     ];
@@ -49,7 +49,7 @@ const HeroHome = () => {
                             spaceBetween={0}
                             centeredSlides={true}
                             loop={true}
-                            // autoplay={{ delay: 2500, disableOnInteraction: false }}
+                            autoplay={{ delay: 2000, disableOnInteraction: false }}
                             speed={800}
                             navigation={true}
                             modules={[Autoplay, Pagination, Navigation]}

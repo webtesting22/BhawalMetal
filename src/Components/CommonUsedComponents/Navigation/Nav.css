@@ -155,6 +155,16 @@
     display: none;
 }
 
+.ant-drawer-close{
+    background-color: #800000 !important;
+    color: white;
+}
+.ant-drawer-close span{
+    color: white !important;
+}
+.AntDrawerImage{
+    width: 150px;
+}
 @media (max-width:900px) {
     .MenuBtnContainer svg {
         display: block;

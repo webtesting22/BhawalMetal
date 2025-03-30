@@ -77,7 +77,9 @@ const Nav = () => {
                         </Col>
                     </Row>
                 </div>
-                <Drawer placement="right" title="Bhawal Metal Industries" onClose={onClose} open={open}>
+                <Drawer placement="right" title={<>
+                    <img src="/Images/BhawalLogo.png" alt="" className="AntDrawerImage" />
+                </>} onClose={onClose} open={open}>
                     <div className="NavigationContainer">
                         <ul className="navigationLinksContainerList">
                             {NavigationDataLinks.map((item, index) => (
@@ -90,11 +92,8 @@ const Nav = () => {
                     <div className="ContactBtnContainer">
                         <div className="HeightAdjustContainer">
                             <div>
-                                <div className="ContactNumbers">
-                                    <p><a href="tel:+91 93270 18703"><MdOutlinePhoneInTalk /> &nbsp;+91 93270 18703</a></p>
-                                    <p><a href="tel:+91 76007 29708"><MdOutlinePhoneInTalk /> &nbsp;+91 76007 29708</a></p>
-                                    <p> <a href="tel:+91 92272 18702"><MdOutlinePhoneInTalk /> &nbsp;+91 92272 18702</a></p>
-                                </div>
+                                <h2>Helloo</h2>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, rerum.</p>
                             </div>
                         </div>
                     </div>
