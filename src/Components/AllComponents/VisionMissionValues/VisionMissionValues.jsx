@@ -7,7 +7,7 @@ const VisionMissionValues = () => {
     const VisionMissionContent = [
         {
             image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/fKJw3sY6Kuptl4eMjMMT/AboutUsVision.jpg",
-            title: "Vision ",
+            title: "Our Vision ",
             content: <>
                 <div>
                     <ul>
@@ -19,8 +19,8 @@ const VisionMissionValues = () => {
             </>
         },
         {
-            image: "https://images.unsplash.com/photo-1529883703457-6de9852c11f9?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            title: "Mission",
+            image: "/Images/OurMission.jpeg",
+            title: "Our Mission",
             content: <>
                 <div>
                     <ul>
@@ -32,19 +32,20 @@ const VisionMissionValues = () => {
             </>
         },
         {
-            image: "https://images.unsplash.com/photo-1469975827474-fbf5687e03e6?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            title: "Core Values",
+            image: "/Images/OurCoreValues.jpg",
+            title: "Our Core Values",
             content: <>
                 <div>
-                    <p> At Bhawal Metal Industries, we strongly believe in:</p>
+                   
 
                     <ul>
-                        <li>Excellence – Striving for the highest quality in everything we do.</li>
-                        <li>Integrity – Conducting business with honesty and strong moral principles.</li>
-                        <li>Transparency – Maintaining open and clear communication in all dealings. </li>
-                        <li>Innovation – Continuously improving and adopting new ideas and technologies. </li>
-                        <li>Customer Service – Prioritizing customer satisfaction through quality products and support.</li>
-                        <li>Accountability – Taking responsibility for our actions and commitments.</li>
+                        <li><b>At Bhawal Metal Industries, we strongly believe in:</b></li>
+                        <li><b>Excellence</b> – Striving for the highest quality in everything we do.</li>
+                        <li><b>Integrity</b> – Conducting business with honesty and strong moral principles.</li>
+                        <li><b>Transparency</b> – Maintaining open and clear communication in all dealings. </li>
+                        <li><b>Innovation</b> – Continuously improving and adopting new ideas and technologies. </li>
+                        <li><b>Customer Service</b> – Prioritizing customer satisfaction through quality products and support.</li>
+                        <li><b>Accountability</b> – Taking responsibility for our actions and commitments.</li>
                     </ul>
                 </div>
 

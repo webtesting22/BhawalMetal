@@ -4,7 +4,9 @@ import { Row, Col, Drawer } from "antd";
 import { IoIosMenu } from "react-icons/io";
 import NavigationDataLinks from "./NavigationLinks";
 import { Link } from "react-router-dom";
-
+import { MdOutlinePhoneInTalk } from "react-icons/md";
+import { TfiEmail } from "react-icons/tfi";
+import { IoLocationOutline } from "react-icons/io5";
 const Nav = () => {
     const [open, setOpen] = useState(false);
     const [scrollHeight, setScrollHeight] = useState(84);
@@ -87,7 +89,13 @@ const Nav = () => {
                     </div>
                     <div className="ContactBtnContainer">
                         <div className="HeightAdjustContainer">
-                            <h2 style={{ color: "white" }}>Contact info</h2>
+                            <div>
+                                <div className="ContactNumbers">
+                                    <p><a href="tel:+91 93270 18703"><MdOutlinePhoneInTalk /> &nbsp;+91 93270 18703</a></p>
+                                    <p><a href="tel:+91 76007 29708"><MdOutlinePhoneInTalk /> &nbsp;+91 76007 29708</a></p>
+                                    <p> <a href="tel:+91 92272 18702"><MdOutlinePhoneInTalk /> &nbsp;+91 92272 18702</a></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </Drawer>

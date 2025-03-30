@@ -15,7 +15,7 @@ const Footer = () => {
                     <div>
                         <div>
                             <Row>
-                                <Col lg={8}>
+                                <Col lg={8} style={{width:"100%"}}>
                                     <div className="FooterlogoContainer">
                                         <div>
                                             <div>
@@ -29,7 +29,7 @@ const Footer = () => {
                                         </div>
                                     </div>
                                 </Col>
-                                <Col lg={8}>
+                                <Col lg={8} style={{width:"100%"}}>
                                     <div className="EmailBoxContainer">
                                         <div style={{ width: "100%" }}>
                                             <div>
@@ -48,7 +48,7 @@ const Footer = () => {
                                         </div>
                                     </div>
                                 </Col>
-                                <Col lg={8}>
+                                <Col lg={8} style={{width:"100%"}}>
                                     <div className="PhoneBoxContainer">
                                         <div>
                                             <div>

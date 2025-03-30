@@ -16,8 +16,7 @@
     padding: 0rem 3rem;
     margin-top: 2rem;
     height: 84px;
-    display: flex
-;
+    display: flex;
     /* width: 100%; */
     align-items: center;
 }
@@ -68,11 +67,17 @@
 
 .ContactBtnContainer {
     position: absolute;
-    left: 0px;
-    bottom: 0px;
-    height: 10vh;
-    right: 0px;
-    background-color: black;
+    left: 10px;
+    bottom: 10px;
+    /* height: 10vh; */
+    right: 10px;
+    background-color: #617E87;
+    padding: 40px 0px;
+    border-radius: 10px;
+}
+.ContactBtnContainer a{
+    color: white;
+    text-decoration: none;
 }
 
 .HeightAdjustContainer {
@@ -122,6 +127,7 @@
     opacity: 0;
     transition: .5s;
 }
+
 .NavigationbarContainer li:hover::before {
     content: "";
     position: absolute;
