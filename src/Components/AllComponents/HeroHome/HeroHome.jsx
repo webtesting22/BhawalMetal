@@ -68,6 +68,7 @@ const HeroHome = () => {
                                                     data-aos-duration="1000"
                                                     data-aos-delay={index * 200}
                                                     className="BigHeadingNormal"
+                                                    id="HomePagTitle"
                                                 >
                                                     {item.title}
                                                 </h1>
