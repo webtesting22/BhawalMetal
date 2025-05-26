@@ -434,6 +434,10 @@
 }
 
 @media (max-width: 768px) {
+    .stats-section {
+        margin-top: 20px;
+        margin-bottom: 3rem;
+    }
     #UnwaveringEffortsContentContainer {
         background-attachment: scroll;
     }
