@@ -127,7 +127,7 @@ const UnwaveringEfforts = () => {
                                 <div className="ContentContainer futuristic-content">
                                     <div className="content-block" data-aos="fade-up" data-aos-duration="1300">
                                         <div className="title-container">
-                                            <div className="title-accent-line" />
+                                            {/* <div className="title-accent-line" /> */}
                                             <h2 className="BigHeading futuristic-heading">
                                                 Unwavering Efforts to Produce Premium Quality Industrial Components
                                             </h2>

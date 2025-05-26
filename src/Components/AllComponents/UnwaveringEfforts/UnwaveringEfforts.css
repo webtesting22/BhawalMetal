@@ -33,7 +33,7 @@
         linear-gradient(90deg, rgba(97, 126, 135, 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
     animation: gridMove 20s linear infinite;
-    z-index: 2;
+    z-index: 1;
 }
 
 /* Floating particles */
@@ -92,7 +92,7 @@
 /* Content wrapper */
 .content-wrapper {
     position: relative;
-    z-index: 3;
+    z-index: 1;
     width: 100%;
     padding: 0px 0;
 }
@@ -189,6 +189,7 @@
 /* Stats section */
 .stats-section {
     margin-top: 20px;
+    margin-bottom: 8rem;
 }
 
 .stats-container {
