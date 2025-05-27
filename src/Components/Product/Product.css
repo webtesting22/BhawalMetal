@@ -4,12 +4,12 @@
 .products-wrapper {
     min-height: 100vh;
     background: linear-gradient(135deg, #4755695a 0%, #64748b 50%, #475569 100%);
-    padding: 80px 16px;
+    /* padding: 80px 16px; */
     padding-top: 12rem !important;
 }
 
 .products-container {
-    max-width: 1280px;
+    /* max-width: 1280px; */
     margin: 0 auto;
 }
 
@@ -596,6 +596,7 @@
 @media (max-width: 768px) {
     .products-wrapper {
         padding: 60px 16px;
+        padding-top: 10rem !important;
     }
 
     .products-main-header,
@@ -605,6 +606,11 @@
         text-align: left;
         gap: 20px;
     }
+
+    .products-main-header {
+        margin-bottom: 50px;
+    }
+
 
     .main-title {
         font-size: 2.5rem;
