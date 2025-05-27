@@ -21,7 +21,7 @@ const HeroHome = () => {
     ];
     const CarousalImages = [
         {
-            img: "/Images/HomepageBanner/HomePageBanner1.jpg",
+            img: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/PlSXjT3D7pa6M3iOVjqw/Induction Hardening.jpg",
             title: "From Indian Roots to a Global Steel Leader",
             description: <>With decades of expertise, we are expanding globally. Our new-generation entrepreneurs drive innovation, ensuring premium stainless steel solutions for industries worldwide.</>,
         },

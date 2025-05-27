@@ -5,11 +5,11 @@ const WhatWeDoHome = () => {
 
     const WhatWeDoCardsData = [
         {
-            img: "/Images/WhatWeDoImages/STAINLESSSTEELLONGPRODUCTS.jpeg",
+            img: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/wNkSGJWfkp9CHTFxZk8r/square bars2.png",
             title: "Stainless Steel Long Products",
         },
         {
-            img: "/Images/WhatWeDoImages/FORGINGCOMPONENTS.jpeg",
+            img: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/bPR50N7W5QYDUqXVae2r/Forged rings.jpg",
             title: "Forging Components"
         },
         {
