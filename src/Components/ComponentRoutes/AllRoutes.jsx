@@ -8,6 +8,7 @@ import Industries from "../AllComponents/Industries/Industries";
 import MetalGrades from "../AllComponents/MetalGrades/MetalGrades";
 import WhatsAppPulseButton from "../CommonUsedComponents/WhatsAppPulseButton/WhatsAppPulseButton";
 import Footer from "../CommonUsedComponents/Footer/Footer";
+import Products from "../Product/Products";
 const AllRoutes = () => {
     return (
         <Router>
@@ -19,7 +20,7 @@ const AllRoutes = () => {
                 <Route path="/facilities-and-services" element={<FacilitiesAndServices />} />
                 <Route path="/industries" element={<Industries />} />
                 <Route path="/metal-grades" element={<MetalGrades />} />
-
+                <Route path="/product" element={<Products />} />
             </Routes>
             <Footer/>
             <WhatsAppPulseButton/>

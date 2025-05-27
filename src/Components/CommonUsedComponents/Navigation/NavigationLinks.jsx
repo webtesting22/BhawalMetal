@@ -8,6 +8,10 @@ const NavigationDataLinks = [
         link: "About"
     },
     {
+        path: "/product",
+        link: "Products"
+    },
+    {
         path: "/metal-grades",
         link: "Grades"
     },
