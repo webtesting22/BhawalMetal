@@ -26,7 +26,7 @@ const HeroHome = () => {
             description: <>With decades of expertise, we are expanding globally. Our new-generation entrepreneurs drive innovation, ensuring premium stainless steel solutions for industries worldwide.</>,
         },
         {
-            img: "/Images/HomepageBanner/HomePageBanner2.jpg",
+            img: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/vlyJA375IvHKDzs3dU3y/Forging Process.jpg",
             title: "Precision in Manufacturing, Perfection in Every Product",
             description: <>We specialize in stainless steel bars, forged components, and custom solutions. Every product meets global standards, ensuring strength, durability, and excellence.</>,
         },

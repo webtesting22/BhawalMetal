@@ -25,42 +25,65 @@ const FacilitiesAndServices = () => {
 
     const FacilitiesCarousalImages = [
         {
-            image: "/Images/FacilitiesAndServices/Bigbanner.jpeg"
+            image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/iB005PNLl6VQdUpCGMdL/Forging Hammer ( process of Forging ).png"
         },
         {
-            image: "https://images.unsplash.com/photo-1444738720667-27446e3f293d?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/Z1ktLn7z3yVUD6SDuQh4/Heat Treatment.jpg"
         }
     ]
 
     const GalleryImages = [
         {
-            img: "/Images/FacilitiesAndServices/Gallery1.png"
+            img: "/Images/FacilitiesAndServices/GalleryImages/1.png"
         },
         {
-            img: "/Images/FacilitiesAndServices/Gallery2.png"
+            img: "/Images/FacilitiesAndServices/GalleryImages/2.jpg"
         },
         {
-            img: "/Images/FacilitiesAndServices/Gallery3.png"
+            img: "/Images/FacilitiesAndServices/GalleryImages/3.jpeg"
         },
         {
-            img: "/Images/FacilitiesAndServices/Gallery4.png"
+            img: "/Images/FacilitiesAndServices/GalleryImages/4.jpg"
         },
         {
-            img: "/Images/FacilitiesAndServices/Gallery5.png"
+            img: "/Images/FacilitiesAndServices/GalleryImages/5.png"
         },
         {
-            img: "/Images/FacilitiesAndServices/Gallery6.png"
+            img: "/Images/FacilitiesAndServices/GalleryImages/6.png"
         },
         {
-            img: "/Images/FacilitiesAndServices/Gallery7.png"
+            img: "/Images/FacilitiesAndServices/GalleryImages/7.jpg"
         },
         {
-            img: "/Images/FacilitiesAndServices/Gallery8.png"
+            img: "/Images/FacilitiesAndServices/GalleryImages/8.jpg"
         },
         {
-            img: "/Images/FacilitiesAndServices/Gallery9.png"
-        }
-
+            img: "/Images/FacilitiesAndServices/GalleryImages/9.png"
+        },
+        {
+            img: "/Images/FacilitiesAndServices/GalleryImages/10.png"
+        },
+        {
+            img: "/Images/FacilitiesAndServices/GalleryImages/11.jpg"
+        },
+        {
+            img: "/Images/FacilitiesAndServices/GalleryImages/12.png"
+        },
+        {
+            img: "/Images/FacilitiesAndServices/GalleryImages/13.jpg"
+        },
+        {
+            img: "/Images/FacilitiesAndServices/GalleryImages/14.jpg"
+        },
+        {
+            img: "/Images/FacilitiesAndServices/GalleryImages/15.jpg"
+        },
+        {
+            img: "/Images/FacilitiesAndServices/GalleryImages/16.jpg"
+        },
+        {
+            img: "/Images/FacilitiesAndServices/GalleryImages/17.jpg"
+        },
     ]
 
     useEffect(() => {
