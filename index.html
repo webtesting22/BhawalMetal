@@ -1,20 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="./public/favicon.ico" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bhawal Metal</title>
+
+  <!-- Title & Favicon -->
+  <title>Bhawal Metal Industries | Stainless Steel Experts</title>
+  <link rel="icon" href="/public/favicon.ico" type="image/x-icon" />
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Bhawal Metal Industries, established in 1996, is a leading manufacturer and exporter of stainless steel round bars, forged components, and precision parts with a strong legacy and a global vision." />
+  <meta name="keywords"
+    content="Bhawal Metal Industries, Stainless Steel, Round Bars, Forged Components, Precision Components, Drawing-Based Components, Metal Supplier India" />
+  <meta name="author" content="Bhawal Metal Industries" />
+
+  <!-- Open Graph Meta (for better link previews) -->
+  <meta property="og:title" content="Bhawal Metal Industries" />
+  <meta property="og:description"
+    content="Leading stainless steel manufacturer and exporter since 1996." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.bhawalmetal.com" />
+  <meta property="og:image" content="/meta-banner.jpg" />
+
+  <!-- AOS Animation CSS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Fonts & Preload (optional performance boost) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Example font (optional) -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" /> -->
 </head>
 
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+  <!-- Optional: Loading Spinner -->
+  <div id="loader" style="display: flex; align-items: center; justify-content: center; height: 100vh;">
+    <p>Loading Bhawal Metal Industries...</p>
+  </div>
+
+  <!-- React Root -->
+  <div id="root" style="display: none;"></div>
+
+  <!-- Scripts -->
+  <script type="module">
+    import('/src/main.jsx').then(() => {
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('root').style.display = 'block';
+    });
+  </script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      once: true,
+      duration: 800
+    });
   </script>
 </body>
 
