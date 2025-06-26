@@ -78,13 +78,12 @@
 
 /* Single Blog Styles */
 .blog-separate-container {
-    max-width: 800px;
     margin: 0 auto;
     padding: 2rem 1rem 4rem 1rem;
     background: #fff;
     border-radius: 18px;
     box-shadow: 0 4px 24px rgba(97, 126, 135, 0.08);
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
 }
 
 .blog-back-btn {
@@ -195,16 +194,18 @@
     max-width: 800px;
     margin: auto;
 }
+
 .blog-layout-image-wrapper {
     height: 600px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius:18px;
+    border-radius: 18px;
     margin-top: 2rem;
 }
-.blog-layout-image-wrapper img{
+
+.blog-layout-image-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -305,6 +306,7 @@
     padding: 2rem 2.5rem 2rem 2rem;
     gap: 2.5rem;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .blog-featured-text {
@@ -534,11 +536,12 @@
 }
 
 .aos-blur {
-  filter: blur(16px);
-  transition: filter 0.7s cubic-bezier(0.4,0,0.2,1);
+    filter: blur(16px);
+    transition: filter 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 [data-aos].aos-animate.aos-blur {
-  filter: blur(0);
+    filter: blur(0);
 }
 
 /* Global AOS Blur-to-Clear Animation */
@@ -548,6 +551,7 @@
     transform: translateY(30px);
     transition: all 1.5s ease-out;
 }
+
 [data-aos="blur-to-clear"].aos-animate {
     filter: blur(0);
     opacity: 1;
@@ -561,39 +565,46 @@
     transform: translateY(30px);
     transition: all 1.5s ease-out;
 }
+
 [data-aos="fade-up"].aos-animate {
     filter: blur(0);
     opacity: 1;
     transform: translateY(0);
 }
+
 [data-aos="fade-down"] {
     filter: blur(5px);
     opacity: 0;
     transform: translateY(-30px);
     transition: all 1.5s ease-out;
 }
+
 [data-aos="fade-down"].aos-animate {
     filter: blur(0);
     opacity: 1;
     transform: translateY(0);
 }
+
 [data-aos="fade-left"] {
     filter: blur(5px);
     opacity: 0;
     transform: translateX(30px);
     transition: all 1.5s ease-out;
 }
+
 [data-aos="fade-left"].aos-animate {
     filter: blur(0);
     opacity: 1;
     transform: translateX(0);
 }
+
 [data-aos="fade-right"] {
     filter: blur(5px);
     opacity: 0;
     transform: translateX(-30px);
     transition: all 1.5s ease-out;
 }
+
 [data-aos="fade-right"].aos-animate {
     filter: blur(0);
     opacity: 1;

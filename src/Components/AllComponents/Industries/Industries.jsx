@@ -15,7 +15,7 @@ const Industries = () => {
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [selectedIndustry, setSelectedIndustry] = useState(null);
 
- 
+
     const showModal = (industry) => {
         setSelectedIndustry(industry);
         setIsModalVisible(true);
@@ -54,14 +54,14 @@ const Industries = () => {
                 <section >
                     <div id="Industries">
                         <Row>
-                            <Col lg={12} md={24} style={{width:"100%"}}>
+                            <Col lg={12} md={24} style={{ width: "100%" }}>
                                 <div>
                                     <div className="AboutUsImageContainer" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
-                                        <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/W7GnePMTWHjkPwRS4IZo/MetalIndustries.jpg" alt="" loading="lazy"/>
+                                        <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/W7GnePMTWHjkPwRS4IZo/MetalIndustries.jpg" alt="" loading="lazy" />
                                     </div>
                                 </div>
                             </Col>
-                            <Col lg={12}  md={24} style={{width:"100%"}}>
+                            <Col lg={12} md={24} style={{ width: "100%" }}>
                                 <div className="AboutUsContentContainer">
                                     <div >
                                         {/* <h2></h2> */}
@@ -112,7 +112,7 @@ const Industries = () => {
                                             <div data-aos="blur-to-clear" data-aos-delay={300 + index * 200} data-aos-duration="1200">
                                                 <div className="WhyChooseUsCardSwiperContainer">
                                                     <div className="SwiperImageCardContainer">
-                                                        <img src={item.image} alt={item.title} loading="lazy"/>
+                                                        <img src={item.image} alt={item.title} loading="lazy" />
                                                     </div>
                                                     <div>
                                                         <h2>{item.title}</h2>
@@ -155,7 +155,7 @@ const Industries = () => {
                             <div className="ModalImageContainer">
                                 <Row>
                                     <Col lg={12}>
-                                        <img src={selectedIndustry.image} alt={selectedIndustry.title} loading="lazy"/>
+                                        <img src={selectedIndustry.image} alt={selectedIndustry.title} loading="lazy" />
 
                                     </Col>
                                     <Col lg={12}>

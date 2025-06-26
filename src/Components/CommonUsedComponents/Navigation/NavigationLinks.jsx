@@ -27,10 +27,10 @@ const NavigationDataLinks = [
     //     path: "",
     //     link: "Sustainabilty"
     // },
-    // {
-    //     path: "",
-    //     link: "Blogs"
-    // },
+    {
+        path: "/blogs",
+        link: "Blogs"
+    },
     // {
     //     path: "",
     //     link: "Contact"

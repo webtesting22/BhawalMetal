@@ -111,7 +111,8 @@ const Blog = () => {
                         <section className="blog-featured" data-aos="fade-up" data-aos-delay="550" data-aos-duration="1200">
                             <div className="blog-featured-text">
                                 <h1 className="blog-featured-title">{featuredBlog.title}</h1>
-                                <p className="blog-featured-summary">{featuredBlog.content.slice(0, 90)}...</p>
+                                <p className="blog-featured-summary">{featuredBlog.excerpt}</p>
+
                                 <button
                                     className="blog-featured-btn"
                                     onClick={() => navigate(`/blogs/${featuredBlog.id}`)}
@@ -151,7 +152,13 @@ const Blog = () => {
                                                     <span className="blog-card-date">{blog.date}</span>
                                                 </div>
                                                 <h2 className="blog-card-h-title">{blog.title}</h2>
-                                                <p className="blog-card-h-excerpt">{blog.excerpt}</p>
+                                                {typeof blog.content === 'string' ? (
+                                                    <p className="blog-card-h-excerpt">{blog.content.slice(0, 40)}...</p>
+                                                ) : (
+                                                    <div className="blog-card-h-excerpt">
+                                                        {blog.content}
+                                                    </div>
+                                                )}
                                                 <button
                                                     className="blog-card-h-btn"
                                                     onClick={() => navigate(`/blogs/${blog.id}`)}
