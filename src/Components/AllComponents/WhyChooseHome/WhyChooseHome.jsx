@@ -58,7 +58,7 @@ const WhyChooseHome = () => {
             <section>
                 <div id="WhyChooseHomeContentContainer">
                     <div>
-                        <h2 className="BigHeading textCenter">Why Choose Bhawal Metal Industries?</h2>
+                        <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">Why Choose Bhawal Metal Industries?</h2>
                     </div>
 
                     <div className="SwiperContainerCardWhyChoose">
@@ -84,7 +84,7 @@ const WhyChooseHome = () => {
                         >
                             {WhyChooseData.map((item, index) => (
                                 <SwiperSlide key={index}>
-                                    <div>
+                                    <div data-aos="blur-to-clear" data-aos-delay={200 + index * 200} data-aos-duration="1200">
                                         <div className="WhyChooseUsCardSwiperContainer">
                                             <div className="SwiperImageCardContainer">
                                                 <img src={item.image} alt={item.title} loading="lazy" />

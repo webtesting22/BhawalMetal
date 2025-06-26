@@ -11,8 +11,8 @@ const VisionMissionValues = () => {
             content: <>
                 <div>
                     <ul>
-                        <li>To recognize our company’s and our people's full potential, establishing ourselves as a leading global Precision Engineering Firm</li>
-                        <li> ⁠To be India’s driving force in the world of automation and robotics through innovation and persistence.</li>
+                        <li>To recognize our company's and our people's full potential, establishing ourselves as a leading global Precision Engineering Firm</li>
+                        <li> ⁠To be India's driving force in the world of automation and robotics through innovation and persistence.</li>
                         <li>To inspire and positively impact millions of lives by uplifting society and making mindful efforts for the well-being of the planet and its people.</li>
                     </ul>
                 </div>
@@ -80,13 +80,15 @@ const VisionMissionValues = () => {
                                 {/* If index is even, display Image first, otherwise display Content first */}
                                 {index % 2 === 0 ? (
                                     <>
-                                        <Col lg={12} xs={24} data-aos="fade-right"
+                                        <Col lg={12} xs={24} data-aos="blur-to-clear"
+                                            data-aos-delay={100 + index * 300}
                                             data-aos-duration="1000">
                                             <div className="VisionMissionContainerImage">
                                                 <img src={item.image} alt={item.title} loading="lazy"/>
                                             </div>
                                         </Col>
-                                        <Col lg={12} xs={24} data-aos="fade-left"
+                                        <Col lg={12} xs={24} data-aos="blur-to-clear"
+                                            data-aos-delay={250 + index * 300}
                                             data-aos-duration="1000">
                                             <div>
                                                 <h2 className="BigHeading">{item.title}</h2>
@@ -96,14 +98,16 @@ const VisionMissionValues = () => {
                                     </>
                                 ) : (
                                     <>
-                                        <Col lg={12} xs={24} data-aos="fade-right"
+                                        <Col lg={12} xs={24} data-aos="blur-to-clear"
+                                            data-aos-delay={100 + index * 300}
                                             data-aos-duration="1000">
                                             <div>
                                                 <h2 className="BigHeading">{item.title}</h2>
                                                 {item.content}
                                             </div>
                                         </Col>
-                                        <Col lg={12} xs={24} data-aos="fade-left"
+                                        <Col lg={12} xs={24} data-aos="blur-to-clear"
+                                            data-aos-delay={250 + index * 300}
                                             data-aos-duration="1000">
                                             <div className="VisionMissionContainerImage" style={{ paddingRight: "0px" }}>
                                                 <img src={item.image} alt={item.title} loading="lazy"/>

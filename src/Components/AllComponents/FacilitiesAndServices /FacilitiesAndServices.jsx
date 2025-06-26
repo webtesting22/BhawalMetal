@@ -95,17 +95,21 @@ const FacilitiesAndServices = () => {
             <section id="FacilitiesAndServices">
                 <div className="FacilitiesAndServicesContentContainer contentInfoContainer">
                     <div>
-                        <p data-aos="fade-up"
+                        <p data-aos="blur-to-clear"
+                            data-aos-delay="100"
                             data-aos-duration="800">Fueled by ambition and driven by its core values, Bhawal Metal Industries specializes in niche precision forgings, fully machined, sub-assembled, and precision products for both domestic and global customers. We have advanced hot forging facilities, heat treatment systems with oil and water quenching, and a precision machining unit equipped with high-end CNCs, VMCs, and SPMs to achieve the required tolerances as per customer specifications. </p>
                         <br />
-                        <p data-aos="fade-up"
+                        <p data-aos="blur-to-clear"
+                            data-aos-delay="200"
                             data-aos-duration="800">Over the past two decades, the company has evolved into an innovative, customer-focused, and robust organization, recognized for high-quality carbon and alloy steel forged and machined components. We provide engineering, design, development, and validation support in close collaboration with our customers.</p>
                         <br />
-                        <p data-aos="fade-up"
+                        <p data-aos="blur-to-clear"
+                            data-aos-delay="300"
                             data-aos-duration="800">With our customer-centric approach and commitment to delivering quality materials, we offer various value-added services, including:</p>
                     </div>
                     <br />
-                    <div className="FacilitiesAndServicesContentSwiper" data-aos="fade-up"
+                    <div className="FacilitiesAndServicesContentSwiper" data-aos="blur-to-clear"
+                        data-aos-delay="400"
                         data-aos-duration="1000">
                         <Swiper
                             spaceBetween={30}
@@ -126,7 +130,7 @@ const FacilitiesAndServices = () => {
                             {FacilitiesCarousalImages.map((item, index) => (
                                 <SwiperSlide key={index}>
                                     <div>
-                                        <div >
+                                        <div data-aos="blur-to-clear" data-aos-delay={500 + index * 200} data-aos-duration="1000">
                                             <img src={item.image} alt="" style={{ width: "100%" }} loading="lazy" />
                                         </div>
                                     </div>
@@ -135,7 +139,7 @@ const FacilitiesAndServices = () => {
                         </Swiper>
                     </div>
                     <div className="containerGap">
-                        <h2 className="BigHeading textCenter">HOT FORGING</h2>
+                        <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="700" data-aos-duration="1000">HOT FORGING</h2>
                     </div>
                 </div>
             </section>
@@ -183,7 +187,7 @@ const FacilitiesAndServices = () => {
                                         <p>Our strengths include:</p>
                                         <ul>
                                             <li>
-                                                Bhawal Metal Provides “first-time-right” products.
+                                                Bhawal Metal Provides "first-time-right" products.
                                             </li>
                                             <li>Net-Shape, Near-Net-Shape. Flashless Forging</li>
                                             <li>Grain Density management & failure analysis</li>
@@ -214,13 +218,13 @@ const FacilitiesAndServices = () => {
                 <div className="contentInfoContainer" style={{paddingBottom:"0px"}}>
                     <div>
                         <div className="containerGap">
-                            <h2 className="BigHeading textCenter" >PRECISION MACHINE FACILITY </h2>
+                            <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1000">PRECISION MACHINE FACILITY </h2>
                         </div>
                     </div>
                     <div>
-                        <p >Bhawal Metal Industries provides top-quality outsourced machining facilities for various product lines, enabling us to supply products in either pre-machined or fully machined conditions with exceptional precision. Our unwavering focus on quality and timely delivery ensures we meet customer demands efficiently.</p>
+                        <p data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="800">Bhawal Metal Industries provides top-quality outsourced machining facilities for various product lines, enabling us to supply products in either pre-machined or fully machined conditions with exceptional precision. Our unwavering focus on quality and timely delivery ensures we meet customer demands efficiently.</p>
                         <br />
-                        <p >We have dedicated machining setups and outsourcing capabilities to offer the following services to our clients:</p>
+                        <p data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="800">We have dedicated machining setups and outsourcing capabilities to offer the following services to our clients:</p>
                     </div>
                     <br />
                     <div>
@@ -228,9 +232,9 @@ const FacilitiesAndServices = () => {
                             {GalleryImages.map((item, index) => (
                                 <Col lg={8} md={12} style={{ width: "100%", height: "100%" }}>
                                     <div  >
-                                        <div className="GalleryImageContainer" data-aos="fade-up"
+                                        <div className="GalleryImageContainer" data-aos="blur-to-clear"
                                             data-aos-duration="800"
-                                            data-aos-delay={index * 200} >
+                                            data-aos-delay={400 + index * 200} >
                                             <Image src={item.img} alt="" loading="lazy" />
                                         </div>
                                     </div>

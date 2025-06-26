@@ -56,7 +56,7 @@ const Industries = () => {
                         <Row>
                             <Col lg={12} md={24} style={{width:"100%"}}>
                                 <div>
-                                    <div className="AboutUsImageContainer" >
+                                    <div className="AboutUsImageContainer" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
                                         <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/W7GnePMTWHjkPwRS4IZo/MetalIndustries.jpg" alt="" loading="lazy"/>
                                     </div>
                                 </div>
@@ -65,13 +65,13 @@ const Industries = () => {
                                 <div className="AboutUsContentContainer">
                                     <div >
                                         {/* <h2></h2> */}
-                                        <p>Bhawal Metal Industries has over 27 years of experience in stainless steel and manufacturing. Our journey as precision components manufacturers in India began in 1997 when we started establishing our presence in various domestic and international markets. Over the years, we have built a strong network of partnerships and supply chains across the country, delivering products to different industrial sectors. </p>
+                                        <p data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">Bhawal Metal Industries has over 27 years of experience in stainless steel and manufacturing. Our journey as precision components manufacturers in India began in 1997 when we started establishing our presence in various domestic and international markets. Over the years, we have built a strong network of partnerships and supply chains across the country, delivering products to different industrial sectors. </p>
                                         <br />
-                                        <p><b>Personalized Products</b></p>
-                                        <p>As precision components manufacturers, we also provide custom-designed products tailored to meet our customers' unique requirements.</p>
+                                        <p data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200"><b>Personalized Products</b></p>
+                                        <p data-aos="blur-to-clear" data-aos-delay="400" data-aos-duration="1200">As precision components manufacturers, we also provide custom-designed products tailored to meet our customers' unique requirements.</p>
                                         <br />
-                                        <p><b>Superior Quality</b></p>
-                                        <p>At Bhawal Metal, we are committed to producing highly durable and corrosion-resistant industrial components of exceptional quality, crafted by skilled professionals. High-quality materials play a crucial role in delivering durable and high-performing finished products. To achieve this, we ensure that all our materials comply with ASTM standards and are ultra-sound, free from unwanted cracks, slags, and air gaps. A strict quality check is maintained throughout all phases of manufacturing to uphold these standards.</p>
+                                        <p data-aos="blur-to-clear" data-aos-delay="500" data-aos-duration="1200"><b>Superior Quality</b></p>
+                                        <p data-aos="blur-to-clear" data-aos-delay="600" data-aos-duration="1200">At Bhawal Metal, we are committed to producing highly durable and corrosion-resistant industrial components of exceptional quality, crafted by skilled professionals. High-quality materials play a crucial role in delivering durable and high-performing finished products. To achieve this, we ensure that all our materials comply with ASTM standards and are ultra-sound, free from unwanted cracks, slags, and air gaps. A strict quality check is maintained throughout all phases of manufacturing to uphold these standards.</p>
                                     </div>
                                 </div>
                             </Col>
@@ -80,8 +80,8 @@ const Industries = () => {
                 </section>
                 <div id="SlidesStyles">
                     <div>
-                        <h2 className="BigHeading textCenter">Industries We Serve</h2>
-                        <p className="textCenter">Over the years, Bhawal Metal Industries has been catering to various industries across the nation. We take pride in our achievements across diverse sectors, from automobiles to aerospace and defense. With advanced technology and expertise in material science, we have developed innovative products to meet the needs of these industries.</p>
+                        <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">Industries We Serve</h2>
+                        <p className="textCenter" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">Over the years, Bhawal Metal Industries has been catering to various industries across the nation. We take pride in our achievements across diverse sectors, from automobiles to aerospace and defense. With advanced technology and expertise in material science, we have developed innovative products to meet the needs of these industries.</p>
                     </div>
 
                     <div className="IndustriesServedCards">
@@ -109,7 +109,7 @@ const Industries = () => {
                                 >
                                     {IndustriesData.map((item, index) => (
                                         <SwiperSlide key={index}>
-                                            <div>
+                                            <div data-aos="blur-to-clear" data-aos-delay={300 + index * 200} data-aos-duration="1200">
                                                 <div className="WhyChooseUsCardSwiperContainer">
                                                     <div className="SwiperImageCardContainer">
                                                         <img src={item.image} alt={item.title} loading="lazy"/>

@@ -23,16 +23,21 @@ const WhatWeDoHome = () => {
             <section style={{ backgroundColor: "#161616" }}>
                 <div id="WhatWeDoHomeContentContainer">
                     <div>
-                        <h2 className="BigHeading textCenter" style={{ color: "white", marginBottom: "1rem" }}>What We Do?</h2>
-                        <p className="textCenter">Bhawal Metal Industries working is divided in 3 major segments -</p>
+                        <h2 className="BigHeading textCenter" style={{ color: "white", marginBottom: "1rem" }}
+                            data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200"
+                        >What We Do?</h2>
+                        <p className="textCenter"
+                            data-aos="blur-to-clear" data-aos-delay="250" data-aos-duration="1200"
+                        >Bhawal Metal Industries working is divided in 3 major segments -</p>
                     </div>
                     <div className="CardContainer">
                         <div className="WhatWeDoCard">
                             <Row>
                                 {WhatWeDoCardsData.map((item, index) => (
-                                    <Col lg={8} md={24} style={{ width: "100%" }} key={index}     data-aos="fade-up"
-                                    data-aos-duration="1000"
-                                    data-aos-delay={index * 200} >
+                                    <Col lg={8} md={24} style={{ width: "100%" }} key={index}
+                                        data-aos="fade-up"
+                                        data-aos-duration="1000"
+                                        data-aos-delay={400 + index * 200} >
                                         <div className="WhatWeCardContainerEdit">
                                             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", width: "100%" }}>
                                                 <div className="CardImageContainer">

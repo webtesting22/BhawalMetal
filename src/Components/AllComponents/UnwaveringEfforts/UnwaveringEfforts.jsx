@@ -125,7 +125,7 @@ const UnwaveringEfforts = () => {
                         <Row style={{ height: "100%" }} align="middle">
                             <Col lg={24}>
                                 <div className="ContentContainer futuristic-content">
-                                    <div className="content-block" data-aos="fade-up" data-aos-duration="1300">
+                                    <div className="content-block" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1300">
                                         <div className="title-container">
                                             {/* <div className="title-accent-line" /> */}
                                             <h2 className="BigHeading futuristic-heading">
@@ -134,7 +134,7 @@ const UnwaveringEfforts = () => {
                                             <div className="title-glow" />
                                         </div>
                                         
-                                        <div className="description-container" data-aos="fade-up" data-aos-duration="1300">
+                                        <div className="description-container" data-aos="blur-to-clear" data-aos-delay="250" data-aos-duration="1300">
                                             <p className="futuristic-description">
                                                 Every product at Bhawal Metal Industries is a valued creation, designed and built with remarkable craftsmanship.
                                                 As a precision components manufacturer in India, we put in unwavering efforts to produce high-quality and accurate industrial components.
@@ -166,9 +166,9 @@ const UnwaveringEfforts = () => {
                                                     className={`futuristic-card`}
                                                     onMouseEnter={() => setHoveredCard(index)}
                                                     onMouseLeave={() => setHoveredCard(null)}
-                                                    data-aos="fade-up"
+                                                    data-aos="blur-to-clear"
                                                     data-aos-duration="1200" 
-                                                    data-aos-delay={index * 200}
+                                                    data-aos-delay={400 + index * 200}
                                                 >
                                                     {/* Card background effects */}
                                                     <div className="card-bg-effect" />

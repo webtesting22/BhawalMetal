@@ -16,7 +16,7 @@ const WhoAreWeHome = () => {
                 // Calculate scroll percentage (0 at top, 1 when fully in view)
                 let scrollProgress = Math.max(0, Math.min(1, 0.6 - rect.top / viewportHeight));
 
-                 let newFirstWidth = Math.min(40 + scrollProgress * 50, 60); // Max 80%
+                let newFirstWidth = Math.min(40 + scrollProgress * 50, 60); // Max 80%
                 let newSecondWidth = Math.max(70 - scrollProgress * 50, 40); // Min 20%
 
                 setFirstWidth(newFirstWidth);
@@ -33,7 +33,7 @@ const WhoAreWeHome = () => {
             <div id="WhoAreWeHomeContentContainer">
                 <Row>
                     <Col lg={24}>
-                        <h2 className="BigHeading textCenter">Who Are We?</h2>
+                        <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">Who Are We?</h2>
                         {/* <div className="AnimationMovingImagesContainer" ref={containerRef}>
                             <div className="WidthAdjustContainer">
                                 <div className="WidthAdjust" style={{ width: `${firstWidth}%` }}>
@@ -55,17 +55,13 @@ const WhoAreWeHome = () => {
                         </div> */}
                         <div className="ContentContainer">
                             <div>
-                                <p className="textCenter" data-aos="fade-up"
-                                    data-aos-duration="1000">
+                                <p className="textCenter" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1000">
                                     Bhawal Metal Industries was established in 1996 to meet the growing demand for stainless steel. We are a leading manufacturer and supplier of high-quality stainless steel round bars, forged components, drawing-based components, and precision components.
                                 </p>
                                 <br />
-                                <p data-aos="fade-up"
-                                    data-aos-duration="1200">Our team of young visionaries strives for excellence in every aspect of the metal industry. We strongly uphold our core values and pursue success through ethical business practices. With a customer-centric approach, timely delivery, and a commitment to quality, the company has expanded in both size and product range.  </p>
+                                <p data-aos="blur-to-clear" data-aos-delay="400" data-aos-duration="1200">Our team of young visionaries strives for excellence in every aspect of the metal industry. We strongly uphold our core values and pursue success through ethical business practices. With a customer-centric approach, timely delivery, and a commitment to quality, the company has expanded in both size and product range.  </p>
                                 <br />
-                                <p data-aos="fade-up"
-                                    data-aos-duration="1400">Over the decades, Bhawal Metal Industries has secured a strong and distinguished position in India’s steel industry while building long-lasting customer relationships. Now, with a new generation of entrepreneurs joining the company, we aim to expand globally, continuing to supply and export stainless steel long products, forged components, drawing-based components, and precision components.</p>
-
+                                <p data-aos="blur-to-clear" data-aos-delay="600" data-aos-duration="1400">Over the decades, Bhawal Metal Industries has secured a strong and distinguished position in India's steel industry while building long-lasting customer relationships. Now, with a new generation of entrepreneurs joining the company, we aim to expand globally, continuing to supply and export stainless steel long products, forged components, drawing-based components, and precision components.</p>
                             </div>
                         </div>
                     </Col>

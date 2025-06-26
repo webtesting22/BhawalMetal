@@ -11,17 +11,17 @@ const Footer = () => {
     return (
         <>
             <div>
-                <section style={{ paddingBottom: "00px",paddingTop:"2rem" }}>
+                <section style={{ paddingBottom: "00px", paddingTop: "2rem" }}>
                     <div>
                         <div>
                             <Row>
-                                <Col lg={8} style={{width:"100%"}}>
+                                <Col lg={8} style={{ width: "100%" }} data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
                                     <div className="FooterlogoContainer">
                                         <div>
                                             <div>
                                                 <img src="/Images/BhawalLogo.png" alt="" loading="lazy" className="FooterLogoContainer" />
                                                 <p><b style={{ fontWeight: "500" }}>Bhawal Metal Industries</b></p>
-                                               <i>Forging excellence, shaping the future—one stainless steel innovation at a time.</i>
+                                                <i>Forging excellence, shaping the future—one stainless steel innovation at a time.</i>
                                                 <div>
 
                                                 </div>
@@ -29,7 +29,7 @@ const Footer = () => {
                                         </div>
                                     </div>
                                 </Col>
-                                <Col lg={8} style={{width:"100%"}}>
+                                <Col lg={8} style={{ width: "100%" }} data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
                                     <div className="EmailBoxContainer">
                                         <div style={{ width: "100%" }}>
                                             <div>
@@ -48,7 +48,7 @@ const Footer = () => {
                                         </div>
                                     </div>
                                 </Col>
-                                <Col lg={8} style={{width:"100%"}}>
+                                <Col lg={8} style={{ width: "100%" }} data-aos="blur-to-clear" data-aos-delay="500" data-aos-duration="1200">
                                     <div className="PhoneBoxContainer">
                                         <div>
                                             <div>

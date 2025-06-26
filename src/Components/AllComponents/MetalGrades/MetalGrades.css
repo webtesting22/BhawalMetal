@@ -13,6 +13,10 @@
     padding: 8px 15px !important;
 }
 
+.GraphImage .ant-table-tbody .ant-table-row:nth-child(even){
+    background-color:rgb(237, 237, 237)  !important;
+}
+
 @media (max-width:900px) {
     #MetalgradesContainer .AboutUsImageContainer {
         margin: 20px 0px;

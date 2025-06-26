@@ -9,6 +9,9 @@ import MetalGrades from "../AllComponents/MetalGrades/MetalGrades";
 import WhatsAppPulseButton from "../CommonUsedComponents/WhatsAppPulseButton/WhatsAppPulseButton";
 import Footer from "../CommonUsedComponents/Footer/Footer";
 import Products from "../Product/Products";
+import Blog from "../Blogs/Blog";
+import BlogSeparate from "../Blogs/BlogSeparate";
+
 const AllRoutes = () => {
     return (
         <Router>
@@ -21,6 +24,8 @@ const AllRoutes = () => {
                 <Route path="/industries" element={<Industries />} />
                 <Route path="/metal-grades" element={<MetalGrades />} />
                 <Route path="/product" element={<Products />} />
+                <Route path="/blogs" element={<Blog />} />
+                <Route path="/blogs/:id" element={<BlogSeparate />} />
             </Routes>
             <Footer/>
             <WhatsAppPulseButton/>

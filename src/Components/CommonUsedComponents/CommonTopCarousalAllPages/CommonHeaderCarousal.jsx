@@ -38,7 +38,7 @@ const CommonHeaderCarousal = ({ slidesData, heading, tagline, pageLink }) => {
                                                 textStroke: "4px black", // Fallback for some browsers
                                                 background: "transparent", fontFamily: '"Poppins", sans-serif'
                                             }}
-                                            data-aos="fade-up"
+                                            data-aos="blur-to-clear"
                                             data-aos-duration="1000"
                                             data-aos-delay={index * 200}
                                         >

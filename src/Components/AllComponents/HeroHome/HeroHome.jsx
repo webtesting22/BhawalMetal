@@ -56,7 +56,7 @@ const HeroHome = () => {
                         >
                             {CarousalImages.map((item, index) => (
                                 <SwiperSlide key={index}>
-                                    <div style={{ height: "100%" }}>
+                                    <div style={{ height: "100%" }} data-aos="blur-to-clear" data-aos-delay={100 + index * 200} data-aos-duration="1200" data-aos-easing="ease-out">
                                         <div className="OverlayEffectContainer"></div>
                                         <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
                                             <img src={item.img} alt={item.title} loading="lazy" />
@@ -64,7 +64,7 @@ const HeroHome = () => {
                                                 <h1
                                                     data-aos="fade-up"
                                                     data-aos-duration="1000"
-                                                    data-aos-delay={index * 200}
+                                                    data-aos-delay={200 + index * 200}
                                                     className="BigHeadingNormal"
                                                     id="HomePagTitle"
                                                 >
@@ -74,7 +74,7 @@ const HeroHome = () => {
                                                 <div className="Paragraph">
                                                     <p style={{ color: "white" }} data-aos="fade-up"
                                                         data-aos-duration="1000"
-                                                        data-aos-delay={index * 200}>{item.description}</p>
+                                                        data-aos-delay={400 + index * 200}>{item.description}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -90,10 +90,7 @@ const HeroHome = () => {
                         <Row style={{ height: "100%" }}>
                             {PointsData.map((item, index) => (
                                 <Col key={index} lg={6} md={12} style={{ width: "100%", height: "100%" }} >
-                                    <div className="BoxEditContainer">
-                                        {/* <div className="HoverableContainer">
-                      <p>Read More</p>
-                    </div> */}
+                                    <div className="BoxEditContainer" >
                                         <div>
                                             {/* Animated Counter */}
                                             <h2 style={{ textAlign: "center" }}>

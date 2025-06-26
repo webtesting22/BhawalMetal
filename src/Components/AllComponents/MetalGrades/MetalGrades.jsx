@@ -169,34 +169,31 @@ const MetalGrades = () => {
         <>
             <CommonHeaderCarousal slidesData={CarousalImages} heading="Material Grades" tagline="BHAWAL METAL INDUSTRIES" pageLink="Material Grades" />
             <section>
-                <div id="MetalgradesContainer" className="contentInfoContainer" style={{paddingBottom:"0px"}}>
+                <div id="MetalgradesContainer" className="contentInfoContainer" style={{paddingBottom:"0px"}} data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
                     <div>
-                        <p >At Bhawal Metal Industries, we have strictly focused on stainless steel. Over time, we have continuously integrated our products within stainless steel materials to meet market demands and client requirements, adding more grades to our portfolio. Currently, the company's material offerings can be categorized into three segments.
-                        </p>
+                        <p data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">At Bhawal Metal Industries, we have strictly focused on stainless steel. Over time, we have continuously integrated our products within stainless steel materials to meet market demands and client requirements, adding more grades to our portfolio. Currently, the company's material offerings can be categorized into three segments.</p>
                     </div>
                     <div>
                         <div className="containerGap">
-                            <h2 className="BigHeading textCenter" >Austenitic Steel</h2>
+                            <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">Austenitic Steel</h2>
                         </div>
                         <div>
                             <Row>
-
                                 <Col lg={12}>
                                     <div className="AboutUsContentContainer">
                                         <div >
-                                            <p>Austenitic steels are non-magnetic stainless steels with high chromium and nickel content and low carbon levels. They are the most widely used stainless steel grade, with the most common composition being 18% chromium and 8% nickel, also known as 18/8 steel.</p>
+                                            <p data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">Austenitic steels are non-magnetic stainless steels with high chromium and nickel content and low carbon levels. They are the most widely used stainless steel grade, with the most common composition being 18% chromium and 8% nickel, also known as 18/8 steel.</p>
                                             <br />
-                                            <p>Austenitic steels are generally classified into two groups: the Chromium-Nickel AISI 300 series and the Chromium-Nickel-Manganese 200 series. Adding 2-3% molybdenum enhances corrosion resistance, often referred to as "acid-proof steel." Grade 304 is the most common type, typically containing 18% chromium and 8% nickel. </p>
+                                            <p data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">Austenitic steels are generally classified into two groups: the Chromium-Nickel AISI 300 series and the Chromium-Nickel-Manganese 200 series. Adding 2-3% molybdenum enhances corrosion resistance, often referred to as "acid-proof steel." Grade 304 is the most common type, typically containing 18% chromium and 8% nickel. </p>
                                             <br />
-                                            <p>Bhawal Metal Industries works with all materials in this grade, including Bright Round Bars, PSQ Bars, Flat Bars, HR Bars & RCS, Cold Drawn Round/Flat/Square/Hexagon Bars, Forged Components, and Precision Components.</p>
-
+                                            <p data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">Bhawal Metal Industries works with all materials in this grade, including Bright Round Bars, PSQ Bars, Flat Bars, HR Bars & RCS, Cold Drawn Round/Flat/Square/Hexagon Bars, Forged Components, and Precision Components.</p>
                                         </div>
                                     </div>
                                 </Col>
                                 <Col lg={12} style={{ width: "100%" }}>
                                     <div >
-                                        <div className="AboutUsImageContainer">
-                                            <img src="/Images/Metalgrades.jpeg" alt="" loading="lazy"/>
+                                        <div className="AboutUsImageContainer" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
+                                            <img src="/Images/Metalgrades.jpeg" alt="" loading="lazy" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200"/>
                                         </div>
                                     </div>
                                 </Col>
@@ -205,21 +202,20 @@ const MetalGrades = () => {
                     </div>
                     <div>
                         <div className="containerGap">
-                            <h2 className="BigHeading textCenter">Chemical Properties of Austenitic Steel</h2>
+                            <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="400" data-aos-duration="1200">Chemical Properties of Austenitic Steel</h2>
                         </div>
                         <div className="GraphImage">
-                            <Table columns={columns} dataSource={data} pagination={{ pageSize: 20 }} />
+                            <Table columns={columns} dataSource={data} pagination={{ pageSize: 20 }} data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200" />
                         </div>
                     </div>
                     <div>
                         <div className="containerGap">
-                            <h2 className="BigHeading textCenter">Mechanical Properties of Austenitic Steel</h2>
+                            <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="500" data-aos-duration="1200">Mechanical Properties of Austenitic Steel</h2>
                         </div>
                         <div className="GraphImage">
-                            <Table columns={columnsMechanical} dataSource={dataMechanical} />
+                            <Table columns={columnsMechanical} dataSource={dataMechanical} data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200" />
                         </div>
                     </div>
-
                 </div>
             </section >
         </>

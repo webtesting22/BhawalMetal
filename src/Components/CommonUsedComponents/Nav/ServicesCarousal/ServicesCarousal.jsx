@@ -42,7 +42,7 @@ const ServicesCarousal = () => {
                     <div className='IndustriesOverlayColor'></div>
                     <section style={{ position: "sticky" }}>
                         <div>
-                            <h2 className="BigHeading textCenter" style={{ color: "white" }}>Industries We Have Served</h2>
+                            <h2 className="BigHeading textCenter" style={{ color: "white" }} data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">Industries We Have Served</h2>
                         </div>
 
                         <div className='containerGap' style={{ marginBottom: "0px" }}>
@@ -71,7 +71,7 @@ const ServicesCarousal = () => {
                                 >
                                     {ServicesData.map((item, index) => (
                                         <SwiperSlide key={index}>
-                                            <div className='IndustriesCardContainer'>
+                                            <div className='IndustriesCardContainer' data-aos="blur-to-clear" data-aos-delay={200 + index * 200} data-aos-duration="1200">
                                                 <div style={{ height: "100%" }}>
                                                     <div className='IndustriesCards'>
                                                         <img src={item.img} alt={item.title} loading="lazy" />
