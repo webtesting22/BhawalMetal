@@ -1,7 +1,12 @@
 #MetalgradesContainer .AboutUsContentContainer {
     padding-right: 20px;
 }
-.GraphImage{
+
+#MetalgradesContainer {
+    margin-bottom: 3rem;
+}
+
+.GraphImage {
     overflow: auto;
 }
 
@@ -9,12 +14,207 @@
     width: 100%;
 }
 
-.GraphImage .ant-table-wrapper .ant-table-tbody .ant-table-cell{
+.GraphImage .ant-table-wrapper .ant-table-tbody .ant-table-cell {
     padding: 8px 15px !important;
 }
 
-.GraphImage .ant-table-tbody .ant-table-row:nth-child(even){
-    background-color:rgb(237, 237, 237)  !important;
+.GraphImage .ant-table-tbody .ant-table-row:nth-child(even) {
+    background-color: rgb(237, 237, 237) !important;
+}
+
+/* Professional Property Cards */
+.property-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 15px;
+    padding: 30px;
+    height: 100%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(97, 126, 135, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.property-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #617E87 0%, #840000 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.property-card:hover::before {
+    transform: scaleX(1);
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    border-color: rgba(97, 126, 135, 0.2);
+}
+
+.property-header {
+    margin-bottom: 20px;
+}
+
+.property-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #617E87;
+    margin: 0;
+    position: relative;
+}
+
+.property-content {
+    color: #555;
+    line-height: 1.6;
+}
+
+.property-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.property-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.property-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #840000;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Grade Application Cards */
+.grade-application-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    height: 100%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    border: 2px solid transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.grade-application-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(97, 126, 135, 0.02) 0%, rgba(132, 0, 0, 0.02) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grade-application-card:hover::after {
+    opacity: 1;
+}
+
+.grade-application-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    border-color: rgba(97, 126, 135, 0.15);
+}
+
+.grade-header {
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.grade-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #840000;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.grade-subtitle {
+    font-size: 0.9rem;
+    color: #617E87;
+    margin: 0;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.grade-content {
+    position: relative;
+    z-index: 1;
+}
+
+.grade-content p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .property-card {
+        padding: 25px;
+    }
+
+    .grade-application-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .property-card,
+    .grade-application-card {
+        margin-bottom: 20px;
+    }
+
+    .property-title {
+        font-size: 1.3rem;
+    }
+
+    .grade-title {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .property-card {
+        padding: 20px;
+    }
+
+    .grade-application-card {
+        padding: 18px;
+    }
+
+    .property-title {
+        font-size: 1.2rem;
+    }
+
+    .grade-title {
+        font-size: 0.95rem;
+    }
+
+    .property-list li {
+        padding-left: 20px;
+        margin-bottom: 12px;
+    }
 }
 
 @media (max-width:900px) {

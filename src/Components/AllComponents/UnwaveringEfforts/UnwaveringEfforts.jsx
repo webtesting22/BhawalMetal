@@ -251,7 +251,7 @@ const UnwaveringEfforts = () => {
                                                         </div>
                                                         
                                                         <div className="card-title">
-                                                            <p>{item.title}</p>
+                                                            <p><b>{item.title}</b></p>
                                                         </div>
                                                         
                                                         {/* Progress bar animation */}

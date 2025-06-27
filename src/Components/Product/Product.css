@@ -417,6 +417,8 @@
     padding: 28px;
     background: #f7f7f773;
     width: unset !important;
+    border-radius: 10px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .card-title {

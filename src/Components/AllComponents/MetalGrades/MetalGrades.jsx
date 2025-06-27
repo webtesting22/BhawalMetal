@@ -216,9 +216,157 @@ const MetalGrades = () => {
                             <Table columns={columnsMechanical} dataSource={dataMechanical} data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200" />
                         </div>
                     </div>
+
+                    {/* Professional Metal Properties Section */}
+                    <div>
+                        <div className="containerGap">
+                            <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
+                                Key Properties & Applications
+                            </h2>
+                            <p className="textCenter" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">
+                                Understanding the fundamental characteristics that make austenitic stainless steel the preferred choice across industries
+                            </p>
+                        </div>
+
+                        <Row gutter={[24, 24]} style={{ marginTop: "40px" }}>
+                            {/* Formability Card */}
+                            <Col lg={12} md={24} sm={24} xs={24}>
+                                <div className="property-card" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
+                                    <div className="property-header">
+                                        <h3 className="property-title">Formability</h3>
+                                    </div>
+                                    <div className="property-content">
+                                        <ul className="property-list">
+                                            <li>Austenitic stainless steels are generally exhibits excellent formability.</li>
+                                            <li>In welded joints, good mechanical strength is developed without the necessity of preheating or post-weld annealing. It is advised to use heat treatment process or alternative selection of low carbon grades to prevent corrosion in the weld area.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </Col>
+
+                            {/* Strength at Temperature Card */}
+                            <Col lg={12} md={24} sm={24} xs={24}>
+                                <div className="property-card" data-aos="blur-to-clear" data-aos-delay="400" data-aos-duration="1200">
+                                    <div className="property-header">
+                                        <h3 className="property-title">Strength at Temperature</h3>
+                                    </div>
+                                    <div className="property-content">
+                                        <ul className="property-list">
+                                            <li>These steels are well suited to both higher service temperatures of around 600°C – or even higher if scaling resistance is the only consideration and extremely low cryogenic temperatures, depending on the load and permissible distortion.</li>
+                                            <li>At sub-zero temperatures, some austenitic steel grades retain good ductility and impact strength. These alloys also maintain tensile and creep strength at elevated temperatures.</li>
+                                            <li>They are used for the storage of liquefied gases at cryogenic temperatures and for heat exchangers & pollution control equipment at high temperatures.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </Col>
+                        </Row>
+                        <br /><br /><br />
+                        <br />
+                        {/* Application by Grade Section */}
+                        <div style={{ marginTop: "60px" }}>
+                            <div className="containerGap">
+                                <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="500" data-aos-duration="1200">
+                                    Application by Grade
+                                </h2>
+                                <p className="textCenter" data-aos="blur-to-clear" data-aos-delay="600" data-aos-duration="1200">
+                                    Specialized applications for different stainless steel grades across various industries
+                                </p>
+                            </div>
+
+                            <Row gutter={[24, 24]} style={{ marginTop: "40px" }}>
+                                {/* 304 and 304L Grade */}
+                                <Col lg={6} md={12} sm={24} xs={24}>
+                                    <div className="grade-application-card" data-aos="blur-to-clear" data-aos-delay="700" data-aos-duration="1200">
+                                        <div className="grade-header">
+                                            <h4 className="grade-title">304 AND 304L</h4>
+                                            <p className="grade-subtitle">(Standard Grade)</p>
+                                        </div>
+                                        <div className="grade-content">
+                                            <p>Used for Tanks, Storage vessels and pipes for corrosive liquids, mining, chemical, cryogenic, food and beverage, Cutlery, Architecture, Sinks, food processing, domestic sinks and tubs, pharmaceutical equipment and deep drawing applications</p>
+                                        </div>
+                                    </div>
+                                </Col>
+
+                                {/* 310 Grade */}
+                                <Col lg={6} md={12} sm={24} xs={24}>
+                                    <div className="grade-application-card" data-aos="blur-to-clear" data-aos-delay="800" data-aos-duration="1200">
+                                        <div className="grade-header">
+                                            <h4 className="grade-title">310 (High Chrome and Nickel Grades)</h4>
+                                        </div>
+                                        <div className="grade-content">
+                                            <p>Furnace parts and equipment, kiln, and catalytic converter components. Also resistant to temperature 900°C to 1100°C.</p>
+                                        </div>
+                                    </div>
+                                </Col>
+
+                                {/* 316 and 316L Grade */}
+                                <Col lg={6} md={12} sm={24} xs={24}>
+                                    <div className="grade-application-card" data-aos="blur-to-clear" data-aos-delay="900" data-aos-duration="1200">
+                                        <div className="grade-header">
+                                            <h4 className="grade-title">316 AND 316L (High Moly Content Grades)</h4>
+                                        </div>
+                                        <div className="grade-content">
+                                            <p>Used where higher corrosion resistance is required, i.e. marine equipment, Chemical storage tanks, pressure vessels, and piping.</p>
+                                        </div>
+                                    </div>
+                                </Col>
+
+                                {/* 321 and 316Ti Grade */}
+                                <Col lg={6} md={12} sm={24} xs={24}>
+                                    <div className="grade-application-card" data-aos="blur-to-clear" data-aos-delay="1000" data-aos-duration="1200">
+                                        <div className="grade-header">
+                                            <h4 className="grade-title">321 AND 316Ti ("Stabilized" Grades)</h4>
+                                        </div>
+                                        <div className="grade-content">
+                                            <p>A titanium stabilised version of 316 is used where high temperature strength & good resistance to intergranular corrosion is required. Also used for superheaters, compensators & expansion bellows.</p>
+                                        </div>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </div>
+
+                        {/* Quality Assurance Section */}
+                        {/* <div style={{ marginTop: "60px" }}>
+                            <div className="containerGap">
+                                <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
+                                    Our Commitment to Quality
+                                </h2>
+                            </div>
+
+                            <Row gutter={[32, 32]} style={{ marginTop: "40px" }} align="middle">
+                                <Col lg={12} md={24} sm={24} xs={24}>
+                                    <div data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">
+                                        <h3 style={{ color: "#617E87", fontSize: "1.5rem", marginBottom: "20px" }}>
+                                            Precision Manufacturing Excellence
+                                        </h3>
+                                        <p style={{ marginBottom: "15px", lineHeight: "1.6" }}>
+                                            At Bhawal Metal Industries, we maintain the highest standards of quality control throughout our manufacturing process. Every grade of austenitic stainless steel undergoes rigorous testing to ensure compliance with international standards.
+                                        </p>
+                                        <p style={{ marginBottom: "15px", lineHeight: "1.6" }}>
+                                            Our state-of-the-art facilities and experienced metallurgists ensure that each product meets the exact specifications required for your critical applications, from chemical processing to aerospace components.
+                                        </p>
+                                        <p style={{ lineHeight: "1.6" }}>
+                                            We are committed to delivering materials that not only meet but exceed industry expectations for durability, corrosion resistance, and mechanical properties.
+                                        </p>
+                                    </div>
+                                </Col>
+                                <Col lg={12} md={24} sm={24} xs={24}>
+                                    <div className="AboutUsImageContainer" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
+                                        <img 
+                                            src="/Images/Metalgrades.jpeg" 
+                                            alt="Quality Assurance in Metal Manufacturing" 
+                                            loading="lazy" 
+                                            style={{ borderRadius: "10px", boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }}
+                                        />
+                                    </div>
+                                </Col>
+                            </Row>
+                        </div> */}
+                    </div>
                 </div>
             </section >
         </>
     )
 }
 export default MetalGrades
+
