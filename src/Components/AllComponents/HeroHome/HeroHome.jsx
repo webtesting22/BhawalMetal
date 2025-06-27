@@ -22,18 +22,18 @@ const HeroHome = () => {
     const CarousalImages = [
         {
             img: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/PlSXjT3D7pa6M3iOVjqw/Induction Hardening.jpg",
-            title: "From Indian Roots to a Global Steel Leader",
-            description: <>With decades of expertise, we are expanding globally. Our new-generation entrepreneurs drive innovation, ensuring premium stainless steel solutions for industries worldwide.</>,
+            title: "Forging Trust Since 1996",
+            description: <>Delivering precision-crafted stainless steel solutions with integrity and innovation.</>,
         },
         {
             img: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/vlyJA375IvHKDzs3dU3y/Forging Process.jpg",
-            title: "Precision in Manufacturing, Perfection in Every Product",
-            description: <>We specialize in stainless steel bars, forged components, and custom solutions. Every product meets global standards, ensuring strength, durability, and excellence.</>,
+            title: "Engineered for Excellence",
+            description: <>From round bars to precision components — where quality meets commitment.</>,
         },
         {
             img: "/Images/HomepageBanner/HomePageBanner3.jpg",
-            title: "Quality Steel, Trusted Service, Lasting Relationships",
-            description: <>Since 1996, Bhawal Metal Industries has delivered top-tier stainless steel. Our ethical practices, timely delivery, and customer-first approach build lasting trust.</>,
+            title: "Building the Future, Globally",
+            description: <>Powered by a new generation, expanding India’s stainless steel legacy worldwide.</>,
         },
     ];
     

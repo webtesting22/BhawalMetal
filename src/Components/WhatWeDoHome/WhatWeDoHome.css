@@ -24,9 +24,10 @@
     justify-content: center;
 }
 
-.WhatWeDoCard .ant-row .ant-col:nth-child(2) .WhatWeCardContainerEdit{
+.WhatWeDoCard .ant-row .ant-col:nth-child(2) .WhatWeCardContainerEdit {
     padding: 0px 20px;
 }
+
 .CardImageContainer {
     height: 400px;
     width: 100%;
@@ -37,6 +38,7 @@
     justify-content: center;
     border: 1px solid transparent;
     margin-bottom: 40px;
+    border-radius: 10px;
 }
 
 .CardImageContainer:hover {
@@ -64,15 +66,17 @@
     }
 }
 
-@media (max-width:900px){
+@media (max-width:900px) {
     .WhatWeDoCard {
         margin: 4rem 0rem;
         width: 100%;
         margin-bottom: 0px !important;
     }
+
     .CardImageContainer {
         height: 300px;
     }
+
     .CardImageContainer {
         height: 300px;
         width: 100%;
@@ -84,12 +88,14 @@
         padding: 10px;
         border: 1px solid rgba(255, 255, 255, 0.508);
     }
-    .CardImageContainer:hover{
+
+    .CardImageContainer:hover {
         height: 300px;
     }
-    .WhatWeCardContainerEdit{
+
+    .WhatWeCardContainerEdit {
         padding: 30px 10px;
     }
-   
-    
+
+
 }

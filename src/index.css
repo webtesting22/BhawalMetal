@@ -1,5 +1,7 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-now-mt-micro');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Now MT Micro', sans-serif !important;
   line-height: 1.5;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -9,8 +11,13 @@
 
 body {
   margin: 0px;
+  font-family: 'Helvetica Now MT Micro', sans-serif !important;
 }
 
+li{
+  font-family: 'Helvetica Now MT Micro', sans-serif !important;
+  font-size: 16px !important;
+}
 a {
   text-decoration: none;
 }

@@ -5,7 +5,7 @@ const WhatWeDoHome = () => {
 
     const WhatWeDoCardsData = [
         {
-            img: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/wNkSGJWfkp9CHTFxZk8r/square bars2.png",
+            img: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/roundBar.png",
             title: "Stainless Steel Long Products",
         },
         {

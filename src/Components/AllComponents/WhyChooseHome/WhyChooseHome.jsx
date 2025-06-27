@@ -70,7 +70,7 @@ const WhyChooseHome = () => {
                             autoplay={{
                                 delay: 2000,
                                 disableOnInteraction: false,
-                              }}
+                            }}
 
                             speed={700}
                             breakpoints={{

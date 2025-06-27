@@ -62,7 +62,7 @@ const Products = () => {
                     id: 7,
                     title: "Forged Circles",
                     description: "High-strength forged circular components for critical industrial applications",
-                    image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/5ri2HvBiK2lccs9JkN30/Forged Circle.jpg"
+                    image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/ForgedCircle.jpeg"
                 },
                 {
                     id: 8,
@@ -74,13 +74,13 @@ const Products = () => {
                     id: 9,
                     title: "Forged Flat bars",
                     description: "Robust forged flat bars offering superior mechanical properties",
-                    image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/2dcIg4HK6mCX693B56Fd/Forged Flats.jpg"
+                    image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/ForgedFlats.jpeg"
                 },
                 {
                     id: 10,
                     title: "Forged Blocks",
                     description: "Heavy-duty forged blocks designed for high-stress applications",
-                    image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/6p2HBXPV98r1nwQesVw1/forged blocks (2).jpg"
+                    image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/ForgedBlocks.jpeg"
                 }
             ]
         },
@@ -93,13 +93,13 @@ const Products = () => {
                     id: 11,
                     title: "Proof Machined Components",
                     description: "Precision-machined components with tight tolerances for critical applications",
-                    image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/EK6vEOXEjtz8DIhiZvUp/Machined Blocks.jpg"
+                    image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/ProofMachined.jpeg"
                 },
                 {
                     id: 12,
                     title: "Shafts",
                     description: "High-precision shafts manufactured to exact specifications for optimal performance",
-                    image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/atufWUsGlp14fDR5HAOa/IMG20241129140754.jpg"
+                    image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Shafts.jpeg"
                 },
                 {
                     id: 13,

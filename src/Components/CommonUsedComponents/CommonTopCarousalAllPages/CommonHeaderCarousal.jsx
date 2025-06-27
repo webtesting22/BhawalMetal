@@ -32,12 +32,6 @@ const CommonHeaderCarousal = ({ slidesData, heading, tagline, pageLink }) => {
                                     <div className="ContentContainerSwiperHome">
                                         <h1
                                             className="BigHeadingNormal"
-                                            style={{
-                                                textAlign: "center",  marginBottom: "10px", color: "transparent", // Makes text fill transparent
-                                                WebkitTextStroke: "3px white", // Black stroke effect
-                                                textStroke: "4px black", // Fallback for some browsers
-                                                background: "transparent", fontFamily: '"Poppins", sans-serif'
-                                            }}
                                             data-aos="blur-to-clear"
                                             data-aos-duration="1000"
                                             data-aos-delay={index * 200}

@@ -14,7 +14,7 @@ const Industries = () => {
     const swiperRef = useRef(null);
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [selectedIndustry, setSelectedIndustry] = useState(null);
-
+    const [currentSlide, setCurrentSlide] = useState(0);
 
     const showModal = (industry) => {
         setSelectedIndustry(industry);
@@ -47,37 +47,50 @@ const Industries = () => {
     const handlePrev = () => {
         if (swiperRef.current) swiperRef.current.slidePrev();
     };
+
+    const handleSlideChange = (swiper) => {
+        setCurrentSlide(swiper.realIndex);
+    };
+
+    const goToSlide = (index) => {
+        if (swiperRef.current) {
+            swiperRef.current.slideToLoop(index);
+        }
+    };
     return (
         <>
             <div >
                 <CommonHeaderCarousal slidesData={CarousalImages} heading="Industries" tagline="BHAWAL METAL INDUSTRIES" pageLink="Industries" />
                 <section >
-                    <div id="Industries">
-                        <Row>
-                            <Col lg={12} md={24} style={{ width: "100%" }}>
-                                <div>
-                                    <div className="AboutUsImageContainer" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
-                                        <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/W7GnePMTWHjkPwRS4IZo/MetalIndustries.jpg" alt="" loading="lazy" />
+                    <div>
+                        <div id="Industries">
+                            <Row>
+                                <Col lg={12} md={24} style={{ width: "100%" }}>
+                                    <div>
+                                        <div className="AboutUsImageContainer" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
+                                            <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/W7GnePMTWHjkPwRS4IZo/MetalIndustries.jpg" alt="" loading="lazy" />
+                                        </div>
                                     </div>
-                                </div>
-                            </Col>
-                            <Col lg={12} md={24} style={{ width: "100%" }}>
-                                <div className="AboutUsContentContainer">
-                                    <div >
-                                        {/* <h2></h2> */}
-                                        <p data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">Bhawal Metal Industries has over 27 years of experience in stainless steel and manufacturing. Our journey as precision components manufacturers in India began in 1997 when we started establishing our presence in various domestic and international markets. Over the years, we have built a strong network of partnerships and supply chains across the country, delivering products to different industrial sectors. </p>
-                                        <br />
-                                        <p data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200"><b>Personalized Products</b></p>
-                                        <p data-aos="blur-to-clear" data-aos-delay="400" data-aos-duration="1200">As precision components manufacturers, we also provide custom-designed products tailored to meet our customers' unique requirements.</p>
-                                        <br />
-                                        <p data-aos="blur-to-clear" data-aos-delay="500" data-aos-duration="1200"><b>Superior Quality</b></p>
-                                        <p data-aos="blur-to-clear" data-aos-delay="600" data-aos-duration="1200">At Bhawal Metal, we are committed to producing highly durable and corrosion-resistant industrial components of exceptional quality, crafted by skilled professionals. High-quality materials play a crucial role in delivering durable and high-performing finished products. To achieve this, we ensure that all our materials comply with ASTM standards and are ultra-sound, free from unwanted cracks, slags, and air gaps. A strict quality check is maintained throughout all phases of manufacturing to uphold these standards.</p>
+                                </Col>
+                                <Col lg={12} md={24} style={{ width: "100%" }}>
+                                    <div className="AboutUsContentContainer">
+                                        <div >
+                                            {/* <h2></h2> */}
+                                            <p data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">Bhawal Metal Industries has over 27 years of experience in stainless steel and manufacturing. Our journey as precision components manufacturers in India began in 1997 when we started establishing our presence in various domestic and international markets. Over the years, we have built a strong network of partnerships and supply chains across the country, delivering products to different industrial sectors. </p>
+                                            <br />
+                                            <p data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200"><b>Personalized Products</b></p>
+                                            <p data-aos="blur-to-clear" data-aos-delay="400" data-aos-duration="1200">As precision components manufacturers, we also provide custom-designed products tailored to meet our customers' unique requirements.</p>
+                                            <br />
+                                            <p data-aos="blur-to-clear" data-aos-delay="500" data-aos-duration="1200"><b>Superior Quality</b></p>
+                                            <p data-aos="blur-to-clear" data-aos-delay="600" data-aos-duration="1200">At Bhawal Metal, we are committed to producing highly durable and corrosion-resistant industrial components of exceptional quality, crafted by skilled professionals. High-quality materials play a crucial role in delivering durable and high-performing finished products. To achieve this, we ensure that all our materials comply with ASTM standards and are ultra-sound, free from unwanted cracks, slags, and air gaps. A strict quality check is maintained throughout all phases of manufacturing to uphold these standards.</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </Col>
-                        </Row>
+                                </Col>
+                            </Row>
+                        </div>
                     </div>
                 </section>
+                <section style={{paddingTop:"0px"}}>
                 <div id="SlidesStyles">
                     <div>
                         <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">Industries We Serve</h2>
@@ -85,58 +98,57 @@ const Industries = () => {
                     </div>
 
                     <div className="IndustriesServedCards">
-                        <div>
-                            <div className="SwiperContainerCardWhyChoose">
-                                <Swiper
-                                    slidesPerView={3}
-                                    spaceBetween={20}
-                                    loop={true}
-                                    freeMode={true}
-                                    autoplay={{
-                                        delay: 2000,
-                                        disableOnInteraction: false,
-                                    }}
-
-                                    speed={700}
-                                    breakpoints={{
-                                        1024: { slidesPerView: 3 }, // PC
-                                        768: { slidesPerView: 2 },  // Tablet
-                                        0: { slidesPerView: 1 }     // Mobile
-                                    }}
-                                    modules={[Autoplay, FreeMode, Pagination]}
-                                    onSwiper={(swiper) => (swiperRef.current = swiper)}
-                                    className="mySwiper"
-                                >
-                                    {IndustriesData.map((item, index) => (
-                                        <SwiperSlide key={index}>
-                                            <div data-aos="blur-to-clear" data-aos-delay={300 + index * 200} data-aos-duration="1200">
-                                                <div className="WhyChooseUsCardSwiperContainer">
-                                                    <div className="SwiperImageCardContainer">
+                        <div className="SingleSlideContainer">
+                            <Swiper
+                                slidesPerView={1}
+                                spaceBetween={30}
+                                loop={true}
+                                speed={700}
+                                modules={[Autoplay]}
+                                onSwiper={(swiper) => (swiperRef.current = swiper)}
+                                onSlideChange={handleSlideChange}
+                                className="singleSlideSwiper"
+                            >
+                                {IndustriesData.map((item, index) => (
+                                    <SwiperSlide key={index}>
+                                        <div className="SingleSlideContent" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
+                                            <Row gutter={[40, 40]} align="middle">
+                                                <Col lg={12} md={24} xs={24}>
+                                                    <div className="SlideContentLeft">
+                                                        <h2 className="SlideTitle">{item.title}</h2>
+                                                        <div className="SlideDescription">
+                                                            {item.description}
+                                                        </div>
+                                                        {/* <div className="SlideButtonContainer">
+                                                            <button className="ColourButton" onClick={() => showModal(item)}>
+                                                                Read More <MdKeyboardArrowRight />
+                                                            </button>
+                                                        </div> */}
+                                                    </div>
+                                                </Col>
+                                                <Col lg={12} md={24} xs={24}>
+                                                    <div className="SlideImageRight">
                                                         <img src={item.image} alt={item.title} loading="lazy" />
                                                     </div>
-                                                    <div>
-                                                        <h2>{item.title}</h2>
-                                                        <div className="AnimatedbtnContainer">
-                                                            <button className="ColourButton" onClick={() => showModal(item)}>Read More <MdKeyboardArrowRight /></button>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </SwiperSlide>
-                                    ))}
-                                </Swiper>
-                                <div className="CarousalbtnContainerEdit">
-                                    <div>
-                                        <button className="swiper-button prev" onClick={handlePrev}>
-                                            <IoIosArrowBack size={24} />
-                                        </button>
-                                        <button className="swiper-button next" onClick={handleNext}>
-                                            <IoIosArrowForward size={24} />
-                                        </button>
-                                    </div>
-
-                                </div>
+                                                </Col>
+                                            </Row>
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                            
+                            {/* Dot Navigation */}
+                            <div className="DotNavigation">
+                                {IndustriesData.map((item, index) => (
+                                    <button
+                                        key={index}
+                                        className={`dot-button ${currentSlide === index ? 'active' : ''}`}
+                                        onClick={() => goToSlide(index)}
+                                        aria-label={`Go to ${item.title}`}
+                                    >
+                                        {item.title}
+                                    </button>
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -167,8 +179,9 @@ const Industries = () => {
                         </>
                     )}
                 </Modal>
-
-            </div>
+                </section>
+            {/* </section> */}
+        </div >
         </>
     )
 }

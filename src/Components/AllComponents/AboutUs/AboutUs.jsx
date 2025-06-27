@@ -19,10 +19,10 @@ const AboutUs = () => {
 
     const AboutUsCarousalImages = [
         {
-            img: "/Images/CarousalImages/AboutUsCarousal1.jpg"
+            img: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Forging Process (1).jpg"
         },
         {
-             img: "/Images/CarousalImages/AboutUsCarousal2.jpg"
+             img: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Drilling process 2 (1).jpg"
         },
         // {
         //     img: ""

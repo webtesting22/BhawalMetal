@@ -1,8 +1,205 @@
-#SlidesStyles {
-    padding: 6rem 6rem;
-    background-color: rgb(249, 249, 249);
+/* Single Slide Container Styles */
+.SingleSlideContainer {
+    margin-top: 4rem;
+    padding: 0 0rem;
 }
 
+.SingleSlideContent {
+    padding: 3rem 2rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* margin: 2rem 0; */
+}
+
+.SlideContentLeft {
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.SlideTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #840000;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.SlideDescription {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    /* margin-bottom: 2rem; */
+}
+
+.SlideDescription p {
+    margin-bottom: 1rem;
+}
+
+.SlideButtonContainer {
+    margin-top: 2rem;
+}
+
+.SlideImageRight {
+    height: 500px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.SlideImageRight img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.SlideImageRight:hover img {
+    transform: scale(1.05);
+}
+
+/* Navigation Buttons at Bottom */
+.NavigationButtonsBottom {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 2rem 0;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border: 2px solid #617E87;
+    background: white;
+    color: #617E87;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 140px;
+    justify-content: center;
+}
+
+.nav-button:hover {
+    background: #617E87;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(97, 126, 135, 0.3);
+}
+
+.prev-button:hover {
+    background: #840000;
+    border-color: #840000;
+    box-shadow: 0 5px 15px rgba(132, 0, 0, 0.3);
+}
+
+.next-button:hover {
+    background: #840000;
+    border-color: #840000;
+    box-shadow: 0 5px 15px rgba(132, 0, 0, 0.3);
+}
+
+/* Dot Navigation Styles */
+.DotNavigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 3rem;
+    padding: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.dot-button {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 2px solid #617E87;
+    background: transparent;
+    color: #617E87;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    outline: none;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dot-button:hover {
+    transform: translateY(-2px);
+    border-color: #840000;
+    color: #840000;
+    box-shadow: 0 4px 12px rgba(132, 0, 0, 0.2);
+}
+
+.dot-button.active {
+    background: #840000;
+    border-color: #840000;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(132, 0, 0, 0.3);
+    font-weight: 600;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #617E87;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0;
+    outline: none;
+}
+
+.dot:hover {
+    transform: scale(1.2);
+    border-color: #840000;
+}
+
+.dot.active {
+    background: #840000;
+    border-color: #840000;
+    transform: scale(1.3);
+}
+
+.dot.active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(132, 0, 0, 0.3);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Existing styles below */
 #SlidesStyles .SwiperContainerIndustries {
     margin-top: 6rem;
 }
@@ -103,6 +300,143 @@
     backdrop-filter: blur(3px);
 }
 
+/* Mobile Responsive Styles */
+@media (max-width: 1024px) {
+    .SlideContentLeft {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .SlideTitle {
+        font-size: 2rem;
+    }
+    
+    .SlideImageRight {
+        height: 350px;
+    }
+    
+    .NavigationButtonsBottom {
+        gap: 1rem;
+    }
+    
+    .nav-button {
+        min-width: 120px;
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .DotNavigation {
+        margin-top: 2rem;
+        padding: 1.5rem 0;
+        gap: 8px;
+    }
+    
+    .dot-button {
+        padding: 6px 12px;
+        font-size: 13px;
+        min-height: 32px;
+    }
+    
+    .dot {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* #SlidesStyles {
+        padding: 3rem 1rem;
+    } */
+    
+    .SingleSlideContainer {
+        padding: 0;
+    }
+    
+    .SingleSlideContent {
+        padding: 2rem 1.5rem;
+        margin: 1rem 0;
+    }
+    
+    .SlideTitle {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .SlideDescription {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .SlideImageRight {
+        height: 280px;
+        margin-top: 1.5rem;
+    }
+    
+    .NavigationButtonsBottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    
+    .nav-button {
+        width: 200px;
+    }
+    
+    .DotNavigation {
+        margin-top: 1.5rem;
+        padding: 1rem 0;
+        gap: 6px;
+        justify-content: center;
+    }
+    
+    .dot-button {
+        padding: 5px 10px;
+        font-size: 12px;
+        min-height: 28px;
+        border-radius: 15px;
+    }
+    
+    .dot {
+        width: 16px;
+        height: 16px;
+        border-width: 3px;
+    }
+    
+    .dot.active::after {
+        width: 24px;
+        height: 24px;
+        border-width: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .DotNavigation {
+        gap: 4px;
+        padding: 0.8rem 0;
+        margin: 0 -10px;
+    }
+    
+    .dot-button {
+        padding: 4px 8px;
+        font-size: 11px;
+        min-height: 26px;
+        border-radius: 12px;
+        flex: 1;
+        max-width: 120px;
+    }
+    
+    .dot {
+        width: 18px;
+        height: 18px;
+        border-width: 3px;
+    }
+    
+    .dot.active::after {
+        width: 28px;
+        height: 28px;
+    }
+}
+
 @media (max-width:900px) {
     
     .ModalImageContainer .ant-row .ant-col:nth-child(1) {
@@ -127,11 +461,6 @@
         margin-top: 0px !important;
         overflow: auto;
         display: none;
-    }
-
-    #SlidesStyles {
-        padding: 3rem 1rem;
-        background-color: rgb(249, 249, 249);
     }
 
     .SwiperContainerIndustries .CardImageContainerIndustries {
