@@ -169,7 +169,7 @@ const MetalGrades = () => {
         <>
             <CommonHeaderCarousal slidesData={CarousalImages} heading="Material Grades" tagline="BHAWAL METAL INDUSTRIES" pageLink="Material Grades" />
             <section>
-                <div id="MetalgradesContainer" className="contentInfoContainer" style={{paddingBottom:"0px"}} data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
+                <div id="MetalgradesContainer" className="contentInfoContainer" style={{ paddingBottom: "0px" }} data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
                     <div>
                         <p data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">At Bhawal Metal Industries, we have strictly focused on stainless steel. Over time, we have continuously integrated our products within stainless steel materials to meet market demands and client requirements, adding more grades to our portfolio. Currently, the company's material offerings can be categorized into three segments.</p>
                     </div>
@@ -193,7 +193,7 @@ const MetalGrades = () => {
                                 <Col lg={12} style={{ width: "100%" }}>
                                     <div >
                                         <div className="AboutUsImageContainer" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
-                                            <img src="/Images/Metalgrades.jpeg" alt="" loading="lazy" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200"/>
+                                            <img src="/Images/Metalgrades.jpeg" alt="" loading="lazy" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200" />
                                         </div>
                                     </div>
                                 </Col>
