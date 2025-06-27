@@ -6,7 +6,7 @@ const VisionMissionValues = () => {
 
     const VisionMissionContent = [
         {
-            image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/fKJw3sY6Kuptl4eMjMMT/AboutUsVision.jpg",
+            image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Ourmission.jpg",
             title: "Our Vision ",
             content: <>
                 <div>

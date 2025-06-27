@@ -119,11 +119,11 @@ const Industries = () => {
                                                             <div className="SlideDescription">
                                                                 {item.description}
                                                             </div>
-                                                            {/* <div className="SlideButtonContainer">
-                                                            <button className="ColourButton" onClick={() => showModal(item)}>
-                                                                Read More <MdKeyboardArrowRight />
-                                                            </button>
-                                                        </div> */}
+                                                            <div className="SlideButtonContainer">
+                                                                <button className="ColourButton" onClick={() => showModal(item)}>
+                                                                    Read More <MdKeyboardArrowRight />
+                                                                </button>
+                                                            </div>
                                                             {/* Mobile Read More Button */}
                                                             <div className="MobileReadMoreButton">
                                                                 <button className="ColourButton" onClick={() => showModal(item)}>

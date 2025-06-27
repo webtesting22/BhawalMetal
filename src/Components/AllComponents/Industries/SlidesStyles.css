@@ -372,7 +372,11 @@
         margin-top: 1.5rem;
     }
     
-    /* Show Mobile Read More Button on mobile */
+    /* Hide desktop button and show mobile button */
+    .SlideButtonContainer {
+        display: none;
+    }
+    
     .MobileReadMoreButton {
         display: block;
     }
