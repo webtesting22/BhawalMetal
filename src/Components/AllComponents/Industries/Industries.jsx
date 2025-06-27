@@ -90,98 +90,104 @@ const Industries = () => {
                         </div>
                     </div>
                 </section>
-                <section style={{paddingTop:"0px"}}>
-                <div id="SlidesStyles">
-                    <div>
-                        <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">Industries We Serve</h2>
-                        <p className="textCenter" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">Over the years, Bhawal Metal Industries has been catering to various industries across the nation. We take pride in our achievements across diverse sectors, from automobiles to aerospace and defense. With advanced technology and expertise in material science, we have developed innovative products to meet the needs of these industries.</p>
-                    </div>
+                <section style={{ paddingTop: "0px" }}>
+                    <div id="SlidesStyles">
+                        <div>
+                            <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">Industries We Serve</h2>
+                            <p className="textCenter" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">Over the years, Bhawal Metal Industries has been catering to various industries across the nation. We take pride in our achievements across diverse sectors, from automobiles to aerospace and defense. With advanced technology and expertise in material science, we have developed innovative products to meet the needs of these industries.</p>
+                        </div>
 
-                    <div className="IndustriesServedCards">
-                        <div className="SingleSlideContainer">
-                            <Swiper
-                                slidesPerView={1}
-                                spaceBetween={30}
-                                loop={true}
-                                speed={700}
-                                modules={[Autoplay]}
-                                onSwiper={(swiper) => (swiperRef.current = swiper)}
-                                onSlideChange={handleSlideChange}
-                                className="singleSlideSwiper"
-                            >
-                                {IndustriesData.map((item, index) => (
-                                    <SwiperSlide key={index}>
-                                        <div className="SingleSlideContent" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
-                                            <Row gutter={[40, 40]} align="middle">
-                                                <Col lg={12} md={24} xs={24}>
-                                                    <div className="SlideContentLeft">
-                                                        <h2 className="SlideTitle">{item.title}</h2>
-                                                        <div className="SlideDescription">
-                                                            {item.description}
-                                                        </div>
-                                                        {/* <div className="SlideButtonContainer">
+                        <div className="IndustriesServedCards">
+                            <div className="SingleSlideContainer">
+                                <Swiper
+                                    slidesPerView={1}
+                                    spaceBetween={30}
+                                    loop={true}
+                                    speed={700}
+                                    modules={[Autoplay]}
+                                    onSwiper={(swiper) => (swiperRef.current = swiper)}
+                                    onSlideChange={handleSlideChange}
+                                    className="singleSlideSwiper"
+                                >
+                                    {IndustriesData.map((item, index) => (
+                                        <SwiperSlide key={index}>
+                                            <div className="SingleSlideContent" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
+                                                <Row gutter={[40, 40]} align="middle">
+                                                    <Col lg={12} md={24} xs={24}>
+                                                        <div className="SlideContentLeft">
+                                                            <h2 className="SlideTitle">{item.title}</h2>
+                                                            <div className="SlideDescription">
+                                                                {item.description}
+                                                            </div>
+                                                            {/* <div className="SlideButtonContainer">
                                                             <button className="ColourButton" onClick={() => showModal(item)}>
                                                                 Read More <MdKeyboardArrowRight />
                                                             </button>
                                                         </div> */}
-                                                    </div>
-                                                </Col>
-                                                <Col lg={12} md={24} xs={24}>
-                                                    <div className="SlideImageRight">
-                                                        <img src={item.image} alt={item.title} loading="lazy" />
-                                                    </div>
-                                                </Col>
-                                            </Row>
-                                        </div>
-                                    </SwiperSlide>
-                                ))}
-                            </Swiper>
-                            
-                            {/* Dot Navigation */}
-                            <div className="DotNavigation">
-                                {IndustriesData.map((item, index) => (
-                                    <button
-                                        key={index}
-                                        className={`dot-button ${currentSlide === index ? 'active' : ''}`}
-                                        onClick={() => goToSlide(index)}
-                                        aria-label={`Go to ${item.title}`}
-                                    >
-                                        {item.title}
-                                    </button>
-                                ))}
+                                                            {/* Mobile Read More Button */}
+                                                            <div className="MobileReadMoreButton">
+                                                                <button className="ColourButton" onClick={() => showModal(item)}>
+                                                                    Read More <MdKeyboardArrowRight />
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </Col>
+                                                    <Col lg={12} md={24} xs={24}>
+                                                        <div className="SlideImageRight">
+                                                            <img src={item.image} alt={item.title} loading="lazy" />
+                                                        </div>
+                                                    </Col>
+                                                </Row>
+                                            </div>
+                                        </SwiperSlide>
+                                    ))}
+                                </Swiper>
+
+                                {/* Dot Navigation */}
+                                <div className="DotNavigation">
+                                    {IndustriesData.map((item, index) => (
+                                        <button
+                                            key={index}
+                                            className={`dot-button ${currentSlide === index ? 'active' : ''}`}
+                                            onClick={() => goToSlide(index)}
+                                            aria-label={`Go to ${item.title}`}
+                                        >
+                                            {item.title}
+                                        </button>
+                                    ))}
+                                </div>
                             </div>
                         </div>
+
                     </div>
+                    <Modal
+                        title={selectedIndustry?.title}
+                        open={isModalVisible}
+                        onCancel={handleClose}
+                        footer={null}
+                        centered
+                        width={900}
+                    >
+                        {selectedIndustry && (
+                            <>
+                                <div className="ModalImageContainer">
+                                    <Row>
+                                        <Col lg={12}>
+                                            <img src={selectedIndustry.image} alt={selectedIndustry.title} loading="lazy" />
 
-                </div>
-                <Modal
-                    title={selectedIndustry?.title}
-                    open={isModalVisible}
-                    onCancel={handleClose}
-                    footer={null}
-                    centered
-                    width={900}
-                >
-                    {selectedIndustry && (
-                        <>
-                            <div className="ModalImageContainer">
-                                <Row>
-                                    <Col lg={12}>
-                                        <img src={selectedIndustry.image} alt={selectedIndustry.title} loading="lazy" />
+                                        </Col>
+                                        <Col lg={12}>
+                                            <p style={{ marginTop: "10px" }}>{selectedIndustry.description}</p>
+                                        </Col>
+                                    </Row>
+                                </div>
 
-                                    </Col>
-                                    <Col lg={12}>
-                                        <p style={{ marginTop: "10px" }}>{selectedIndustry.description}</p>
-                                    </Col>
-                                </Row>
-                            </div>
-
-                        </>
-                    )}
-                </Modal>
+                            </>
+                        )}
+                    </Modal>
                 </section>
-            {/* </section> */}
-        </div >
+                {/* </section> */}
+            </div >
         </>
     )
 }

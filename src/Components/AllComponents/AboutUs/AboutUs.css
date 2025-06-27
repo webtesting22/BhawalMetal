@@ -1,13 +1,16 @@
-#AboutUsContainer{
+#AboutUsContainer {
     overflow: hidden;
 }
+
 .TopBannerContainerCommon {
     width: 100%;
 
 }
-#WhatDoesBhawalContainer{
+
+#WhatDoesBhawalContainer {
     padding-top: 4rem;
 }
+
 .ImageBackContainerWithContent {
     width: 100%;
     position: relative;
@@ -88,14 +91,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     height: 100%;
 }
 
-@media (max-width:900px){
-    #WhatDoesBhawalContainer{
+@media (max-width:900px) {
+    #WhatDoesBhawalContainer {
         padding-top: 4rem;
     }
+
     .CommonTopContainer {
         height: 500px;
         width: 100%;
@@ -105,28 +108,34 @@
         justify-content: center;
         position: relative;
     }
-    .WhatDoesBhawalImageContainer{
+
+    .WhatDoesBhawalImageContainer {
         margin-bottom: 20px;
     }
-    .AboutUsImageContainer{
+
+    .AboutUsImageContainer {
         margin-bottom: 20px;
     }
+
     .ImageBackContainerWithContent {
         width: 100%;
         position: relative;
         height: 100%;
     }
+
     .ContentContainerTopheader {
         padding: 0rem 2rem;
     }
-    #WhatDoesBhawalContainer{
+
+    #WhatDoesBhawalContainer {
         padding-left: 0px;
         padding-right: 0px;
     }
+
     .AboutUsImageContainer {
         padding-right: 0px;
         height: 300px;
         overflow: hidden;
     }
-    
+
 }

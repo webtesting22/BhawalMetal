@@ -112,8 +112,8 @@
     justify-content: center;
     align-items: center;
     gap: 12px;
-    margin-top: 3rem;
-    padding: 2rem 0;
+    /* margin-top: 3rem; */
+    padding: 0rem 0;
     flex-wrap: wrap;
 }
 
@@ -193,6 +193,7 @@
         transform: translate(-50%, -50%) scale(1);
         opacity: 1;
     }
+
     100% {
         transform: translate(-50%, -50%) scale(1.5);
         opacity: 0;
@@ -306,36 +307,36 @@
         padding-right: 0;
         margin-bottom: 2rem;
     }
-    
+
     .SlideTitle {
         font-size: 2rem;
     }
-    
+
     .SlideImageRight {
         height: 350px;
     }
-    
+
     .NavigationButtonsBottom {
         gap: 1rem;
     }
-    
+
     .nav-button {
         min-width: 120px;
         padding: 0.8rem 1.5rem;
     }
-    
+
     .DotNavigation {
         margin-top: 2rem;
         padding: 1.5rem 0;
         gap: 8px;
     }
-    
+
     .dot-button {
         padding: 6px 12px;
         font-size: 13px;
         min-height: 32px;
     }
-    
+
     .dot {
         width: 14px;
         height: 14px;
@@ -346,22 +347,22 @@
     /* #SlidesStyles {
         padding: 3rem 1rem;
     } */
-    
+
     .SingleSlideContainer {
         padding: 0;
     }
-    
+
     .SingleSlideContent {
-        padding: 2rem 1.5rem;
+        padding: 2rem 0rem;
         margin: 1rem 0;
     }
-    
+
     .SlideTitle {
         font-size: 1.8rem;
         margin-bottom: 1rem;
     }
-    
-    .SlideDescription {
+
+        .SlideDescription {
         font-size: 1rem;
         margin-bottom: 1.5rem;
     }
@@ -371,42 +372,100 @@
         margin-top: 1.5rem;
     }
     
+    /* Show Mobile Read More Button on mobile */
+    .MobileReadMoreButton {
+        display: block;
+    }
+    
+    /* Mobile Modal Styles */
+    .ant-modal {
+        margin: 0 !important;
+        max-width: 100% !important;
+        top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    
+    .ant-modal .ant-modal-content {
+        border-radius: 0 !important;
+        height: 100vh !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    .ant-modal .ant-modal-body {
+        flex: 1 !important;
+        overflow-y: auto !important;
+        padding: 16px !important;
+    }
+    
+    .ant-modal .ant-modal-header {
+        border-radius: 0 !important;
+        padding: 16px 16px 8px 16px !important;
+    }
+    
+    .ant-modal .ant-modal-title {
+        font-size: 18px !important;
+        font-weight: 600 !important;
+    }
+    
+    .ModalImageContainer .ant-row {
+        flex-direction: column !important;
+    }
+    
+    .ModalImageContainer .ant-col {
+        width: 100% !important;
+        margin-bottom: 16px !important;
+    }
+    
+    .ModalImageContainer img {
+        height: 200px !important;
+        object-fit: cover !important;
+    }
+    
+    .ModalImageContainer p {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+        margin-top: 0 !important;
+    }
+
     .NavigationButtonsBottom {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
         margin-top: 2rem;
     }
-    
+
     .nav-button {
         width: 200px;
     }
-    
+
     .DotNavigation {
         margin-top: 1.5rem;
         padding: 1rem 0;
         gap: 6px;
         justify-content: center;
     }
-    
+
     .dot-button {
         padding: 5px 10px;
         font-size: 12px;
         min-height: 28px;
         border-radius: 15px;
     }
-    
+
     .dot {
         width: 16px;
         height: 16px;
         border-width: 3px;
     }
-    
+
     .dot.active::after {
         width: 24px;
         height: 24px;
         border-width: 3px;
     }
+
+
 }
 
 @media (max-width: 480px) {
@@ -415,7 +474,7 @@
         padding: 0.8rem 0;
         margin: 0 -10px;
     }
-    
+
     .dot-button {
         padding: 4px 8px;
         font-size: 11px;
@@ -424,13 +483,13 @@
         flex: 1;
         max-width: 120px;
     }
-    
+
     .dot {
         width: 18px;
         height: 18px;
         border-width: 3px;
     }
-    
+
     .dot.active::after {
         width: 28px;
         height: 28px;
@@ -438,7 +497,7 @@
 }
 
 @media (max-width:900px) {
-    
+
     .ModalImageContainer .ant-row .ant-col:nth-child(1) {
 
         padding-right: 0px;
@@ -446,7 +505,7 @@
 
     }
 
-  
+
 
     .IndustriesMobileCards {
         display: block;
@@ -473,4 +532,22 @@
     .SwiperContainerIndustries {
         display: none;
     }
+}
+
+/* Mobile Read More Button - Hidden by default */
+.MobileReadMoreButton {
+    display: none;
+    margin-top: 1.5rem;
+}
+
+.MobileReadMoreButton .ColourButton {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }

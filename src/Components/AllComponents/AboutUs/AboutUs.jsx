@@ -24,11 +24,6 @@ const AboutUs = () => {
         {
              img: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Drilling process 2 (1).jpg"
         },
-        // {
-        //     img: ""
-        // },
-
-
     ]
     const CarousalImages = [
 

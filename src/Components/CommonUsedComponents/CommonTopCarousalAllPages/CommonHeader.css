@@ -22,14 +22,13 @@
 }
 
 
-.BigHeadingNormal{
+.BigHeadingNormal {
     font-size: 102px;
     font-family: 'Helvetica Now MT Micro', sans-serif;
 }
 
-@media (max-width:900px){
-
-.BigHeadingNormal{
-    font-size: 40px;
-}
+@media (max-width:900px) {
+    .BigHeadingNormal {
+        font-size: 40px;
+    }
 }
