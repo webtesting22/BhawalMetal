@@ -520,7 +520,7 @@ const MetalGrades = () => {
                     </div>
                 </Col>
                 <Col lg={12}>
-                    <div className="AboutUsImageContainer" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
+                    <div  data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
                         <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AusteniticSteelNew.png" alt="Austenitic Steel" loading="lazy" />
                     </div>
                 </Col>
@@ -602,7 +602,7 @@ const MetalGrades = () => {
                     </div>
                 </Col>
                 <Col lg={12}>
-                    <div className="AboutUsImageContainer" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
+                    <div data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
                         <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AusteniticSteelNew.png" alt="Martensitic Steel" loading="lazy" />
                     </div>
                 </Col>
@@ -658,7 +658,7 @@ const MetalGrades = () => {
                     </div>
                 </Col>
                 <Col lg={12}>
-                    <div className="AboutUsImageContainer" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
+                    <div data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
                         <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AusteniticSteelNew.png" alt="Duplex Steel" loading="lazy" />
                     </div>
                 </Col>
@@ -748,7 +748,7 @@ const MetalGrades = () => {
                         </div>
                     </Col>
                     <Col lg={12} md={24}>
-                        <div className="AboutUsImageContainer">
+                        <div>
                             <img src="/Images/Metalgrades.jpeg" alt="Duplex Applications" loading="lazy" style={{ width: "100%", height: "300px", objectFit: "cover", borderRadius: "8px" }} />
                         </div>
                     </Col>
@@ -758,14 +758,268 @@ const MetalGrades = () => {
     );
 
     const renderPHContent = () => (
-        <div style={{ textAlign: "center" }}>
-            <div style={{ fontSize: "3rem", marginBottom: "20px" }}>🚀</div>
-            <h3 style={{ color: "#617E87", marginBottom: "20px" }}>Coming Soon</h3>
-            <p style={{ fontSize: "1.1rem", maxWidth: "600px", margin: "0 auto", lineHeight: "1.6" }}>
-                Detailed information about PH Stainless Steel including chemical properties, mechanical properties, and applications will be available soon.
-            </p>
-            <div style={{ marginTop: "30px" }}>
-                <p><strong>Key Features:</strong> High strength steels with excellent mechanical properties, perfect for aerospace, nuclear, and high-performance applications.</p>
+        <div>
+            <div className="PHSteelLayout">
+                <div className="PHSteelIntroSection" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1000">
+                    <Row gutter={[40, 40]} align="middle"  style={{alignItems:"unset"}}>
+                        <Col lg={14} md={24} sm={24} xs={24}>
+                            <div className="PHSteelContent">
+                                <p >
+                                    SAE Type 630 stainless steel (more commonly known as 17-4 PH, or simply 17-4; also known as UNS 17400) is a grade of martensitic precipitation hardened stainless steel. It contains approximately 15–17.5% chromium and 3–5% nickel, as well as 3–5% copper. The name comes from the chemical makeup which is approximately 17% chromium and 4% nickel.
+                                </p>
+                                <br />
+                                <h4 style={{ fontSize: "1.6rem", fontWeight: "600", color: "#617E87", marginBottom: "30px" }}>
+                                    Chemical Properties of PH Stainless Steels
+                                </h4>
+                                
+                                {/* 17-4 PH Table */}
+                                <div style={{ marginBottom: "30px" }}>
+                                    <h5 style={{ fontSize: "1.3rem", fontWeight: "600", color: "#333", marginBottom: "15px" }}>
+                                        17-4 ph
+                                    </h5>
+                                    <div className="ChemicalPropertiesTable" style={{ marginBottom: "20px" }}>
+                                        <table style={{ width: "100%", borderCollapse: "collapse", border: "1px solid #ddd" }}>
+                                            <thead>
+                                                <tr style={{ backgroundColor: "#f5f5f5" }}>
+                                                    <th style={{ border: "1px solid #ddd", padding: "12px", textAlign: "center" }}>Chemical Properties of S.S. 17-4 ph</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                        <table style={{ width: "100%", borderCollapse: "collapse", border: "1px solid #ddd" }}>
+                                            <thead>
+                                                <tr style={{ backgroundColor: "#f8f8f8" }}>
+                                                    <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>C</th>
+                                                    <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>Si</th>
+                                                    <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>Mn</th>
+                                                    <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>P</th>
+                                                    <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>S</th>
+                                                    <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>Ni</th>
+                                                    <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>Cr</th>
+                                                    <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>Cu</th>
+                                                    <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>Nb+Ta</th>
+                                                    <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>Fe</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>0.07%</td>
+                                                    <td style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>1%</td>
+                                                    <td style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>1%</td>
+                                                    <td style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>0.04%</td>
+                                                    <td style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>0.03%</td>
+                                                    <td style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>3-5%</td>
+                                                    <td style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>15-17.5%</td>
+                                                    <td style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>3-5%</td>
+                                                    <td style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>0.45%</td>
+                                                    <td style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>Balance</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                {/* 15-5 PH Table */}
+                                <div style={{ marginBottom: "30px" }}>
+                                    <h5 style={{ fontSize: "1.3rem", fontWeight: "600", color: "#333", marginBottom: "15px" }}>
+                                        15-5 ph
+                                    </h5>
+                                    <div className="ChemicalPropertiesTable">
+                                        <table style={{ width: "100%", borderCollapse: "collapse", border: "1px solid #ddd" }}>
+                                            <thead>
+                                                <tr style={{ backgroundColor: "#f5f5f5" }}>
+                                                    <th style={{ border: "1px solid #ddd", padding: "12px", textAlign: "center" }}>Chemical Properties of S.S. 17-4 ph</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                        <table style={{ width: "100%", borderCollapse: "collapse", border: "1px solid #ddd" }}>
+                                            <thead>
+                                                <tr style={{ backgroundColor: "#f8f8f8" }}>
+                                                    <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>C</th>
+                                                    <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>Si</th>
+                                                    <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>Mn</th>
+                                                    <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>P</th>
+                                                    <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>S</th>
+                                                    <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>Ni</th>
+                                                    <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>Cr</th>
+                                                    <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>Cu</th>
+                                                    <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>Nb+Ta</th>
+                                                    <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>Fe</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>0.07%</td>
+                                                    <td style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>1%</td>
+                                                    <td style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>1%</td>
+                                                    <td style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>0.04%</td>
+                                                    <td style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>0.03%</td>
+                                                    <td style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>3.5-5.5%</td>
+                                                    <td style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>14-15.5%</td>
+                                                    <td style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>4.5%</td>
+                                                    <td style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>0.45%</td>
+                                                    <td style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>Balance</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col lg={10} md={24} sm={24} xs={24}>
+                            <div className="PHSteelImage">
+                                <Image
+                                    src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AusteniticSteelNew.png"
+                                    alt="PH Stainless Steel Rods"
+                                    loading="lazy"
+                                    style={{ width: "100%", height: "400px", objectFit: "cover", borderRadius: "16px" }}
+                                />
+                            </div>
+                        </Col>
+                    </Row>
+                </div>
+
+                {/* Mechanical Properties Section */}
+                <div className="MechanicalPropertiesSection" data-aos="blur-to-clear" data-aos-delay="400" data-aos-duration="1000">
+                    <div style={{ marginTop: "50px" }}>
+                        <h4 style={{ fontSize: "1.6rem", fontWeight: "600", color: "#617E87", marginBottom: "30px" }}>
+                            Mechanical Properties of PH Stainless Steels
+                        </h4>
+                        
+                        <div className="MechanicalPropertiesTable">
+                            <table style={{ width: "100%", borderCollapse: "collapse", border: "1px solid #ddd", fontSize: "0.9rem" }}>
+                                <thead>
+                                    <tr style={{ backgroundColor: "#f5f5f5" }}>
+                                        <th style={{ border: "1px solid #ddd", padding: "12px", textAlign: "center", fontWeight: "600" }}>Material</th>
+                                        <th style={{ border: "1px solid #ddd", padding: "12px", textAlign: "center", fontWeight: "600" }}>Condition</th>
+                                        <th style={{ border: "1px solid #ddd", padding: "12px", textAlign: "center", fontWeight: "600" }}>Ultimate<br/>Tensile<br/>Strength<br/>(ksi)</th>
+                                        <th style={{ border: "1px solid #ddd", padding: "12px", textAlign: "center", fontWeight: "600" }}>0.2 %<br/>Yield<br/>Strength<br/>(ksi)</th>
+                                        <th style={{ border: "1px solid #ddd", padding: "12px", textAlign: "center", fontWeight: "600" }}>Elongation<br/>% in 2D</th>
+                                        <th style={{ border: "1px solid #ddd", padding: "12px", textAlign: "center", fontWeight: "600" }}>%<br/>Reduction<br/>of Area</th>
+                                        <th style={{ border: "1px solid #ddd", padding: "12px", textAlign: "center", fontWeight: "600" }}>Rockwell C<br/>Hardness</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>Alloy 15-5 PH<br/>Bar AMS 5659</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>Cond A</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>–</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>–</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>–</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>–</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>363 HB max</td>
+                                    </tr>
+                                    <tr>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>Alloy 15-5 PH<br/>Bar AMS 5659</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>H900</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>190</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>170</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>10</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>35</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>388-444</td>
+                                    </tr>
+                                    <tr>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>Alloy 15-5 PH<br/>Bar AMS 5659</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>H925</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>170</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>155</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>10</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>38</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>375-429</td>
+                                    </tr>
+                                    <tr>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>Alloy 15-5 PH<br/>Bar AMS 5659</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>H1025</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>155</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>145</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>12</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>45</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>331-401</td>
+                                    </tr>
+                                    <tr>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>Alloy 15-5 PH<br/>Bar AMS 5659</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>H1075</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>145</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>125</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>13</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>45</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>311-375</td>
+                                    </tr>
+                                    <tr>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>Alloy 15-5 PH<br/>Bar AMS 5659</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>H1100</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>140</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>115</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>14</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>45</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>302-363</td>
+                                    </tr>
+                                    <tr>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>Alloy 15-5 PH<br/>Bar AMS 5659</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>H1150</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>135</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>105</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>16</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>50</td>
+                                        <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>277-352</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Properties and Applications Section */}
+                <div className="PropertiesApplicationsSection" data-aos="blur-to-clear" data-aos-delay="500" data-aos-duration="1000">
+                    <div style={{ marginTop: "50px" }}>
+                        <Row gutter={[40, 40]}>
+                            <Col lg={12} md={24} sm={24} xs={24}>
+                                <div className="PropertiesCard" style={{
+                                    backgroundColor: "#f8f9fa",
+                                    padding: "30px",
+                                    borderRadius: "16px",
+                                    // height: "100%",
+                                    border: "1px solid #e9ecef"
+                                }}>
+                                    <h4 >
+                                        Properties-17-4 PH Stainless Steel
+                                    </h4>
+                                    <div style={{ fontSize: "1rem", lineHeight: "1.7", color: "#555" }}>
+                                        <div style={{ marginBottom: "20px", display: "flex", alignItems: "flex-start", gap: "10px" }}>
+                                            <span style={{ color: "#617E87", fontSize: "1.2rem", marginTop: "2px" }}>•</span>
+                                            <span>
+                                                17-4 can be heat treated to high levels of strength and hardness, and features corrosion resistance and machinability comparable to austenitic 304 stainless. Being martensitic, 17-4 is magnetic. 17-4 is capable of being hardened up to approximately 44 Rc when heat treated to condition H900.
+                                            </span>
+                                        </div>
+                                        <div style={{ display: "flex", alignItems: "flex-start", gap: "10px" }}>
+                                            <span style={{ color: "#617E87", fontSize: "1.2rem", marginTop: "2px" }}>•</span>
+                                            <span>
+                                                Over aging (aging beyond the peak strength condition) improves resistance to stress corrosion cracking.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </Col>
+                            <Col lg={12} md={24} sm={24} xs={24}>
+                                <div className="ApplicationCard" style={{
+                                    backgroundColor: "#f8f9fa",
+                                    padding: "30px",
+                                    borderRadius: "16px",
+                                    // height: "100%",
+                                    border: "1px solid #e9ecef"
+                                }}>
+                                    <h4 >
+                                        Application
+                                    </h4>
+                                    <div style={{ fontSize: "1rem", lineHeight: "1.7", color: "#555" }}>
+                                        <p>
+                                            Uses for 17-4 stainless steel include components which require high hardness and/or corrosion resistance at temperatures of up to 600 °F (316 °C). Specific applications for 17-4 include the petroleum and chemical industries, as well as use in aircraft parts.
+                                        </p>
+                                    </div>
+                                </div>
+                            </Col>
+                        </Row>
+                    </div>
+                </div>
             </div>
         </div>
     );
