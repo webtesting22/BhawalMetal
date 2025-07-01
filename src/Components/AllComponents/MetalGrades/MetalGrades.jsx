@@ -455,6 +455,13 @@ const MetalGrades = () => {
         window.scrollTo(0, 0);
     }, [selectedCategory]);
 
+    // Helper function to get current page title
+    const getCurrentPageTitle = () => {
+        if (!selectedCategory) return "Material Grades";
+        const category = steelCategories.find(cat => cat.id === selectedCategory);
+        return category ? category.title : "Material Grades";
+    };
+
     // Main Categories Overview
     const renderCategoriesOverview = () => (
         <section style={marginVariables}>
@@ -940,11 +947,11 @@ const MetalGrades = () => {
                                                     <p style={{ fontSize: "1.1rem", lineHeight: "1.6", marginBottom: "30px" }}>
                                                         Martensitic steels with high carbon content are often used for <strong>tool steels, cutlery, fasteners, dies, surgical and dental instruments.</strong> They are also used in petrochemical industry for <strong>gas and steam turbine blades.</strong>
                                                     </p>
-                                                    <div className="AnimatedbtnContainer" style={{ textAlign: "center" }}>
+                                                    {/* <div className="AnimatedbtnContainer" style={{ textAlign: "center" }}>
                                                         <button className="ColourButton" style={{ justifyContent: "center", display: "flex", alignItems: "center", gap: "8px", margin: "0 auto" }}>
                                                             Get Quote for Martensitic Steel <MdKeyboardArrowRight />
                                                         </button>
-                                                    </div>
+                                                    </div> */}
                                                 </div>
                                             </div>
                                         </Col>
@@ -1202,11 +1209,11 @@ const MetalGrades = () => {
                                                         • <strong>Engineering:</strong> pumps, valves, fittings, springs, etc.
                                                     </li>
                                                 </ul>
-                                                <div className="AnimatedbtnContainer" style={{ marginTop: "var(--table-margin)", textAlign: "center" }}>
+                                                {/* <div className="AnimatedbtnContainer" style={{ marginTop: "var(--table-margin)", textAlign: "center" }}>
                                                     <button className="ColourButton" style={{ justifyContent: "center", display: "flex", alignItems: "center", gap: "8px", margin: "0 auto" }}>
                                                         Get Quote for Duplex Steel <MdKeyboardArrowRight />
                                                     </button>
-                                                </div>
+                                                </div> */}
                                             </div>
                                         </div>
                                     </Col>
@@ -1250,7 +1257,12 @@ const MetalGrades = () => {
 
     return (
         <>
-            <CommonHeaderCarousal slidesData={CarousalImages} heading="Material Grades" tagline="BHAWAL METAL INDUSTRIES" pageLink="Material Grades" />
+            <CommonHeaderCarousal 
+                slidesData={CarousalImages} 
+                heading={getCurrentPageTitle()} 
+                tagline="BHAWAL METAL INDUSTRIES" 
+                pageLink={getCurrentPageTitle()} 
+            />
             {selectedCategory ? renderCategoryDetail(selectedCategory) : renderCategoriesOverview()}
         </>
     );
