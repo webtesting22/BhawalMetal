@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./MetalGrades.css"
-import { Row, Col, Image, Table, Input, Button, Card } from "antd";
-import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
+import { Row, Col, Image, Table, Input, Button, Card, Collapse, Modal } from "antd";
+import { ArrowLeftOutlined, ArrowRightOutlined, CaretRightOutlined, CloseOutlined } from '@ant-design/icons';
 import CommonHeaderCarousal from "../../CommonUsedComponents/CommonTopCarousalAllPages/CommonHeaderCarousal";
 import { MdKeyboardArrowRight } from "react-icons/md";
 const { Search } = Input;
+const { Panel } = Collapse;
 
 const MetalGrades = () => {
-    const [selectedCategory, setSelectedCategory] = useState(null);
+    // Modal state for mobile devices
+    const [modalVisible, setModalVisible] = useState(false);
+    const [selectedModalContent, setSelectedModalContent] = useState(null);
+    const [isMobile, setIsMobile] = useState(false);
 
     // Dynamic Margin Variables - Change these values to adjust spacing throughout the component
     const marginVariables = {
@@ -200,13 +204,13 @@ const MetalGrades = () => {
             },
         ],
         mechanicalData: [
-            { grade: "410S", tensileStrength: "415", yieldStrength: "205", elongation: "22", hardnessBHN: "183", hardnessRb: "89" },
-            { grade: "410", tensileStrength: "450", yieldStrength: "205", elongation: "20", hardnessBHN: "217", hardnessRb: "89" },
-            { grade: "420", tensileStrength: "700 (max)", yieldStrength: "-", elongation: "15", hardnessBHN: "217", hardnessRb: "95" },
-            { grade: "430", tensileStrength: "450", yieldStrength: "205", elongation: "22", hardnessBHN: "183", hardnessRb: "89" },
-            { grade: "416", tensileStrength: "515", yieldStrength: "205", elongation: "30", hardnessBHN: "207", hardnessRb: "89" },
-            { grade: "431 condition T", tensileStrength: "850", yieldStrength: "635", elongation: "11", hardnessBHN: "302", hardnessRb: "-" },
-            { grade: "431", tensileStrength: "862", yieldStrength: "655", elongation: "20", hardnessBHN: "285", hardnessRb: "-" },
+            { grade: "415", tensileStrength: "415", yieldStrength: "205", elongation: "22", hardnessBHN: "183", hardnessRb: "89" },
+            { grade: "450", tensileStrength: "450", yieldStrength: "205", elongation: "20", hardnessBHN: "217", hardnessRb: "89" },
+            { grade: "700 (max)", tensileStrength: "700", yieldStrength: "-", elongation: "15", hardnessBHN: "217", hardnessRb: "95" },
+            { grade: "450", tensileStrength: "450", yieldStrength: "205", elongation: "22", hardnessBHN: "183", hardnessRb: "89" },
+            { grade: "515", tensileStrength: "515", yieldStrength: "205", elongation: "30", hardnessBHN: "207", hardnessRb: "89" },
+            { grade: "850", tensileStrength: "850", yieldStrength: "635", elongation: "11", hardnessBHN: "302", hardnessRb: "-" },
+            { grade: "862", tensileStrength: "862", yieldStrength: "655", elongation: "20", hardnessBHN: "285", hardnessRb: "-" },
         ]
     };
 
@@ -453,817 +457,646 @@ const MetalGrades = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [selectedCategory]);
+
+        // Check if device is mobile
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    // Handle modal opening for mobile
+    const handleMobileClick = (contentType, title) => {
+        if (isMobile) {
+            setSelectedModalContent({ type: contentType, title });
+            setModalVisible(true);
+            return false; // Prevent accordion expansion
+        }
+        return true; // Allow accordion expansion on desktop
+    };
+
+    // Get modal content based on type
+    const getModalContent = () => {
+        if (!selectedModalContent) return null;
+
+        switch (selectedModalContent.type) {
+            case 'austenitic':
+                return renderAusteniticContent();
+            case 'martensitic':
+                return renderMarteniticContent();
+            case 'duplex':
+                return renderDuplexContent();
+            case 'precipitation':
+                return renderPHContent();
+            default:
+                return null;
+        }
+    };
 
     // Helper function to get current page title
     const getCurrentPageTitle = () => {
-        if (!selectedCategory) return "Material Grades";
-        const category = steelCategories.find(cat => cat.id === selectedCategory);
-        return category ? category.title : "Material Grades";
+        return "Material Grades";
     };
 
-    // Main Categories Overview
-    const renderCategoriesOverview = () => (
-        <section style={marginVariables}>
-            <div id="MetalgradesContainer" >
-                <div>
-                    <p data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
-                        At Bhawal Metal Industries, we have strictly focused on stainless steel. Over time, we have continuously integrated our products within stainless steel materials to meet market demands and client requirements, adding more grades to our portfolio. Currently, the company's material offerings can be categorized into five main segments.
-                    </p>
-                </div>
-
-                <div className="containerGap">
-                    <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">
-                        Our Stainless Steel Categories
-                    </h2>
-                    <p className="textCenter" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
-                        Explore our comprehensive range of stainless steel grades designed for various industrial applications
-                    </p>
-                </div>
-
-                <Row gutter={[24, 24]} style={{ marginTop: "var(--subsection-margin)" }}>
-                    {steelCategories.map((category, index) => (
-                        <Col lg={8} md={12} sm={24} xs={24} key={category.id}>
-                            <div
-                                className="category-card"
-                                data-aos="blur-to-clear"
-                                data-aos-delay={400 + index * 100}
-                                data-aos-duration="1200"
-                                onClick={() => setSelectedCategory(category.id)}
-                            >
-                                <div className="category-icon">
-                                    {category.icon}
-                                </div>
-                                <div className="category-content">
-                                    <h3 className="category-title">
-                                        {category.title}
-                                    </h3>
-                                    <br />
-                                    <p className="category-subtitle">
-                                        {category.subtitle}
-                                    </p>
-                                    <p className="category-description">
-                                        {category.description}
-                                    </p>
-                                    <div className="AnimatedbtnContainer">
-                                        <button className="ColourButton" style={{ width: "100%", justifyContent: "center" }}>Read More <MdKeyboardArrowRight /></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                    ))}
-                </Row>
-
-                {/* Quick Access Section */}
-                {/* <div style={{ marginTop: "var(--section-margin)" }}>
-                    <div className="containerGap">
-                        <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
-                            Why Choose Bhawal Metal Industries?
-                        </h2>
+    // Render content for each steel category
+    const renderAusteniticContent = () => (
+        <div>
+            <Row gutter={[24, 24]} style={{ marginBottom: "var(--section-margin)" }}>
+                <Col lg={12}>
+                    <div className="AboutUsContentContainer">
+                        <div>
+                            <p data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
+                                Austenitic steels are non-magnetic stainless steels with high chromium and nickel content and low carbon levels. They are the most widely used stainless steel grade, with the most common composition being 18% chromium and 8% nickel, also known as 18/8 steel.
+                            </p>
+                            <br />
+                            <p data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">
+                                Austenitic steels are generally classified into two groups: the Chromium-Nickel AISI 300 series and the Chromium-Nickel-Manganese 200 series. Adding 2-3% molybdenum enhances corrosion resistance, often referred to as "acid-proof steel."
+                            </p>
+                        </div>
                     </div>
-                    <Row gutter={[32, 32]} style={{ marginTop: "var(--subsection-margin)" }}>
-                        <Col lg={8} md={24} sm={24} xs={24}>
-                            <div className="feature-card" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">
-                                <h4>Premium Quality</h4>
-                                <p>All our stainless steel grades meet international standards and undergo rigorous quality testing.</p>
-                                <div className="AnimatedbtnContainer" style={{ marginTop: "var(--button-margin)" }}>
-                                    <button className="ColourButton" style={{ width: "100%", justifyContent: "center" }}>
-                                        Quality Assurance <MdKeyboardArrowRight />
-                                    </button>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col lg={8} md={24} sm={24} xs={24}>
-                            <div className="feature-card" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
-                                <h4>Expert Guidance</h4>
-                                <p>Our metallurgists provide technical support to help you choose the right grade for your application.</p>
-                                <div className="AnimatedbtnContainer" style={{ marginTop: "var(--button-margin)" }}>
-                                    <button className="ColourButton" style={{ width: "100%", justifyContent: "center" }}>
-                                        Get Expert Help <MdKeyboardArrowRight />
-                                    </button>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col lg={8} md={24} sm={24} xs={24}>
-                            <div className="feature-card" data-aos="blur-to-clear" data-aos-delay="400" data-aos-duration="1200">
-                                <h4>Custom Solutions</h4>
-                                <p>We offer customized solutions including precision components and specialized processing.</p>
-                                <div className="AnimatedbtnContainer" style={{ marginTop: "var(--button-margin)" }}>
-                                    <button className="ColourButton" style={{ width: "100%", justifyContent: "center" }}>
-                                        Request Custom Quote <MdKeyboardArrowRight />
-                                    </button>
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
-                </div> */}
+                </Col>
+                <Col lg={12}>
+                    <div className="AboutUsImageContainer" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
+                        <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AusteniticSteelNew.png" alt="Austenitic Steel" loading="lazy" />
+                    </div>
+                </Col>
+            </Row>
+
+            {/* Chemical Properties Table */}
+            <div style={{ marginBottom: "var(--section-margin)" }}>
+                <h3 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
+                    Chemical Properties
+                </h3>
+                <div className="GraphImage">
+                    <Table columns={austeniticData.columns} dataSource={austeniticData.data} pagination={{ pageSize: 10 }} />
+                </div>
             </div>
-        </section>
+
+            {/* Mechanical Properties Table */}
+            <div style={{ marginBottom: "var(--section-margin)" }}>
+                <h3 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
+                    Mechanical Properties
+                </h3>
+                <div className="GraphImage">
+                    <Table columns={austeniticData.mechanicalColumns} dataSource={austeniticData.mechanicalData} />
+                </div>
+            </div>
+
+            {/* Key Properties */}
+            <div style={{ marginBottom: "var(--section-margin)" }}>
+                <h3 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
+                    Key Properties & Applications
+                </h3>
+                <Row gutter={[24, 24]} style={{ marginTop: "var(--subsection-margin)" }}>
+                    <Col lg={12} md={24}>
+                        <div className="property-card">
+                            <div className="property-header">
+                                <h4 className="property-title">Formability</h4>
+                            </div>
+                            <div className="property-content">
+                                <ul className="property-list">
+                                    <li>Excellent formability and weldability</li>
+                                    <li>Good mechanical strength in welded joints</li>
+                                    <li>No preheating or post-weld annealing required</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col lg={12} md={24}>
+                        <div className="property-card">
+                            <div className="property-header">
+                                <h4 className="property-title">Temperature Performance</h4>
+                            </div>
+                            <div className="property-content">
+                                <ul className="property-list">
+                                    <li>Service temperatures up to 600°C</li>
+                                    <li>Excellent cryogenic temperature performance</li>
+                                    <li>Maintains ductility at sub-zero temperatures</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+            </div>
+        </div>
     );
 
-    // Render Other Categories Section
-    const renderOtherCategories = (currentCategoryId) => {
-        const otherCategories = steelCategories.filter(cat => cat.id !== currentCategoryId);
+    const renderMarteniticContent = () => (
+        <div>
+            <Row gutter={[24, 24]} style={{ marginBottom: "var(--section-margin)" }}>
+                <Col lg={12}>
+                    <div className="AboutUsContentContainer">
+                        <div>
+                            <p data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
+                                Martensitic stainless steels are classified as the 400 series. Carbon content ranges from 0.15 to 1.2%, while chromium content ranges from 10.5 to 18%. These steels can be hardened and tempered, similar to carbon steels, and are ferromagnetic.
+                            </p>
+                            <br />
+                            <p data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">
+                                The crystal structure is body-centered cubic (BCC), giving them magnetic properties and high strength. They are heat treatable and can achieve high hardness levels through proper quenching and tempering.
+                            </p>
+                        </div>
+                    </div>
+                </Col>
+                <Col lg={12}>
+                    <div className="AboutUsImageContainer" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
+                        <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AusteniticSteelNew.png" alt="Martensitic Steel" loading="lazy" />
+                    </div>
+                </Col>
+            </Row>
 
-        return (
-            <div style={{ marginTop: "var(--large-margin)", paddingTop: "var(--section-margin)", ...marginVariables }}>
-                <div className="containerGap">
-                    <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
-                        Explore Other Steel Categories
-                    </h2>
-                    <p className="textCenter" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">
-                        Discover more specialized stainless steel solutions for your industrial needs
-                    </p>
+            {/* Chemical Properties Table */}
+            <div style={{ marginBottom: "var(--section-margin)" }}>
+                <h3 className="BigHeading textCenter">Chemical Properties</h3>
+                <div className="GraphImage">
+                    <Table columns={marteniticData.columns} dataSource={marteniticData.data} pagination={{ pageSize: 10 }} />
                 </div>
+            </div>
 
-                <Row gutter={[24, 24]} style={{ marginTop: "var(--subsection-margin)" }}>
-                    {otherCategories.map((category, index) => (
-                        <Col lg={6} md={12} sm={24} xs={24} key={category.id}>
-                            <div
-                                className="category-card"
-                                data-aos="blur-to-clear"
-                                data-aos-delay={300 + index * 100}
-                                data-aos-duration="1200"
-                                onClick={() => setSelectedCategory(category.id)}
-                                style={{ minHeight: "320px" }}
-                            >
-                                <div className="category-icon">
-                                    {category.icon}
-                                </div>
-                                <div className="category-content">
-                                    <h3 className="category-title">
-                                        {category.title}
-                                    </h3>
-                                    <p className="category-subtitle">
-                                        {category.subtitle}
-                                    </p>
-                                    <p className="category-description">
-                                        {category.description}
-                                    </p>
-                                    <div className="AnimatedbtnContainer">
-                                        <button className="ColourButton" style={{ width: "100%", justifyContent: "center" }}>
-                                            Learn More <MdKeyboardArrowRight />
-                                        </button>
-                                    </div>
-                                </div>
+            {/* Mechanical Properties Table */}
+            <div style={{ marginBottom: "var(--section-margin)" }}>
+                <h3 className="BigHeading textCenter">Mechanical Properties</h3>
+                <div className="GraphImage">
+                    <Table columns={marteniticData.mechanicalColumns} dataSource={marteniticData.mechanicalData} />
+                </div>
+            </div>
+
+            {/* Applications */}
+            <div style={{ marginBottom: "var(--section-margin)" }}>
+                <h3 className="BigHeading textCenter">Applications</h3>
+                <div className="property-card">
+                    <div className="property-content">
+                        <p style={{ marginBottom: "20px", fontSize: "1.1rem", lineHeight: "1.6" }}>
+                            <strong>Used for high-strength applications:</strong> tool steels, cutlery, fasteners, dies, surgical and dental instruments. Also used in petrochemical industry for gas and steam turbine blades.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+
+    const renderDuplexContent = () => (
+        <div>
+            <Row gutter={[24, 24]} style={{ marginBottom: "var(--section-margin)" }}>
+                <Col lg={12}>
+                    <div className="AboutUsContentContainer">
+                        <div>
+                            <p data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
+                                <strong>Duplex stainless steel offers excellent resistance to corrosion and very high mechanical strength.</strong> The high corrosion resistance ensures significantly more uptime, while the mechanical strength allows for lighter constructions and more compact system design.
+                            </p>
+                            <br />
+                            <h4 style={{ color: "#617E87", fontSize: "1.2rem", marginBottom: "15px" }}>
+                                An alternative to nickel alloys
+                            </h4>
+                            <p data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">
+                                Using our metallurgical expertise, we continue to achieve breakthroughs in duplex stainless steel, adding more specialized, higher performance products.
+                            </p>
+                        </div>
+                    </div>
+                </Col>
+                <Col lg={12}>
+                    <div className="AboutUsImageContainer" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
+                        <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AusteniticSteelNew.png" alt="Duplex Steel" loading="lazy" />
+                    </div>
+                </Col>
+            </Row>
+
+            {/* Chemical Properties Table */}
+            <div style={{ marginBottom: "var(--section-margin)" }}>
+                <h3 className="BigHeading textCenter">Chemical Properties</h3>
+                <div className="GraphImage">
+                    <Table columns={duplexData.columns} dataSource={duplexData.data} pagination={{ pageSize: 10 }} />
+                </div>
+            </div>
+
+            {/* Mechanical Properties */}
+            <div style={{ marginBottom: "var(--section-margin)" }}>
+                <h3 className="BigHeading textCenter">Mechanical Properties</h3>
+                <Row gutter={[32, 32]}>
+                    <Col lg={12} md={24} style={{ width: "100%" }}>
+                        <div className="property-card">
+                            <div className="property-header">
+                                <h4 className="property-title">Duplex 2205</h4>
                             </div>
-                        </Col>
-                    ))}
+                            <div className="property-content">
+                                <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                                    <thead>
+                                        <tr style={{ backgroundColor: "#617E87", color: "white" }}>
+                                            <th style={{ padding: "12px", border: "1px solid #ddd", textAlign: "center" }}>Property</th>
+                                            <th style={{ padding: "12px", border: "1px solid #ddd", textAlign: "center" }}>Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td style={{ padding: "10px", border: "1px solid #ddd" }}>Density</td><td style={{ padding: "10px", border: "1px solid #ddd", textAlign: "center" }}>7.83 g/cm3</td></tr>
+                                        <tr><td style={{ padding: "10px", border: "1px solid #ddd" }}>Melting Range</td><td style={{ padding: "10px", border: "1px solid #ddd", textAlign: "center" }}>1385-1440°C</td></tr>
+                                        <tr><td style={{ padding: "10px", border: "1px solid #ddd" }}>Tensile Strength</td><td style={{ padding: "10px", border: "1px solid #ddd", textAlign: "center" }}>655 MPa</td></tr>
+                                        <tr><td style={{ padding: "10px", border: "1px solid #ddd" }}>Yield Strength</td><td style={{ padding: "10px", border: "1px solid #ddd", textAlign: "center" }}>450 MPa</td></tr>
+                                        <tr><td style={{ padding: "10px", border: "1px solid #ddd" }}>Elongation</td><td style={{ padding: "10px", border: "1px solid #ddd", textAlign: "center" }}>25%</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col lg={12} md={24} style={{ width: "100%" }}>
+                        <div className="property-card">
+                            <div className="property-header">
+                                <h4 className="property-title">S.S. 2507</h4>
+                            </div>
+                            <div className="property-content">
+                                <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                                    <thead>
+                                        <tr style={{ backgroundColor: "#840000", color: "white" }}>
+                                            <th style={{ padding: "12px", border: "1px solid #ddd", textAlign: "center" }}>Property</th>
+                                            <th style={{ padding: "12px", border: "1px solid #ddd", textAlign: "center" }}>Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td style={{ padding: "10px", border: "1px solid #ddd" }}>Density</td><td style={{ padding: "10px", border: "1px solid #ddd", textAlign: "center" }}>7.8 g/cm3</td></tr>
+                                        <tr><td style={{ padding: "10px", border: "1px solid #ddd" }}>Melting Range</td><td style={{ padding: "10px", border: "1px solid #ddd", textAlign: "center" }}>1350°C</td></tr>
+                                        <tr><td style={{ padding: "10px", border: "1px solid #ddd" }}>Tensile Strength</td><td style={{ padding: "10px", border: "1px solid #ddd", textAlign: "center" }}>799 MPa</td></tr>
+                                        <tr><td style={{ padding: "10px", border: "1px solid #ddd" }}>Yield Strength</td><td style={{ padding: "10px", border: "1px solid #ddd", textAlign: "center" }}>551 MPa</td></tr>
+                                        <tr><td style={{ padding: "10px", border: "1px solid #ddd" }}>Elongation</td><td style={{ padding: "10px", border: "1px solid #ddd", textAlign: "center" }}>15%</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </Col>
                 </Row>
             </div>
-        );
-    };
 
-    // Detailed Category View - Single Dynamic Component
-    const renderCategoryDetail = (categoryId) => {
-        const category = steelCategories.find(cat => cat.id === categoryId);
-
-        return (
-            <section style={marginVariables}>
-                <div id="MetalgradesContainer" className="contentInfoContainer" style={{ paddingBottom: "0px" }}>
-                    {/* Back Button */}
-                    <div style={{ marginBottom: "var(--button-margin)" }}>
-                        <div className="AnimatedbtnContainer">
-                            <button
-                                className="ColourButton"
-                                onClick={() => setSelectedCategory(null)}
-                                style={{ justifyContent: "center", display: "flex", alignItems: "center", gap: "8px" }}
-                            >
-                                <ArrowLeftOutlined /> Back to All Categories
-                            </button>
-                        </div>
-                    </div>
-
-                    {/* Category Header */}
-                    <div>
-                        <div className="containerGap">
-                            <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">
-                                {category?.title}
-                            </h2>
-                            <p className="textCenter" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200" style={{ fontSize: "1.1rem", color: "#617E87", fontStyle: "italic" }}>
-                                {category?.subtitle}
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Dynamic Content Based on Category */}
-                    {categoryId === 'austenitic' ? (
-                        // Austenitic Steel - Full Content
-                        <>
-                            <div>
-                                <Row>
-                                    <Col lg={12}>
-                                        <div className="AboutUsContentContainer">
-                                            <div>
-                                                <p data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
-                                                    Austenitic steels are non-magnetic stainless steels with high chromium and nickel content and low carbon levels. They are the most widely used stainless steel grade, with the most common composition being 18% chromium and 8% nickel, also known as 18/8 steel.
-                                                </p>
-                                                <br />
-                                                <p data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
-                                                    Austenitic steels are generally classified into two groups: the Chromium-Nickel AISI 300 series and the Chromium-Nickel-Manganese 200 series. Adding 2-3% molybdenum enhances corrosion resistance, often referred to as "acid-proof steel." Grade 304 is the most common type, typically containing 18% chromium and 8% nickel.
-                                                </p>
-                                                <br />
-                                                <p data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
-                                                    Bhawal Metal Industries works with all materials in this grade, including Bright Round Bars, PSQ Bars, Flat Bars, HR Bars & RCS, Cold Drawn Round/Flat/Square/Hexagon Bars, Forged Components, and Precision Components.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </Col>
-                                    <Col lg={12} style={{ width: "100%" }}>
-                                        <div>
-                                            <div className="AboutUsImageContainer" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
-                                                <img src="/Images/Metalgrades.jpeg" alt="" loading="lazy" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200" />
-                                            </div>
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </div>
-
-                            {/* Chemical Properties Table */}
-                            <div>
-                                <div className="containerGap">
-                                    <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="400" data-aos-duration="1200">
-                                        Chemical Properties of Austenitic Steel
-                                    </h2>
-                                </div>
-                                <div className="GraphImage">
-                                    <Table columns={austeniticData.columns} dataSource={austeniticData.data} pagination={{ pageSize: 20 }} data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200" />
-                                </div>
-                            </div>
-
-                            {/* Mechanical Properties Table */}
-                            <div>
-                                <div className="containerGap">
-                                    <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="500" data-aos-duration="1200">
-                                        Mechanical Properties of Austenitic Steel
-                                    </h2>
-                                </div>
-                                <div className="GraphImage">
-                                    <Table columns={austeniticData.mechanicalColumns} dataSource={austeniticData.mechanicalData} data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200" />
-                                </div>
-                            </div>
-
-                            {/* Key Properties & Applications Section */}
-                            <div>
-                                <div className="containerGap">
-                                    <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
-                                        Key Properties & Applications
-                                    </h2>
-                                    <p className="textCenter" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">
-                                        Understanding the fundamental characteristics that make austenitic stainless steel the preferred choice across industries
-                                    </p>
-                                </div>
-
-                                <Row gutter={[24, 24]} style={{ marginTop: "40px" }}>
-                                    {/* Formability Card */}
-                                    <Col lg={12} md={24} sm={24} xs={24}>
-                                        <div className="property-card" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
-                                            <div className="property-header">
-                                                <h3 className="property-title">Formability</h3>
-                                            </div>
-                                            <div className="property-content">
-                                                <ul className="property-list">
-                                                    <li>Austenitic stainless steels are generally exhibits excellent formability.</li>
-                                                    <li>In welded joints, good mechanical strength is developed without the necessity of preheating or post-weld annealing. It is advised to use heat treatment process or alternative selection of low carbon grades to prevent corrosion in the weld area.</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </Col>
-
-                                    {/* Strength at Temperature Card */}
-                                    <Col lg={12} md={24} sm={24} xs={24}>
-                                        <div className="property-card" data-aos="blur-to-clear" data-aos-delay="400" data-aos-duration="1200">
-                                            <div className="property-header">
-                                                <h3 className="property-title">Strength at Temperature</h3>
-                                            </div>
-                                            <div className="property-content">
-                                                <ul className="property-list">
-                                                    <li>These steels are well suited to both higher service temperatures of around 600°C – or even higher if scaling resistance is the only consideration and extremely low cryogenic temperatures, depending on the load and permissible distortion.</li>
-                                                    <li>At sub-zero temperatures, some austenitic steel grades retain good ductility and impact strength. These alloys also maintain tensile and creep strength at elevated temperatures.</li>
-                                                    <li>They are used for the storage of liquefied gases at cryogenic temperatures and for heat exchangers & pollution control equipment at high temperatures.</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </Col>
-                                </Row>
-                                <br /><br /><br />
-                                <br />
-
-                                {/* Application by Grade Section */}
-                                <div style={{ marginTop: "60px" }}>
-                                    <div className="containerGap">
-                                        <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="500" data-aos-duration="1200">
-                                            Application by Grade
-                                        </h2>
-                                        <p className="textCenter" data-aos="blur-to-clear" data-aos-delay="600" data-aos-duration="1200">
-                                            Specialized applications for different stainless steel grades across various industries
-                                        </p>
-                                    </div>
-
-                                    <Row gutter={[24, 24]} style={{ marginTop: "40px" }}>
-                                        {/* 304 and 304L Grade */}
-                                        <Col lg={6} md={12} sm={24} xs={24}>
-                                            <div className="grade-application-card" data-aos="blur-to-clear" data-aos-delay="700" data-aos-duration="1200">
-                                                <div className="grade-header">
-                                                    <h4 className="grade-title">304 AND 304L</h4>
-                                                    <p className="grade-subtitle">(Standard Grade)</p>
-                                                </div>
-                                                <div className="grade-content">
-                                                    <p>Used for Tanks, Storage vessels and pipes for corrosive liquids, mining, chemical, cryogenic, food and beverage, Cutlery, Architecture, Sinks, food processing, domestic sinks and tubs, pharmaceutical equipment and deep drawing applications</p>
-                                                </div>
-                                            </div>
-                                        </Col>
-
-                                        {/* 310 Grade */}
-                                        <Col lg={6} md={12} sm={24} xs={24}>
-                                            <div className="grade-application-card" data-aos="blur-to-clear" data-aos-delay="800" data-aos-duration="1200">
-                                                <div className="grade-header">
-                                                    <h4 className="grade-title">310 (High Chrome and Nickel Grades)</h4>
-                                                </div>
-                                                <div className="grade-content">
-                                                    <p>Furnace parts and equipment, kiln, and catalytic converter components. Also resistant to temperature 900°C to 1100°C.</p>
-                                                </div>
-                                            </div>
-                                        </Col>
-
-                                        {/* 316 and 316L Grade */}
-                                        <Col lg={6} md={12} sm={24} xs={24}>
-                                            <div className="grade-application-card" data-aos="blur-to-clear" data-aos-delay="900" data-aos-duration="1200">
-                                                <div className="grade-header">
-                                                    <h4 className="grade-title">316 AND 316L (High Moly Content Grades)</h4>
-                                                </div>
-                                                <div className="grade-content">
-                                                    <p>Used where higher corrosion resistance is required, i.e. marine equipment, Chemical storage tanks, pressure vessels, and piping.</p>
-                                                </div>
-                                            </div>
-                                        </Col>
-
-                                        {/* 321 and 316Ti Grade */}
-                                        <Col lg={6} md={12} sm={24} xs={24}>
-                                            <div className="grade-application-card" data-aos="blur-to-clear" data-aos-delay="1000" data-aos-duration="1200">
-                                                <div className="grade-header">
-                                                    <h4 className="grade-title">321 AND 316Ti ("Stabilized" Grades)</h4>
-                                                </div>
-                                                <div className="grade-content">
-                                                    <p>A titanium stabilised version of 316 is used where high temperature strength & good resistance to intergranular corrosion is required. Also used for superheaters, compensators & expansion bellows.</p>
-                                                </div>
-                                            </div>
-                                        </Col>
-                                    </Row>
-                                </div>
-                            </div>
-                        </>
-                    ) : categoryId === 'martensitic' ? (
-                        // Martensitic Steel - Full Content
-                        <>
-                            <div>
-                                <Row>
-                                    <Col lg={12}>
-                                        <div className="AboutUsContentContainer">
-                                            <div>
-                                                <p data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
-                                                    Martensitic stainless steels are a class of stainless steels that are classified as the 400 series. The carbon content of martensitic stainless steels ranges from 0.15 to 1.2%, while the chromium content ranges from 10.5 to 18%. These steels can be hardened and tempered, similar to carbon steels, and are ferromagnetic.
-                                                </p>
-                                                <br />
-                                                <p data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
-                                                    The crystal structure of martensitic stainless steels is body-centered cubic (BCC), which gives them their characteristic magnetic properties and high strength. They are heat treatable and can achieve high hardness levels through proper quenching and tempering processes.
-                                                </p>
-                                                <br />
-                                                <p data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
-                                                    Due to their high carbon content, welding of martensitic stainless steels requires special consideration to prevent cracking. Preheating and post-weld heat treatment are often necessary to achieve desired properties and prevent defects.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </Col>
-                                    <Col lg={12} style={{ width: "100%" }}>
-                                        <div>
-                                            <div className="AboutUsImageContainer" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
-                                                <img src="/Images/Metalgrades.jpeg" alt="" loading="lazy" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200" />
-                                            </div>
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </div>
-
-                            {/* Chemical Properties Table */}
-                            <div>
-                                <div className="containerGap">
-                                    <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="400" data-aos-duration="1200">
-                                        Chemical Properties of Martensitic Steel
-                                    </h2>
-                                </div>
-                                <div className="GraphImage">
-                                    <Table columns={marteniticData.columns} dataSource={marteniticData.data} pagination={{ pageSize: 20 }} data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200" />
-                                </div>
-                            </div>
-
-                            {/* Mechanical Properties Table */}
-                            <div>
-                                <div className="containerGap">
-                                    <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="500" data-aos-duration="1200">
-                                        Mechanical Properties of Martensitic Steel
-                                    </h2>
-                                </div>
-                                <div className="GraphImage">
-                                    <Table columns={marteniticData.mechanicalColumns} dataSource={marteniticData.mechanicalData} data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200" />
-                                </div>
-                            </div>
-
-                            {/* Key Properties & Applications Section */}
-                            <div>
-                                <div className="containerGap">
-                                    <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
-                                        Key Properties & Applications
-                                    </h2>
-                                    <p className="textCenter" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">
-                                        Understanding the fundamental characteristics that make martensitic stainless steel ideal for high-strength applications
-                                    </p>
-                                </div>
-
-                                <Row gutter={[24, 24]} style={{ marginTop: "var(--subsection-margin)" }}>
-                                    {/* Formability Card */}
-                                    <Col lg={8} md={12} sm={24} xs={24}>
-                                        <div className="property-card" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
-                                            <div className="property-header">
-                                                <h3 className="property-title">Formability</h3>
-                                            </div>
-                                            <div className="property-content">
-                                                <ul className="property-list">
-                                                    <li>Martensitic grades are moderately cold formed due to high carbon content.</li>
-                                                    <li>The strength obtained by heat treatment depends on the carbon content of the steels.</li>
-                                                    <li>Increasing the carbon content increases the strength and hardness potential but decreases ductility and toughness.</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </Col>
-
-                                    {/* Weldability Card */}
-                                    <Col lg={8} md={12} sm={24} xs={24}>
-                                        <div className="property-card" data-aos="blur-to-clear" data-aos-delay="400" data-aos-duration="1200">
-                                            <div className="property-header">
-                                                <h3 className="property-title">Weldability</h3>
-                                            </div>
-                                            <div className="property-content">
-                                                <ul className="property-list">
-                                                    <li>It offers very limited weldability due to its hardenability.</li>
-                                                    <li>Special consideration may be required to prevent cracking by preheating and post weld heat treatment.</li>
-                                                    <li>Proper procedures needed to achieve desired characteristics/properties.</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </Col>
-
-                                    {/* Corrosion Resistance Card */}
-                                    <Col lg={8} md={12} sm={24} xs={24}>
-                                        <div className="property-card" data-aos="blur-to-clear" data-aos-delay="500" data-aos-duration="1200">
-                                            <div className="property-header">
-                                                <h3 className="property-title">Corrosion Resistance</h3>
-                                            </div>
-                                            <div className="property-content">
-                                                <ul className="property-list">
-                                                    <li>Martensitic grades generally exhibits moderate corrosion resistance due to high carbon content.</li>
-                                                    <li>Suitable for applications where material is subjected to both corrosion and wear.</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </Col>
-                                </Row>
-                                <br /><br /><br />
-                                {/* Applications Section */}
-                                <div style={{ marginTop: "var(--section-margin)" }}>
-                                    <div className="containerGap">
-                                        <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
-                                            Applications of Martensitic Stainless Steels
-                                        </h2>
-                                    </div>
-
-                                    <Row gutter={[32, 32]} style={{ marginTop: "var(--subsection-margin)" }}>
-                                        <Col lg={24} md={24} sm={24} xs={24}>
-                                            <div className="property-card" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">
-                                                <div className="property-content">
-                                                    <p style={{ marginBottom: "20px", fontSize: "1.1rem", lineHeight: "1.6" }}>
-                                                        <strong>Martensitic stainless steels are used where the application requires good tensile strength, creep, and fatigue strength properties.</strong> Due to their high strength in combination with some corrosion resistance, martensitic steels are suitable for applications where the material is subjected to both corrosion and wear.
-                                                    </p>
-                                                    <p style={{ fontSize: "1.1rem", lineHeight: "1.6", marginBottom: "30px" }}>
-                                                        Martensitic steels with high carbon content are often used for <strong>tool steels, cutlery, fasteners, dies, surgical and dental instruments.</strong> They are also used in petrochemical industry for <strong>gas and steam turbine blades.</strong>
-                                                    </p>
-                                                    {/* <div className="AnimatedbtnContainer" style={{ textAlign: "center" }}>
-                                                        <button className="ColourButton" style={{ justifyContent: "center", display: "flex", alignItems: "center", gap: "8px", margin: "0 auto" }}>
-                                                            Get Quote for Martensitic Steel <MdKeyboardArrowRight />
-                                                        </button>
-                                                    </div> */}
-                                                </div>
-                                            </div>
-                                        </Col>
-                                    </Row>
-                                </div>
-                                <br /><br /><br />
-                                <br />
-
-                                {/* Application by Grade Section */}
-                                <div style={{ marginTop: "var(--section-margin)" }}>
-                                    <div className="containerGap">
-                                        <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="500" data-aos-duration="1200">
-                                            Application by Grade
-                                        </h2>
-                                        <p className="textCenter" data-aos="blur-to-clear" data-aos-delay="600" data-aos-duration="1200">
-                                            Specialized applications for different martensitic stainless steel grades across various industries
-                                        </p>
-                                    </div>
-
-                                    <Row gutter={[24, 24]} style={{ marginTop: "var(--subsection-margin)" }}>
-                                        {/* 410 Grade */}
-                                        <Col lg={6} md={12} sm={24} xs={24}>
-                                            <div className="grade-application-card" data-aos="blur-to-clear" data-aos-delay="700" data-aos-duration="1200">
-                                                <div className="grade-header">
-                                                    <h4 className="grade-title">410</h4>
-                                                    <p className="grade-subtitle">(Basic Martensitic Grade)</p>
-                                                </div>
-                                                <div className="grade-content">
-                                                    <p>Used for cutlery, surgical instruments, valve parts, pump shafts, bolts, screws, and general engineering applications requiring moderate corrosion resistance and high strength.</p>
-                                                    <div className="AnimatedbtnContainer" style={{ marginTop: "var(--small-margin)" }}>
-                                                        <button className="ColourButton" style={{ width: "100%", justifyContent: "center", fontSize: "0.9rem", padding: "8px 16px" }}>
-                                                            Grade 410 Quote <MdKeyboardArrowRight />
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Col>
-
-                                        {/* 416 Grade */}
-                                        <Col lg={6} md={12} sm={24} xs={24}>
-                                            <div className="grade-application-card" data-aos="blur-to-clear" data-aos-delay="800" data-aos-duration="1200">
-                                                <div className="grade-header">
-                                                    <h4 className="grade-title">416</h4>
-                                                    <p className="grade-subtitle">(Free Machining Grade)</p>
-                                                </div>
-                                                <div className="grade-content">
-                                                    <p>Excellent machinability due to sulfur addition. Used for precision machined parts, valve components, pump parts, and aircraft fittings.</p>
-                                                    <div className="AnimatedbtnContainer" style={{ marginTop: "var(--small-margin)" }}>
-                                                        <button className="ColourButton" style={{ width: "100%", justifyContent: "center", fontSize: "0.9rem", padding: "8px 16px" }}>
-                                                            Grade 416 Quote <MdKeyboardArrowRight />
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Col>
-
-                                        {/* 420 Grade */}
-                                        <Col lg={6} md={12} sm={24} xs={24}>
-                                            <div className="grade-application-card" data-aos="blur-to-clear" data-aos-delay="900" data-aos-duration="1200">
-                                                <div className="grade-header">
-                                                    <h4 className="grade-title">420</h4>
-                                                    <p className="grade-subtitle">(High Carbon Grade)</p>
-                                                </div>
-                                                <div className="grade-content">
-                                                    <p>High hardness and wear resistance. Used for cutting tools, surgical instruments, dental instruments, springs, and measuring tools.</p>
-                                                    <div className="AnimatedbtnContainer" style={{ marginTop: "var(--small-margin)" }}>
-                                                        <button className="ColourButton" style={{ width: "100%", justifyContent: "center", fontSize: "0.9rem", padding: "8px 16px" }}>
-                                                            Grade 420 Quote <MdKeyboardArrowRight />
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Col>
-
-                                        {/* 430F & 431 Grade */}
-                                        <Col lg={6} md={12} sm={24} xs={24}>
-                                            <div className="grade-application-card" data-aos="blur-to-clear" data-aos-delay="1000" data-aos-duration="1200">
-                                                <div className="grade-header">
-                                                    <h4 className="grade-title">430F & 431</h4>
-                                                    <p className="grade-subtitle">(Specialized Grades)</p>
-                                                </div>
-                                                <div className="grade-content">
-                                                    <p>430F offers free machining properties, while 431 provides higher strength and corrosion resistance for aerospace and high-performance applications.</p>
-                                                    <div className="AnimatedbtnContainer" style={{ marginTop: "var(--small-margin)" }}>
-                                                        <button className="ColourButton" style={{ width: "100%", justifyContent: "center", fontSize: "0.9rem", padding: "8px 16px" }}>
-                                                            Grade 430F/431 Quote <MdKeyboardArrowRight />
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Col>
-                                    </Row>
-                                </div>
-                            </div>
-                        </>
-                    ) : categoryId === 'duplex' ? (
-                        // Duplex Stainless Steel - Full Content
-                        <>
-                            <div>
-                                <Row>
-                                    <Col lg={12}>
-                                        <div className="AboutUsContentContainer">
-                                            <div>
-                                                <p data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
-                                                    <strong>Duplex stainless steel offers excellent resistance to corrosion and very high mechanical strength.</strong> The high corrosion resistance of duplex stainless steel ensures significantly more uptime than carbon steels and conventional stainless steels, while the mechanical strength allows for lighter constructions, a more compact system design and less welding.
-                                                </p>
-                                                <br />
-                                                <h3 data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200" style={{ color: "#617E87", fontSize: "1.4rem", marginBottom: "15px" }}>
-                                                    An alternative to nickel alloys
-                                                </h3>
-                                                <p data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
-                                                    Using our metallurgical expertise, we continue to achieve breakthroughs in the area of duplex stainless steel, adding more specialized, higher performance products to the program.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </Col>
-                                    <Col lg={12} style={{ width: "100%" }}>
-                                        <div>
-                                            <div className="AboutUsImageContainer" data-aos="blur-to-clear" data-aos-delay="400" data-aos-duration="1200">
-                                                <img src="/Images/Metalgrades.jpeg" alt="Duplex Stainless Steel" loading="lazy" data-aos="blur-to-clear" data-aos-delay="500" data-aos-duration="1200" />
-                                            </div>
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </div>
-
-                            {/* Chemical Properties Table */}
-                            <div style={{ marginTop: "var(--section-margin)" }}>
-                                <div className="containerGap">
-                                    <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="400" data-aos-duration="1200">
-                                        Chemical Properties of Duplex Stainless Steels
-                                    </h2>
-                                </div>
-                                <div className="GraphImage">
-                                    <Table columns={duplexData.columns} dataSource={duplexData.data} pagination={{ pageSize: 10 }} data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200" />
-                                </div>
-                            </div>
-
-                            {/* Mechanical Properties Section */}
-                            <div style={{ marginTop: "var(--section-margin)" }}>
-                                <div className="containerGap">
-                                    <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
-                                        Mechanical Properties of Duplex Stainless Steels
-                                    </h2>
-                                </div>
-
-                                <Row gutter={[32, 32]} style={{ marginTop: "var(--subsection-margin)" }}>
-                                    {/* Duplex 2205 Properties */}
-                                    <Col lg={12} md={24} sm={24} xs={24}>
-                                        <div className="property-card" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">
-                                            <div className="property-header">
-                                                <h3 className="property-title">Mechanical Properties of Duplex 2205</h3>
-                                            </div>
-                                            <div className="property-content">
-                                                <div className="mechanical-properties-table">
-                                                    <table style={{ width: "100%", borderCollapse: "collapse" }}>
-                                                        <thead>
-                                                            <tr style={{ backgroundColor: "#617E87", color: "white" }}>
-                                                                <th style={{ padding: "12px", border: "1px solid #ddd", textAlign: "center" }}>Density</th>
-                                                                <th style={{ padding: "12px", border: "1px solid #ddd", textAlign: "center" }}>Melting Range</th>
-                                                                <th style={{ padding: "12px", border: "1px solid #ddd", textAlign: "center" }}>Tensile Strength</th>
-                                                                <th style={{ padding: "12px", border: "1px solid #ddd", textAlign: "center" }}>Yield Strength (0.2%Offset)</th>
-                                                                <th style={{ padding: "12px", border: "1px solid #ddd", textAlign: "center" }}>Elongation</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr style={{ backgroundColor: "#f9f9f9" }}>
-                                                                <td style={{ padding: "10px", border: "1px solid #ddd", textAlign: "center" }}>7.83 g/cm3</td>
-                                                                <td style={{ padding: "10px", border: "1px solid #ddd", textAlign: "center" }}>1385-1440°C</td>
-                                                                <td style={{ padding: "10px", border: "1px solid #ddd", textAlign: "center" }}>MPa - 655</td>
-                                                                <td style={{ padding: "10px", border: "1px solid #ddd", textAlign: "center" }}>MPa - 450</td>
-                                                                <td style={{ padding: "10px", border: "1px solid #ddd", textAlign: "center" }}>25 %</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Col>
-
-                                    {/* Duplex 2507 Properties */}
-                                    <Col lg={12} md={24} sm={24} xs={24}>
-                                        <div className="property-card" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
-                                            <div className="property-header">
-                                                <h3 className="property-title">Mechanical Properties of S.S. 2507</h3>
-                                            </div>
-                                            <div className="property-content">
-                                                <div className="mechanical-properties-table">
-                                                    <table style={{ width: "100%", borderCollapse: "collapse" }}>
-                                                        <thead>
-                                                            <tr style={{ backgroundColor: "#840000", color: "white" }}>
-                                                                <th style={{ padding: "12px", border: "1px solid #ddd", textAlign: "center" }}>Density</th>
-                                                                <th style={{ padding: "12px", border: "1px solid #ddd", textAlign: "center" }}>Melting Range</th>
-                                                                <th style={{ padding: "12px", border: "1px solid #ddd", textAlign: "center" }}>Tensile Strength</th>
-                                                                <th style={{ padding: "12px", border: "1px solid #ddd", textAlign: "center" }}>Yield Strength (0.2%Offset)</th>
-                                                                <th style={{ padding: "12px", border: "1px solid #ddd", textAlign: "center" }}>Elongation</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr style={{ backgroundColor: "#f9f9f9" }}>
-                                                                <td style={{ padding: "10px", border: "1px solid #ddd", textAlign: "center" }}>7.8 g/cm3</td>
-                                                                <td style={{ padding: "10px", border: "1px solid #ddd", textAlign: "center" }}>1350°C</td>
-                                                                <td style={{ padding: "10px", border: "1px solid #ddd", textAlign: "center" }}>MPa - 799</td>
-                                                                <td style={{ padding: "10px", border: "1px solid #ddd", textAlign: "center" }}>MPa - 551</td>
-                                                                <td style={{ padding: "10px", border: "1px solid #ddd", textAlign: "center" }}>15 %</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </div>
-
-                            {/* Applications Section */}
-                            <div style={{ marginTop: "var(--section-margin)" }}>
-                                <div className="containerGap">
-                                    <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
-                                        Applications of Duplex Stainless Steels
-                                    </h2>
-                                </div>
-
-                                <Row gutter={[32, 32]} style={{ marginTop: "var(--subsection-margin)" }}>
-                                    {/* Applications List */}
-                                    <Col lg={12} md={24} sm={24} xs={24}>
-                                        <div className="property-card" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">
-                                            <div className="property-content" style={{ padding: "30px" }}>
-                                                <ul className="applications-list" style={{ listStyle: "none", padding: "0", margin: "0" }}>
-                                                    <li style={{ marginBottom: "15px", fontSize: "1.1rem", lineHeight: "1.6", color: "#555" }}>
-                                                        • <strong>Architecture</strong> - waterfront building
-                                                    </li>
-                                                    <li style={{ marginBottom: "15px", fontSize: "1.1rem", lineHeight: "1.6", color: "#555" }}>
-                                                        • <strong>Infrastructure:</strong> bridge, sea walls, piers, tunnels.
-                                                    </li>
-                                                    <li style={{ marginBottom: "15px", fontSize: "1.1rem", lineHeight: "1.6", color: "#555" }}>
-                                                        • <strong>Oil and Gas:</strong> a wide range of equipment: flow lines, manifolds, risers, pumps, valves.
-                                                    </li>
-                                                    <li style={{ marginBottom: "15px", fontSize: "1.1rem", lineHeight: "1.6", color: "#555" }}>
-                                                        • <strong>Pulp and Paper:</strong> digesters, pressure vessels, liquor tanks etc.
-                                                    </li>
-                                                    <li style={{ marginBottom: "15px", fontSize: "1.1rem", lineHeight: "1.6", color: "#555" }}>
-                                                        • <strong>Chemical engineering:</strong> pressure vessels, heat exchangers, condensers, distillation columns, agitators, marine chemical tankers.
-                                                    </li>
-                                                    <li style={{ marginBottom: "15px", fontSize: "1.1rem", lineHeight: "1.6", color: "#555" }}>
-                                                        • <strong>Water:</strong> desalination plants, large tanks for water storage, waste water treatment
-                                                    </li>
-                                                    <li style={{ marginBottom: "15px", fontSize: "1.1rem", lineHeight: "1.6", color: "#555" }}>
-                                                        • <strong>renewable energy:</strong> Biogas tanks
-                                                    </li>
-                                                    <li style={{ marginBottom: "15px", fontSize: "1.1rem", lineHeight: "1.6", color: "#555" }}>
-                                                        • <strong>Mobility:</strong> tramcars and bus frames, tank trucks, iron ore wagons.
-                                                    </li>
-                                                    <li style={{ marginBottom: "0px", fontSize: "1.1rem", lineHeight: "1.6", color: "#555" }}>
-                                                        • <strong>Engineering:</strong> pumps, valves, fittings, springs, etc.
-                                                    </li>
-                                                </ul>
-                                                {/* <div className="AnimatedbtnContainer" style={{ marginTop: "var(--table-margin)", textAlign: "center" }}>
-                                                    <button className="ColourButton" style={{ justifyContent: "center", display: "flex", alignItems: "center", gap: "8px", margin: "0 auto" }}>
-                                                        Get Quote for Duplex Steel <MdKeyboardArrowRight />
-                                                    </button>
-                                                </div> */}
-                                            </div>
-                                        </div>
-                                    </Col>
-
-                                    {/* Applications Image */}
-                                    <Col lg={12} md={24} sm={24} xs={24}>
-                                        <div className="AboutUsImageContainer" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
-                                            <img src="/Images/Metalgrades.jpeg" alt="Duplex Stainless Steel Applications" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "8px" }} />
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </div>
-                        </>
-                    ) : (
-                        // Other Categories - Coming Soon Content
-                        <div style={{ textAlign: "center", padding: "var(--section-margin) 20px" }}>
-                            <div style={{ fontSize: "4rem", marginBottom: "var(--button-margin)" }}>{category?.icon}</div>
-                            <h3 style={{ color: "#617E87", marginBottom: "var(--button-margin)" }}>Coming Soon</h3>
-                            <p style={{ fontSize: "1.1rem", maxWidth: "600px", margin: "0 auto", lineHeight: "1.6" }}>
-                                Detailed information about {category?.title.toLowerCase()} including chemical properties,
-                                mechanical properties, and applications will be available soon.
-                            </p>
-                            <div style={{ marginTop: "var(--subsection-margin)" }}>
-                                <p><strong>Key Features:</strong></p>
-                                <p>{category?.description}</p>
-                                <div className="AnimatedbtnContainer" style={{ marginTop: "var(--table-margin)" }}>
-                                    <button className="ColourButton" style={{ justifyContent: "center", display: "flex", alignItems: "center", gap: "8px", margin: "0 auto" }}>
-                                        Get Notified When Available <MdKeyboardArrowRight />
-                                    </button>
-                                </div>
+            {/* Applications */}
+            <div style={{ marginBottom: "var(--section-margin)" }}>
+                <h3 className="BigHeading textCenter">Applications</h3>
+                <Row gutter={[32, 32]}>
+                    <Col lg={12} md={24}>
+                        <div className="property-card">
+                            <div className="property-content">
+                                <ul style={{ listStyle: "none", padding: "0", margin: "0" }}>
+                                    <li style={{ marginBottom: "12px", fontSize: "1rem", lineHeight: "1.5" }}>• <strong>Architecture:</strong> waterfront buildings</li>
+                                    <li style={{ marginBottom: "12px", fontSize: "1rem", lineHeight: "1.5" }}>• <strong>Infrastructure:</strong> bridges, sea walls, piers, tunnels</li>
+                                    <li style={{ marginBottom: "12px", fontSize: "1rem", lineHeight: "1.5" }}>• <strong>Oil and Gas:</strong> flow lines, manifolds, risers, pumps, valves</li>
+                                    <li style={{ marginBottom: "12px", fontSize: "1rem", lineHeight: "1.5" }}>• <strong>Pulp and Paper:</strong> digesters, pressure vessels, liquor tanks</li>
+                                    <li style={{ marginBottom: "12px", fontSize: "1rem", lineHeight: "1.5" }}>• <strong>Chemical engineering:</strong> pressure vessels, heat exchangers</li>
+                                    <li style={{ marginBottom: "12px", fontSize: "1rem", lineHeight: "1.5" }}>• <strong>Water treatment:</strong> desalination plants, storage tanks</li>
+                                    <li style={{ marginBottom: "12px", fontSize: "1rem", lineHeight: "1.5" }}>• <strong>Renewable energy:</strong> biogas tanks</li>
+                                    <li style={{ marginBottom: "0px", fontSize: "1rem", lineHeight: "1.5" }}>• <strong>Engineering:</strong> pumps, valves, fittings, springs</li>
+                                </ul>
                             </div>
                         </div>
-                    )}
+                    </Col>
+                    <Col lg={12} md={24}>
+                        <div className="AboutUsImageContainer">
+                            <img src="/Images/Metalgrades.jpeg" alt="Duplex Applications" loading="lazy" style={{ width: "100%", height: "300px", objectFit: "cover", borderRadius: "8px" }} />
+                        </div>
+                    </Col>
+                </Row>
+            </div>
+        </div>
+    );
 
-                    {/* Other Categories Section - Always Show at Bottom */}
-                    {renderOtherCategories(categoryId)}
-                </div>
-            </section>
-        );
-    };
+    const renderPHContent = () => (
+        <div style={{ textAlign: "center" }}>
+            <div style={{ fontSize: "3rem", marginBottom: "20px" }}>🚀</div>
+            <h3 style={{ color: "#617E87", marginBottom: "20px" }}>Coming Soon</h3>
+            <p style={{ fontSize: "1.1rem", maxWidth: "600px", margin: "0 auto", lineHeight: "1.6" }}>
+                Detailed information about PH Stainless Steel including chemical properties, mechanical properties, and applications will be available soon.
+            </p>
+            <div style={{ marginTop: "30px" }}>
+                <p><strong>Key Features:</strong> High strength steels with excellent mechanical properties, perfect for aerospace, nuclear, and high-performance applications.</p>
+            </div>
+        </div>
+    );
 
     return (
         <>
-            <CommonHeaderCarousal 
-                slidesData={CarousalImages} 
-                heading={getCurrentPageTitle()} 
-                tagline="BHAWAL METAL INDUSTRIES" 
-                pageLink={getCurrentPageTitle()} 
+            <CommonHeaderCarousal
+                slidesData={CarousalImages}
+                heading={getCurrentPageTitle()}
+                tagline="BHAWAL METAL INDUSTRIES"
+                pageLink={getCurrentPageTitle()}
             />
-            {selectedCategory ? renderCategoryDetail(selectedCategory) : renderCategoriesOverview()}
+            <section style={marginVariables}>
+                <div id="MetalgradesContainer">
+                    {/* Introduction */}
+                    <div className="containerGap">
+                        <p data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">
+                            At Bhawal Metal Industries, we have strictly focused on stainless steel. Over time, we have continuously integrated our products within stainless steel materials to meet market demands and client requirements, adding more grades to our portfolio. Currently, the company's material offerings can be categorized into four main segments.
+                        </p>
+                    </div>
+
+                    <div className="containerGap">
+                        <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200">
+                            Our Stainless Steel Categories
+                        </h2>
+                        <p className="textCenter" data-aos="blur-to-clear" data-aos-delay="300" data-aos-duration="1200">
+                            Explore our comprehensive range of stainless steel grades designed for various industrial applications
+                        </p>
+                    </div>
+
+                    {/* Accordion Layout */}
+                    <div style={{ marginTop: "var(--section-margin)" }}>
+                        <Collapse
+                            expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />}
+                            ghost
+                            size="large"
+                            data-aos="blur-to-clear"
+                            data-aos-delay="400"
+                            data-aos-duration="1200"
+                            onChange={(activeKeys) => {
+                                // Handle mobile modal opening
+                                if (isMobile && activeKeys && activeKeys.length > 0) {
+                                    const key = activeKeys[activeKeys.length - 1];
+                                    let title = '';
+                                    switch (key) {
+                                        case 'austenitic':
+                                            title = 'Austenitic Steel';
+                                            break;
+                                        case 'martensitic':
+                                            title = 'Martensitic Stainless Steels';
+                                            break;
+                                        case 'duplex':
+                                            title = 'Duplex Stainless Steel';
+                                            break;
+                                        case 'precipitation':
+                                            title = 'PH Stainless Steel';
+                                            break;
+                                    }
+                                    handleMobileClick(key, title);
+                                }
+                            }}
+                        >
+                            {/* Austenitic Steel Panel */}
+                            <Panel
+                                header={
+                                    <div className="PanelRow">
+                                        <div style={{
+                                            fontSize: "2rem",
+                                            minWidth: "60px",
+                                            display: "flex",
+                                            justifyContent: "center"
+                                        }}>
+                                            🔬
+                                        </div>
+                                        <div>
+                                            <h3 style={{
+                                                margin: "0",
+                                                color: "#617E87",
+                                                fontSize: isMobile ? "1.2rem" : "1.5rem",
+                                                fontWeight: "600",
+                                                
+                                            }}>
+                                                Austenitic Steel
+                                            </h3>
+                                            <p style={{
+                                                margin: "5px 0 0 0",
+                                                color: "#666",
+                                                fontSize: isMobile ? "0.9rem" : "1rem",
+                                                
+                                            }}>
+                                                Non-magnetic steels with high chromium and nickel content
+                                            </p>
+                                        </div>
+                                        {isMobile && (
+                                            <div style={{
+                                                // marginLeft: "auto",
+                                                color: "#617E87",
+                                                fontSize: "0.8rem",
+                                                fontWeight: "500"
+                                            }}>
+                                                View More
+                                            </div>
+                                        )}
+                                    </div>
+                                }
+                                key="austenitic"
+                                style={{
+                                    marginBottom: "16px",
+                                    border: "1px solid #e8e8e8",
+                                    borderRadius: "8px",
+                                    overflow: "hidden"
+                                }}
+                                showArrow={!isMobile}
+                            >
+                                {!isMobile && renderAusteniticContent()}
+                            </Panel>
+
+                            {/* Martensitic Steel Panel */}
+                            <Panel
+                                header={
+                                    <div className="PanelRow">
+                                        <div style={{
+                                            fontSize: "2rem",
+                                            minWidth: "60px",
+                                            display: "flex",
+                                            justifyContent: "center"
+                                        }}>
+                                            ⚔️
+                                        </div>
+                                        <div>
+                                            <h3 style={{
+                                                margin: "0",
+                                                color: "#840000",
+                                                fontSize: isMobile ? "1.2rem" : "1.5rem",
+                                                fontWeight: "600",
+                                                
+                                            }}>
+                                                Martensitic Stainless Steels
+                                            </h3>
+                                            <p style={{
+                                                margin: "5px 0 0 0",
+                                                color: "#666",
+                                                fontSize: isMobile ? "0.9rem" : "1rem",
+                                                
+                                            }}>
+                                                Magnetic steels with high strength and hardness
+                                            </p>
+                                        </div>
+                                        {isMobile && (
+                                            <div style={{
+                                                // marginLeft: "auto",
+                                                color: "#840000",
+                                                fontSize: "0.8rem",
+                                                fontWeight: "500"
+                                            }}>
+                                                View More
+                                            </div>
+                                        )}
+                                    </div>
+                                }
+                                key="martensitic"
+                                style={{
+                                    marginBottom: "16px",
+                                    border: "1px solid #e8e8e8",
+                                    borderRadius: "8px",
+                                    overflow: "hidden"
+                                }}
+                                showArrow={!isMobile}
+                            >
+                                {!isMobile && renderMarteniticContent()}
+                            </Panel>
+
+                            {/* Duplex Steel Panel */}
+                            <Panel
+                                header={
+                                    <div className="PanelRow">
+                                        <div style={{
+                                            fontSize: "2rem",
+                                            minWidth: "60px",
+                                            display: "flex",
+                                            justifyContent: "center"
+                                        }}>
+                                            🔗
+                                        </div>
+                                        <div>
+                                            <h3 style={{
+                                                margin: "0",
+                                                color: "#617E87",
+                                                fontSize: isMobile ? "1.2rem" : "1.5rem",
+                                                fontWeight: "600",
+                                               
+                                            }}>
+                                                Duplex Stainless Steel
+                                            </h3>
+                                            <p style={{
+                                                margin: "5px 0 0 0",
+                                                color: "#666",
+                                                fontSize: isMobile ? "0.9rem" : "1rem",
+                                               
+                                            }}>
+                                                Combination of austenitic and ferritic structures
+                                            </p>
+                                        </div>
+                                        {isMobile && (
+                                            <div style={{
+                                                // marginLeft: "auto",
+                                                color: "#617E87",
+                                                fontSize: "0.8rem",
+                                                fontWeight: "500"
+                                            }}>
+                                                View More
+                                            </div>
+                                        )}
+                                    </div>
+                                }
+                                key="duplex"
+                                style={{
+                                    marginBottom: "16px",
+                                    border: "1px solid #e8e8e8",
+                                    borderRadius: "8px",
+                                    overflow: "hidden"
+                                }}
+                                showArrow={!isMobile}
+                            >
+                                {!isMobile && renderDuplexContent()}
+                            </Panel>
+
+                            {/* PH Steel Panel */}
+                            <Panel
+                                header={
+                                    <div className="PanelRow">
+                                        <div style={{
+                                            fontSize: "2rem",
+                                            minWidth: "60px",
+                                            display: "flex",
+                                            justifyContent: "center"
+                                        }}>
+                                            🚀
+                                        </div>
+                                        <div>
+                                            <h3 style={{
+                                                margin: "0",
+                                                color: "#840000",
+                                                fontSize: isMobile ? "1.2rem" : "1.5rem",
+                                                fontWeight: "600",
+                                                
+                                            }}>
+                                                PH Stainless Steel
+                                            </h3>
+                                            <p style={{
+                                                margin: "5px 0 0 0",
+                                                color: "#666",
+                                                fontSize: isMobile ? "0.9rem" : "1rem",
+                                                
+                                            }}>
+                                                High strength steels with excellent mechanical properties
+                                            </p>
+                                        </div>
+                                        {isMobile && (
+                                            <div style={{
+                                                // marginLeft: "auto",
+                                                color: "#840000",
+                                                fontSize: "0.8rem",
+                                                fontWeight: "500"
+                                            }}>
+                                                View More
+                                            </div>
+                                        )}
+                                    </div>
+                                }
+                                key="precipitation"
+                                style={{
+                                    marginBottom: "16px",
+                                    border: "1px solid #e8e8e8",
+                                    borderRadius: "8px",
+                                    overflow: "hidden"
+                                }}
+                                showArrow={!isMobile}
+                            >
+                                {!isMobile && renderPHContent()}
+                            </Panel>
+                        </Collapse>
+                    </div>
+                </div>
+            </section>
+
+            {/* Mobile Modal */}
+            <Modal
+                title={
+                    <div style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "15px",
+                        fontSize: "1.3rem",
+                        fontWeight: "600",
+                        color: "#333"
+                    }}>
+                        {selectedModalContent?.type === 'austenitic' && '🔬'}
+                        {selectedModalContent?.type === 'martensitic' && '⚔️'}
+                        {selectedModalContent?.type === 'duplex' && '🔗'}
+                        {selectedModalContent?.type === 'precipitation' && '🚀'}
+                        {selectedModalContent?.title}
+                    </div>
+                }
+                open={modalVisible}
+                onCancel={() => setModalVisible(false)}
+                footer={null}
+                width="95vw"
+                style={{
+                    top: 20,
+                    maxWidth: "100%",
+                    margin: "0 auto",
+                    padding: "0px"
+                }}
+                bodyStyle={{
+                    padding: "00px 0px",
+                    maxHeight: "80vh",
+                    overflowY: "auto"
+                }}
+                closeIcon={<CloseOutlined style={{ fontSize: "18px", color: "#666" }} />}
+                maskClosable={true}
+                destroyOnClose={true}
+                className="modal-container"
+            >
+                <div style={{
+                    fontSize: "0.95rem",
+                    lineHeight: "1.6"
+                }}>
+                    {getModalContent()}
+                </div>
+            </Modal>
         </>
     );
 };

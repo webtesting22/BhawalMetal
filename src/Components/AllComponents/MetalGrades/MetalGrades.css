@@ -343,6 +343,12 @@
     font-size: 0.95rem;
 }
 
+.PanelRow {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     #MetalgradesContainer .category-card {
@@ -359,7 +365,33 @@
     }
 }
 
+.ant-collapse-header {
+    align-items: center !important;
+}
+
 @media (max-width: 992px) {
+
+    .PanelRow {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .PanelRow>div h3,
+    .PanelRow>div p {
+        text-align: center;
+    }
+
+    .modal-container .ant-modal-body {
+        padding: 20px 0px !important;
+    }
+
+    .ant-modal-wrap {
+        display: flex;
+        justify-content: center;
+    }
+
     #MetalgradesContainer .category-card {
         min-height: 320px;
         margin-bottom: 20px;
