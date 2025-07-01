@@ -499,7 +499,7 @@ const MetalGrades = () => {
                                         {category.description}
                                     </p>
                                     <div className="AnimatedbtnContainer">
-                                        <button className="ColourButton" style={{ width: "100%", justifyContent: "center" }}>View All Products <MdKeyboardArrowRight /></button>
+                                        <button className="ColourButton" style={{ width: "100%", justifyContent: "center" }}>Read More <MdKeyboardArrowRight /></button>
                                     </div>
                                 </div>
                             </div>
