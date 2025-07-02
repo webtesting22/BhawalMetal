@@ -10,13 +10,13 @@ const ServicesCarousal = () => {
     const swiperRef = useRef(null);
 
     const ServicesData = [
-        { img: "./Images/IndustriesServed/AeroSpace.svg", title: "Aerospace and Defence" },
-        { img: "./Images/IndustriesServed/MarineEngineering.svg", title: "Marine Engineering" },
-        { img: "./Images/IndustriesServed/OilAndGas.svg", title: "Oil & Gas" },
-        { img: "./Images/IndustriesServed/Packging.png", title: "Packaging" },
-        { img: "./Images/IndustriesServed/Pharma.svg", title: "Pharma" },
-        { img: "./Images/IndustriesServed/Processing.svg", title: "Processing " },
-        { img: "./Images/IndustriesServed/WaterTreatment.svg", title: "Water Treatment" }
+        { img: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Aerospace and Defence.png", title: "Aerospace and Defence" },
+        { img: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Marine Engineering.png", title: "Marine Engineering" },
+        { img: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Oil & Gas.png", title: "Oil & Gas" },
+        { img: "", title: "Packaging" },
+        { img: "", title: "Pharma" },
+        { img: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Processing .png", title: "Processing " },
+        { img: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Water Treatment.png", title: "Water Treatment" }
 
     ];
 
