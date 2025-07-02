@@ -53,6 +53,18 @@ const WhyChooseHome = () => {
         if (swiperRef.current) swiperRef.current.slidePrev();
     };
 
+    const handleMouseEnter = () => {
+        if (swiperRef.current && swiperRef.current.autoplay) {
+            swiperRef.current.autoplay.stop();
+        }
+    };
+
+    const handleMouseLeave = () => {
+        if (swiperRef.current && swiperRef.current.autoplay) {
+            swiperRef.current.autoplay.start();
+        }
+    };
+
     return (
         <>
             <section>
@@ -61,7 +73,7 @@ const WhyChooseHome = () => {
                         <h2 className="BigHeading textCenter" data-aos="blur-to-clear" data-aos-delay="100" data-aos-duration="1200">Why Choose Bhawal Metal Industries?</h2>
                     </div>
 
-                    <div className="SwiperContainerCardWhyChoose">
+                    <div className="SwiperContainerCardWhyChoose" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                         <Swiper
                             slidesPerView={3}
                             spaceBetween={20}
