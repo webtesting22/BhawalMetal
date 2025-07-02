@@ -1,19 +1,94 @@
+/* Professional Card Container */
+.WhyChooseUsCardSwiperContainer {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.WhyChooseUsCardSwiperContainer:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: #617E87;
+    transition: all 0.3s ease;
+}
+
+/* Card Header */
+.CardHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Image Container */
 .SwiperImageCardContainer {
-    height: 400px;
-    margin: 2rem 0rem;
+    margin-bottom: 20px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .SwiperImageCardContainer img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: all 0.4s ease;
+    filter: drop-shadow(0 4px 12px rgba(97, 126, 135, 0.3));
+}
+
+.WhyChooseUsCardSwiperContainer:hover .SwiperImageCardContainer img {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 6px 16px rgba(97, 126, 135, 0.4));
+    transition: all 0.4s ease;
+}
+
+/* Title Styling */
+.CardTitleContainer {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: .5s;
 }
-.SwiperImageCardContainer:hover img{
-    transform: scale(1.1);
-    transition: .5s;
+
+.CardTitle {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #617E87;
+    margin: 0;
+    line-height: 1.3;
+    text-align: center;
+    letter-spacing: -0.5px;
 }
+
+/* Card Content */
+.CardContent {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.CardDescription {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #666;
+    text-align: left;
+}
+
+.CardDescription p {
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.CardDescription p:last-child {
+    margin-bottom: 0;
+}
+
 .next,
 .prev {
     background: transparent;
@@ -51,24 +126,106 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-   margin-bottom: 0px !important;
+    margin-bottom: 0px !important;
     margin: 4rem 0rem;
     margin-top: 2rem;
     /* flex-direction: column; */
     justify-content: space-between;
     align-items: center;
 }
-.CarousalbtnContainerEdit>div:first-child{
+
+.CarousalbtnContainerEdit>div:first-child {
     display: flex;
     gap: 20px;
 
 }
+
 .CarousalbtnContainerEdit>div {
     width: 100%;
 }
-.CarousalbtnContainerEdit .AnimatedbtnContainer{
+
+.CarousalbtnContainerEdit .AnimatedbtnContainer {
     display: flex;
     justify-content: end;
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+/* Section Container */
+#WhyChooseHomeContentContainer {
+    padding: 60px 0px;
+    /* background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); */
+    position: relative;
+}
+
+/* #WhyChooseHomeContentContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #617E87, transparent);
+} */
+
+/* Swiper Container */
+.SwiperContainerCardWhyChoose {
+    margin-top: 50px;
+}
+
+.SwiperContainerCardWhyChoose .swiper {
+    padding: 20px 0 40px 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .WhyChooseUsCardSwiperContainer {
+        margin: 15px 5px;
+        padding: 25px 20px;
+    }
+    
+    .CardTitle {
+        font-size: 1.2rem;
+    }
+    
+    .CardDescription {
+        font-size: 0.9rem;
+    }
+    
+    .SwiperImageCardContainer img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    /* #WhyChooseHomeContentContainer {
+        padding: 40px 15px;
+    } */
+}
+
+@media (max-width: 480px) {
+    .WhyChooseUsCardSwiperContainer {
+        padding: 20px 15px;
+    }
+    
+    .CardTitle {
+        font-size: 1.1rem;
+    }
+    
+    .CardHeader {
+        margin-bottom: 20px;
+    }
+    
+    .CarousalbtnContainerEdit {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    
+    .CarousalbtnContainerEdit > div {
+        width: auto;
+    }
+    
+    .CarousalbtnContainerEdit .AnimatedbtnContainer {
+        justify-content: center;
+    }
 }
